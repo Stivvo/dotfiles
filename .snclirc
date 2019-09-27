@@ -1,0 +1,19 @@
+[sncli]
+cfg_sn_username = .@gmail.com
+cfg_sn_password = 
+
+kb_page_down = ctrl d
+kb_page_up = ctrl u
+
+kb_half_page_down = w
+kb_half_page_up = b
+
+kb_bottom = G
+kb_top = g
+
+kb_create_note = n
+kb_view_note_ext = space
+
+kb_note_trash = d
+
+kb_edit_note = i
