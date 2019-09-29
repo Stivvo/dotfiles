@@ -1,5 +1,5 @@
 [sncli]
-cfg_sn_username = .@gmail.com
+cfg_sn_username = 
 cfg_sn_password = 
 
 kb_page_down = ctrl d
@@ -17,3 +17,5 @@ kb_view_note_ext = space
 kb_note_trash = d
 
 kb_edit_note = i
+
+cfg_default_markdown = yes
