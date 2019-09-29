@@ -19,6 +19,9 @@ git config --global user.email entattis15@itisvinci.com
 git config --global core.editor vim
 echo "git config..."
 
-# chmod +x scripts
+# scripts
 chmod +x ~/Sync/script/mark/mark.sh
 echo "mark.sh..."
+chmod +x ~/Sync/script/snPasswd.sh
+~/Sync/script/./snPasswd.sh
+echo "setting username and password of simplenote..."
