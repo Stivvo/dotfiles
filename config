@@ -194,7 +194,7 @@ for_window [instance="whats-app-nativefier-d52542"] floating enable
 
 # background
 exec "bash ~/prog/dotfiles/script/background/sh"
-exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/firefox --new-window '
+exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/firefox --new-window https://www.youtube.com/'
 exec --no-startup-id i3-msg 'workspace $ws4; exec /usr/bin/gnome-terminal -- fish --init-command=neofetch'
 exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/gnome-terminal -- nnn'
 exec "syncthing"
