@@ -5,6 +5,7 @@ alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
 alias clone='git clone'
+alias pull='git pull'
 alias commit='git commit'
 alias push='git push'
 alias merge='git merge'

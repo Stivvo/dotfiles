@@ -1,0 +1,10 @@
+#!/bin/bash
+
+while true
+do
+    while read LINE
+    do
+        feh --bg-scale $LINE
+        sleep $(cat ~/Sync/script/background/time)
+    done < ~/Sync/script/background/list
+done

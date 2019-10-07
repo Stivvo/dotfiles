@@ -20,8 +20,13 @@ git config --global core.editor vim
 echo "git config..."
 
 # scripts
-chmod +x ~/Sync/script/mark/mark.sh
-echo "mark.sh..."
+chmod +x ~/prog/dotfiles/script/mark/mark.sh
+chmod +x ~/prog/dotfiles/script/screen/screen.sh
+chmod +x ~/prog/dotfiles/script/update.sh/
+chmod +x ~/prog/dotfiles/script/background/sh
+echo "chmod +x useful scripts..."
+
+# simplenote
 chmod +x ~/Sync/script/snPasswd.sh
-~/Sync/script/./snPasswd.sh
+~/prog/dotfiles/script/./snPasswd.sh
 echo "setting username and password of simplenote..."
