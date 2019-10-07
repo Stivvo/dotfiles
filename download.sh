@@ -28,5 +28,5 @@ echo "chmod +x useful scripts..."
 
 # simplenote
 chmod +x ~/Sync/script/snPasswd.sh
-~/prog/dotfiles/script/./snPasswd.sh
+~/Sync/script/./snPasswd.sh
 echo "setting username and password of simplenote..."
