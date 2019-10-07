@@ -169,8 +169,8 @@ bindsym --release Control+Print exec "scrot --focused -q 100 ~/Pictures/screen/s
 bindsym $mod+Print exec "printf '~/Pictures/screen/%s'$(ls ~/Pictures/screen/ | tail -n 1)'\n' | gthumb"
 
 #monitor
-exec "~/Sync/script/screen/./screen.sh r"
-bindsym $mod+m exec "~/Sync/script/screen/./screen.sh s"
+exec "~/prog/dotfiles/script/screen/./screen.sh r"
+bindsym $mod+m exec "~/prog/dotfiles/script/screen/./screen.sh s"
 
 # monitor names
 set $m1 DisplayPort-1
@@ -187,15 +187,18 @@ bindsym $mod+Ctrl+k move workspace to output $m2
 assign [class="QtCreator"] $ws1
 assign [class="firefox"] $ws2
 assign [class="whats-app-nativefier-d52542"] $ws10
-assign [title="nnn /home/stefano"] $ws6
 
 #floating windows
 for_window [instance="qt-ts-csv"] floating enable
 for_window [instance="whats-app-nativefier-d52542"] floating enable
 
 # background
-exec "bash ~/Sync/script/background/sh"
-exec --no-startup-id i3-msg 'workspace 6 ; exec /usr/bin/gnome-terminal -e "nnn"'
+exec "bash ~/prog/dotfiles/script/background/sh"
+exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/firefox --new-window '
+exec --no-startup-id i3-msg 'workspace $ws4; exec /usr/bin/gnome-terminal -- fish --init-command=neofetch'
+exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/gnome-terminal -- nnn'
 exec "syncthing"
-exec "syncthing --browser-only"
 exec "whatsapp-nativefier"
+
+# update
+exec "bash ~/prog/dotfiles/script/update.sh"
