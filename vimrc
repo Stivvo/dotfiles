@@ -56,7 +56,7 @@ map <leader>r :set number relativenumber<Cr>
 "open with gedit
 map <leader>g :!gedit<space>%<Cr>
 "compile markdown
-map <leader>m :!~/Sync/script/mark/mark.sh<space>'<c-r>%'<Cr>
+map <leader>m :!~/prog/dotfiles/script/mark/mark.sh<space>'<c-r>%'<Cr>
 "macro
 map <space> @q
 "copypaste
