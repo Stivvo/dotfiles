@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PATH="/home/stefano/Sync/script/screen/"
+PATH="prog/dotfiles/script/screen/"
 CAT=$(/usr/bin/cat "${PATH}status.txt")
 
 if [ $1 == "r" ]
