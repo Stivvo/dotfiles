@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PATH="~/prog/dotfiles/script/background"
+PATH="~/prog/dotfiles/script/background/"
 
 while true
 do
