@@ -183,22 +183,23 @@ workspace $ws2 output $m2
 bindsym $mod+Ctrl+j move workspace to output $m1
 bindsym $mod+Ctrl+k move workspace to output $m2
 
+# background
+exec "bash ~/prog/dotfiles/script/background/sh"
+exec "bash ~/prog/dotfiles/script/update.sh"
+exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/syncthing'
+exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/firefox --new-window https://www.youtube.com/'
+exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox --new-window'
+exec --no-startup-id i3-msg 'workspace $ws4; exec /usr/bin/gnome-terminal -- fish --init-command=neofetch'
+exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/gnome-terminal -- nnn'
+
 # default workspaces
 assign [class="QtCreator"] $ws1
-assign [class="firefox"] $ws2
+assign [class="Eclipse"] $ws1
 assign [class="whats-app-nativefier-d52542"] $ws10
 
 #floating windows
 for_window [instance="qt-ts-csv"] floating enable
 for_window [instance="whats-app-nativefier-d52542"] floating enable
 
-# background
-exec "bash ~/prog/dotfiles/script/background/sh"
-exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/firefox --new-window https://www.youtube.com/'
-exec --no-startup-id i3-msg 'workspace $ws4; exec /usr/bin/gnome-terminal -- fish --init-command=neofetch'
-exec --no-startup-id i3-msg 'workspace $ws6; exec /usr/bin/gnome-terminal -- nnn'
-exec "syncthing"
+# start programs
 exec "whatsapp-nativefier"
-
-# update
-exec "bash ~/prog/dotfiles/script/update.sh"
