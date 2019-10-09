@@ -70,13 +70,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
+"utility
 Plug 'junegunn/goyo.vim'
-Plug 'vimwiki/vimwiki'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'google/vim-maktaba'
+Plug 'kien/ctrlp.vim'
+"programming
 Plug 'bazelbuild/vim-bazel'
 Plug 'justmao945/vim-clang'
-Plug 'kien/ctrlp.vim'
+"other
+Plug 'google/vim-maktaba'
+"unused
+"Plug 'vimwiki/vimwiki'
 call plug#end()
 
 "goyo
@@ -87,7 +91,7 @@ let g:goyo_margin_bottom = 2
 map <C-f> :Goyo<Cr>
 
 "ctrlp
-let g:ctrlp_map = '<c-p>'
+let g:ctrlp_map = '<c-k>'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
