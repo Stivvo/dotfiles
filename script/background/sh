@@ -1,12 +1,12 @@
 #!/bin/bash
 
-PATH="~/prog/dotfiles/script/background/"
+PATH="/home/stefano/prog/dotfiles/script/background/"
 
 while true
 do
     while read LINE
     do
-        feh --bg-scale $LINE
-        sleep $(cat ${PATH}time)
+        /usr/bin/feh --bg-scale $LINE
+        /usr/bin/sleep $(/usr/bin/cat ${PATH}time)
     done < ${PATH}list
 done
