@@ -16,3 +16,5 @@ alias checkout='git checkout'
 alias v='vim'
 
 fish_vi_key_bindings
+
+set -U fish_user_paths $fish_user_paths /opt/lampp
