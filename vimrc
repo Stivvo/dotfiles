@@ -46,20 +46,43 @@ set expandtab
 set smarttab
 set shiftwidth=4
 
-"shortcuts
+"spelling
+function! SetSpell() 
+    if &spell == 1
+        set spell nospell
+    else
+        set spell spell spelllang=it
+    endif
+    echo &spell
+endfunction
+map <leader>s :call SetSpell()<Cr>
 
 "save pressing esc twice
 map <Esc><Esc> :w<Cr>
-"set numbers
-map <leader>n :set number norelativenumber<Cr>
-map <leader>r :set number relativenumber<Cr>
+
+"set number
+function! SetNumber()
+    if &relativenumber == 1
+        set relativenumber norelativenumber
+    else
+        set relativenumber relativenumber
+    endif
+endfunction
+map <leader>n :call SetNumber()<Cr>
+
 "open with gedit
 map <leader>g :!gedit<space>%<Cr>
+
 "compile markdown
 map <leader>m :!~/prog/dotfiles/script/mark/mark.sh<space>'<c-r>%'<Cr>
+
+"open php
+map <leader>h :!firefox --new-window 'localhost/%'<Cr>
+
 "macro
 map <space> @q
-"copypaste
+
+"copypaste from system
 map <leader>p "+p
 map <leader>y "+y
 
