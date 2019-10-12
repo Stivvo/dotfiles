@@ -192,14 +192,18 @@ exec --no-startup-id i3-msg 'workspace $internet; exec /usr/bin/firefox --new-wi
 exec --no-startup-id i3-msg 'workspace $terminal; exec /usr/bin/gnome-terminal -- fish --init-command=neofetch'
 exec --no-startup-id i3-msg 'workspace $file; exec /usr/bin/gnome-terminal -- nnn'
 
-# default workspaces
+# default workspaces (use 2nd x class)
 assign [class="QtCreator"] $ide
 assign [class="Eclipse"] $ide
 assign [class="whats-app-nativefier-d52542"] $chat
+assign [class="Pavucontrol"] $tool
+assign [class="package"] $tool
 
-#floating windows
+# floating windows (use 1st x class)
 for_window [instance="qt-ts-csv"] floating enable
 for_window [instance="whats-app-nativefier-d52542"] floating enable
+for_window [instance="pavucontrol"] floating enable
+for_window [instance="osxmanager"] floating enable
 
 # start programs
 exec "whatsapp-nativefier"
