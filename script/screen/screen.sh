@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PATH="prog/dotfiles/script/screen/"
-CAT=$(/usr/bin/cat "${PATH}status.txt")
+CAT=$(/usr/bin/cat "/tmp/status.txt")
 
 if [ $1 == "r" ]
 then
@@ -33,5 +33,5 @@ case "$VAR" in
         ;;
 esac
 
-echo "$VAR" > "${PATH}status.txt"
+echo "$VAR" > "/tmp/status.txt"
 
