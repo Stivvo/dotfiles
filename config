@@ -91,40 +91,40 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1 "
-set $ws2 "2 "
-set $ws3 "3 "
-set $ws4 "4  "
-set $ws5 "5 "
-set $ws6 "6 "
-set $ws7 "7"
+set $ide "1 "
+set $internet "2 "
+set $media "3 "
+set $terminal "4  "
+set $file "5 "
+set $git "6 "
+set $tool "7 "
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10 "
+set $chat "10 "
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
+bindsym $mod+1 workspace $ide
+bindsym $mod+2 workspace $internet
+bindsym $mod+3 workspace $media
+bindsym $mod+4 workspace $terminal
+bindsym $mod+5 workspace $file
+bindsym $mod+6 workspace $git
+bindsym $mod+7 workspace $tool
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+0 workspace $chat
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+1 move container to workspace $ide
+bindsym $mod+Shift+2 move container to workspace $internet
+bindsym $mod+Shift+3 move container to workspace $media
+bindsym $mod+Shift+4 move container to workspace $terminal
+bindsym $mod+Shift+5 move container to workspace $file
+bindsym $mod+Shift+6 move container to workspace $git
+bindsym $mod+Shift+7 move container to workspace $tool
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+0 move container to workspace $chat
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -177,25 +177,25 @@ set $m1 DisplayPort-1
 set $m2 HDMI-A-0
 
 # monitor to workspace
-workspace $ws1 output $m1
-workspace $ws2 output $m2
-workspace $ws3 output $m2
+workspace $ide output $m1
+workspace $internet output $m2
+workspace $media output $m2
 bindsym $mod+Ctrl+j move workspace to output $m1
 bindsym $mod+Ctrl+k move workspace to output $m2
 
 # background
 exec "bash ~/prog/dotfiles/script/background/sh"
 exec "bash ~/prog/dotfiles/script/update.sh"
-exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/syncthing'
-exec --no-startup-id i3-msg 'workspace $ws3; exec /usr/bin/firefox --new-window https://www.youtube.com/'
-exec --no-startup-id i3-msg 'workspace $ws2; exec /usr/bin/firefox --new-window'
-exec --no-startup-id i3-msg 'workspace $ws4; exec /usr/bin/gnome-terminal -- fish --init-command=neofetch'
-exec --no-startup-id i3-msg 'workspace $ws5; exec /usr/bin/gnome-terminal -- nnn'
+exec --no-startup-id i3-msg 'workspace $internet; exec /usr/bin/syncthing'
+exec --no-startup-id i3-msg 'workspace $media; exec /usr/bin/firefox --new-window https://www.youtube.com/'
+exec --no-startup-id i3-msg 'workspace $internet; exec /usr/bin/firefox --new-window'
+exec --no-startup-id i3-msg 'workspace $terminal; exec /usr/bin/gnome-terminal -- fish --init-command=neofetch'
+exec --no-startup-id i3-msg 'workspace $file; exec /usr/bin/gnome-terminal -- nnn'
 
 # default workspaces
-assign [class="QtCreator"] $ws1
-assign [class="Eclipse"] $ws1
-assign [class="whats-app-nativefier-d52542"] $ws10
+assign [class="QtCreator"] $ide
+assign [class="Eclipse"] $ide
+assign [class="whats-app-nativefier-d52542"] $chat
 
 #floating windows
 for_window [instance="qt-ts-csv"] floating enable
