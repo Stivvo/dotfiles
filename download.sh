@@ -30,3 +30,10 @@ echo "chmod +x useful scripts..."
 chmod +x ~/Sync/script/snPasswd.sh
 ~/Sync/script/./snPasswd.sh
 echo "setting username and password of simplenote..."
+
+# i3
+if [ ! -z $(ls ~/.config/ | /usr/bin/grep "i3") ]
+then
+    echo "i3 config..."
+    cp ~/prog/dotfiles/config ~/.config/i3/config
+fi

@@ -13,4 +13,11 @@ alias add='git add'
 alias branch='git branch'
 alias checkout='git checkout'
 
+alias xamppt='sudo xampp start'
+alias xamppp='sudo xampp stop'
+
+alias v='vim'
+
 fish_vi_key_bindings
+
+set -U fish_user_paths $fish_user_paths /opt/lampp
