@@ -198,6 +198,7 @@ assign [class="Eclipse"] $ide
 assign [class="whats-app-nativefier-d52542"] $chat
 assign [class="Pavucontrol"] $tool
 assign [class="package"] $tool
+assign [class="jetbrains-idea-ce"] $ide
 
 # floating windows (use 1st x class)
 for_window [instance="qt-ts-csv"] floating enable
