@@ -198,12 +198,14 @@ assign [class="Eclipse"] $ide
 assign [class="whats-app-nativefier-d52542"] $chat
 assign [class="Pavucontrol"] $tool
 assign [class="package"] $tool
+assign [class="jetbrains-idea-ce"] $ide
 
 # floating windows (use 1st x class)
 for_window [instance="qt-ts-csv"] floating enable
 for_window [instance="whats-app-nativefier-d52542"] floating enable
 for_window [instance="pavucontrol"] floating enable
 for_window [instance="osxmanager"] floating enable
+for_window [instance="gnome-calculator"] floating enable
 
 # start programs
 exec "whatsapp-nativefier"
