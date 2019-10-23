@@ -77,7 +77,7 @@ map <leader>g :!gedit<space>%<Cr>
 map <leader>m :!~/prog/dotfiles/script/mark/mark.sh<space>'<c-r>%'<Cr>
 
 "open php
-map <leader>h :!firefox --new-window 'localhost/%'<Cr>
+map <leader>h :!firefox --new-window 'localhost/esercizi/%'<Cr>
 
 "macro
 map <space> @q
@@ -111,10 +111,10 @@ let g:goyo_width = 120
 let g:goyo_height = 100
 let g:goyo_margin_top = 2
 let g:goyo_margin_bottom = 2
-map <C-f> :Goyo<Cr>
+map <leader>f :Goyo<Cr>
 
 "ctrlp
-let g:ctrlp_map = '<c-k>'
+let g:ctrlp_map = '<C-i>'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
