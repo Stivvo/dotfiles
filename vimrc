@@ -100,6 +100,7 @@ Plug 'kien/ctrlp.vim'
 "programming
 Plug 'bazelbuild/vim-bazel'
 Plug 'justmao945/vim-clang'
+Plug 'othree/xml.vim'
 "other
 Plug 'google/vim-maktaba'
 "unused
@@ -118,3 +119,4 @@ let g:ctrlp_map = '<C-i>'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
+" scarica temi di visualstudio...
