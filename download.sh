@@ -1,13 +1,17 @@
 #!/bin/bash
 
+echo $(whoami)
 # update dotfiles
-mkdir ~/.vim/vimrc
+mkdir ~/.vim/
 cp vimrc ~/.vim/.
 echo "vimrc..."
 cp .snclirc ~/.
 echo "snclirc..."
 cp config.fish ~/.config/fish/.
 echo "config.fish..."
+mkdir ~/.config/zathura
+cp zathurarc ~/.config/zathura/.
+echo "zathurarc..."
 
 # commands
 sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
