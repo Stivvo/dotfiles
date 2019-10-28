@@ -1,9 +1,11 @@
 let mapleader =" "
 
+
 "basics
-filetype plugin on
-set number norelativenumber
 filetype indent on
+filetype plugin on
+filetype plugin indent on
+set number norelativenumber
 
 "splits
 set splitbelow splitright
@@ -98,6 +100,11 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kien/ctrlp.vim'
 "programming
+Plug 'jiangmiao/auto-pairs'
+Plug 'scrooloose/nerdcommenter'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-surround'
+"languages
 Plug 'bazelbuild/vim-bazel'
 Plug 'justmao945/vim-clang'
 Plug 'othree/xml.vim'
@@ -118,5 +125,3 @@ map <leader>f :Goyo<Cr>
 let g:ctrlp_map = '<C-i>'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-
-" scarica temi di visualstudio...
