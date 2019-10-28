@@ -35,7 +35,7 @@ set ignorecase
 "set incsearch
 "set showmatch
 set ruler
-set textwidth=80
+"set textwidth=80
 set colorcolumn=80
 
 "complention
@@ -102,12 +102,13 @@ Plug 'kien/ctrlp.vim'
 "programming
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
-Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 "languages
 Plug 'bazelbuild/vim-bazel'
 Plug 'justmao945/vim-clang'
 Plug 'othree/xml.vim'
+"git
+Plug 'airblade/vim-gitgutter'
 "other
 Plug 'google/vim-maktaba'
 "unused
