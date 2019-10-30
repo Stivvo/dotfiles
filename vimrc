@@ -1,6 +1,5 @@
 let mapleader =" "
 
-
 "basics
 filetype indent on
 filetype plugin on
