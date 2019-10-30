@@ -9,9 +9,6 @@ cp .snclirc ~/.
 echo "snclirc..."
 cp config.fish ~/.config/fish/.
 echo "config.fish..."
-mkdir ~/.config/zathura
-cp zathurarc ~/.config/zathura/.
-echo "zathurarc..."
 
 # commands
 sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
@@ -38,6 +35,13 @@ echo "setting username and password of simplenote..."
 # i3
 if [ ! -z $(ls ~/.config/ | /usr/bin/grep "i3") ]
 then
-    echo "i3 config..."
     cp ~/prog/dotfiles/config ~/.config/i3/config
+    echo "i3 config..."
+fi
+
+# zathura
+if [ ! -z $(ls ~/.config/ | /usr/bin/grep "zathura") ]
+then
+    cp zathurarc ~/.config/zathura/.
+    echo "zathurarc..."
 fi
