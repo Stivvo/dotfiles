@@ -46,5 +46,5 @@ fi
 if [ ! -z $(ls ~/.config/ | /usr/bin/grep "sway") ]
 then
     echo "sway config..."
-    cp ~/prog/dotfiles/sway ~/.config/i3/config
+    cp ~/prog/dotfiles/sway ~/.config/sway/config
 fi
