@@ -39,5 +39,12 @@ echo "setting username and password of simplenote..."
 if [ ! -z $(ls ~/.config/ | /usr/bin/grep "i3") ]
 then
     echo "i3 config..."
-    cp ~/prog/dotfiles/config ~/.config/i3/config
+    cp ~/prog/dotfiles/i3 ~/.config/i3/config
+fi
+
+# sway
+if [ ! -z $(ls ~/.config/ | /usr/bin/grep "sway") ]
+then
+    echo "sway config..."
+    cp ~/prog/dotfiles/sway ~/.config/i3/config
 fi
