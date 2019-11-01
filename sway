@@ -40,7 +40,11 @@
     output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     exec "script/screen/./screen.sh r"
 
+    set $m1 = DP-2
+    set $m2 = HDMI-A-1
+
     bindsym $mod+m exec "~/prog/dotfiles/script/screen/./screen.sh s"
+    bindsym $mod+Shift+m exec "~/prog/dotfiles/script/screen/./chOut.sh"
 
 ##########################
 #-- Idle configuration --#
@@ -118,19 +122,18 @@
 #-- Workspaces --#
 ##################
 #
-    # Workspace variables:
-    set $ide "1 "
-    set $internet "2 "
-    set $media "3 "
-    set $terminal "4  "
-    set $file "5 "
-    set $git "6 "
-    set $tool "7 "
-    set $ws8 "8"
-    set $ws9 "9"
-    set $chat "10 "
-
-    # Switch to workspace
+# Workspace variables:
+    set $ide "1  "
+    set $internet "2  "
+    set $media "3  "
+    set $terminal "4   "
+    set $file "5  "
+    set $git "6  "
+    set $tool "7  "
+    set $ws8 " 8 "
+    set $ws9 " 9 "
+    set $chat "10  "
+# Switch to workspace
     bindsym $mod+1 workspace $ide
     bindsym $mod+2 workspace $internet
     bindsym $mod+3 workspace $media
@@ -141,8 +144,7 @@
     bindsym $mod+8 workspace $ws8
     bindsym $mod+9 workspace $ws9
     bindsym $mod+0 workspace $chat
-
-    # Move focused container to workspace
+# Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace $ide
     bindsym $mod+Shift+2 move container to workspace $internet
     bindsym $mod+Shift+3 move container to workspace $media
@@ -153,6 +155,20 @@
     bindsym $mod+Shift+8 move container to workspace $ws8
     bindsym $mod+Shift+9 move container to workspace $ws9
     bindsym $mod+Shift+0 move container to workspace $chat
+# Move workspace to focused screen
+    bindsym $mod+Ctrl+1 "[workspace=$ide]" to $m1
+    bindsym $mod+Ctrl+2 "[workspace=$internet]" to output $m1
+    bindsym $mod+Ctrl+3 "[workspace=$media]" to output $m1
+    bindsym $mod+Ctrl+4 "[workspace=$terminal]" to output $m1
+    bindsym $mod+Ctrl+5 "[workspace=$file]" to output $m1
+    bindsym $mod+Ctrl+6 "[workspace=$git]" to output $m1
+    bindsym $mod+Ctrl+7 "[workspace=$tool]" to output $m1
+    bindsym $mod+Ctrl+8 "[workspace=$ws8]" to output $m1
+    bindsym $mod+Ctrl+9 "[workspace=$ws9]" to output $m1
+    bindsym $mod+Ctrl+0 "[workspace=$chat]" to output $m1
+# Worspace back and forth
+    workspace back_and_forth yes
+    bindsym $mod+u workspace back_and_forth
 
 ####################
 #-- Layout stuff --#
