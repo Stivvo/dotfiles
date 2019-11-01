@@ -100,7 +100,7 @@
     bindsym --release $mod+Shift+s exec "systemctl suspend"
 
     # Shutdown
-    bindsym --release $mod+Shift+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'swaymsg exit'
+    bindsym --release $mod+Shift+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'poweroff'
 
 #####################
 #-- Moving around --#
