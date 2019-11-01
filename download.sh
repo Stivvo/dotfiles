@@ -24,10 +24,10 @@ git config --global core.editor vim
 echo "git config..."
 
 # scripts
-chmod +x ~/prog/dotfiles/script/mark/mark.sh
-chmod +x ~/prog/dotfiles/script/screen/screen.sh
-chmod +x ~/prog/dotfiles/script/update.sh
-chmod +x ~/prog/dotfiles/script/background/sh
+sudo chmod ua+x ~/prog/dotfiles/script/mark/mark.sh
+sudo chmod ua+x ~/prog/dotfiles/script/screen/screen.sh
+sudo chmod ua+x ~/prog/dotfiles/script/update.sh
+sudo chmod ua+x ~/prog/dotfiles/script/background/sh
 echo "chmod +x useful scripts..."
 
 # simplenote
