@@ -21,16 +21,23 @@ git config --global core.editor vim
 echo "git config..."
 
 # scripts
-chmod +x ~/prog/dotfiles/script/mark/mark.sh
-chmod +x ~/prog/dotfiles/script/screen/screen.sh
-chmod +x ~/prog/dotfiles/script/update.sh
-chmod +x ~/prog/dotfiles/script/background/sh
+sudo chmod ua+x ~/prog/dotfiles/script/mark/mark.sh
+sudo chmod ua+x ~/prog/dotfiles/script/screen/screen.sh
+sudo chmod ua+x ~/prog/dotfiles/script/update.sh
+sudo chmod ua+x ~/prog/dotfiles/script/background/sh
 echo "chmod +x useful scripts..."
 
 # simplenote
 chmod +x ~/Sync/script/snPasswd.sh
 ~/Sync/script/./snPasswd.sh
 echo "setting username and password of simplenote..."
+
+# zathura
+if [ ! -z $(ls ~/.config/ | /usr/bin/grep "zathura") ]
+then
+    cp zathurarc ~/.config/zathura/.
+    echo "zathurarc..."
+fi
 
 # i3
 if [ ! -z $(ls ~/.config/ | /usr/bin/grep "i3") ]
@@ -39,9 +46,9 @@ then
     echo "i3 config..."
 fi
 
-# zathura
-if [ ! -z $(ls ~/.config/ | /usr/bin/grep "zathura") ]
+# sway
+if [ ! -z $(ls ~/.config/ | /usr/bin/grep "sway") ]
 then
-    cp zathurarc ~/.config/zathura/.
-    echo "zathurarc..."
+    cp ~/prog/dotfiles/sway ~/.config/sway/config
+    echo "sway config..."
 fi

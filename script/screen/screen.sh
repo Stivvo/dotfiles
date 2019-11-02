@@ -1,6 +1,5 @@
 #!/bin/bash
 
-PATH="prog/dotfiles/script/screen/"
 CAT=$(/usr/bin/cat "/tmp/status.txt")
 
 if [ $1 == "r" ]
@@ -20,16 +19,16 @@ fi
 
 case "$VAR" in
     "1") # monitor
-    /usr/bin/xrandr --output DisplayPort-0 --off --output DisplayPort-1 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-0 --off --output HDMI-A-1 --off --output DVI-D-0 --off
-    /usr/bin/notify-send "monitor"
+    swaymsg "output DP-2 pos 0 0 enable"
+    swaymsg "output HDMI-A-1 disable"
         ;;
     "2") # tv
-    /usr/bin/xrandr --output DisplayPort-0 --off --output DisplayPort-1 --off --output HDMI-A-0 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --off --output DVI-D-0 --off
-    /usr/bin/notify-send "TV"
+    swaymsg "output HDMI-A-1 pos 0 0 enable"
+    swaymsg "output DP-2 disable"
         ;;
     "3") # double
-    /usr/bin/xrandr --output DisplayPort-0 --off --output DisplayPort-1 --primary --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI-A-0 --mode 1920x1080 --pos 0x0 --rotate normal --output HDMI-A-1 --off --output DVI-D-0 --off
-    /usr/bin/notify-send "double"
+    swaymsg "output DP-2 pos 1920 0 enable"
+    swaymsg "output HDMI-A-1 pos 0 0 enable"
         ;;
 esac
 

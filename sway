@@ -1,0 +1,262 @@
+# 
+#                                                                                   ______   __           
+#                                                                                  /      \ /  |          
+#   _______  __   __   __   ______   __    __         _______   ______   _______  /$$$$$$  |$$/   ______  
+#  /       |/  | /  | /  | /      \ /  |  /  |       /       | /      \ /       \ $$ |_ $$/ /  | /      \ 
+# /$$$$$$$/ $$ | $$ | $$ | $$$$$$  |$$ |  $$ |      /$$$$$$$/ /$$$$$$  |$$$$$$$  |$$   |    $$ |/$$$$$$  |
+# $$      \ $$ | $$ | $$ | /    $$ |$$ |  $$ |      $$ |      $$ |  $$ |$$ |  $$ |$$$$/     $$ |$$ |  $$ |
+#  $$$$$$  |$$ \_$$ \_$$ |/$$$$$$$ |$$ \__$$ |      $$ \_____ $$ \__$$ |$$ |  $$ |$$ |      $$ |$$ \__$$ |
+# /     $$/ $$   $$   $$/ $$    $$ |$$    $$ |      $$       |$$    $$/ $$ |  $$ |$$ |      $$ |$$    $$ |
+# $$$$$$$/   $$$$$/$$$$/   $$$$$$$/  $$$$$$$ |       $$$$$$$/  $$$$$$/  $$/   $$/ $$/       $$/  $$$$$$$ |
+#                                   /  \__$$ |                                                  /  \__$$ |
+#                                   $$    $$/                                                   $$    $$/ 
+#                                    $$$$$$/                                                     $$$$$$/  
+# 
+
+# Read `man 5 sway` for a complete reference.
+
+#################
+#-- Variables --#
+#################
+#
+# Logo key. Use Mod1 for Alt.
+    set $mod Mod4
+# Home row direction keys, like vim
+    set $left h
+    set $down j
+    set $up k
+    set $right l
+# Your preferred terminal emulator
+    set $term gnome-terminal
+# Your preferred application launcher
+# Note: it's recommended that you pass the final command to sway
+    set $menu dmenu_path | dmenu | xargs swaymsg exec --
+
+############################
+#-- Output configuration --#
+############################
+#
+# Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
+    output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+    exec "script/screen/./screen.sh r"
+
+    set $m1 = DP-2
+    set $m2 = HDMI-A-1
+
+    bindsym $mod+m exec "~/prog/dotfiles/script/screen/./screen.sh s"
+    bindsym $mod+Shift+m exec "~/prog/dotfiles/script/screen/./chOut.sh"
+
+##########################
+#-- Idle configuration --#
+##########################
+#
+    exec swayidle -w timeout 600 'swaymsg "output * dpms off"' \
+        resume 'swaymsg "output * dpms on"'
+
+#    timeout 300 'swaylock -f -c 000000' \ # lock 300s
+#    before-sleep 'swaylock -f -c 000000' # lock before sleep
+
+###########################
+#-- Input configuration --#
+###########################
+#
+    input type:keyboard  {
+            xkb_layout it
+    }
+#
+# You can get the names of your inputs by running: swaymsg -t get_inputs
+# Read `man 5 sway-input` for more information about this section.
+
+##########################
+#-- Basics keybindings --#
+##########################
+#
+    # Start a terminal
+    bindsym $mod+Return exec $term
+
+    # Kill focused window
+    bindsym $mod+q kill
+
+    # Start your launcher
+    bindsym $mod+d exec $menu
+
+    # Drag floating windows by holding down $mod and left mouse button.
+    # Resize them with right mouse button + $mod.
+    # Despite the name, also works for non-floating windows.
+    # Change normal to inverse to use left mouse button for resizing and right
+    # mouse button for dragging.
+    floating_modifier $mod normal
+
+    # Reload the configuration file
+    bindsym $mod+Shift+c reload
+
+    # Exit sway (logs you out of your Wayland session)
+    bindsym --release $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+    # swaylok
+    bindsym --release $mod+Ctrl+l exec swaylock
+
+    # Suspend the computer
+    bindsym --release $mod+Shift+s exec "systemctl suspend"
+
+    # Shutdown
+    bindsym --release $mod+Shift+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'poweroff'
+
+#####################
+#-- Moving around --#
+#####################
+#
+    # Move your focus around
+    bindsym $mod+$left focus left
+    bindsym $mod+$down focus down
+    bindsym $mod+$up focus up
+    bindsym $mod+$right focus right
+
+    # Move the focused window with the same, but add Shift
+    bindsym $mod+Shift+$left move left
+    bindsym $mod+Shift+$down move down
+    bindsym $mod+Shift+$up move up
+    bindsym $mod+Shift+$right move right
+
+##################
+#-- Workspaces --#
+##################
+#
+# Workspace variables:
+    set $ide "1  "
+    set $internet "2  "
+    set $media "3  "
+    set $terminal "4   "
+    set $file "5  "
+    set $git "6  "
+    set $tool "7  "
+    set $ws8 " 8 "
+    set $ws9 " 9 "
+    set $chat "10  "
+# Switch to workspace
+    bindsym $mod+1 workspace $ide
+    bindsym $mod+2 workspace $internet
+    bindsym $mod+3 workspace $media
+    bindsym $mod+4 workspace $terminal
+    bindsym $mod+5 workspace $file
+    bindsym $mod+6 workspace $git
+    bindsym $mod+7 workspace $tool
+    bindsym $mod+8 workspace $ws8
+    bindsym $mod+9 workspace $ws9
+    bindsym $mod+0 workspace $chat
+# Move focused container to workspace
+    bindsym $mod+Shift+1 move container to workspace $ide
+    bindsym $mod+Shift+2 move container to workspace $internet
+    bindsym $mod+Shift+3 move container to workspace $media
+    bindsym $mod+Shift+4 move container to workspace $terminal
+    bindsym $mod+Shift+5 move container to workspace $file
+    bindsym $mod+Shift+6 move container to workspace $git
+    bindsym $mod+Shift+7 move container to workspace $tool
+    bindsym $mod+Shift+8 move container to workspace $ws8
+    bindsym $mod+Shift+9 move container to workspace $ws9
+    bindsym $mod+Shift+0 move container to workspace $chat
+# Move workspace to focused screen
+    bindsym $mod+Ctrl+1 "[workspace=$ide]" to $m1
+    bindsym $mod+Ctrl+2 "[workspace=$internet]" to output $m1
+    bindsym $mod+Ctrl+3 "[workspace=$media]" to output $m1
+    bindsym $mod+Ctrl+4 "[workspace=$terminal]" to output $m1
+    bindsym $mod+Ctrl+5 "[workspace=$file]" to output $m1
+    bindsym $mod+Ctrl+6 "[workspace=$git]" to output $m1
+    bindsym $mod+Ctrl+7 "[workspace=$tool]" to output $m1
+    bindsym $mod+Ctrl+8 "[workspace=$ws8]" to output $m1
+    bindsym $mod+Ctrl+9 "[workspace=$ws9]" to output $m1
+    bindsym $mod+Ctrl+0 "[workspace=$chat]" to output $m1
+# Worspace back and forth
+    workspace back_and_forth yes
+    bindsym $mod+u workspace back_and_forth
+
+####################
+#-- Layout stuff --#
+####################
+#
+    # You can "split" the current object of your focus with
+    # $mod+b or $mod+v, for horizontal and vertical splits
+    # respectively.
+    bindsym $mod+b splith
+    bindsym $mod+v splitv
+
+    # Switch the current container between different layout styles
+    bindsym $mod+s layout stacking
+    bindsym $mod+w layout tabbed
+    bindsym $mod+e layout toggle split
+
+    # Make the current focus fullscreen
+    bindsym $mod+f fullscreen
+
+    # Toggle the current focus between tiling and floating mode
+    bindsym $mod+Shift+space floating toggle
+
+    # Swap focus between the tiling area and the floating area
+    bindsym $mod+space focus mode_toggle
+
+    # Move focus to the parent container
+    bindsym $mod+a focus parent
+
+##################
+#-- Scratchpad --#
+##################
+#
+    # Sway has a "scratchpad", which is a bag of holding for windows.
+    # You can send windows there and get them back later.
+
+    # Move the currently focused window to the scratchpad
+    bindsym $mod+minus move scratchpad
+
+    # Show the next scratchpad window or hide the focused scratchpad window.
+    # If there are multiple scratchpad windows, this command cycles through them.
+    bindsym $mod+plus scratchpad show
+
+###########################
+#-- Resizing containers --#
+###########################
+#
+mode "resize" {
+    # left will shrink the containers width
+    # right will grow the containers width
+    # up will shrink the containers height
+    # down will grow the containers height
+    bindsym $left resize shrink width 30px
+    bindsym $down resize grow height 30px
+    bindsym $up resize shrink height 30px
+    bindsym $right resize grow width 30px
+    # move faster
+    bindsym Ctrl+$left resize shrink width 90px
+    bindsym Ctrl+$down resize grow height 90px
+    bindsym Ctrl+$up resize shrink height 90px
+    bindsym Ctrl+$right resize grow width 90px
+    # move slower
+    bindsym Shift+$left resize shrink width 10px
+    bindsym Shift+$down resize grow height 10px
+    bindsym Shift+$up resize shrink height 10px
+    bindsym Shift+$right resize grow width 10px
+    # Return to default mode
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+r mode "resize"
+
+##################
+#-- Status Bar --#
+##################
+#
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+    position top
+
+    # When the status_command prints a new line to stdout, swaybar updates.
+    # The default just shows the current date and time.
+    status_command while date +'%d-%m-%Y | %l:%M '; do sleep 1; done
+
+    colors {
+        statusline #ffffff
+        background #323232
+        inactive_workspace #32323200 #32323200 #5c5c5c
+    }
+}
+
+include /etc/sway/config.d/*

@@ -1,6 +1,5 @@
 let mapleader =" "
 
-
 "basics
 filetype indent on
 filetype plugin on
@@ -23,7 +22,7 @@ map <leader>j :tabn<Cr>
 set showmode
 set showcmd
 syntax on
-set mouse=a
+set mouse=i
 set confirm
 
 "cursor above 8 lines from the bottom of the screen
@@ -65,12 +64,13 @@ map <Esc><Esc> :w<Cr>
 "set number
 function! SetNumber()
     if &relativenumber == 1
-        set relativenumber norelativenumber
+        set number relativenumber norelativenumber
     else
-        set relativenumber relativenumber
+        set number relativenumber relativenumber
     endif
 endfunction
 map <leader>n :call SetNumber()<Cr>
+map <leader><S-n> :set nonumber norelativenumber<Cr>
 
 "open with gedit
 map <leader>g :!gedit<space>%<Cr>
