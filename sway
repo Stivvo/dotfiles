@@ -123,49 +123,60 @@
 ##################
 #
 # Workspace variables:
-    set $ide "1  "
-    set $internet "2  "
-    set $media "3  "
-    set $terminal "4   "
-    set $file "5  "
-    set $git "6  "
-    set $tool "7  "
+    set $ws1 "1  "
+    set $ws2 "2  "
+    set $ws3 "3  "
+    set $ws4 "4  "
+    set $ws5 "5  "
+    set $ws6 "6  "
+    set $ws7 "7  "
     set $ws8 " 8 "
     set $ws9 " 9 "
-    set $chat "10  "
+    set $ws10 "10  "
 # Switch to workspace
-    bindsym $mod+1 workspace $ide
-    bindsym $mod+2 workspace $internet
-    bindsym $mod+3 workspace $media
-    bindsym $mod+4 workspace $terminal
-    bindsym $mod+5 workspace $file
-    bindsym $mod+6 workspace $git
-    bindsym $mod+7 workspace $tool
+    bindsym $mod+1 workspace $ws1
+    bindsym $mod+2 workspace $ws2
+    bindsym $mod+3 workspace $ws3
+    bindsym $mod+4 workspace $ws4
+    bindsym $mod+5 workspace $ws5
+    bindsym $mod+6 workspace $ws6
+    bindsym $mod+7 workspace $ws7
     bindsym $mod+8 workspace $ws8
     bindsym $mod+9 workspace $ws9
-    bindsym $mod+0 workspace $chat
+    bindsym $mod+0 workspace $ws10
 # Move focused container to workspace
-    bindsym $mod+Shift+1 move container to workspace $ide
-    bindsym $mod+Shift+2 move container to workspace $internet
-    bindsym $mod+Shift+3 move container to workspace $media
-    bindsym $mod+Shift+4 move container to workspace $terminal
-    bindsym $mod+Shift+5 move container to workspace $file
-    bindsym $mod+Shift+6 move container to workspace $git
-    bindsym $mod+Shift+7 move container to workspace $tool
+    bindsym $mod+Shift+1 move container to workspace $ws1
+    bindsym $mod+Shift+2 move container to workspace $ws2
+    bindsym $mod+Shift+3 move container to workspace $ws5
+    bindsym $mod+Shift+4 move container to workspace $ws4
+    bindsym $mod+Shift+5 move container to workspace $ws5
+    bindsym $mod+Shift+6 move container to workspace $ws6
+    bindsym $mod+Shift+7 move container to workspace $ws7
     bindsym $mod+Shift+8 move container to workspace $ws8
     bindsym $mod+Shift+9 move container to workspace $ws9
-    bindsym $mod+Shift+0 move container to workspace $chat
-# Move workspace to focused screen
-    bindsym $mod+Ctrl+1 "[workspace=$ide]" to $m1
-    bindsym $mod+Ctrl+2 "[workspace=$internet]" to output $m1
-    bindsym $mod+Ctrl+3 "[workspace=$media]" to output $m1
-    bindsym $mod+Ctrl+4 "[workspace=$terminal]" to output $m1
-    bindsym $mod+Ctrl+5 "[workspace=$file]" to output $m1
-    bindsym $mod+Ctrl+6 "[workspace=$git]" to output $m1
-    bindsym $mod+Ctrl+7 "[workspace=$tool]" to output $m1
+    bindsym $mod+Shift+0 move container to workspace $ws10
+# Move workspace to screen 1
+    bindsym $mod+Ctrl+1 "[workspace=$ws1]" to output $m1
+    bindsym $mod+Ctrl+2 "[workspace=$ws2]" to output $m1
+    bindsym $mod+Ctrl+3 "[workspace=$ws3]" to output $m1
+    bindsym $mod+Ctrl+4 "[workspace=$ws4]" to output $m1
+    bindsym $mod+Ctrl+5 "[workspace=$ws5]" to output $m1
+    bindsym $mod+Ctrl+6 "[workspace=$ws6]" to output $m1
+    bindsym $mod+Ctrl+7 "[workspace=$ws7]" to output $m1
     bindsym $mod+Ctrl+8 "[workspace=$ws8]" to output $m1
     bindsym $mod+Ctrl+9 "[workspace=$ws9]" to output $m1
-    bindsym $mod+Ctrl+0 "[workspace=$chat]" to output $m1
+    bindsym $mod+Ctrl+0 "[workspace=$ws10]" to output $m1
+# Move workspace to screeen 2
+    bindsym $mod+Alt+1 "[workspace=$ws1]" to output $m2
+    bindsym $mod+Alt+2 "[workspace=$ws2]" to output $m2
+    bindsym $mod+Alt+3 "[workspace=$ws3]" to output $m2
+    bindsym $mod+Alt+4 "[workspace=$ws4]" to output $m2
+    bindsym $mod+Alt+5 "[workspace=$ws5]" to output $m2
+    bindsym $mod+Alt+6 "[workspace=$ws6]" to output $m2
+    bindsym $mod+Alt+7 "[workspace=$ws7]" to output $m2
+    bindsym $mod+Alt+8 "[workspace=$ws8]" to output $m2
+    bindsym $mod+Alt+9 "[workspace=$ws9]" to output $m2
+    bindsym $mod+Alt+0 "[workspace=$ws10]" to output $m2
 # Worspace back and forth
     workspace back_and_forth yes
     bindsym $mod+u workspace back_and_forth
