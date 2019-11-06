@@ -147,7 +147,7 @@
 # Move focused container to workspace
     bindsym $mod+Shift+1 move container to workspace $ws1
     bindsym $mod+Shift+2 move container to workspace $ws2
-    bindsym $mod+Shift+3 move container to workspace $ws5
+    bindsym $mod+Shift+3 move container to workspace $ws3
     bindsym $mod+Shift+4 move container to workspace $ws4
     bindsym $mod+Shift+5 move container to workspace $ws5
     bindsym $mod+Shift+6 move container to workspace $ws6
