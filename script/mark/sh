@@ -4,5 +4,8 @@ rm ~/temp*
 #echo -e "---\noutput: pdf_document\n---\n" > temp
 cat $1 > ~/temp
 echo "require(rmarkdown); render('~/temp')" | R --vanilla
+if [ $1 -eq "f" ]
+then
 gnome-terminal -- firefox ~/temp.html
+fi
 #firefox --new-window temp.html

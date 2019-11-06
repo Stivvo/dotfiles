@@ -21,8 +21,8 @@ git config --global core.editor vim
 echo "git config..."
 
 # scripts
-sudo chmod ua+x ~/prog/dotfiles/script/mark/mark.sh
-sudo chmod ua+x ~/prog/dotfiles/script/screen/screen.sh
+sudo chmod ua+x ~/prog/dotfiles/script/mark/sh
+sudo chmod ua+x ~/prog/dotfiles/script/screen/sh
 sudo chmod ua+x ~/prog/dotfiles/script/update.sh
 sudo chmod ua+x ~/prog/dotfiles/script/background/sh
 sudo chmod ua+x ~/prog/dotfiles/script/shot/all.sh

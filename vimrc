@@ -76,7 +76,7 @@ map <leader><S-n> :set nonumber norelativenumber<Cr>
 map <leader>g :!gedit<space>%<Cr>
 
 "compile markdown
-map <leader>m :!~/prog/dotfiles/script/mark/mark.sh<space>'<c-r>%'<Cr>
+map <leader>m :!~/prog/dotfiles/script/mark/sh<space>'<c-r>%'<Cr>
 
 "open php
 map <leader>h :!firefox --new-window 'localhost/esercizi/%'<Cr>
