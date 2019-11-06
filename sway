@@ -38,7 +38,7 @@
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
     output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-    exec_always "script/screen/./screen.sh r"
+    exec_always "~/prog/dotfiles/script/screen/./screen.sh r"
 
     set $m1 = DP-2
     set $m2 = HDMI-A-1
