@@ -58,25 +58,28 @@ function! SetSpell()
 endfunction
 map <leader>s :call SetSpell()<Cr>
 
-"save pressing esc twice
-map <Esc><Esc> :w<Cr>
+function! CompileMarkdown()
+    if &filetype ==# 'markdown'
+       :!~/prog/dotfiles/script/mark/./sh %
+    endif
+endfunction
 
-"set number
+"save pressing esc twice
+map <Esc><Esc> :w<Cr>:call CompileMarkdown()<Cr>
+
+"Set number
 function! SetNumber()
     if &relativenumber == 1
         set number relativenumber norelativenumber
     else
         set number relativenumber relativenumber
-    endif
+    Endif
 endfunction
 map <leader>n :call SetNumber()<Cr>
 map <leader><S-n> :set nonumber norelativenumber<Cr>
 
 "open with gedit
 map <leader>g :!gedit<space>%<Cr>
-
-"compile markdown
-map <leader>m :!~/prog/dotfiles/script/mark/sh<space>'<c-r>%'<Cr>
 
 "open php
 map <leader>h :!firefox --new-window 'localhost/esercizi/%'<Cr>
@@ -88,7 +91,7 @@ map <space> @q
 map <leader>p "+p
 map <leader>y "+y
 
-"plugins
+"Plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -99,7 +102,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kien/ctrlp.vim'
-"programming
+"Programming
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
@@ -107,7 +110,7 @@ Plug 'tpope/vim-surround'
 Plug 'bazelbuild/vim-bazel'
 Plug 'justmao945/vim-clang'
 Plug 'othree/xml.vim'
-"git
+"Git
 Plug 'airblade/vim-gitgutter'
 "other
 Plug 'google/vim-maktaba'
