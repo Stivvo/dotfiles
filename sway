@@ -278,6 +278,16 @@ bar {
     bindsym Control+Print exec "~/prog/dotfiles/script/shot/./all.sh"
     bindsym Shift+Print exec "~/prog/dotfiles/script/shot/./area.sh"
     bindsym $mod+Print exec "grim -g '$(slurp -p)' -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | wl-copy" # color picker
-    
+
+##################
+#-- Brightness --#
+##################
+#
+    bindsym XF86MonBrightnessUp exec light -A 10
+    bindsym XF86MonBrightnessDown exec light -U 10
+    bindsym Shift+XF86MonBrightnessUp exec light -A 5
+    bindsym Shift+XF86MonBrightnessDown exec light -U 5
+    bindsym Control+XF86MonBrightnessUp exec light -A 20
+    bindsym Control+XF86MonBrightnessDown exec light -U 20
 
 include /etc/sway/config.d/*
