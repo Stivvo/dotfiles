@@ -73,7 +73,7 @@ function! SetNumber()
         set number relativenumber norelativenumber
     else
         set number relativenumber relativenumber
-    Endif
+    endif
 endfunction
 map <leader>n :call SetNumber()<Cr>
 map <leader><S-n> :set nonumber norelativenumber<Cr>
