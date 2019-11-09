@@ -58,14 +58,14 @@ function! SetSpell()
 endfunction
 map <leader>s :call SetSpell()<Cr>
 
-function! CompileMarkdown()
+function! Save()
     if &filetype ==# 'markdown'
        :!~/prog/dotfiles/script/mark/./sh %
     endif
 endfunction
 
 "save pressing esc twice
-map <Esc><Esc> :w<Cr>:call CompileMarkdown()<Cr>
+map <Esc><Esc> :w<Cr>:call Save()<Cr>
 
 "Set number
 function! SetNumber()

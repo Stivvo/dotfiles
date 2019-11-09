@@ -1,0 +1,33 @@
+#!/bin/bash
+
+while true
+do
+    SEP=" | "
+    DATE="$(date +'%d-%m-%Y | %l:%M ')"
+
+    BATTERY="$(acpi | awk '{print $4}' )"
+    BATTERY="${BATTERY::len-1}"
+    B=$[${BATTERY::len-1}]
+
+    if [ $B -lt 11 ]
+    then
+        BICON=""
+    elif [ $B -lt 41 ]
+    then
+        BICON=""
+    elif [ $B -lt 70 ]
+    then
+        BICON=""
+    elif [ $B -lt 100 ]
+    then
+        BICON=""
+    else
+        BICON="" 
+    fi
+    
+    FREE="$(free used -h | awk 'FNR == 2 {print$3}')"
+
+    echo $DATE $SEP $BATTERY $BICON $SEP $FREE
+    sleep 20
+done
+
