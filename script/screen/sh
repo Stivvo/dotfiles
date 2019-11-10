@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CAT=$(/usr/bin/cat "/tmp/status.txt")
+CAT=$(cat /tmp/status.txt)
 
 if [ $1 == "r" ]
 then
