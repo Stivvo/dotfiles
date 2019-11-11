@@ -261,7 +261,7 @@ bar {
 
     # When the status_command prints a new line to stdout, swaybar updates.
     # The default just shows the current date and time.
-    status_command ~/prog/dotfiles/script/bar/sh
+    status_command ~/prog/dotfiles/script/bar/loop.sh
 
     colors {
         statusline #ffffff
@@ -277,17 +277,23 @@ bar {
     bindsym Print exec "~/prog/dotfiles/script/shot/./focused.sh"
     bindsym Control+Print exec "~/prog/dotfiles/script/shot/./all.sh"
     bindsym Shift+Print exec "~/prog/dotfiles/script/shot/./area.sh"
-    bindsym $mod+Print exec "grim -g '$(slurp -p)' -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | wl-copy" # color picker
+    bindsym $mod+Print exec "grim -g '$(slurp -p)' -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | wl-copy"
 
 ##################
 #-- Brightness --#
 ##################
 #
-    bindsym XF86MonBrightnessUp exec light -A 10
-    bindsym XF86MonBrightnessDown exec light -U 10
-    bindsym Shift+XF86MonBrightnessUp exec light -A 5
-    bindsym Shift+XF86MonBrightnessDown exec light -U 5
-    bindsym Control+XF86MonBrightnessUp exec light -A 20
-    bindsym Control+XF86MonBrightnessDown exec light -U 20
+    bindsym XF86MonBrightnessUp exec "~/prog/dotfiles/script/light/./sh A 5"
+    bindsym XF86MonBrightnessDown exec "~/prog/dotfiles/script/light/./sh U 5"
+
+##############
+#-- Volume --#
+##############
+#
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+    bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
 
 include /etc/sway/config.d/*

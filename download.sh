@@ -29,6 +29,8 @@ sudo chmod ua+x ~/prog/dotfiles/script/shot/all.sh
 sudo chmod ua+x ~/prog/dotfiles/script/shot/focused.sh
 sudo chmod ua+x ~/prog/dotfiles/script/shot/area.sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/sh
+sudo chmod ua+x ~/prog/dotfiles/script/bar/loop.sh
+sudo chmod ua+x ~/prog/dotfiles/script/light/sh
 echo "chmod +x useful scripts..."
 
 # simplenote
