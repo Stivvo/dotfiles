@@ -1,0 +1,4 @@
+#!/bin/bash
+
+light "-$1" $2
+~/prog/dotfiles/script/bar/./sh
