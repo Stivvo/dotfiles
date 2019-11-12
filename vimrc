@@ -87,10 +87,6 @@ map <leader>h :!firefox --new-window 'localhost/esercizi/%'<Cr>
 "macro
 map <space> @q
 
-"copypaste from system
-map <leader>p "+p
-map <leader>y "+y
-
 "Plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -129,3 +125,19 @@ map <leader>f :Goyo<Cr>
 let g:ctrlp_map = '<C-i>'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+"writing text
+if &filetype != 'markdown'
+    nnoremap j gj
+    nnoremap k gk
+    vnoremap j gj
+    vnoremap k gk
+endif
+
+if &filetype != 'text'
+    nnoremap j gj
+    nnoremap k gk
+    vnoremap j gj
+    vnoremap k gk
+endif
+
