@@ -4,6 +4,12 @@ rm ~/temp.html
 #echo -e "---\noutput: pdf_document\n---\n" > temp
 cat $1 > ~/temp
 echo "require(rmarkdown); render('~/temp')" | R --vanilla &> /dev/null
+
+sudo ydotool key enter &> /dev/null
+sudo ydotool key super+l &> /dev/null
+sudo ydotool key r &> /dev/null
+sudo ydotool key super+h &> /dev/null
+
 #if [ $2 == "f" ]
 #then
     #gnome-terminal -- firefox ~/temp.html
