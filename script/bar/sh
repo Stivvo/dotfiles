@@ -10,7 +10,7 @@ then
     BICON=""
 else
     BATTERY="${BATTERY::len-1}"
-    B=$[${BATTERY::len-1}]
+    B=$[${BATTERY%"%"}]
 
     if [ $B -lt 11 ]
     then
