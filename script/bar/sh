@@ -34,5 +34,26 @@ LIGHT="$(light -G)"
 
 FREE="$(free used -h | awk 'FNR == 2 {print$3}')"
 
-echo $DATE $SEP $FREE $BATTERY $BICON $SEP $LIGHT""
+VOLUME="$(amixer | awk 'FNR == 6 {print$5}')"
+VOLUME="${VOLUME#[}"
+VOLUME="${VOLUME%]}"
+V="${VOLUME%"%"}"
+V=$[$V]
+
+if [ "$(amixer | awk 'FNR == 6 {print$6}')" == "[off]" ]
+then
+    VICON=""
+else 
+    if [ $V -lt 1 ]
+    then
+        VICON=""
+    elif [ $V -lt 100 ]
+    then
+        VICON=""
+    else
+        VICON=""
+    fi
+fi
+
+echo $DATE $SEP $FREE $SEP $VOLUME $VICON $BATTERY $BICON $SEP $LIGHT""
 
