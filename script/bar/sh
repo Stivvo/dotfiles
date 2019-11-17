@@ -27,7 +27,6 @@ else
     else
         BICON="" 
     fi
-    BATTERY="${SEP} ${BATTERY}"
 fi
 
 LIGHT="$(light -G)"
@@ -55,5 +54,9 @@ else
     fi
 fi
 
-echo $DATE $SEP $FREE $SEP $VOLUME $VICON $BATTERY $BICON $SEP $LIGHT""
+if [ ! -z "$BATTERY"]
+then
+    echo $BATTERY $BICON $SEP $LIGHT
+fi
 
+echo $SEP $VOLUME $VICON $SEP $FREE $SEP $DATE $SEP
