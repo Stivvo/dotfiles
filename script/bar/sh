@@ -54,9 +54,13 @@ else
     fi
 fi
 
-if [ ! -z "$BATTERY"]
+echo $SEP
+
+if [ -z "$BATTERY" ]
 then
-    echo $BATTERY $BICON $SEP $LIGHT
+    echo ""
+else
+    echo $BATTERY $BICON $SEP $LIGHT $SEP
 fi
 
-echo $SEP $VOLUME $VICON $SEP $FREE $SEP $DATE $SEP
+echo $VOLUME $VICON $SEP $FREE $SEP $DATE $SEP
