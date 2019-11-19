@@ -30,6 +30,8 @@ else
 fi
 
 LIGHT="$(light -G)"
+LIGHT="${LIGHT::len-3}"
+LIGHT="$LIGHT%"
 
 FREE="$(free used -h | awk 'FNR == 2 {print$3}')"
 
