@@ -2,8 +2,8 @@
 
 rm ~/temp.html
 #echo -e "---\noutput: pdf_document\n---\n" > temp
-cat $1 > ~/temp
-echo "require(rmarkdown); render('~/temp')" | R --vanilla &> /dev/null
+cat $1 > ~/temp.mkd
+echo "require(rmarkdown); render('~/temp.mkd')" | R --vanilla &> /dev/null
 
 sudo ydotool key enter &> /dev/null
 sudo ydotool key super+l &> /dev/null
