@@ -221,10 +221,13 @@
     # default_border none
     # default_border none
     
-    default_border pixel 3
+    default_border pixel 4
 
     bindsym $mod+Shift+plus gaps inner all plus 10
     bindsym $mod+Shift+minus gaps inner all minus 10
+
+    smart_borders on
+    smart_gaps on
 
 ##################
 #-- Scratchpad --#
@@ -283,10 +286,20 @@ bar {
 
     colors {
         statusline #ffffff
-        background #323232
+        background #000000
         inactive_workspace #32323200 #32323200 #5c5c5c
+        focused_workspace #FFFFFF #4E9C00 #FFFFFF
     }
 }
+
+##############
+#-- Colors --#
+##############
+#
+    client.focused #4E9C00 #4E9C00 #FFFFFF #FFFFFF #4E9C00 
+    client.focused_inactive #1B3600 #1B3600 #888888 #FFFFFF #1B3600 
+    client.unfocused #333333 #333333 #888888 #FFFFFF #333333 
+    client.urgent #C20000 #C20000 #FFFFFF #FFFFFF #C20000 
 
 ###################
 #-- Screenshots --#

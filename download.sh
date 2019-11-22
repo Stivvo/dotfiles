@@ -48,7 +48,7 @@ fi
 # i3
 if [ ! -z $(ls ~/.config/ | /usr/bin/grep "i3") ]
 then
-    cp ~/prog/dotfiles/config ~/.config/i3/config
+    cp ~/prog/dotfiles/i3 ~/.config/i3/config
     echo "i3 config..."
 fi
 
