@@ -84,6 +84,12 @@
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Start firefox
+    bindsym $mod+i exec firefox
+
+    # Start vifm
+    bindsym $mod+o exec gnome-terminal -- vifm
+
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
     # Despite the name, also works for non-floating windows.
@@ -193,6 +199,16 @@
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+###############
+#-- Borders --#
+###############
+#
+    gaps inner 10
+    gaps outer 10
+
+    default_border none
+    default_border none
 
 ##################
 #-- Scratchpad --#
