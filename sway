@@ -46,6 +46,15 @@
     bindsym $mod+m exec "~/prog/dotfiles/script/screen/./sh s"
     bindsym $mod+Shift+m exec "~/prog/dotfiles/script/screen/./chOut.sh"
 
+# Move workspace to screen 1
+    bindsym $mod+Shift+left move workspace to left
+# Move workspace to screeen 2
+    bindsym $mod+Shift+right move workspace to right
+# Focus screen 1
+    bindsym $mod+left focus output left
+# Focus screeen 2
+    bindsym $mod+right focus output right
+
 ##########################
 #-- Idle configuration --#
 ##########################
@@ -165,13 +174,12 @@
     bindsym $mod+Shift+8 move container to workspace $ws8
     bindsym $mod+Shift+9 move container to workspace $ws9
     bindsym $mod+Shift+0 move container to workspace $ws10
-# Move workspace to screen 1
-    bindsym $mod+Alt+h move workspace to left
-# Move workspace to screeen 2
-    bindsym $mod+Alt+l move workspace to right
 # Worspace back and forth
     workspace back_and_forth yes
     bindsym $mod+u workspace back_and_forth
+# Workspace next and prev
+    bindsym $mod+Alt+h workspace prev
+    bindsym $mod+Alt+l workspace next
 
 ####################
 #-- Layout stuff --#
