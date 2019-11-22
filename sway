@@ -218,6 +218,16 @@
     # Move focus to the parent container
     bindsym $mod+a focus parent
 
+###############
+#-- Borders --#
+###############
+#
+    gaps inner 10
+    gaps outer 10
+
+    default_border none
+    default_border none
+
 ##################
 #-- Scratchpad --#
 ##################
