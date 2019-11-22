@@ -160,27 +160,9 @@
     bindsym $mod+Shift+9 move container to workspace $ws9
     bindsym $mod+Shift+0 move container to workspace $ws10
 # Move workspace to screen 1
-    bindsym $mod+Ctrl+1 "[workspace=$ws1]" to output $m1
-    bindsym $mod+Ctrl+2 "[workspace=$ws2]" to output $m1
-    bindsym $mod+Ctrl+3 "[workspace=$ws3]" to output $m1
-    bindsym $mod+Ctrl+4 "[workspace=$ws4]" to output $m1
-    bindsym $mod+Ctrl+5 "[workspace=$ws5]" to output $m1
-    bindsym $mod+Ctrl+6 "[workspace=$ws6]" to output $m1
-    bindsym $mod+Ctrl+7 "[workspace=$ws7]" to output $m1
-    bindsym $mod+Ctrl+8 "[workspace=$ws8]" to output $m1
-    bindsym $mod+Ctrl+9 "[workspace=$ws9]" to output $m1
-    bindsym $mod+Ctrl+0 "[workspace=$ws10]" to output $m1
+    bindsym $mod+Ctrl+1 move workspace to output $m1
 # Move workspace to screeen 2
-    bindsym $mod+Alt+1 "[workspace=$ws1]" to output $m2
-    bindsym $mod+Alt+2 "[workspace=$ws2]" to output $m2
-    bindsym $mod+Alt+3 "[workspace=$ws3]" to output $m2
-    bindsym $mod+Alt+4 "[workspace=$ws4]" to output $m2
-    bindsym $mod+Alt+5 "[workspace=$ws5]" to output $m2
-    bindsym $mod+Alt+6 "[workspace=$ws6]" to output $m2
-    bindsym $mod+Alt+7 "[workspace=$ws7]" to output $m2
-    bindsym $mod+Alt+8 "[workspace=$ws8]" to output $m2
-    bindsym $mod+Alt+9 "[workspace=$ws9]" to output $m2
-    bindsym $mod+Alt+0 "[workspace=$ws10]" to output $m2
+    bindsym $mod+Alt+1 move workspace to output $m2
 # Worspace back and forth
     workspace back_and_forth yes
     bindsym $mod+u workspace back_and_forth
