@@ -166,9 +166,9 @@
     bindsym $mod+Shift+9 move container to workspace $ws9
     bindsym $mod+Shift+0 move container to workspace $ws10
 # Move workspace to screen 1
-    bindsym $mod+Ctrl+1 move workspace to output $m1
+    bindsym $mod+Alt+h move workspace to left
 # Move workspace to screeen 2
-    bindsym $mod+Alt+1 move workspace to output $m2
+    bindsym $mod+Alt+l move workspace to right
 # Worspace back and forth
     workspace back_and_forth yes
     bindsym $mod+u workspace back_and_forth
@@ -252,6 +252,8 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+for_window [instance="__focused__"] border normal
 
 ##################
 #-- Status Bar --#
