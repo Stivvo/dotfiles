@@ -178,8 +178,11 @@
     workspace back_and_forth yes
     bindsym $mod+u workspace back_and_forth
 # Workspace next and prev
-    bindsym $mod+Alt+h workspace prev
-    bindsym $mod+Alt+l workspace next
+    bindsym Ctrl+Alt+h workspace prev
+    bindsym Ctrl+Alt+l workspace next
+# Move window to workspace next and prev
+    bindsym Ctrl+Alt+Shift+h move container to workspace prev
+    bindsym Ctrl+Alt+Shift+l move container to workspace next
 
 ####################
 #-- Layout stuff --#
@@ -213,10 +216,15 @@
 ###############
 #
     gaps inner 10
-    gaps outer 10
+    gaps outer 0
 
-    default_border none
-    default_border none
+    # default_border none
+    # default_border none
+    
+    default_border pixel 3
+
+    bindsym $mod+Shift+plus gaps inner all plus 10
+    bindsym $mod+Shift+minus gaps inner all minus 10
 
 ##################
 #-- Scratchpad --#
@@ -261,8 +269,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-for_window [instance="__focused__"] border normal
-
 ##################
 #-- Status Bar --#
 ##################
@@ -306,6 +312,5 @@ bar {
     bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
 
 include /etc/sway/config.d/*
