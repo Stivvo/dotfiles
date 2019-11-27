@@ -58,3 +58,5 @@ then
     cp ~/prog/dotfiles/sway ~/.config/sway/config
     echo "sway config..."
 fi
+
+cp ~/prog/dotfiles/vifmrc ~/.config/vifm/vifmrc
