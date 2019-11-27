@@ -31,6 +31,8 @@ sudo chmod ua+x ~/prog/dotfiles/script/shot/area.sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/loop.sh
 sudo chmod ua+x ~/prog/dotfiles/script/light/sh
+sudo chmod ua+x ~/prog/dotfiles/script/vifm/vifmimg
+sudo chmod ua+x ~/prog/dotfiles/script/vifm/vifmrun
 echo "chmod +x useful scripts..."
 
 # simplenote
@@ -59,4 +61,9 @@ then
     echo "sway config..."
 fi
 
+# vifm
 cp ~/prog/dotfiles/vifmrc ~/.config/vifm/vifmrc
+cp ~/prog/dotfiles/script/vifm/vifmimg ~/.config/vifm/scripts/
+cp ~/prog/dotfiles/script/vifm/vifmrun ~/.config/vifm/scripts/
+
+
