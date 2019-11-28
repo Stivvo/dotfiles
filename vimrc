@@ -58,14 +58,21 @@ function! SetSpell()
 endfunction
 map <leader>s :call SetSpell()<Cr>
 
-function! Save()
+function Save(browser)
+    f!
     if &filetype ==# 'markdown'
-       :!~/prog/dotfiles/script/mark/./sh %
+        if a:browser ==# 'yes'
+            !~/prog/dotfiles/script/mark/./sh % "f"
+        else
+            !~/prog/dotfiles/script/mark/./sh %
+        endif
     endif
 endfunction
 
 "save pressing esc twice
-map <Esc><Esc> :w<Cr>:call Save()<Cr>
+map <Esc><Esc> :w<Cr>:call Save('no')<Cr>
+" compile markdown and open with firefox
+map <leader>m :w<Cr>:call Save('yes')<Cr>
 
 "Set number
 function! SetNumber()
