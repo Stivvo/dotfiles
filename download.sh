@@ -66,4 +66,4 @@ cp ~/prog/dotfiles/vifmrc ~/.config/vifm/vifmrc
 cp ~/prog/dotfiles/script/vifm/vifmimg ~/.config/vifm/scripts/
 cp ~/prog/dotfiles/script/vifm/vifmrun ~/.config/vifm/scripts/
 
-
+mkdir ~/.cache/markdown/
