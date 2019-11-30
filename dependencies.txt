@@ -22,8 +22,15 @@ htop
 dia
 vifm
 alsa
+alsamixergui
 pavucontrol
 lxappeareance
 lsd
 nerdfont
 awesome-font
+most
+vifm
+cmake
+xorg-xwayland
+python
+kava-openjdk
