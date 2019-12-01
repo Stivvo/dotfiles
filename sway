@@ -105,6 +105,11 @@ $mod+Shift+c reload
     --release $mod+Shift+s exec "systemctl suspend"
 # Shutdown
     --release $mod+Shift+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'poweroff'
+# Special keys
+    XF86Search exec firefox
+    XF86Calculator exec gnome-calculator
+    XF86Explorer exec gnome-terminal -- vifm
+    XF86Tools exec intellide
 }
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
