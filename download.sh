@@ -35,6 +35,8 @@ sudo chmod ua+x ~/prog/dotfiles/script/bar/loop.sh
 sudo chmod ua+x ~/prog/dotfiles/script/light/sh
 sudo chmod ua+x ~/prog/dotfiles/script/vifm/vifmimg
 sudo chmod ua+x ~/prog/dotfiles/script/vifm/vifmrun
+sudo chmod ua+x ~/prog/dotfiles/script/intellide
+sudo cp ~/prog/dotfiles/script/intellide /usr/bin/
 echo "chmod +x useful scripts..."
 
 # simplenote
