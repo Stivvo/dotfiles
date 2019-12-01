@@ -9,6 +9,8 @@ cp .snclirc ~/.
 echo "snclirc..."
 cp config.fish ~/.config/fish/.
 echo "config.fish..."
+cp bashrc ~/.bashrc
+echo "bashrc..."
 
 # commands
 sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)

@@ -2,11 +2,27 @@
 # ~/.bashrc
 #
 
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 #paths
-export PS1="\[\033[38;5;214m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\][\[$(tput sgr0)\]\[\033[38;5;38m\]\@\[$(tput sgr0)\]\[\033[38;5;15m\]]\w\[$(tput sgr0)\]\[\033[38;5;214m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
 export PATH=/home/stefano/bin/:$PATH
 export HISTCONTROL=ignoredups
 
@@ -45,3 +61,5 @@ alias power='sudo ~/Dropbox/script/./power.sh'
 alias win='sudo efibootmgr -n4 && sudo reboot'
 alias rcupload='~/Dropbox/script/up/./upload.sh'
 alias rcdownload='~/Dropbox/script/up/./download.sh'
+
+export _JAVA_AWT_WM_NONREPARENTING=1
