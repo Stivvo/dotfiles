@@ -2,9 +2,10 @@
 
 P="/home/stefano/.cache/markdown/"
 #echo -e "---\noutput: pdf_document\n---\n" > temp
-F="$(cat $1 | head -n 1 | awk '{print $2}')"
+F="$(cat $1 | head -n 1)"
+F=${F#"# "}
+F=$(echo "${P}${F}.mkd" | sed "s/ //g")
 echo $F
-F="${P}${F}.mkd"
 touch $F
 cat $1 > $F
 echo "require(rmarkdown); render('${F}')" | R --vanilla &> /dev/null
@@ -16,5 +17,5 @@ sudo ydotool key super+h &> /dev/null
 
 if [ "$2" == "f" ]
 then
-    gnome-terminal -- firefox --new-window ${F%.mkd}.html &> /dev/null
+    gnome-terminal -- firefox --new-window "${F%.mkd}.html" &> /dev/null
 fi
