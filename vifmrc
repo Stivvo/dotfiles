@@ -180,7 +180,7 @@ fileviewer *.pdf
         " \ vifmimg pdfpreview %px %py %pw %ph %c
         " \ %pc
         " \ vifmimg clear
-        pdftotext -nopgbrk %c - " pdftotext 
+        \ pdftotext -nopgbrk %c - " pdftotext 
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
