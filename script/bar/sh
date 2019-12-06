@@ -33,6 +33,9 @@ LIGHT="$(light -G)"
 LIGHT="${LIGHT::len-3}"
 LIGHT="$LIGHT%"
 
+FREQ=$(lscpu | grep -i mhz | awk 'FNR == 1 {print$3}')
+let FREQ=FREQ/=1000
+
 FREE="$(free used -h | awk 'FNR == 2 {print$3}')"
 
 VOLUME="$(amixer | awk 'FNR == 6 {print$5}')"
@@ -65,4 +68,4 @@ else
     echo $BATTERY $BICON $SEP $LIGHT $SEP
 fi
 
-echo $VOLUME $VICON $SEP $FREE $SEP $DATE $SEP
+echo $VOLUME $VICON $SEP $FREQ $SEP $FREE $SEP $DATE $SEP
