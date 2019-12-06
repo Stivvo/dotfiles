@@ -177,10 +177,10 @@ command! reload :write | restart
 " Pdf
 filextype *.pdf zathura %c %i &, apvlv %c, xpdf %c
 fileviewer *.pdf
-        \ vifmimg pdfpreview %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
-        " pdftotext -nopgbrk %c - " pdftotext 
+        " \ vifmimg pdfpreview %px %py %pw %ph %c
+        " \ %pc
+        " \ vifmimg clear
+        \ pdftotext -nopgbrk %c - 
 
 " PostScript
 filextype *.ps,*.eps,*.ps.gz
@@ -219,10 +219,10 @@ filextype *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
           \*.fl[icv],*.m2v,*.mov,*.webm,*.ts,*.mts,*.m4v,*.r[am],*.qt,*.divx,
           \*.as[fx]
-        \ vifmimg videopreview %px %py %pw %ph %c 
-        \ %pc 
-        \ vifmimg clear
-         " \ ffprobe -pretty %c 2>&1
+        " \ vifmimg videopreview %px %py %pw %ph %c 
+        " \ %pc 
+        " \ vifmimg clear
+         \ ffprobe -pretty %c 2>&1
 
 " Web
 filextype *.html,*.htm
@@ -249,15 +249,16 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ gpicview %c,
         \ {View in shotwell}
         \ shotwell,
+        \ gthumb %c &
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ vifmimg draw %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
-        " \ identify %f
+        " \ vifmimg draw %px %py %pw %ph %c
+        " \ %pc
+        " \ vifmimg clear
+        \ identify %f
 fileviewer *.gif
-        \ vifmimg gifpreview %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
+        " \ vifmimg gifpreview %px %py %pw %ph %c
+        " \ %pc
+        " \ vifmimg clear
 
 " OpenRaster
 filextype *.ora
