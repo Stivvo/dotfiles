@@ -1,6 +1,6 @@
 let mapleader =" "
 
-"go to previous line
+"go to last line
 if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
@@ -11,9 +11,9 @@ filetype indent on
 filetype plugin on
 filetype plugin indent on
 function! Kformat()
-    let &l:lineNumber = line('.')
-    :norm gg=G<Cr>
-    :&l:lineNumber<Cr>
+    let line = line('.')
+    :norm gg=G
+    :exec line
 endfunction
 map <F5> :call Kformat()<Cr>
 
@@ -45,7 +45,7 @@ set ruler
 set colorcolumn=80
 
 "search
-set hlsearch
+set nohlsearch
 set incsearch
 set showmatch
 map <F4> :set hlsearch!<Cr>
