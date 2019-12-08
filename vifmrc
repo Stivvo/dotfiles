@@ -243,12 +243,10 @@ fileviewer *.[1-8] man ./%c | col -b
 
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-        \ {View in sxiv}
         \ sxiv %f,
-        \ {View in gpicview}
         \ gpicview %c,
         \ {View in shotwell}
-        \ shotwell,
+        \ shotwell %c &,
         \ gthumb %c &
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         " \ vifmimg draw %px %py %pw %ph %c

@@ -34,3 +34,4 @@ cmake
 xorg-xwayland
 python
 kava-openjdk
+mako

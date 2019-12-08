@@ -1,10 +1,21 @@
 let mapleader =" "
 
-"basics
+"go to last line
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+"indent
+set autoindent
 filetype indent on
 filetype plugin on
 filetype plugin indent on
-set number norelativenumber
+function! Kformat()
+    let line = line('.')
+    :norm gg=G
+    :exec line
+endfunction
+map <F5> :call Kformat()<Cr>
 
 "splits
 set splitbelow splitright
@@ -18,7 +29,6 @@ map <C-j> <C-w>j
 map <leader>k :tabp<Cr>
 map <leader>j :tabn<Cr>
 
-"set omnifunc=syntaxcomplete#Complete
 set showmode
 set showcmd
 syntax on
@@ -30,12 +40,15 @@ set so=8
 
 "text width
 set ignorecase
-"set hlsearch
-"set incsearch
-"set showmatch
 set ruler
 "set textwidth=80
 set colorcolumn=80
+
+"search
+set nohlsearch
+set incsearch
+set showmatch
+map <F4> :set hlsearch!<Cr>
 
 "complention
 set wildmenu
@@ -48,15 +61,7 @@ set smarttab
 set shiftwidth=4
 
 "spelling
-function! SetSpell() 
-    if &spell == 1
-        set spell nospell
-    else
-        set spell spell spelllang=it
-    endif
-    echo &spell
-endfunction
-map <leader>s :call SetSpell()<Cr>
+map <F6> :set spell! spelllang=it<Cr>
 
 function Save(browser)
     f!
@@ -74,19 +79,10 @@ map <Esc><Esc> :w<Cr>:call Save('no')<Cr>
 " compile markdown and open with firefox
 map <leader>m :w<Cr>:call Save('yes')<Cr>
 
-"Set number
-function! SetNumber()
-    if &relativenumber == 1
-        set number relativenumber norelativenumber
-    else
-        set number relativenumber relativenumber
-    endif
-endfunction
-map <leader>n :call SetNumber()<Cr>
-map <leader><S-n> :set nonumber norelativenumber<Cr>
-
-"open with gedit
-map <leader>g :!gedit<space>%<Cr>
+"numbers
+set number norelativenumber
+map <F2> :set number relativenumber!<Cr>
+map <F3> :set nonumber!<Cr>
 
 "open php
 map <leader>h :!firefox --new-window 'localhost/esercizi/%'<Cr>
@@ -96,9 +92,9 @@ map <space> @q
 
 "Plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 call plug#begin('~/.vim/plugged')
 "utility
@@ -129,7 +125,6 @@ let g:goyo_margin_bottom = 2
 map <leader>f :Goyo<Cr>
 
 "ctrlp
-let g:ctrlp_map = '<C-i>'
 let g:ctrlp_working_path_mode = 'ra'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
