@@ -61,7 +61,19 @@ set smarttab
 set shiftwidth=4
 
 "spelling
-map <F6> :set spell! spelllang=it<Cr>
+function SetSpell() 
+    if &spell == 0
+        set spell spelllang=it
+    else
+        if &spelllang ==# 'it'
+            set nospell
+            set spell spelllang=en
+        else
+            set nospell
+        endif
+    endif
+endfunction
+map <F6> :call SetSpell()<Cr>
 
 function Save(browser)
     f!
@@ -81,8 +93,8 @@ map <leader>m :w<Cr>:call Save('yes')<Cr>
 
 "numbers
 set number norelativenumber
-map <F2> :set number relativenumber!<Cr>
-map <F3> :set nonumber!<Cr>
+map <F2> :set number! norelativenumber<Cr>
+map <F3> :set number relativenumber!<Cr>
 
 "open php
 map <leader>h :!firefox --new-window 'localhost/esercizi/%'<Cr>
