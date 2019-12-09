@@ -25,7 +25,6 @@ map <C-k> <C-w>k
 map <C-j> <C-w>j
 
 "tabs
-":tabe <filepath> to open a tab or C-p + <filepath> + C-t
 map <leader>k :tabp<Cr>
 map <leader>j :tabn<Cr>
 
@@ -50,7 +49,7 @@ set incsearch
 set showmatch
 map <F4> :set hlsearch!<Cr>
 
-"complention
+"completion
 set wildmenu
 
 "indent
@@ -86,7 +85,7 @@ function Save(browser)
     endif
 endfunction
 
-"save pressing esc twice
+"save pressing ESC twice
 map <Esc><Esc> :w<Cr>:call Save('no')<Cr>
 " compile markdown and open with firefox
 map <leader>m :w<Cr>:call Save('yes')<Cr>
@@ -138,20 +137,9 @@ map <leader>f :Goyo<Cr>
 
 "ctrlp
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_map = '<F7>'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
-"writing text
-if &filetype != 'markdown'
-    nnoremap j gj
-    nnoremap k gk
-    vnoremap j gj
-    vnoremap k gk
-endif
-
-if &filetype != 'text'
-    nnoremap j gj
-    nnoremap k gk
-    vnoremap j gj
-    vnoremap k gk
-endif
-
+"virtual lines with markdown
+autocmd Filetype markdown nnoremap j gj
+autocmd Filetype markdown nnoremap k gk
