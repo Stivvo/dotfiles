@@ -78,9 +78,9 @@ function Save(browser)
     f!
     if &filetype ==# 'markdown'
         if a:browser ==# 'yes'
-            !~/prog/dotfiles/script/mark/./sh % "f"
+            !~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null
         else
-            !~/prog/dotfiles/script/mark/./sh %
+            !~/prog/dotfiles/script/mark/./sh % >> /dev/null
         endif
     endif
 endfunction
