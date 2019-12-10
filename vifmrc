@@ -116,6 +116,7 @@ set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 
 " :mark mark /full/directory/path [filename]
 
+mark o /opt/lampp/htdocs/esercizi
 mark h ~/
 mark s ~/scuola
 mark i ~/scuola/info
@@ -434,6 +435,9 @@ set vifminfo=dhistory,savedirs,chistory,state,tui,shistory,
 
 " Start shell in current directory
 nnoremap s :shell<cr>
+
+"Open a new terminal in the current directory
+nnoremap gt :!gnome-terminal<cr>
 
 " Display sorting dialog
 nnoremap S :sort<cr>
