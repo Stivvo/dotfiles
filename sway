@@ -339,11 +339,11 @@ bindsym {
 #-- Window Rules --#
 ####################
 #
-   for_window [class="com-code-Login"] floating enable
-   for_window [class="com-code-Login"] border normal
+   for_window [class="code-Login"] floating enable
+   for_window [class="code-Login"] border normal
 
-   for_window [class="com-code-Client"] floating enable
-   for_window [class="com-code-Client"] border normal
+   for_window [class="code-Client"] floating enable
+   for_window [class="code-Client"] border normal
 
 
 include /etc/sway/config.d/*
