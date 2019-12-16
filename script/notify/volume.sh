@@ -25,16 +25,18 @@ STATE=`amixer -D pulse sget Master          | \
     egrep -m 1 'Playback.*?\[o' | \
     egrep -o '\[o.+\]'`
 
+ICONPATH="/home/stefano/prog/dotfiles/script/notify/"
+
 # Have a different symbol for varying volume levels:
 if [[ $STATE != '[off]' ]]; then
     if [ "${VOLUME}" == "0" ]; then
-        ICON=~/.config/icons/vol-mute.png
+        ICON="${ICONPATH}vol-mute.png"
     elif [ "${VOLUME}" -lt "33" ] && [ $VOLUME -gt "0" ]; then
-        ICON=~/.config/icons/vol-low.png
+        ICON="${ICONPATH}vol-low.png"
     elif [ "${VOLUME}" -lt "90" ] && [ $VOLUME -ge "33" ]; then
-        ICON=~/.config/icons/vol-med.png
+        ICON="${ICONPATH}vol-med.png"
     else
-        ICON=~/.config/icons/vol-high.png
+        ICON="${ICONPATH}vol-high.png"
     fi
 
     notify-send.sh "Volume: $VOLUME%" \
@@ -42,14 +44,16 @@ if [[ $STATE != '[off]' ]]; then
         -t 2000 \
         -i ${ICON} \
         -h int:value:${VOLUME} \
-        -h string:synchronous:volume-change
+        -u critical \
+        -h string:synchronous:volume-change \
 
 # If volume is muted, display the mute sybol:
 else
     notify-send.sh "Muted (volume: $VOLUME%)" \
         --replace-file=/tmp/audio-notification \
         -t 2000 \
-        -i ~/.config/icons/vol-mute.png \
+        -i "${ICONPATH}vol-mute.png" \
         -h int:value:${VOLUME} \
+        -u critical \
         -h string:synchronous:volume-change
 fi

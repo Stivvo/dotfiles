@@ -320,8 +320,8 @@ bindsym {
 ##################
 #
 bindsym {
-    XF86MonBrightnessUp exec "~/prog/dotfiles/script/light/./sh A 5"
-    XF86MonBrightnessDown exec "~/prog/dotfiles/script/light/./sh U 5"
+    XF86MonBrightnessUp exec "~/prog/dotfiles/script/notify/./light.sh A 5"
+    XF86MonBrightnessDown exec "~/prog/dotfiles/script/notify/./light.sh U 5"
 }
 
 ##############
@@ -329,10 +329,10 @@ bindsym {
 ##############
 #
 bindsym {
-    XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-    XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-    XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-    XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+    XF86AudioRaiseVolume exec "~/prog/dotfiles/script/notify/./volume.sh +5%"
+    XF86AudioLowerVolume exec "~/prog/dotfiles/script/notify/./volume.sh -5%"
+    XF86AudioMute exec "~/prog/dotfiles/script/notify/./volume.sh audiomute"
+    XF86AudioMicMute exec "~/prog/dotfiles/script/notify/./volume.sh micmute"
 }
 
 ####################
