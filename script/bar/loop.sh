@@ -3,6 +3,6 @@
 while true
 do
     echo $(~/prog/dotfiles/script/bar/./sh)
-    sleep 20
+    sleep 10
 done
 

@@ -1,18 +1,30 @@
 #!/bin/bash
 
-light "-$1" $2
+LIGHTFILE="/home/stefano/prog/dotfiles/script/notify/light.txt"
+BRIGHTNESS=$(cat $LIGHTFILE)
 
-BRIGHTNESS=$(light -G);
-PCT=$(echo $BRIGHTNESS | awk '{printf "%4.0f\n",($1)}' | tr -d '[:space:]')
+if [ "$1" == "u" ]
+then
+    let BRIGHTNESS+=5
+elif [ "$1" == "d" ]
+then
+    let BRIGHTNESS-=5
+fi
 
-# Round the brightness percentage:
-LC_ALL=C
+if [ $BRIGHTNESS -ge "100" ]
+then
+    BRIGHTNESS="100"
+elif [ $BRIGHTNESS -le "0" ]
+then
+    BRIGHTNESS="0"
+fi
 
-# Send the notification with the icon:
-notify-send.sh "Brightness ${PCT}%" \
-    --replace-file=/tmp/brightness-notification \
+echo $BRIGHTNESS > $LIGHTFILE
+light -S $BRIGHTNESS
+
+notify-send.sh  "Brightness ${BRIGHTNESS}%"  \
     -t 2000 \
     --icon /home/stefano/prog/dotfiles/script/notify/brightness-icon.png \
-    -h int:value:${PCT} \
-    -u critical \
-    -h string:synchronous:brightness-change
+    -h int:value:${BRIGHTNESS} \
+    --replace-file=/tmp/brightness-notification \
+    -h string:synchronous:brightness-change \

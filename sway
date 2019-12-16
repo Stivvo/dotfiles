@@ -320,8 +320,8 @@ bindsym {
 ##################
 #
 bindsym {
-    XF86MonBrightnessUp exec "~/prog/dotfiles/script/notify/./light.sh A 5"
-    XF86MonBrightnessDown exec "~/prog/dotfiles/script/notify/./light.sh U 5"
+    XF86MonBrightnessUp exec "~/prog/dotfiles/script/notify/./light.sh u"
+    XF86MonBrightnessDown exec "~/prog/dotfiles/script/notify/./light.sh d"
 }
 
 ##############
