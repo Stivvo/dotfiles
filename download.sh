@@ -59,11 +59,13 @@ then
 fi
 
 # sway
-if [ ! -z $(ls ~/.config/ | /usr/bin/grep "sway") ]
-then
+#if [ ! -z $(ls ~/.config/ | /usr/bin/grep "sway") ]
+#then
     cp ~/prog/dotfiles/sway ~/.config/sway/config
     echo "sway config..."
-fi
+    cp ~/prog/dotfiles/swaylock ~/.config/
+    echo "swaylock..."
+#fi
 
 # vifm
 cp ~/prog/dotfiles/vifmrc ~/.config/vifm/vifmrc

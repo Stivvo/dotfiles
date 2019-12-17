@@ -112,6 +112,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kien/ctrlp.vim'
+Plug 'vifm/vifm.vim'
 "Programming
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
