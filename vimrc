@@ -113,6 +113,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kien/ctrlp.vim'
 Plug 'vifm/vifm.vim'
+Plug 'scrooloose/nerdtree'
 "Programming
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
@@ -140,6 +141,10 @@ map <leader>f :Goyo<Cr>
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_map = '<F7>'
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+"nerdtree
+map <F8> :NERDTreeToggle<CR>
+autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
 
 "virtual lines with markdown
 autocmd Filetype markdown nnoremap j gj
