@@ -119,8 +119,9 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 "languages
-Plug 'bazelbuild/vim-bazel'
-Plug 'justmao945/vim-clang'
+"Plug 'bazelbuild/vim-bazel'
+"Plug 'justmao945/vim-clang'
+Plug 'valloric/youcompleteme'
 Plug 'othree/xml.vim'
 "Git
 Plug 'airblade/vim-gitgutter'
