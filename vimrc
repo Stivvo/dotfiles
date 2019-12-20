@@ -124,6 +124,8 @@ Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme'
 Plug 'othree/xml.vim'
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'ap/vim-css-color'
+Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 "other
 Plug 'airblade/vim-gitgutter'
 Plug 'google/vim-maktaba'

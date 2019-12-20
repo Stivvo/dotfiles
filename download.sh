@@ -32,7 +32,8 @@ sudo chmod ua+x ~/prog/dotfiles/script/shot/focused.sh
 sudo chmod ua+x ~/prog/dotfiles/script/shot/area.sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/loop.sh
-sudo chmod ua+x ~/prog/dotfiles/script/light/sh
+sudo chmod ua+x ~/prog/dotfiles/script/notify/light.sh
+sudo chmod ua+x ~/prog/dotfiles/script/notify/volume.sh
 sudo chmod ua+x ~/prog/dotfiles/script/vifm/vifmimg
 sudo chmod ua+x ~/prog/dotfiles/script/vifm/vifmrun
 sudo chmod ua+x ~/prog/dotfiles/script/intellide
@@ -73,3 +74,5 @@ cp ~/prog/dotfiles/script/vifm/vifmimg ~/.config/vifm/scripts/
 cp ~/prog/dotfiles/script/vifm/vifmrun ~/.config/vifm/scripts/
 
 mkdir ~/.cache/markdown/
+mkdir ~/.cache/markdown/mkd
+mkdir ~/.cache/markdown/html
