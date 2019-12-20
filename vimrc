@@ -136,6 +136,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 map <F8> :NERDTreeToggle<CR>
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
 
+"instant markdown
+let g:instant_markdown_browser = "firefox --new-window"
+
 "virtual lines with markdown
 autocmd Filetype markdown nnoremap j gj
 autocmd Filetype markdown nnoremap k gk
