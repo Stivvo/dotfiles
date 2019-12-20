@@ -123,12 +123,10 @@ Plug 'tpope/vim-surround'
 "Plug 'justmao945/vim-clang'
 Plug 'valloric/youcompleteme'
 Plug 'othree/xml.vim'
-"Git
-Plug 'airblade/vim-gitgutter'
+Plug 'nathanaelkane/vim-indent-guides'
 "other
+Plug 'airblade/vim-gitgutter'
 Plug 'google/vim-maktaba'
-"unused
-"Plug 'vimwiki/vimwiki'
 call plug#end()
 
 "goyo
