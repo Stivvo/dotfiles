@@ -74,21 +74,10 @@ function SetSpell()
 endfunction
 map <F6> :call SetSpell()<Cr>
 
-function Save(browser)
-    f!
-    if &filetype ==# 'markdown'
-        if a:browser ==# 'yes'
-            !~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null
-        else
-            !~/prog/dotfiles/script/mark/./sh % >> /dev/null
-        endif
-    endif
-endfunction
-
 "save pressing ESC twice
-map <Esc><Esc> :w<Cr>:call Save('no')<Cr>
+map <Esc><Esc> :w<Cr>
 " compile markdown and open with firefox
-map <leader>m :w<Cr>:call Save('yes')<Cr>
+map <leader>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr>
 
 "numbers
 set number norelativenumber
