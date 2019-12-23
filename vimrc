@@ -109,7 +109,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
 "languages
 "Plug 'bazelbuild/vim-bazel'
 "Plug 'justmao945/vim-clang'
@@ -143,6 +143,7 @@ autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | en
 
 "instant markdown
 let g:instant_markdown_browser = "firefox --new-window"
+let g:instant_markdown_slow = 1
 
 "virtual lines with markdown
 autocmd Filetype markdown nnoremap j gj

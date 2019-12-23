@@ -35,3 +35,10 @@ xorg-xwayland
 python
 kava-openjdk
 mako
+nodejs
+npm
+xdg-utils
+rsync
+youtube-dl
+python
+clang

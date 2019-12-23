@@ -1,12 +1,14 @@
 #!/bin/bash
 
-PATH="/home/stefano/prog/dotfiles/script/background/"
+PA="/home/stefano/prog/wallpapers/"
+P="/home/stefano/prog/dotfiles/script/background/"
 
 while true
 do
     while read LINE
     do
-        /usr/bin/feh --bg-scale $LINE
-        /usr/bin/sleep $(/usr/bin/cat ${PATH}time)
-    done < ${PATH}list
+        echo $LINE
+        swaymsg "output "*" bg "${PA}${LINE}" fill"
+        /usr/bin/sleep $(/usr/bin/cat ${P}time)
+    done < ${P}list
 done
