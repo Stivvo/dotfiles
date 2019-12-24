@@ -8,7 +8,7 @@ do
     while read LINE
     do
         echo $LINE
-        swaymsg "output "*" bg "${PA}${LINE}" fill"
+        swaymsg "output "*" bg "${PA}${LINE}" fit"
         /usr/bin/sleep $(/usr/bin/cat ${P}time)
     done < ${P}list
 done
