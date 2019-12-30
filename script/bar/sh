@@ -34,7 +34,8 @@ LIGHT="${LIGHT::len-3}"
 LIGHT="$LIGHT%"
 
 FREQ=$(lscpu | grep -i mhz | awk 'FNR == 1 {print$3}')
-let FREQ=FREQ/=1000
+FREQ="${FREQ::len-4}"
+FREQ="${FREQ}MHz"
 
 FREE="$(free used -h | awk 'FNR == 2 {print$3}')"
 
