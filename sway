@@ -36,7 +36,7 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 #-- Output configuration --#
 ############################
 #
-exec "~/prog/dotfiles/script/background/./sh"
+exec_always "~/prog/dotfiles/script/background/./sh"
 exec_always "~/prog/dotfiles/script/screen/./sh r"
 
 set $m1 = DP-2
@@ -218,7 +218,7 @@ gaps {
     outer 0
 }
 
-default_border pixel 4
+default_border pixel 3
 
 bindsym {
     $mod+Shift+plus gaps inner all plus 10
@@ -289,7 +289,7 @@ bar {
     colors {
         statusline #ffffff
         background #000000
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        inactive_workspace #4E9C00 #000000 #4E9C00
         focused_workspace #FFFFFF #4E9C00 #FFFFFF
     }
 }

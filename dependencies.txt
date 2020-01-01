@@ -1,4 +1,5 @@
 wl-clipboard
+clipman
 grim
 slurp
 sway
@@ -42,3 +43,5 @@ rsync
 youtube-dl
 python
 clang
+upower
+wofi
