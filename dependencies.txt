@@ -45,3 +45,5 @@ python
 clang
 upower
 wofi
+sway-launcher-desktop
+notify-send.sh

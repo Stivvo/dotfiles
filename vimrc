@@ -121,7 +121,6 @@ Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 "other
 Plug 'airblade/vim-gitgutter'
 Plug 'google/vim-maktaba'
-Plug 'yuttie/comfortable-motion.vim'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 

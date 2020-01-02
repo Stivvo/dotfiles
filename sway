@@ -26,11 +26,17 @@ set $left h
 set $down j
 set $up k
 set $right l
-# Your preferred terminal emulator
 set $term gnome-terminal
-# Your preferred application launcher
 # Note: it's recommended that you pass the final command to sway
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+
+#####################
+#-- sway-launcher --#
+#####################
+#
+for_window [class="URxvt" instance="launcher"] floating enable, border pixel 10, sticky enable
+set $menu exec urxvt -geometry 55x18 -name launcher -e env TERMINAL_COMMAND="urxvt -e" ~/prog/sway-launcher-desktop/sway-launcher-desktop.sh
+bindsym $mod+d exec $menu
 
 ############################
 #-- Output configuration --#
@@ -88,8 +94,6 @@ bindsym {
     $mod+Return exec $term
 # Kill focused window
     $mod+q kill
-# Start your launcher
-    $mod+d exec $menu
 # Start firefox
     $mod+i exec firefox
 # Start vifm
@@ -282,15 +286,14 @@ mode "resize" {
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-# When the status_command prints a new line to stdout, swaybar updates.
-# The default just shows the current date and time.
-    status_command ~/prog/dotfiles/script/bar/loop.sh
+    status_command ~/prog/dotfiles/script/bar/./loop.sh
 
     colors {
-        statusline #ffffff
+        statusline #FFFFFF
         background #000000
-        inactive_workspace #4E9C00 #000000 #4E9C00
+        inactive_workspace #4E9C00 #000000 #FFFFFF
         focused_workspace #FFFFFF #4E9C00 #FFFFFF
+        separator #4E9C00 
     }
 }
 
@@ -298,10 +301,10 @@ bar {
 #-- Colors --#
 ##############
 #
-client.focused #4E9C00 #4E9C00 #FFFFFF #FFFFFF #4E9C00 
-client.focused_inactive #1B3600 #1B3600 #888888 #FFFFFF #1B3600 
-client.unfocused #333333 #333333 #888888 #FFFFFF #333333 
-client.urgent #C20000 #C20000 #FFFFFF #FFFFFF #C20000 
+client.focused #4E9C00 #4E9C00 #FFFFFF #FFFFFF #4E9C00
+client.focused_inactive #1B3600 #1B3600 #888888 #FFFFFF #1B3600
+client.unfocused #333333 #333333 #888888 #FFFFFF #333333
+client.urgent #C20000 #C20000 #FFFFFF #FFFFFF #C20000
 
 ###################
 #-- Screenshots --#
