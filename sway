@@ -35,7 +35,7 @@ set $term gnome-terminal
 #####################
 #
 for_window [class="URxvt" instance="launcher"] floating enable, border pixel 10, sticky enable
-set $menu exec urxvt -geometry 55x18 -name launcher -e env TERMINAL_COMMAND="urxvt -e" ~/prog/sway-launcher-desktop/sway-launcher-desktop.sh
+set $menu exec urxvt -geometry 55x18 -name launcher -e env TERMINAL_COMMAND="urxvt -e" sway-launcher-desktop
 bindsym $mod+d exec $menu
 
 ############################
