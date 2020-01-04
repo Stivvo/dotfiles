@@ -114,9 +114,9 @@ Plug 'tpope/vim-surround'
 "Plug 'bazelbuild/vim-bazel'
 "Plug 'justmao945/vim-clang'
 Plug 'valloric/youcompleteme'
-Plug 'othree/xml.vim'
+Plug 'othree/xml.vim', {'for': ['xml', 'html']}
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'ap/vim-css-color'
+Plug 'ap/vim-css-color', {'for': 'css'} 
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 "other
 Plug 'airblade/vim-gitgutter'
