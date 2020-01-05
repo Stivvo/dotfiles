@@ -76,3 +76,6 @@ cp ~/prog/dotfiles/script/vifm/vifmrun ~/.config/vifm/scripts/
 mkdir ~/.cache/markdown/
 mkdir ~/.cache/markdown/mkd
 mkdir ~/.cache/markdown/html
+
+# install vim instant markdown
+sudo npm -g install instant-markdown-d
