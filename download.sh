@@ -55,6 +55,7 @@ mkdir ~/.config/i3
 cp ~/prog/dotfiles/i3 ~/.config/i3/config
 echo "i3 config..."
 
+# sway
 mkdir ~/.config/sway
 cp ~/prog/dotfiles/sway ~/.config/sway/config
 echo "sway config..."
