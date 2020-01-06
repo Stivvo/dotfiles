@@ -47,3 +47,5 @@ wofi
 sway-launcher-desktop
 notify-send.sh
 ly-git
+acpi
+syncthing
