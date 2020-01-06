@@ -1,15 +1,15 @@
-wl-clipboard
+wl-clipboard-git
 clipman
 grim
 slurp
-sway
-swayidle
-swaybg
-swaylock
+sway-git
+swayidle-git
+swaybg-git
+swaylock-git
 vim
 git
 fish
-light
+light-git
 R
 tk
 pandoc-citeproc
@@ -47,4 +47,4 @@ upower
 wofi
 sway-launcher-desktop
 notify-send.sh
-ly
+ly-git

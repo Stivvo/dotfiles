@@ -46,27 +46,21 @@ chmod +x ~/Sync/script/snPasswd.sh
 echo "setting username and password of simplenote..."
 
 # zathura
-if [ ! -z $(ls ~/.config/ | /usr/bin/grep "zathura") ]
-then
-    cp zathurarc ~/.config/zathura/.
-    echo "zathurarc..."
-fi
+mkdir ~/.config/zathura
+cp zathurarc ~/.config/zathura/.
+echo "zathurarc..."
 
 # i3
-if [ ! -z $(ls ~/.config/ | /usr/bin/grep "i3") ]
-then
-    cp ~/prog/dotfiles/i3 ~/.config/i3/config
-    echo "i3 config..."
-fi
+mkdir ~/.config/i3
+cp ~/prog/dotfiles/i3 ~/.config/i3/config
+echo "i3 config..."
 
-# sway
-#if [ ! -z $(ls ~/.config/ | /usr/bin/grep "sway") ]
-#then
-    cp ~/prog/dotfiles/sway ~/.config/sway/config
-    echo "sway config..."
-    cp ~/prog/dotfiles/swaylock ~/.config/
-    echo "swaylock..."
-#fi
+mkdir ~/.config/sway
+cp ~/prog/dotfiles/sway ~/.config/sway/config
+echo "sway config..."
+mkdir ~/.config/swaylock
+cp ~/prog/dotfiles/swaylock ~/.config/
+echo "swaylock..."
 
 # vifm
 cp ~/prog/dotfiles/vifmrc ~/.config/vifm/vifmrc
@@ -79,3 +73,6 @@ mkdir ~/.cache/markdown/html
 
 # install vim instant markdown
 sudo npm -g install instant-markdown-d
+
+# video group for light
+sudo usermod -a -G video $USER
