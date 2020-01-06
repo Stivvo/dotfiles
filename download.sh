@@ -51,9 +51,9 @@ cp zathurarc ~/.config/zathura/.
 echo "zathurarc..."
 
 # i3
-#mkdir ~/.config/i3
-#cp ~/prog/dotfiles/i3 ~/.config/i3/config
-#echo "i3 config..."
+mkdir ~/.config/i3
+cp ~/prog/dotfiles/i3 ~/.config/i3/config
+echo "i3 config..."
 
 mkdir ~/.config/sway
 cp ~/prog/dotfiles/sway ~/.config/sway/config
