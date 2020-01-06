@@ -17,6 +17,7 @@ alias xamppt='sudo xampp start'
 alias xamppp='sudo xampp stop'
 
 alias v='vim'
+export EDITOR=vim
 
 fish_vi_key_bindings
 

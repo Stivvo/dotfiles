@@ -41,7 +41,6 @@ npm
 xdg-utils
 rsync
 youtube-dl
-python
 clang
 upower
 wofi
