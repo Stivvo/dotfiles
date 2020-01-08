@@ -3,9 +3,9 @@ clipman
 grim
 slurp
 sway-git
-swayidle-git
+swayidle
 swaybg-git
-swaylock-git
+swaylock-fancy-git
 vim
 git
 fish
