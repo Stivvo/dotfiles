@@ -49,3 +49,4 @@ notify-send.sh
 ly-git
 acpi
 syncthing
+j4-dmenu-desktop
