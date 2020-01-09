@@ -25,6 +25,10 @@ map <C-h> <C-w>h
 map <C-l> <C-w>l
 map <C-k> <C-w>k
 map <C-j> <C-w>j
+nmap <Up> <C-w>+
+nmap <Down> <C-w>-
+nmap <Left> <C-w><
+nmap <Right> <C-w>>
 
 "tabs
 map <leader>k :tabp<Cr>
