@@ -34,10 +34,9 @@ sudo chmod ua+x ~/prog/dotfiles/script/bar/sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/loop.sh
 sudo chmod ua+x ~/prog/dotfiles/script/notify/light.sh
 sudo chmod ua+x ~/prog/dotfiles/script/notify/volume.sh
-sudo chmod ua+x ~/prog/dotfiles/script/vifm/vifmimg
-sudo chmod ua+x ~/prog/dotfiles/script/vifm/vifmrun
-sudo chmod ua+x ~/prog/dotfiles/script/intellide
-sudo cp ~/prog/dotfiles/script/intellide /usr/bin/
+sudo cp ~/prog/dotfiles/script/intellideScript/intellide /usr/bin/
+sudo cp ~/prog/dotfiles/script/intellideScript/intellide.desktop /usr/share/applications
+sudo chmod ua+x ~/usr/bin/intellide
 echo "chmod +x useful scripts..."
 
 # simplenote
