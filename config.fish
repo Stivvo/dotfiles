@@ -26,3 +26,4 @@ fish_vi_key_bindings
 set -U fish_user_paths $fish_user_paths /opt/lampp /home/stefano/.cargo/bin
 
 export _JAVA_AWT_WM_NONREPARENTING=1
+export RANGER_LOAD_DEFAULT_RC=FALSE

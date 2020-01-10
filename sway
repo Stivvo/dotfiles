@@ -27,7 +27,7 @@ set $down j
 set $up k
 set $right l
 set $term exec gnome-terminal
-set $file exec gnome-terminal -- ranger
+set $file exec urxvt -e ranger
 # Note: it's recommended that you pass the final command to sway
 set $menu j4-dmenu-desktop --term=gnome-terminal --no-generic --use-xdg-de
 bindsym $mod+d exec $menu

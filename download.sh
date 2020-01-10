@@ -34,6 +34,7 @@ sudo chmod ua+x ~/prog/dotfiles/script/bar/sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/loop.sh
 sudo chmod ua+x ~/prog/dotfiles/script/notify/light.sh
 sudo chmod ua+x ~/prog/dotfiles/script/notify/volume.sh
+sudo chmod ua+x ~/prog/dotfiles/ranger/scope.sh
 sudo cp ~/prog/dotfiles/script/intellideScript/intellide /usr/bin/
 sudo cp ~/prog/dotfiles/script/intellideScript/intellide.desktop /usr/share/applications
 sudo chmod ua+x ~/usr/bin/intellide
@@ -66,6 +67,16 @@ echo "swaylock..."
 cp ~/prog/dotfiles/vifmrc ~/.config/vifm/vifmrc
 cp ~/prog/dotfiles/script/vifm/vifmimg ~/.config/vifm/scripts/
 cp ~/prog/dotfiles/script/vifm/vifmrun ~/.config/vifm/scripts/
+echo "vifm..."
+
+# ranger
+mkdir ~/.config/ranger/
+ranger --copy-config=all
+cp ~/prog/dotfiles/ranger/rc.conf ~/.config/ranger/
+cp ~/prog/dotfiles/ranger/scope.sh ~/.config/ranger/
+echo "ranger..."
+cp ~/prog/dotfiles/Xresources ~/.Xresources
+xrdb ~/.Xresources
 
 mkdir ~/.cache/markdown/
 mkdir ~/.cache/markdown/mkd
