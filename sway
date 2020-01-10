@@ -26,7 +26,8 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term gnome-terminal
+set $term exec gnome-terminal
+set $file exec gnome-terminal -- ranger
 # Note: it's recommended that you pass the final command to sway
 set $menu j4-dmenu-desktop --term=gnome-terminal --no-generic --use-xdg-de
 bindsym $mod+d exec $menu
@@ -84,13 +85,13 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 #
 bindsym {
 # Start a terminal
-    $mod+Return exec $term
+    $mod+Return $term
 # Kill focused window
     $mod+q kill
 # Start firefox
     $mod+i exec firefox
-# Start vifm
-    $mod+o exec gnome-terminal -- vifm
+# Start file manager
+    $mod+o $file
 # Reload the configuration file
 $mod+Shift+c reload
 # Exit sway (logs you out of your Wayland session)
@@ -104,7 +105,7 @@ $mod+Shift+c reload
 # Special keys
     XF86Search exec firefox
     XF86Calculator exec gnome-calculator
-    XF86Explorer exec gnome-terminal -- vifm
+    XF86Explorer $file
     XF86Tools exec intellide
 }
 # Drag floating windows by holding down $mod and left mouse button.
