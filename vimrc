@@ -37,7 +37,7 @@ map <leader>j :tabn<Cr>
 set showmode
 set showcmd
 syntax on
-set mouse=i
+set mouse=a
 set confirm
 
 "cursor above 8 lines from the bottom of the screen
@@ -145,7 +145,8 @@ map <F8> :NERDTreeToggle<CR>
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
 
 "instant markdown
-let g:instant_markdown_browser = "firefox --new-window"
+let g:instant_markdown_browser = "firefox --private-window"
+let g:instant_markdown_autoscroll = 1
 let g:instant_markdown_slow = 1
 
 "virtual lines with markdown

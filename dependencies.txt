@@ -53,3 +53,5 @@ j4-dmenu-desktop
 urxvt-unicode
 ranger
 w3m
+imv
+mpv

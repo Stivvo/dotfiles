@@ -74,6 +74,7 @@ mkdir ~/.config/ranger/
 ranger --copy-config=all
 cp ~/prog/dotfiles/ranger/rc.conf ~/.config/ranger/
 cp ~/prog/dotfiles/ranger/scope.sh ~/.config/ranger/
+cp ~/prog/dotfiles/ranger/rifle.conf ~/.config/ranger/
 echo "ranger..."
 sudo cp ~/prog/dotfiles/Xresources ~/.Xresources
 xrdb ~/.Xresources
