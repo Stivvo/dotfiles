@@ -160,9 +160,9 @@ let g:instant_markdown_slow = 1
 "virtual lines with markdown
 autocmd Filetype markdown nnoremap j gj
 autocmd Filetype markdown nnoremap k gk
-autocmd BufRead,BufNewFile *.md,*.mkd,*.c,*.cpp,*.php,*.html,*.css,*.js
+autocmd BufRead,BufNewFile *.md,*.mkd
     \ setlocal textwidth=80
-autocmd BufRead,BufNewFile *.md,*.mkd,*.c,*.cpp,*.php,*.html,*.css,*.js
+autocmd BufRead,BufNewFile *.md,*.mkd
     \ let b:wrapText=1
 autocmd BufRead,BufNewFile *.md,*.mkd
     \ nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
