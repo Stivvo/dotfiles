@@ -55,3 +55,4 @@ ranger
 w3m
 imv
 mpv
+gnome-calculator

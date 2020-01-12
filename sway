@@ -341,5 +341,7 @@ bindsym {
    for_window [class="code-Client"] floating enable
    for_window [class="code-Client"] border normal
 
+   for_window [app_id="gnome-calculator"] floating enable
+
 
 include /etc/sway/config.d/*
