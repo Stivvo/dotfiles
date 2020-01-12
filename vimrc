@@ -1,6 +1,7 @@
 let mapleader =" "
 set encoding=UTF-8
 set backspace=indent,eol,start
+let b:wrapText=0
 
 "go to last line
 if has("autocmd")
@@ -81,7 +82,14 @@ endfunction
 map <F6> :call SetSpell()<Cr>
 
 "save pressing ESC twice
-map <Esc><Esc> :w<Cr>
+function! Save()
+    if b:wrapText == 1
+        let line = line('.')
+        :norm ggVGgq
+        :exec line
+    endif
+endfunction
+map <Esc><Esc> :w<Cr>:call Save()<Cr>
 " compile markdown and open with firefox
 map <leader>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr>
 
@@ -152,3 +160,11 @@ let g:instant_markdown_slow = 1
 "virtual lines with markdown
 autocmd Filetype markdown nnoremap j gj
 autocmd Filetype markdown nnoremap k gk
+autocmd BufRead,BufNewFile *.md,*.mkd,*.c,*.cpp,*.php,*.html,*.css,*.js
+    \ setlocal textwidth=80
+autocmd BufRead,BufNewFile *.md,*.mkd,*.c,*.cpp,*.php,*.html,*.css,*.js
+    \ let b:wrapText=1
+autocmd BufRead,BufNewFile *.md,*.mkd
+    \ nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
+autocmd BufRead,BufNewFile *.md,*.mkd
+    \ nnoremap ZQ :InstantMarkdownStop<Cr>:q!<Cr>
