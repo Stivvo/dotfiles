@@ -82,14 +82,14 @@ endfunction
 map <F6> :call SetSpell()<Cr>
 
 "save pressing ESC twice
-function! Save()
+function! Format()
     if b:wrapText == 1
         let line = line('.')
         :norm ggVGgq
         :exec line
     endif
 endfunction
-map <Esc><Esc> :w<Cr>:call Save()<Cr>
+map <Esc><Esc> :call Format()<Cr>:w<Cr>
 " compile markdown and open with firefox
 map <leader>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr>
 
