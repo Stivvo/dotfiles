@@ -5,7 +5,7 @@ echo $(whoami)
 mkdir ~/.vim/
 cp vimrc ~/.vim/.
 echo "vimrc..."
-cp .snclirc ~/.
+cp snclirc ~/.snclirc
 echo "snclirc..."
 cp config.fish ~/.config/fish/.
 echo "config.fish..."
