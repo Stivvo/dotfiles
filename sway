@@ -226,9 +226,6 @@ bindsym {
 smart_borders on
 smart_gaps on
 
-# default_border none
-# default_border none
-
 ##################
 #-- Scratchpad --#
 ##################
@@ -343,5 +340,7 @@ bindsym {
 
    for_window [app_id="gnome-calculator"] floating enable
 
+# load Xresources
+exec xrdb ~/.Xresources
 
 include /etc/sway/config.d/*
