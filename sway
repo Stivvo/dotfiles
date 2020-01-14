@@ -31,6 +31,8 @@ set $file exec urxvt -e ranger
 # Note: it's recommended that you pass the final command to sway
 set $menu j4-dmenu-desktop --term=gnome-terminal --no-generic --use-xdg-de
 bindsym $mod+d exec $menu
+# load Xresources
+exec_always xrdb ~/.Xresources
 
 ############################
 #-- Output configuration --#
@@ -339,8 +341,5 @@ bindsym {
    for_window [class="code-Client"] border normal
 
    for_window [app_id="gnome-calculator"] floating enable
-
-# load Xresources
-exec xrdb ~/.Xresources
 
 include /etc/sway/config.d/*
