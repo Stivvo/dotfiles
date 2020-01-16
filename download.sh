@@ -11,6 +11,8 @@ cp config.fish ~/.config/fish/.
 echo "config.fish..."
 cp bashrc ~/.bashrc
 echo "config.fish..."
+sudo cp profile /etc/profile
+echo "profile..."
 
 # commands
 #sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
