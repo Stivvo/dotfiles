@@ -1,7 +1,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=IntelliJ IDEA Community Edition
+Name=IntelliJ IDEA launcher
 Comment=Develop with pleasure!
 Exec=/usr/bin/intellide %f
 Icon=idea
