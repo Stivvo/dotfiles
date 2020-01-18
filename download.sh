@@ -10,7 +10,7 @@ echo "snclirc..."
 cp config.fish ~/.config/fish/.
 echo "config.fish..."
 cp bashrc ~/.bashrc
-echo "config.fish..."
+echo "bashrc..."
 sudo cp profile /etc/profile
 echo "profile..."
 

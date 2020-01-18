@@ -31,8 +31,15 @@ set $file exec urxvt -e ranger
 # Note: it's recommended that you pass the final command to sway
 set $menu j4-dmenu-desktop --term=gnome-terminal --no-generic --use-xdg-de
 bindsym $mod+d exec $menu
+
+#####################
+#-- Load services --#
+#####################
+#
 # load Xresources
 exec_always xrdb ~/.Xresources
+# start ydotool
+exec_always ydotoold
 
 ############################
 #-- Output configuration --#
@@ -109,6 +116,9 @@ $mod+Shift+c reload
     XF86Calculator exec gnome-calculator
     XF86Explorer $file
     XF86Tools exec intellide
+# gnome-terminal relpace shortcut
+    #Ctrl+Shift+t exec swaymsg [app_id="gnome-terminal-server"] focus && gnome-terminal --tab -- fish -c 'cd '$(pwd)'; fish' &> /dev/null
+    #Ctrl+Shift+n exec swaymsg [app_id="gnome-terminal-server"] focus && gnome-terminal -- fish -c 'cd '$(pwd)'; fish' &> /dev/null
 }
 # Drag floating windows by holding down $mod and left mouse button.
 # Resize them with right mouse button + $mod.
