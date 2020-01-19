@@ -1,7 +1,7 @@
 let mapleader =" "
 set encoding=UTF-8
 set backspace=indent,eol,start
-let b:wrapText=0
+let g:wrapText=0
 
 "go to last line
 if has("autocmd")
@@ -83,7 +83,7 @@ map <F6> :call SetSpell()<Cr>
 
 "save pressing ESC twice
 function! Format()
-    if b:wrapText == 1
+    if g:wrapText == 1
         let line = line('.')
         :norm ggVGgq
         :exec line
@@ -160,11 +160,7 @@ let g:instant_markdown_slow = 1
 "virtual lines with markdown
 autocmd Filetype markdown nnoremap j gj
 autocmd Filetype markdown nnoremap k gk
-autocmd BufRead,BufNewFile *.md,*.mkd
-    \ setlocal textwidth=80
-autocmd BufRead,BufNewFile *.md,*.mkd
-    \ let b:wrapText=1
-autocmd BufRead,BufNewFile *.md,*.mkd
-    \ nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
-autocmd BufRead,BufNewFile *.md,*.mkd
-    \ nnoremap ZQ :InstantMarkdownStop<Cr>:q!<Cr>
+autocmd Filetype markdown setlocal textwidth=80
+autocmd Filetype markdown let g:wrapText=1
+autocmd Filetype markdown nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
+autocmd Filetype markdown nnoremap ZQ :InstantMarkdownStop<Cr>:q!<Cr>
