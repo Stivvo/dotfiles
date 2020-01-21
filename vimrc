@@ -153,9 +153,10 @@ map <F8> :NERDTreeToggle<CR>
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
 
 "instant markdown
-let g:instant_markdown_browser = "firefox --private-window"
+let g:instant_markdown_browser = "env MOZ_ENABLE_WAYLAND=1 firefox --new-window "
 let g:instant_markdown_autoscroll = 1
 let g:instant_markdown_slow = 1
+let g:instant_markdown_port = 8888
 
 "virtual lines with markdown
 autocmd Filetype markdown nnoremap j gj
