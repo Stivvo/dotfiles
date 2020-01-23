@@ -38,7 +38,7 @@ map <leader>j :tabn<Cr>
 set showmode
 set showcmd
 syntax on
-set mouse=a
+set mouse=i
 set confirm
 
 "cursor above 8 lines from the bottom of the screen

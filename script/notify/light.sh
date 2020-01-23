@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LIGHTFILE="/home/stefano/prog/dotfiles/script/notify/light.txt"
+LIGHTFILE="/tmp/light.txt"
 BRIGHTNESS=$(cat $LIGHTFILE)
 
 if [ "$1" == "u" ]
