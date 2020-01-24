@@ -13,7 +13,7 @@
 #                                    $$$$$$/                                                     $$$$$$/  
 # 
 
-# Read `man 5 sway` for a complete reference.
+# Read man 5 sway for a complete reference.
 
 #################
 #-- Variables --#
@@ -363,6 +363,12 @@ bindsym {
 
    for_window [class="code-Client"] floating enable
    for_window [class="code-Client"] border normal
+
+   for_window [class="ProvaPallaServer"] floating enable
+   for_window [class="ProvaPallaServer"] border normal
+
+   for_window [class="ProvaPallaClient"] floating enable
+   for_window [class="ProvaPallaClient"] border normal
 
    for_window [app_id="gnome-calculator"] floating enable
 
