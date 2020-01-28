@@ -56,3 +56,5 @@ w3m
 imv
 mpv
 gnome-calculator
+gnome-terminal-fedora
+fedora-firefox-wayland-bin
