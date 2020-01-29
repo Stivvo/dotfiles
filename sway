@@ -50,9 +50,9 @@ exec env MOZ_ENABLE_WAYLAND=1 firefox
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-    gsettings set $gnome-schema gtk-theme vimix
-    gsettings set $gnome-schema icon-theme Papirus
-    gsettings set $gnome-schema cursor-theme vimix
+    gsettings set $gnome-schema gtk-theme vimix-dark-ruby
+    gsettings set $gnome-schema icon-theme numix
+    gsettings set $gnome-schema cursor-theme numix
 }
 
 ############################
