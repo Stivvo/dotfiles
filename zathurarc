@@ -1,10 +1,25 @@
 map R rotate
+map [fullscreen] R rotate
+
+map [fullscreen] p print
 map p print
 
-map u scroll half-up
+map [fullscreen] u scroll half-up
+map  u scroll half-up
+
+map [fullscreen] d scroll half-down
 map d scroll half-down
+
+map [fullscreen] D toggle_page_mode
 map D toggle_page_mode
 
 map 0 zoom 0
+map [fullscreen] 0 zoom 0
+
+map e follow
+map [fullscreen] e follow
+
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
 
 set selection-clipboard clipboard
