@@ -58,3 +58,6 @@ mpv
 gnome-calculator
 gnome-terminal-fedora
 fedora-firefox-wayland-bin
+numix-cursor-maia
+vimix-gtk-themes-git
+vimix-icon-theme
