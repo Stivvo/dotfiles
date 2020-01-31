@@ -61,3 +61,4 @@ fedora-firefox-wayland-bin
 numix-cursor-maia
 vimix-gtk-themes-git
 vimix-icon-theme
+brave-bin
