@@ -40,11 +40,10 @@ if [[ $STATE != '[off]' ]]; then
     fi
 
     notify-send.sh "Volume: $VOLUME%" \
-        --replace-file=/tmp/audio-notification \
         -t 2000 \
         -i ${ICON} \
         -h int:value:${VOLUME} \
-        -u critical \
+        --replace-file=/tmp/audio-notification \
         -h string:synchronous:volume-change \
 
 # If volume is muted, display the mute sybol:

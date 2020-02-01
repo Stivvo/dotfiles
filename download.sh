@@ -85,6 +85,10 @@ mkdir ~/.cache/markdown/
 mkdir ~/.cache/markdown/mkd
 mkdir ~/.cache/markdown/html
 
+# volume and brightness notifications files
+echo 100 > /tmp/audio-notification
+echo 100 > /tmp/brightness-notification
+
 # install vim instant markdown
 sudo npm -g install instant-markdown-d
 
