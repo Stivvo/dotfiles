@@ -153,7 +153,7 @@ map <F8> :NERDTreeToggle<CR>
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
 
 "instant markdown
-let g:instant_markdown_browser = "brave-nightly "
+let g:instant_markdown_browser = "brave "
 let g:instant_markdown_autoscroll = 1
 let g:instant_markdown_slow = 1
 let g:instant_markdown_port = 8888
