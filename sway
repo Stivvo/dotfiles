@@ -68,6 +68,8 @@ set $m2 = HDMI-A-1
 bindsym {
 # switch output
     $mod+m exec "~/prog/dotfiles/script/screen/./sh s"
+# transform output
+    $mod+Shift+m exec "~/prog/dotfiles/script/screen/./sh t"
 # Move workspace to screen 1
     $mod+Shift+left move workspace to left
 # Move workspace to screeen 2
