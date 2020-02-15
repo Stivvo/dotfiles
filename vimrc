@@ -168,5 +168,10 @@ autocmd Filetype markdown nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
 autocmd Filetype markdown noremap ZQ :InstantMarkdownStop<Cr>:q<Cr>
 
 autocmd Filetype tex nnoremap<Esc><Esc> :call Format()<Cr>:w<Cr>:!pdflatex % >> /dev/null<Cr>
-autocmd Filetype tex let g:wrapText=1
+autocmd Filetype markdown nnoremap j gj
+autocmd Filetype markdown nnoremap k gk
+autocmd Filetype markdown setlocal textwidth=80
+autocmd Filetype markdown let g:wrapText=1
+autocmd Filetype markdown nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
+autocmd Filetype markdown noremap ZQ :InstantMarkdownStop<Cr>:q<Cr>
 
