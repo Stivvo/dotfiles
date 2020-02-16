@@ -94,3 +94,7 @@ sudo npm -g install instant-markdown-d
 
 # video group for light
 sudo usermod -a -G video $USER
+
+# create screen folder
+mkdir ~/screen
+mkdir ~/.cache/screen

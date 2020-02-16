@@ -82,7 +82,7 @@ function SetSpell()
 endfunction
 map <F6> :call SetSpell()<Cr>
 
-"save pressing ESC twice
+"save pressing esc twice
 function! Format()
     if g:wrapText == 1
         let line = line('.')
@@ -90,7 +90,7 @@ function! Format()
         :exec line
     endif
 endfunction
-map <Esc><Esc> :call Format()<Cr>:w<Cr>
+nmap <Esc><Esc> :call Format()<Cr>:w<Cr>
 " compile markdown and open with firefox
 map <leader>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr>
 
@@ -131,6 +131,7 @@ Plug 'othree/xml.vim', {'for': ['xml', 'html']}
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ap/vim-css-color', {'for': 'css'} 
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
+Plug 'lervag/vimtex'
 "other
 Plug 'airblade/vim-gitgutter'
 Plug 'google/vim-maktaba'
@@ -165,4 +166,12 @@ autocmd Filetype markdown nnoremap k gk
 autocmd Filetype markdown setlocal textwidth=80
 autocmd Filetype markdown let g:wrapText=1
 autocmd Filetype markdown nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
-autocmd Filetype markdown nnoremap ZQ :InstantMarkdownStop<Cr>:q!<Cr>
+autocmd Filetype markdown noremap ZQ :InstantMarkdownStop<Cr>:q<Cr>
+
+autocmd Filetype tex nnoremap j gj
+autocmd Filetype tex nnoremap k gk
+autocmd Filetype tex setlocal textwidth=80
+autocmd Filetype tex let g:wrapText=1
+autocmd Filetype tex nmap <F9> :VimtexTocOpen<Cr>
+autocmd Filetype tex nmap <C-F9> :VimtexTocToggle<Cr>
+autocmd Filetype tex :VimtexCompile
