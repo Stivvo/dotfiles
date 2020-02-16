@@ -18,7 +18,7 @@ function! Kformat()
     :norm gg=G
     :exec line
 endfunction
-map <F5> :call Kformat()<Cr>
+map <F5> :call Kformat()<Cr> :call Format()<Cr>
 
 "splits
 set splitbelow splitright
@@ -39,6 +39,7 @@ set showmode
 set showcmd
 syntax on
 set mouse=i
+set mouse=a
 set confirm
 
 "cursor above 8 lines from the bottom of the screen
@@ -67,7 +68,7 @@ set smarttab
 set shiftwidth=4
 
 "spelling
-function SetSpell() 
+function SetSpell()
     if &spell == 0
         set spell spelllang=it
     else
@@ -89,7 +90,7 @@ function! Format()
         :exec line
     endif
 endfunction
-nmap <Esc><Esc> :call Format()<Cr>:w<Cr>
+nmap <Esc><Esc> :w<Cr>
 " compile markdown and open with firefox
 map <leader>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr>
 
@@ -128,7 +129,7 @@ Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme'
 Plug 'othree/xml.vim', {'for': ['xml', 'html']}
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'ap/vim-css-color', {'for': 'css'} 
+Plug 'ap/vim-css-color', {'for': 'css'}
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 Plug 'lervag/vimtex'
 "other
