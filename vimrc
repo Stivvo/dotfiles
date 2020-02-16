@@ -39,6 +39,7 @@ set showmode
 set showcmd
 syntax on
 set mouse=i
+set mouse=a
 set confirm
 
 "cursor above 8 lines from the bottom of the screen
