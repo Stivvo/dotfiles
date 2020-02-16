@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FILE1="~/.cache/screen/status.txt"
-FILE2="~/.cache/screen/rotation.txt"
+FILE1="/home/stefano/.cache/screen/status.txt"
+FILE2="/home/stefano/.cache/screen/rotation.txt"
 
 VAR=$(cat $FILE1)
 VAR2=$(cat $FILE2)
@@ -39,7 +39,7 @@ case "$VAR" in
         ;;
 esac
 
-if [ $VAR2 == "1" ]
+if [ "$VAR2" == "1" ]
 then
     swaymsg output DP-2 transform "0"
 else
