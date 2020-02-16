@@ -172,6 +172,4 @@ autocmd Filetype tex nnoremap j gj
 autocmd Filetype tex nnoremap k gk
 autocmd Filetype tex setlocal textwidth=80
 autocmd Filetype tex let g:wrapText=1
-autocmd Filetype tex nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
-autocmd Filetype tex noremap ZQ :InstantMarkdownStop<Cr>:q<Cr>
 

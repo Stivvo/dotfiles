@@ -97,3 +97,4 @@ sudo usermod -a -G video $USER
 
 # create screen folder
 mkdir ~/screen
+mkdir ~/.cache/screen

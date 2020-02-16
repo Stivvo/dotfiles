@@ -1,7 +1,10 @@
 #!/bin/bash
 
-VAR=$(cat /tmp/status.txt)
-VAR2=$(cat /tmp/rotation.txt)
+FILE1="~/.cache/screen/status.txt"
+FILE2="~/.cache/screen/rotation.txt"
+
+VAR=$(cat $FILE1)
+VAR2=$(cat $FILE2)
 
 if [ $1 == "s" ]
 then
@@ -43,5 +46,5 @@ else
     swaymsg output DP-2 transform "270"
 fi
 
-echo "$VAR" > "/tmp/status.txt"
-echo "$VAR2" > "/tmp/rotation.txt"
+echo "$VAR" > $FILE1
+echo "$VAR2" > $FILE2
