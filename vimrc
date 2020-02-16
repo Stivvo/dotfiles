@@ -171,5 +171,5 @@ autocmd Filetype tex nnoremap j gj
 autocmd Filetype tex nnoremap k gk
 autocmd Filetype tex setlocal textwidth=80
 autocmd Filetype tex let g:wrapText=1
-autocmd Filetype tex nmap <F9> :VimtexTocToggle
+autocmd Filetype tex nmap <F9> :VimtexTocToggle<Cr>
 autocmd Filetype tex :VimtexCompile
