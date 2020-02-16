@@ -130,7 +130,7 @@ Plug 'othree/xml.vim', {'for': ['xml', 'html']}
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ap/vim-css-color', {'for': 'css'} 
 Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
-Plug 'vim-latex/vim-latex'
+Plug 'lervag/vimtex'
 "other
 Plug 'airblade/vim-gitgutter'
 Plug 'google/vim-maktaba'
@@ -167,9 +167,9 @@ autocmd Filetype markdown let g:wrapText=1
 autocmd Filetype markdown nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
 autocmd Filetype markdown noremap ZQ :InstantMarkdownStop<Cr>:q<Cr>
 
-autocmd Filetype tex nnoremap<Esc><Esc> :call Format()<Cr>:w<Cr>:!pdflatex % >> /dev/null<Cr>
 autocmd Filetype tex nnoremap j gj
 autocmd Filetype tex nnoremap k gk
 autocmd Filetype tex setlocal textwidth=80
 autocmd Filetype tex let g:wrapText=1
-
+autocmd Filetype tex nmap <F9> :VimtexTocToggle
+autocmd Filetype tex :VimtexCompile
