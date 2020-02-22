@@ -89,12 +89,17 @@ mkdir ~/.cache/markdown/html
 echo 100 > /tmp/audio-notification
 echo 100 > /tmp/brightness-notification
 
-# install vim instant markdown
-sudo npm -g install instant-markdown-d
-
 # video group for light
 sudo usermod -a -G video $USER
 
 # create screen folder
 mkdir ~/screen
 mkdir ~/.cache/screen
+
+# install all packages
+sudo pacman -S trizen
+trizen -S --needed < packages.txt
+
+# install vim instant markdown
+sudo npm -g install instant-markdown-d
+

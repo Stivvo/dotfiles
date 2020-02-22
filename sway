@@ -42,6 +42,8 @@ exec_always xrdb ~/.Xresources
 exec_always ydotoold
 # start firefox on wayland
 exec env MOZ_ENABLE_WAYLAND=1 firefox
+# update package list
+exec trizen -Syy
 
 ##################
 #-- GTK themes --#
