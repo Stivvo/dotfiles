@@ -41,7 +41,7 @@ exec_always xrdb ~/.Xresources
 # start ydotool
 exec_always ydotoold
 # start firefox on wayland
-exec env MOZ_ENABLE_WAYLAND=1 firefox
+exec env firefox
 # update package list
 exec trizen -Syy
 
@@ -116,7 +116,7 @@ bindsym {
 # Kill focused window
     $mod+q kill
 # Start firefox
-    $mod+i exec env MOZ_ENABLE_WAYLAND=1 firefox
+    $mod+i exec firefox
 # Start file manager
     $mod+o $file
 # Reload the configuration file
@@ -130,7 +130,7 @@ $mod+Shift+c reload
 # Shutdown
     --release $mod+Shift+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'poweroff'
 # Special keys
-    XF86Search exec env MOZ_ENABLE_WAYLAND=1 firefox
+    XF86Search exec firefox
     XF86Calculator exec gnome-calculator
     XF86Explorer $file
     XF86Tools exec intellide
@@ -377,6 +377,6 @@ bindsym {
 
    for_window [app_id="gnome-calculator"] floating enable
 
-   for_window [app_id="firefox"] move container to workspace $ws2
+   # for_window [app_id="firefox"] move container to workspace $ws2
 
 include /etc/sway/config.d/*
