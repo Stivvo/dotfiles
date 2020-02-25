@@ -13,10 +13,10 @@ sudo cp profile /etc/profile
 echo "profile..."
 
 # fish
-sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
+#sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
 #echo "setting default shell to fish, reboot required"
-#cp fish ~/.config/fish/config.fish
 echo "fish..."
+cp fish ~/.config/fish/config.fish
 curl -L https://get.oh-my.fish | fish
 omf install l
 
