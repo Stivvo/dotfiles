@@ -7,16 +7,18 @@ cp vimrc ~/.vim/.
 echo "vimrc..."
 cp snclirc ~/.snclirc
 echo "snclirc..."
-cp config.fish ~/.config/fish/.
-echo "config.fish..."
 cp bashrc ~/.bashrc
 echo "bashrc..."
 sudo cp profile /etc/profile
 echo "profile..."
 
-# commands
-#sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
-#echo "setting default shell to fish, reboot required"
+# fish
+sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
+echo "setting default shell to fish, reboot required"
+cp config.fish ~/.config/fish/.
+echo "config.fish..."
+curl -L https://get.oh-my.fish | fish
+omf install lambda
 
 # git config
 git config --global user.name Stivvo
