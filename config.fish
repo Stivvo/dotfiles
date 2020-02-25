@@ -39,7 +39,7 @@ set -U fish_user_paths $fish_user_paths /opt/lampp
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export RANGER_LOAD_DEFAULT_RC=FALSE
-export fish_greeting=""
+set fish_greeting
 
 alias tbt="gnome-terminal -q --tab -- fish -c 'cd '(pwd)'; fish'"
 alias nwt="gnome-terminal -q -- fish -c 'cd '(pwd)'; fish'"
