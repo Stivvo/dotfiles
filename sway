@@ -41,9 +41,11 @@ exec_always xrdb ~/.Xresources
 # start ydotool
 exec_always ydotoold
 # start firefox on wayland
-exec env firefox
+exec firefox
 # update package list
 exec trizen -Syy
+# start mako notification server
+exec_always mako
 
 ##################
 #-- GTK themes --#
@@ -353,8 +355,8 @@ bindsym {
 ##############
 #
 bindsym {
-    XF86AudioRaiseVolume exec "~/prog/dotfiles/script/notify/./volume.sh +5%"
-    XF86AudioLowerVolume exec "~/prog/dotfiles/script/notify/./volume.sh -5%"
+    XF86AudioRaiseVolume exec "~/prog/dotfiles/script/notify/./volume.sh up 5"
+    XF86AudioLowerVolume exec "~/prog/dotfiles/script/notify/./volume.sh down 5"
     XF86AudioMute exec "~/prog/dotfiles/script/notify/./volume.sh audiomute"
     XF86AudioMicMute exec "~/prog/dotfiles/script/notify/./volume.sh micmute"
 }

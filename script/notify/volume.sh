@@ -1,14 +1,19 @@
 #!/bin/bash
 
-if [ "$1" == "audiomute" ]
-then
-    pactl set-sink-mute @DEFAULT_SINK@ toggle
-elif [ "$1" == "micmute" ]
-then
-    pactl set-source-mute @DEFAULT_SOURCE@ toggle
-else
-    pactl set-sink-volume @DEFAULT_SINK@ $1
-fi
+case $1 in
+    "audiomute")
+    amixer -q set Master toggle
+        ;;
+    "micmute")
+    amixer -q set Capture toggle
+        ;;
+    "up")
+    amixer -q set Master "${2}%+"
+        ;;
+    "down")
+    amixer -q set Master "${2}%-"
+        ;;
+esac
 
 # Script to create pop-up notification when volume changes.
 
@@ -16,12 +21,12 @@ fi
 sleep 0.05
 
 # Get the volume and check if muted or not (STATE):
-VOLUME=`amixer -D pulse sget Master | \
+VOLUME=`amixer get Master | \
     grep 'Left:' | \
     awk -F'[][]' '{ print $2 }' | \
     sed --expression 's/%//g'`
 
-STATE=`amixer -D pulse sget Master          | \
+STATE=`amixer get Master          | \
     egrep -m 1 'Playback.*?\[o' | \
     egrep -o '\[o.+\]'`
 

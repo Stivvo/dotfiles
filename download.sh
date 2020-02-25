@@ -71,6 +71,10 @@ cp ~/prog/dotfiles/script/vifm/vifmimg ~/.config/vifm/scripts/
 cp ~/prog/dotfiles/script/vifm/vifmrun ~/.config/vifm/scripts/
 echo "vifm..."
 
+# mako
+mkdir ~/.config/mako
+cp ~/prog/dotfiles/mako ~/.config/mako/config
+
 # ranger
 mkdir ~/.config/ranger/
 ranger --copy-config=all
