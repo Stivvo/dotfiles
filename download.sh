@@ -14,11 +14,11 @@ echo "profile..."
 
 # fish
 sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
-echo "setting default shell to fish, reboot required"
-cp fish ~/.config/fish/config.fish
+#echo "setting default shell to fish, reboot required"
+#cp fish ~/.config/fish/config.fish
 echo "fish..."
 curl -L https://get.oh-my.fish | fish
-omf install lambda
+omf install l
 
 # git config
 git config --global user.name Stivvo
@@ -103,7 +103,7 @@ mkdir ~/screen
 mkdir ~/.cache/screen
 
 # install all packages
-sudo pacman -S trizen
+sudo pacman -S --needed trizen
 trizen -S --needed < packages.txt
 
 # install vim instant markdown
