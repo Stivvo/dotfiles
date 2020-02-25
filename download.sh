@@ -15,8 +15,8 @@ echo "profile..."
 # fish
 sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
 echo "setting default shell to fish, reboot required"
-cp config.fish ~/.config/fish/.
-echo "config.fish..."
+cp fish ~/.config/fish/config.fish
+echo "fish..."
 curl -L https://get.oh-my.fish | fish
 omf install lambda
 
