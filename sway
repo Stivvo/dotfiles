@@ -308,6 +308,9 @@ mode "resize" {
 ##################
 #
 # Read `man 5 sway-bar` for more information about this section.
+
+font Ubuntu Nerd Font Medium 12
+
 bar {
     position top
     status_command ~/prog/dotfiles/script/bar/./loop.sh
