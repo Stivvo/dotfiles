@@ -29,7 +29,7 @@ set $right l
 set $term exec gnome-terminal
 set $file exec urxvt -e ranger
 # Note: it's recommended that you pass the final command to sway
-set $menu j4-dmenu-desktop --term=gnome-terminal --no-generic --use-xdg-de
+set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
 bindsym $mod+d exec $menu
 
 #####################
@@ -341,7 +341,7 @@ bindsym {
     Print exec "~/prog/dotfiles/script/shot/./focused.sh"
     Control+Print exec "~/prog/dotfiles/script/shot/./all.sh"
     Shift+Print exec "~/prog/dotfiles/script/shot/./area.sh"
-    $mod+Print exec "grim -g '$(slurp -p)' -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | wl-copy"
+    $mod+Print exec "~/prog/dotfiles/script/shot/./colorPicker.sh"
 }
 
 ##################
