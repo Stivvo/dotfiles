@@ -38,6 +38,7 @@ alias xamppt='sudo xampp start'
 alias xamppp='sudo xampp stop'
 
 alias y='trizen'
+alias diff='diff --color'
 
 alias v='vim'
 export EDITOR=vim
