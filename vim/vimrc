@@ -96,30 +96,30 @@ endfunction
 
 "Plugins
 call plug#begin('~/.vim/plugged')
-"utility
+"--dependencies
+Plug 'google/vim-maktaba'
+Plug 'ryanoasis/vim-devicons'
+"---utility
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'vifm/vifm.vim', { 'on': 'Vifm' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-"Programming
+Plug 'airblade/vim-gitgutter'
+"---Programming
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme', { 'for': ['c', 'c++', 'java', 'markdown', 'tex', 'html'] }
 Plug 'nathanaelkane/vim-indent-guides'
 "Plug 'scrooloose/syntastic'
-"languages
-"Plug 'bazelbuild/vim-bazel'
-"Plug 'justmao945/vim-clang'
+"---languages
 Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
 Plug 'ap/vim-css-color'
 Plug 'lervag/vimtex', { 'for': 'tex' }
-"other
-Plug 'airblade/vim-gitgutter'
-Plug 'google/vim-maktaba'
-Plug 'ryanoasis/vim-devicons'
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
+"Plug 'bazelbuild/vim-bazel'
+"Plug 'justmao945/vim-clang'
 call plug#end()
 
 "goyo
@@ -131,20 +131,12 @@ map <leader>f :Goyo<Cr>
 
 "ctrlp
 let g:ctrlp_working_path_mode = 'ra'
-nmap <F7> :CtrlP
+nmap <F7> :CtrlP<Cr>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 "nerdtree
 map <F8> :NERDTreeToggle<CR>
 autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
-
-autocmd Filetype tex nnoremap j gj
-autocmd Filetype tex nnoremap k gk
-autocmd Filetype tex setlocal textwidth=80
-autocmd Filetype tex let g:wrapText=1
-autocmd Filetype tex nmap <F9> :VimtexTocOpen<Cr>
-autocmd Filetype tex nmap <C-F9> :VimtexTocToggle<Cr>
-autocmd Filetype tex :VimtexCompile
 
 "indent guides
 let g:indent_guides_auto_colors = 1
