@@ -110,8 +110,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'valloric/youcompleteme', { 'for': ['c', 'c++', 'java', 'markdown', 'tex', 'html'] }
+Plug 'valloric/youcompleteme', { 'for': ['c', 'c++', 'java', 'markdown', 'tex'] }
 Plug 'nathanaelkane/vim-indent-guides'
+Plug 'sheerun/vim-polyglot'
 "Plug 'scrooloose/syntastic'
 "---languages
 Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
