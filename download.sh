@@ -2,9 +2,10 @@
 
 echo $(whoami)
 # update dotfiles
-mkdir ~/.vim/
-cp vimrc ~/.vim/.
-echo "vimrc..."
+mkdir ~/.vim
+cp vim/vimrc ~/.vim/vimrc
+cp -r vim/ftplugin ~/.vim/
+echo "vim..."
 cp snclirc ~/.snclirc
 echo "snclirc..."
 cp bashrc ~/.bashrc
