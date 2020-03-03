@@ -60,6 +60,7 @@ set ruler
 set colorcolumn=80
 
 "search
+set ignorecase
 set smartcase
 set nohlsearch
 set incsearch
