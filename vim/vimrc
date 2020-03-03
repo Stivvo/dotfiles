@@ -110,9 +110,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'neoclide/coc.nvim', {'branch': 'release' }
+Plug 'nathanaelkane/vim-indent-guides' 
 Plug 'sheerun/vim-polyglot'
+"Plug 'arp242/jumpy.vim'
 "Plug 'scrooloose/syntastic'
 "---languages
 Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
@@ -123,29 +124,9 @@ Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 "Plug 'justmao945/vim-clang'
 call plug#end()
 
-"goyo
-let g:goyo_width = 120
-let g:goyo_height = 100
-let g:goyo_margin_top = 1
-let g:goyo_margin_bottom = 1
-map <leader>f :Goyo<Cr>
-
-"ctrlp
-let g:ctrlp_working_path_mode = 'ra'
-nmap <F7> :CtrlP<Cr>
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-let g:ctrlp_cmd = ''
-
-"nerdtree
-map <F8> :NERDTreeToggle<CR>
-autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
-
-"indent guides
-let g:indent_guides_enable_on_vim_startup = 1
-"let g:indent_guides_auto_colors = 0
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=yellow ctermbg=4
-
+"plugin specific configuraiton
+source ~/.vim/goyo.vim
+source ~/.vim/ctrlP.vim
+source ~/.vim/nerdTree.vim
 source ~/.vim/coc.vim
+source ~/.vim/indentGuides.vim
