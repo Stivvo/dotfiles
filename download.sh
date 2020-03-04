@@ -17,10 +17,8 @@ echo "profile..."
 # fish
 #sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
 #echo "setting default shell to fish, reboot required"
-echo "fish..."
 cp fish ~/.config/fish/config.fish
-curl -L https://get.oh-my.fish | fish
-omf install l
+echo "fish..."
 
 # git config
 git config --global user.name Stivvo
@@ -111,3 +109,6 @@ trizen -S --needed < packages.txt
 # install vim instant markdown
 sudo npm -g install instant-markdown-d
 
+# installing fish
+curl -L https://get.oh-my.fish | fish
+omf install l
