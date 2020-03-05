@@ -43,7 +43,7 @@ exec_always ydotoold
 # start firefox on wayland
 exec firefox
 # update package list
-exec trizen -Syy
+#exec trizen -Syy
 # start mako notification server
 exec_always mako
 
@@ -54,8 +54,8 @@ exec_always mako
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-    gsettings set $gnome-schema gtk-theme vimix-dark-ruby
-    gsettings set $gnome-schema icon-theme vimix
+    gsettings set $gnome-schema gtk-theme Yaru-Purple-dark
+    gsettings set $gnome-schema icon-theme Yaru
     gsettings set $gnome-schema cursor-theme Numix-Cursor-Maia
 }
 
@@ -309,7 +309,7 @@ mode "resize" {
 #
 # Read `man 5 sway-bar` for more information about this section.
 
-font Ubuntu Nerd Font Medium 12
+font UbuntuMono Nerd Font Regular 13
 
 bar {
     position top
@@ -318,9 +318,9 @@ bar {
     colors {
         statusline #FFFFFF
         background #000000
-        inactive_workspace #4E9C00 #000000 #FFFFFF
-        focused_workspace #FFFFFF #4E9C00 #FFFFFF
-        separator #4E9C00 
+        inactive_workspace #9654D4 #000000 #FFFFFF
+        focused_workspace #FFFFFF #9654D4 #FFFFFF
+        separator #9654D4
     }
 }
 
@@ -328,7 +328,7 @@ bar {
 #-- Colors --#
 ##############
 #
-client.focused #4E9C00 #4E9C00 #FFFFFF #FFFFFF #4E9C00
+client.focused #9654D4 #9654D4 #FFFFFF #FFFFFF #9654D4
 client.focused_inactive #1B3600 #1B3600 #888888 #FFFFFF #1B3600
 client.unfocused #333333 #333333 #888888 #FFFFFF #333333
 client.urgent #C20000 #C20000 #FFFFFF #FFFFFF #C20000
