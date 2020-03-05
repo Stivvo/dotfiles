@@ -14,6 +14,8 @@ set autoindent
 filetype indent on
 filetype plugin on
 filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
+
 function! Kformat()
     let line = line('.')
     :norm gg=G
@@ -121,6 +123,7 @@ Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
 Plug 'ap/vim-css-color'
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
+Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 "Plug 'bazelbuild/vim-bazel'
 "Plug 'justmao945/vim-clang'
 call plug#end()
