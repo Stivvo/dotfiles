@@ -329,7 +329,7 @@ bar {
 ##############
 #
 client.focused #9654D4 #9654D4 #FFFFFF #FFFFFF #9654D4
-client.focused_inactive #1B3600 #1B3600 #888888 #FFFFFF #1B3600
+client.focused_inactive #1b0f26 #1b0f26 #888888 #FFFFFF #1b0f26
 client.unfocused #333333 #333333 #888888 #FFFFFF #333333
 client.urgent #C20000 #C20000 #FFFFFF #FFFFFF #C20000
 

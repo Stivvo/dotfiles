@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PA="/home/stefano/prog/wallpapers/"
+PA="/home/stefano/wallpapers/"
 P="/home/stefano/prog/dotfiles/script/background/"
 
 while true
