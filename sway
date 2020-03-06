@@ -27,6 +27,7 @@ set $down j
 set $up k
 set $right l
 set $term exec gnome-terminal
+set $Vterm exec mate-terminal
 set $file exec urxvt -e ranger
 # Note: it's recommended that you pass the final command to sway
 set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
@@ -115,6 +116,10 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 bindsym {
 # Start a terminal
     $mod+Return $term
+# Start vim terminal
+    $mod+Shift+Return $Vterm
+# Start a terminal running vim
+    $mod+Control+Return $Vterm -- vim
 # Kill focused window
     $mod+q kill
 # Start firefox
