@@ -344,9 +344,9 @@ client.urgent #C20000 #C20000 #FFFFFF #FFFFFF #C20000
 ###################
 #
 bindsym {
-    Print exec "~/prog/dotfiles/script/shot/./focused.sh"
-    Control+Print exec "~/prog/dotfiles/script/shot/./all.sh"
-    Shift+Print exec "~/prog/dotfiles/script/shot/./area.sh"
+    Print exec "~/prog/dotfiles/script/shot/./shot.sh focused"
+    Control+Print exec "~/prog/dotfiles/script/shot/./shot.sh all"
+    Shift+Print exec "~/prog/dotfiles/script/shot/./shot.sh area"
     $mod+Print exec "~/prog/dotfiles/script/shot/./colorPicker.sh"
 }
 

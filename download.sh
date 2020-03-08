@@ -31,9 +31,8 @@ sudo chmod ua+x ~/prog/dotfiles/script/mark/sh
 sudo chmod ua+x ~/prog/dotfiles/script/screen/sh
 sudo chmod ua+x ~/prog/dotfiles/script/update.sh
 sudo chmod ua+x ~/prog/dotfiles/script/background/sh
-sudo chmod ua+x ~/prog/dotfiles/script/shot/all.sh
-sudo chmod ua+x ~/prog/dotfiles/script/shot/focused.sh
-sudo chmod ua+x ~/prog/dotfiles/script/shot/area.sh
+sudo chmod ua+x ~/prog/dotfiles/script/shot/shot.sh
+sudo chmod ua+x ~/prog/dotfiles/script/shot/colorPicker.sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/loop.sh
 sudo chmod ua+x ~/prog/dotfiles/script/notify/light.sh
