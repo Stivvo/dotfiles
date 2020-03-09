@@ -103,6 +103,7 @@ bindsym {
 # Read `man 5 sway-input` for more information about this section.
 input type:keyboard  {
     xkb_layout it
+    xkb_options caps:swapescape
 }
 input "2:7:SynPS/2_Synaptics_TouchPad" {
     tap enabled
