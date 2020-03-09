@@ -41,10 +41,12 @@ bindsym $mod+d exec $menu
 exec_always xrdb ~/.Xresources
 # start ydotool
 exec_always ydotoold
+# start redshift at my latitude
+exec_always redshift -l 45.47:9.19 -t 6500:4500 -m wayland
 # start firefox on wayland
 exec firefox
 # update package list
-#exec trizen -Syy
+exec trizen -Syy
 # start mako notification server
 exec_always mako
 
