@@ -1,7 +1,7 @@
 layer=overlay
 anchor=top-right
-progress-color=#f0544c
+progress-color=#343434
 border-color=#FFFFFF
-background-color=#4E9C00
+background-color=#9654D4
 default-timeout=10000
 padding=10
