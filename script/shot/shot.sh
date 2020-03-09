@@ -15,17 +15,25 @@ case "$1" in
         ;;
 esac
 
-select="$(echo -e "default\nchoose" | dmenu -i -p "${scrnName} folder")"
+select="$(echo -e "default\nchoose\ndelete" | dmenu -i -p "${scrnName} folder")"
 
-if [ $select == "default" ]
+case "$select" in
+    "default")
+        scrnPath="/home/stefano/screen/${scrnName}"
+        ;;
+    "choose")
+        urxvt -e ranger --show-only-dirs --choosedir=/tmp/scrnDir.txt
+        scrnPath="$(cat /tmp/scrnDir.txt)/${scrnName}"
+        ;;
+    "delete")
+        rm $tmpPath
+        ;;
+esac
+
+if [ "${select}" != "delete" ]
 then
-    scrnPath="/home/stefano/screen/${scrnName}"
-else
-    urxvt -e ranger --show-only-dirs --choosedir=/tmp/scrnDir.txt
-    scrnPath="$(cat /tmp/scrnDir.txt)/${scrnName}"
+    mv $tmpPath $scrnPath
+    notify-send.sh $scrnPath -i $scrnPath --default-action="urxvt -e ranger --selectfile=${scrnPath}"
+    #selectfile is a legacy option
 fi
 
-mv $tmpPath $scrnPath
-
-notify-send.sh $scrnPath -i $scrnPath --default-action="urxvt -e ranger --selectfile=${scrnPath}"
-#selectfile is a legacy option
