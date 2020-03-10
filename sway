@@ -265,7 +265,7 @@ smart_gaps on
 bindsym {
     $mod+Shift+plus gaps inner all plus 10
     $mod+Shift+minus gaps inner all minus 10
-    $mod+g smart_gaps toggle
+    $mod+g exec "~/prog/dotfiles/script/smartGapsBorderToggle.sh"
 }
 
 ##################

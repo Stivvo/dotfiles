@@ -37,6 +37,7 @@ sudo chmod ua+x ~/prog/dotfiles/script/bar/sh
 sudo chmod ua+x ~/prog/dotfiles/script/bar/loop.sh
 sudo chmod ua+x ~/prog/dotfiles/script/notify/light.sh
 sudo chmod ua+x ~/prog/dotfiles/script/notify/volume.sh
+sudo chmod ua+x ~/prog/dotfiles/script/smartGapsBorderToggle.sh
 sudo chmod ua+x ~/prog/dotfiles/ranger/scope.sh
 sudo cp ~/prog/dotfiles/script/intellideScript/intellide /usr/bin/
 sudo cp ~/prog/dotfiles/script/intellideScript/intellide.desktop /usr/share/applications
