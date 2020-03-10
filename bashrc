@@ -8,4 +8,6 @@ then
 fi
 export PATH
 
+export RANGER_LOAD_DEFAULT_RC=FALSE
+
 [[ $- != *i* ]] && return
