@@ -116,6 +116,7 @@ Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release' }
 Plug 'nathanaelkane/vim-indent-guides' 
 Plug 'sheerun/vim-polyglot'
+let g:polyglot_disabled = ['latex']
 "Plug 'arp242/jumpy.vim'
 "Plug 'scrooloose/syntastic'
 "---languages

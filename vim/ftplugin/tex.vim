@@ -9,5 +9,5 @@ let g:wrapText=1
 "vimtex
 nmap <F9> :VimtexTocOpen<Cr>
 nmap <C-F9> :VimtexTocToggle<Cr>
-:VimtexCompile
+autocmd VimEnter * VimtexCompile
 
