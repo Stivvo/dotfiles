@@ -49,6 +49,9 @@ chmod +x ~/Sync/script/snPasswd.sh
 ~/Sync/script/./snPasswd.sh
 echo "setting username and password of simplenote..."
 
+# pam environment, enable wayland on firefox
+cp ~/prog/dotfiles/.pam_environment ~/
+
 # zathura
 mkdir ~/.config/zathura
 cp zathurarc ~/.config/zathura/.

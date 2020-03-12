@@ -9,5 +9,6 @@ fi
 export PATH
 
 export RANGER_LOAD_DEFAULT_RC=FALSE
+export GDK_BACKEND=wayland
 
 [[ $- != *i* ]] && return
