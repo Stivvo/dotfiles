@@ -45,6 +45,8 @@ exec_always ydotoold
 exec_always redshift -l 45.47:9.19 -t 6500:4500 -m wayland
 # start firefox on wayland
 exec firefox
+# start qtwaw (Whatsapp)
+exec qtwaw
 # update package list
 exec trizen -Syy
 # start mako notification server
@@ -392,6 +394,9 @@ bindsym {
    for_window [class="ProvaPallaClient"] border normal
 
    for_window [app_id="gnome-calculator"] floating enable
+   
+   workspace $ws10 output $m2
+   for_window [app_id="eu.scarpetta.QtWAW"] move container to workspace $ws10
 
    # for_window [app_id="firefox"] move container to workspace $ws2
 
