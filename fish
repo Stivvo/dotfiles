@@ -50,7 +50,6 @@ set -U fish_user_paths /opt/lampp
 export _JAVA_AWT_WM_NONREPARENTING=1
 export RANGER_LOAD_DEFAULT_RC=FALSE
 set fish_greeting
-export GDK_BACKEND=wayland
 
 alias tbt="gnome-terminal -q --tab -- fish -c 'cd '(pwd)'; fish'"
 alias nwt="gnome-terminal -q -- fish -c 'cd '(pwd)'; fish'"
