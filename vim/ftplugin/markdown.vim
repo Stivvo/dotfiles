@@ -1,5 +1,5 @@
 "instant markdown
-let g:instant_markdown_browser = "firefox --new-window "
+let g:instant_markdown_browser = ""
 let g:instant_markdown_autoscroll = 1
 let g:instant_markdown_slow = 1
 let g:instant_markdown_port = 8888
@@ -16,4 +16,6 @@ let g:wrapText=1
 
 " compile markdown and open with firefox
 map <leader>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr>
+
+autocmd VimEnter * !firefox-developer-edition --new-window "http://127.0.0.1:8888/"
 
