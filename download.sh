@@ -11,8 +11,6 @@ cp snclirc ~/.snclirc
 echo "snclirc..."
 cp bashrc ~/.bashrc
 echo "bashrc..."
-sudo cp profile /etc/profile
-echo "profile..."
 
 # fish
 #sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
