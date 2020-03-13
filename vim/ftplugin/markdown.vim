@@ -1,12 +1,12 @@
 "instant markdown
 let g:instant_markdown_browser = "brave "
-let g:instant_markdown_autostart = 1
-let g:instant_markdown_autoscroll = 1
-let g:instant_markdown_slow = 1
-let g:instant_markdown_port = 8888
-let g:instant_markdown_allow_unsafe_content = 1
-let g:instant_markdown_allow_external_content = 1
-let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
+"let g:instant_markdown_autostart = 1
+"let g:instant_markdown_autoscroll = 1
+"let g:instant_markdown_slow = 1
+"let g:instant_markdown_port = 8888
+"let g:instant_markdown_allow_unsafe_content = 1
+"let g:instant_markdown_allow_external_content = 1
+"let g:instant_markdown_logfile = '/tmp/instant_markdown.log'
 
 nnoremap ZZ :InstantMarkdownStop<Cr>:wq<Cr>
 noremap ZQ :InstantMarkdownStop<Cr>:q<Cr>
