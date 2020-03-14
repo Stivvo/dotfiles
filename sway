@@ -53,7 +53,7 @@ exec trizen -Syy
 # start mako notification server
 exec_always mako
 # start amdgpu fan
-sudo systemctl start amdgpu-fancontrol.service
+exec sudo systemctl start amdgpu-fancontrol.service
 
 ##################
 #-- GTK themes --#
