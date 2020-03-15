@@ -136,3 +136,8 @@ source ~/.vim/indentGuides.vim
 noremap <leader>k :tabprevious<Cr>
 noremap <leader>j :tabNext<Cr>
 
+" move around
+nnoremap E gE
+nnoremap <leader>w f 
+nnoremap <leader>b F 
+
