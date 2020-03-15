@@ -20,3 +20,5 @@ let g:wrapText=1
 
 " compile markdown and open with firefox
 map <leader>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr>
+
+nnoremap <leader>h /^[#]\+ [a-z A-Z]*
