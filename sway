@@ -135,7 +135,7 @@ bindsym {
 # Start file manager
     $mod+o $file
 # Start joplin in a terminal
-    $mod+n exec $term -- joplin && joplin sync
+    $mod+n exec firefox-developer-edition & $term -- ranger ~/notes &
 # Reload the configuration file
     $mod+Shift+c reload
 # Exit sway (logs you out of your Wayland session)
