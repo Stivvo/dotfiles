@@ -22,7 +22,9 @@ case "$select" in
         scrnPath="/home/stefano/screen/${scrnName}"
         ;;
     "choose")
-        urxvt -e ranger --show-only-dirs --choosedir=/tmp/scrnDir.txt
+        scrnDir="$(cat /tmp/scrnDir.txt)"
+        urxvt -e ranger "$scrnDir" --show-only-dirs --choosedir=/tmp/scrnDir.txt
+        scrnDir="$(cat /tmp/scrnDir.txt)"
         scrnPath="$(cat /tmp/scrnDir.txt)/${scrnName}"
         ;;
     "delete")
