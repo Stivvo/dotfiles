@@ -1,6 +1,6 @@
 #!/bin/bash
 
-trizen -Syu
+#trizen -Syu
 trizen -Rscn $(trizen -Qdtq)
 trizen -c
 paccache -ruk0

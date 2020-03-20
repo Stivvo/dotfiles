@@ -10,6 +10,7 @@ echo "vim..."
 cp snclirc ~/.snclirc
 echo "snclirc..."
 cp bashrc ~/.bashrc
+source /home/stefano/.bashrc
 echo "bashrc..."
 
 # fish
