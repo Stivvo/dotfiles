@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#trizen -Syu
-trizen -Rscn $(trizen -Qdtq)
-trizen -c
+#pacaur -Syu
+pacaur -Rscn $(pacaur -Qdtq)
+pacaur -c
 paccache -ruk0
-trizen -Scc
+pacaur -Scc
 

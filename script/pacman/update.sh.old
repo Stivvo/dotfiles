@@ -2,6 +2,6 @@
 
 while [ true ]
 do
-    yay -Sy
+    pacaur -Sy
     sleep 30m
 done
