@@ -3,3 +3,8 @@ yaru-gtk-theme
 yaru-icon-theme
 yaru-sound-theme
 yaru-unity-theme
+otf-san-francisco
+otf-san-francisco-mono
+otf-san-francisco-pro
+nerd-fonts-complete
+

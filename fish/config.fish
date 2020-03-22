@@ -37,7 +37,7 @@ alias greset='git reset'
 alias xamppt='sudo xampp start'
 alias xamppp='sudo xampp stop'
 
-alias y='trizen'
+alias y='pacaur'
 alias diff='diff --color'
 
 alias v='vim'
