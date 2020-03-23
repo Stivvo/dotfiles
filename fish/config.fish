@@ -1,3 +1,14 @@
+fish_vi_key_bindings
+
+set -U _JAVA_AWT_WM_NONREPARENTING 1
+set -U RANGER_LOAD_DEFAULT_RC FALSE
+set fish_greeting
+set -U JAVA_HOME /usr/lib/jvm/java-11-openjdk
+set -U CATALINA_HOME /home/stefano/tomcat
+
+export EDITOR=vim
+export BROWSER=firefox-developer-edition
+
 alias l='lsd -h'
 alias ll='lsd -hl'
 alias la='lsd -ha'
@@ -33,25 +44,15 @@ alias gdiff='git diff'
 alias ggrep='git grep'
 alias gstatus='git status'
 alias greset='git reset'
+alias grestore='git restore'
 
 alias xamppt='sudo xampp start'
 alias xamppp='sudo xampp stop'
 
-alias y='pacaur'
-alias diff='diff --color'
-
 alias v='vim'
-export EDITOR=vim
-
-fish_vi_key_bindings
-
-set -U fish_user_paths /opt/lampp
-
-export _JAVA_AWT_WM_NONREPARENTING=1
-export RANGER_LOAD_DEFAULT_RC=FALSE
-set fish_greeting
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
-export CATALINA_HOME=/home/stefano/tomcat
+alias y='pacaur'
+alias yy='update.sh ~/prog/dotfiles/script/pacman/ignore.txt'
+alias diff='diff --color'
 
 alias tbt="gnome-terminal -q --tab -- fish -c 'cd '(pwd)'; fish'"
 alias nwt="gnome-terminal -q -- fish -c 'cd '(pwd)'; fish'"
