@@ -35,9 +35,6 @@ echo "procedures..."
 # volume and brightness notifications files
 echo 100 > /tmp/audio-notification
 echo 100 > /tmp/brightness-notification
-# install all packages
-sudo pacman -S --needed trizen
-trizen -S --needed < packages.txt
 # video group for light
 sudo usermod -a -G video $USER
 # install vim instant markdown

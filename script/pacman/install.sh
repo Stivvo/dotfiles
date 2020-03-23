@@ -1,4 +1,5 @@
 #!/bin/bash
 
-echo "$(tr "\n" " " < packages.txt)"
-pacaur -S --needed "$(tr "\n" " " < packages.txt)"
+pkg="$(tr "\n" " " < packages.txt)"
+echo $pkg
+pacaur -S --needed "$pkg"
