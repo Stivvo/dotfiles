@@ -1,35 +1,40 @@
 #!/bin/bash
 
+echo "creating useful dirs..."
+mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.vim/ftplugin ~/.config/zathura ~/.config/sway ~/.config/swaylock 
+pw=$(pwd)
+echo ${pw}
+
 echo "shells..."
-ln -s bashrc ~/.bashrc
+ln -sf ${pw}/bashrc ~/.bashrc
 source ~/.bashrc
 #sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
 #echo "setting default shell to fish, reboot required"
-ln -s fish ~/.config/fish
-ln -s Xresources ~/.Xresources
+ln -sf ${pw}/fish/config.fish ~/.config/fish/config.fish
+ln -sf ${pw}/Xresources ~/.Xresources
 xrdb ~/.Xresources
 
 echo "creating symlinks for programs configs..."
-ln -s mako ~/.config/mako
-ln -s pam ~/.pam_environment  # pam environment, enable wayland on firefox
-ln -s vim ~/.vim/
-ln -s zathura ~/.config/zathura
+# single
+ln -sf ${pw}/pam ~/.pam_environment  # pam environment, enable wayland on firefox
+ln -sf ${pw}/mako ~/.config/mako/config
+ln -sf ${pw}/zathurarc ~/.config/zathura/zathurarc
+#ranger
+ln -sf ${pw}/ranger/rc.conf ~/.config/ranger/rc.conf
+ln -sf ${pw}/ranger/rifle.conf ~/.config/ranger/rifle.conf
+ln -sf ${pw}/ranger/scope.sh ~/.config/ranger/scope.sh
+# vim
+ln -sf ${pw}/vim/vimrc ~/.vim/vimrc
+ln -sf ${pw}/vim/*.vim ~/.vim/
+ln -sf ${pw}/vim/ftplugin ~/.vim/ftplugin
 # sway
-ln -s sway ~/.config/sway
-ln -s swaylock ~/.config/swaylock
-ln -s ranger ~/.config/ranger
+ln -sf ${pw}/sway ~/.config/sway/config
+ln -sf ${pw}/swaylock ~/.config/swaylock/config
 
 echo "git config..."
 git config --global user.name Stivvo
 git config --global user.email entattis15@itisvinci.com
 git config --global core.editor vim
-
-echo "creating useful dirs..."
-mkdir ~/.cache/markdown/
-mkdir ~/.cache/markdown/mkd
-mkdir ~/.cache/markdown/html
-mkdir ~/screen
-mkdir ~/.cache/screen
 
 echo "procedures..."
 # volume and brightness notifications files
