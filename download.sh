@@ -35,6 +35,7 @@ echo "git config..."
 git config --global user.name Stivvo
 git config --global user.email entattis15@itisvinci.com
 git config --global core.editor vim
+git config --global credential.helper 'cache --timeout=14400'
 
 echo "procedures..."
 # volume and brightness notifications files
