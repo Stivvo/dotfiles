@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "creating useful dirs..."
-mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.vim/ftplugin ~/.config/zathura ~/.config/sway ~/.config/swaylock 
+mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock 
 pw=$(pwd)
 echo ${pw}
 
@@ -25,7 +25,7 @@ ln -sf ${pw}/ranger/rifle.conf ~/.config/ranger/rifle.conf
 ln -sf ${pw}/ranger/scope.sh ~/.config/ranger/scope.sh
 # vim
 ln -sf ${pw}/vim/vimrc ~/.vim/vimrc
-ln -sf ${pw}/vim/*.vim ~/.vim/
+ln -sf ${pw}/vim/confPlugins ~/.vim/confPlugins
 ln -sf ${pw}/vim/ftplugin ~/.vim/ftplugin
 # sway
 ln -sf ${pw}/sway ~/.config/sway/config

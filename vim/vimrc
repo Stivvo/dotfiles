@@ -126,11 +126,11 @@ Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 call plug#end()
 
 "plugin specific configuraiton
-source ~/.vim/goyo.vim
-source ~/.vim/ctrlP.vim
-source ~/.vim/nerdTree.vim
-source ~/.vim/coc.vim
-source ~/.vim/indentGuides.vim
+source ~/.vim/confPlugins/coc.vim
+source ~/.vim/confPlugins/ctrlP.vim
+source ~/.vim/confPlugins/goyo.vim
+source ~/.vim/confPlugins/indentGuides.vim
+source ~/.vim/confPlugins/nerdTree.vim
 
 "tabs
 noremap <leader>k :tabprevious<Cr>
