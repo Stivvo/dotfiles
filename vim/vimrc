@@ -16,6 +16,10 @@ filetype plugin on
 filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 
+"statusline
+set laststatus=2
+set statusline+=%f
+
 function! Kformat()
     let line = line('.')
     :norm gg=G
