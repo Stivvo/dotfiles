@@ -408,6 +408,7 @@ bindsym {
    for_window [app_id="pavucontrol"] move container to workspace $ws9
    
    for_window [class="qtwaw"] move container to workspace $ws10
+   for_window [app_id="eu.scarpetta.QtWAW"] move container to workspace $ws10
 
    # for_window [app_id="firefox"] move container to workspace $ws2
 
