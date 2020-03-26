@@ -55,7 +55,7 @@ exec_always mako
 # start volume control
 exec pavucontrol
 # set fish path
-exec fish --command=set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/prog/dotfiles/script/intellide/ $fish_user_paths
+exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/prog/dotfiles/script/intellide/ $fish_user_paths"
 
 ##################
 #-- GTK themes --#
