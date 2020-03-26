@@ -44,14 +44,16 @@ exec_always xrdb ~/.Xresources
 exec_always ydotoold
 # start redshift at my latitude
 exec_always redshift -l 45.47:9.19 -t 6500:4500 -m wayland
-# start firefox on wayland
-exec $browser
+# start firefox
+$browser
 # start qtwaw (Whatsapp)
 exec qtwaw
 # update package list
 exec trizen -Syy
 # start mako notification server
 exec_always mako
+# start volume control
+exec pavucontrol
 # set fish path
 exec fish --command=set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/prog/dotfiles/script/intellide/ $fish_user_paths
 
@@ -131,11 +133,11 @@ bindsym {
 # Kill focused window
     $mod+q kill
 # Start firefox
-    $mod+i exec $browser
+    $mod+i $browser
 # Start file manager
     $mod+o $file
 # Start joplin in a terminal
-    $mod+n exec firefox-developer-edition & $term -- ranger ~/notes &
+    $mod+n $browser & $term -- ranger ~/notes &
 # Reload the configuration file
     $mod+Shift+c reload
 # Exit sway (logs you out of your Wayland session)
@@ -147,7 +149,7 @@ bindsym {
 # Shutdown
     --release $mod+Shift+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'poweroff'
 # Special keys
-    XF86Search exec $browser
+    XF86Search $browser
     XF86Calculator exec gnome-calculator
     XF86Explorer $file
     XF86Tools exec intellide
@@ -386,6 +388,9 @@ bindsym {
 #-- Window Rules --#
 ####################
 #
+   workspace $ws10 output $m2
+   workspace $ws9 output $m2
+
    for_window [class="code-Login"] floating enable
    for_window [class="code-Login"] border normal
 
@@ -399,9 +404,10 @@ bindsym {
    for_window [class="ProvaPallaClient"] border normal
 
    for_window [app_id="gnome-calculator"] floating enable
+
+   for_window [app_id="pavucontrol"] move container to workspace $ws9
    
-   workspace $ws10 output $m2
-   for_window [app_id="eu.scarpetta.QtWAW"] move container to workspace $ws10
+   for_window [class="qtwaw"] move container to workspace $ws10
 
    # for_window [app_id="firefox"] move container to workspace $ws2
 
