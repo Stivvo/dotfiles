@@ -136,8 +136,8 @@ bindsym {
     $mod+i $browser
 # Start file manager
     $mod+o $file
-# Start joplin in a terminal
-    $mod+n $browser & $term -- ranger ~/notes &
+# Start notes app in a terminal
+    $mod+n $term -- ranger ~/notes &
 # Reload the configuration file
     $mod+Shift+c reload
 # Exit sway (logs you out of your Wayland session)
