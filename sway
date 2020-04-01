@@ -137,13 +137,13 @@ bindsym {
 # Start file manager
     $mod+o $file
 # Start joplin in a terminal
-    $mod+n $browser & $term -- ranger ~/notes &
+    $mod+n $term -- ranger ~/notes &
 # Reload the configuration file
     $mod+Shift+c reload
 # Exit sway (logs you out of your Wayland session)
     --release $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 # swaylok
-    --release $mod+Ctrl+l exec swaylock-fancy
+    --release $mod+Ctrl+l exec swaylock-blur
 # Suspend the computer
     --release $mod+Shift+s exec "systemctl suspend"
 # Shutdown
