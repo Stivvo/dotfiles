@@ -27,6 +27,7 @@ map <F5> :call Kformat()<Cr> :call Format()<Cr>
 map <C-Esc> :Format()
 nmap <Esc><Esc> :w<Cr>
 map <leader> @q
+nmap <F9> :Ranger<Cr>
 
 "splits
 set splitbelow splitright
@@ -72,7 +73,7 @@ set smarttab
 set shiftwidth=4
 
 "statusline
-set laststatus=1
+set laststatus=2
 set statusline+=%f
 
 "spelling
@@ -102,30 +103,34 @@ call plug#begin('~/.vim/plugged')
 "--dependencies
 Plug 'google/vim-maktaba'
 Plug 'ryanoasis/vim-devicons'
+"--appearance
+Plug 'itchyny/lightline.vim'
 "---utility
+Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'francoiscabrol/ranger.vim', { 'on': 'Ranger' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'airblade/vim-gitgutter'
+Plug 'unblevable/quick-scope'
 "---Programming
+Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release' }
 Plug 'nathanaelkane/vim-indent-guides' 
-Plug 'sheerun/vim-polyglot'
-"Plug 'arp242/jumpy.vim'
-"Plug 'scrooloose/syntastic'
 "---languages
 Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
-Plug 'ap/vim-css-color'
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
+"maybe
 "Plug 'bazelbuild/vim-bazel'
 "Plug 'justmao945/vim-clang'
+"Plug 'arp242/jumpy.vim'
+"Plug 'scrooloose/syntastic'
 call plug#end()
 
 "plugin specific configuraiton
@@ -136,6 +141,8 @@ source ~/.vim/confPlugins/goyo.vim
 source ~/.vim/confPlugins/indentGuides.vim
 source ~/.vim/confPlugins/nerdTree.vim
 source ~/.vim/confPlugins/ranger.vim
+source ~/.vim/confPlugins/lightline.vim
+source ~/.vim/confPlugins/quick-scope.vim
 
 "tabs
 noremap <leader>k :tabprevious<Cr>
