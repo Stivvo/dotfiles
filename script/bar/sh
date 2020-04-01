@@ -3,14 +3,14 @@
 SEP=" | "
 DATE="$(date +'%d-%m-%Y | %l:%M ')"
 
-BATTERY="$(acpi | awk '{print $4}' )"
+BATTERY="$(cat /sys/class/power_supply/BAT1/capacity)"
+
 if [ -z "$BATTERY" ]
 then
     BATTERY=""
     BICON=""
 else
-    BATTERY="${BATTERY::len-1}"
-    B=$[${BATTERY%"%"}]
+    BATTERY="${BATTERY}"
 
     if [ $B -lt 11 ]
     then
@@ -28,6 +28,7 @@ else
         BICON="" 
     fi
 fi
+BATTERY="${BATTERY}%"
 
 LIGHT="$(cat /tmp/light.txt)"
 LIGHT="$LIGHT%"
