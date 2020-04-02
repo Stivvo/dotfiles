@@ -332,16 +332,16 @@ mode "resize" {
 font UbuntuMono Nerd Font Regular 13
 
 bar {
-    position top
-    status_command ~/prog/dotfiles/script/bar/./loop.sh
+    #position top
+    swaybar_command waybar
 
-    colors {
-        statusline #FFFFFF
-        background #000000
-        inactive_workspace #9654D4 #000000 #FFFFFF
-        focused_workspace #FFFFFF #9654D4 #FFFFFF
-        separator #9654D4
-    }
+    #colors {
+        #statusline #FFFFFF
+        #background #000000
+        #inactive_workspace #9654D4 #000000 #FFFFFF
+        #focused_workspace #FFFFFF #9654D4 #FFFFFF
+        #separator #9654D4
+    #}
 }
 
 ##############

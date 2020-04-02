@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "creating useful dirs..."
-mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock 
+mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock
 pw=$(pwd)
 echo ${pw}
 
@@ -30,6 +30,7 @@ ln -f ${pw}/vim/ftplugin ~/.vim/ftplugin
 # sway
 ln -sf ${pw}/sway ~/.config/sway/config
 ln -sf ${pw}/swaylock ~/.config/swaylock/config
+ln -sf ${pw}/waybar ~/.config/waybar
 
 echo "git config..."
 git config --global user.name Stivvo

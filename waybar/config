@@ -1,0 +1,66 @@
+{
+    "layer": "bottom",
+    "height": 30,
+    "width": 1280,
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["pulseaudio", "custom/ram", "cpu", "temperature", "battery", "clock"],
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "clock": {
+        "timezone": "Europe/Rome",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%b %a %d}"
+    },
+    "custom/ram": {
+        "format": "{} ",
+        "on-click": "gnome-terminal -- htop",
+        "interval": 30,
+        "exec": "free used -h | awk 'FNR == 2 {print$3}'"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    }
+}
+

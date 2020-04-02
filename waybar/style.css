@@ -1,0 +1,74 @@
+* {
+    border: none;
+    border-radius: 0;
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: UbuntuMono Nerd Font;
+    font-size: 15px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+    border-bottom: 3px solid transparent;
+}
+
+#workspaces button:hover {
+    background-color: rgba(55, 55, 55, 0.2);
+    border-bottom: 3px solid rgba(160, 100, 215, 1);
+}
+
+#workspaces button.focused {
+    background-color: rgba(150, 84, 212, 0.5);
+    border-bottom: 3px solid rgba(160, 100, 215, 1);
+}
+
+#workspaces button.urgent {
+    background-color: #eb4d4b;
+    border-bottom: 3px solid #eb4d4b;
+}
+
+#mode {
+    background-color: rgba(54, 54, 54, 0.8);
+    border-bottom: 3px solid rgba(160, 100, 215, 1);
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#pulseaudio,
+#mode,
+#custom-ram {
+    padding: 0 10px;
+    margin: 0 4px;
+}
+
+#battery.charging {
+    color: #ffffff;
+    background-color: #26A65B;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #eb4d4b;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#temperature.critical {
+    background-color: #eb4d4b;
+}
+
