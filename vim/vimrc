@@ -133,17 +133,6 @@ Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 "Plug 'scrooloose/syntastic'
 call plug#end()
 
-"plugin specific configuraiton
-source ~/.vim/confPlugins/polyglot.vim
-source ~/.vim/confPlugins/coc.vim
-source ~/.vim/confPlugins/ctrlP.vim
-source ~/.vim/confPlugins/goyo.vim
-source ~/.vim/confPlugins/indentGuides.vim
-source ~/.vim/confPlugins/nerdTree.vim
-source ~/.vim/confPlugins/ranger.vim
-source ~/.vim/confPlugins/lightline.vim
-source ~/.vim/confPlugins/quick-scope.vim
-
 "tabs
 noremap <leader>k :tabprevious<Cr>
 noremap <leader>j :tabNext<Cr>
