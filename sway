@@ -13,26 +13,22 @@
 #                                    $$$$$$/                                                     $$$$$$/  
 # 
 
-# Read man 5 sway for a complete reference.
-
 #################
 #-- Variables --#
 #################
 #
-# Logo key. Use Mod1 for Alt.
+# keys
 set $mod Mod4
-# Home row direction keys, like vim
 set $left h
 set $down j
 set $up k
 set $right l
+# applications
 set $term exec gnome-terminal
 set $Vterm exec mate-terminal
 set $file exec urxvt -e ranger
 set $browser exec firefox-developer-edition
-# Note: it's recommended that you pass the final command to sway
 set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
-bindsym $mod+d exec $menu
 
 #####################
 #-- Load services --#
@@ -56,7 +52,7 @@ set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
     gsettings set $gnome-schema gtk-theme Yaru-Purple-dark
-    gsettings set $gnome-schema icon-theme Yaru
+    gsettings set $gnome-schema icon-theme Yaru-Purple
     gsettings set $gnome-schema cursor-theme Numix-Cursor-Maia
 }
 
@@ -71,18 +67,12 @@ set $m1 = DP-2
 set $m2 = HDMI-A-1
 
 bindsym {
-# switch output
-    $mod+m exec "~/prog/dotfiles/script/screen/./sh s"
-# transform output
-    $mod+Shift+m exec "~/prog/dotfiles/script/screen/./sh t"
-# Move workspace to screen 1
-    $mod+Shift+left move workspace to left
-# Move workspace to screeen 2
-    $mod+Shift+right move workspace to right
-# Focus screen 1
-    $mod+left focus output left
-# Focus screeen 2
-    $mod+right focus output right
+    $mod+m exec "~/prog/dotfiles/script/screen/./sh s" # switch output
+    $mod+Shift+m exec "~/prog/dotfiles/script/screen/./sh t" # transform output
+    $mod+Shift+left move workspace to left # Move workspace to screen 1
+    $mod+Shift+right move workspace to right # Move workspace to screeen 2
+    $mod+left focus output left # Focus screen 1
+    $mod+right focus output right # Focus screeen 2
 }
 
 ##########################
@@ -115,45 +105,32 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 ##########################
 #
 bindsym {
-# Start a terminal
+# basics
+    $mod+d exec $menu
     $mod+Return $term
-# Start vim terminal
-    $mod+Shift+Return $Vterm
-# Start a terminal running vim
-    $mod+Control+Return $Vterm -- vim
-# Kill focused window
+    $mod+Shift+Return $Vterm # Start vim terminal 
+    $mod+Control+Return $Vterm -- vim # Start a terminal running vim
     $mod+q kill
-# Start firefox
     $mod+i $browser
-# Start file manager
     $mod+o $file
-# Start notes app in a terminal
-    $mod+n $term -- ranger ~/notes &
-# Reload the configuration file
-    $mod+Shift+c reload
-# Exit sway (logs you out of your Wayland session)
-    --release $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-# swaylok
-    --release $mod+Ctrl+l exec swaylock-blur
-# Suspend the computer
-    --release $mod+Shift+s exec "systemctl suspend"
-# Shutdown
-    --release $mod+Shift+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'poweroff'
+    $mod+n $term -- ranger ~/notes & # start notes app in a terminal
+    $mod+Shift+c exec swaymsg reload
 # Special keys
-    XF86Search $browser
+    XF86Search $browser #browsers
+    XF86Search+Shift exec brave
     XF86Calculator exec gnome-calculator
-    XF86Explorer $file
-    XF86Tools exec intellide
+    XF86Explorer $file # file managers
+    XF86Explorer+Shift exec nautilus
+    XF86Tools exec intellide # ides
     XF86Tools+Shift exec qtcreator
-# gnome-terminal relpace shortcut
-    #Ctrl+Shift+t exec swaymsg [app_id="gnome-terminal-server"] focus && gnome-terminal --tab -- fish -c 'cd '$(pwd)'; fish' &> /dev/null
-    #Ctrl+Shift+n exec swaymsg [app_id="gnome-terminal-server"] focus && gnome-terminal -- fish -c 'cd '$(pwd)'; fish' &> /dev/null
+    XF86Tools+Ctrl exec eclipse
+# exit
+    --release $mod+Ctrl+l exec swaylock-blur
+    --release $mod+Ctrl+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+    --release $mod+Ctrl+s exec "systemctl suspend"
+    --release $mod+Ctrl+r exec swaynag -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot off this computer?' -b 'Yes, reboot' 'systemctl -i poweroff'
+    --release $mod+Ctrl+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'systemctl-reboot'
 }
-# Drag floating windows by holding down $mod and left mouse button.
-# Resize them with right mouse button + $mod.
-# Despite the name, also works for non-floating windows.
-# Change normal to inverse to use left mouse button for resizing and right
-# mouse button for dragging.
 floating_modifier $mod normal
 
 #####################
@@ -228,9 +205,6 @@ bindsym {
 #-- Layout stuff --#
 ####################
 #
-# You can "split" the current object of your focus with
-# $mod+b or $mod+v, for horizontal and vertical splits
-# respectively.
 bindsym {
     $mod+b splith
     $mod+v splitv
@@ -288,30 +262,36 @@ bindsym {
 #-- Resizing containers --#
 ###########################
 #
-# toggle resize
 bindsym $mod+r mode "resize"
-mode "resize" {
+set $resizeNorm 30px
+set $resizeFast 90px
+set $resizeSlow 10px
+
 # left shrink the containers width
 # down shrink the containers heigh
-# up shrink the containers width 
-# grow grow the containers height
-    bindsym $left resize shrink width 30px
-    bindsym $down resize grow height 30px
-    bindsym $up resize shrink height 30px
-    bindsym $right resize grow width 30px
+# up shrink the containers width
+# right grow the containers height
+
+mode "resize" {
+    bindsym {
+        $left resize shrink width $resizeNorm 
+        $down resize grow height $resizeNorm  
+        $up resize shrink height $resizeNorm  
+        $right resize grow width $resizeNorm  
 # move faster
-    bindsym Ctrl+$left resize shrink width 90px
-    bindsym Ctrl+$down resize grow height 90px
-    bindsym Ctrl+$up resize shrink height 90px
-    bindsym Ctrl+$right resize grow width 90px
+        Ctrl+$left resize shrink width $resizeFast
+        Ctrl+$down resize grow height $resizeFast
+        Ctrl+$up resize shrink height $resizeFast
+        Ctrl+$right resize grow width $resizeFast
 # move slower
-    bindsym Shift+$left resize shrink width 10px
-    bindsym Shift+$down resize grow height 10px
-    bindsym Shift+$up resize shrink height 10px
-    bindsym Shift+$right resize grow width 10px
+        Shift+$left resize shrink width $resizeSlow
+        Shift+$down resize grow height $resizeSlow
+        Shift+$up resize shrink height $resizeSlow
+        Shift+$right resize grow width $resizeSlow
 # Return to default mode
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+        Return mode "default"
+        Escape mode "default"
+    }
 }
 
 ##################
