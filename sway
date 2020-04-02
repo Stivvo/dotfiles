@@ -128,8 +128,8 @@ bindsym {
     --release $mod+Ctrl+l exec swaylock-blur
     --release $mod+Ctrl+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
     --release $mod+Ctrl+s exec "systemctl suspend"
-    --release $mod+Ctrl+r exec swaynag -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot off this computer?' -b 'Yes, reboot' 'systemctl -i poweroff'
-    --release $mod+Ctrl+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'systemctl-reboot'
+    --release $mod+Ctrl+r exec swaynag -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot off this computer?' -b 'Yes, reboot' 'systemctl -i reboot'
+    --release $mod+Ctrl+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'systemctl poweroff'
 }
 floating_modifier $mod normal
 
