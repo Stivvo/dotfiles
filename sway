@@ -37,7 +37,7 @@ set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
 exec_always xrdb ~/.Xresources & # load Xresources
 exec_always ydotoold & # start ydotool server
 exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland & # start redshift at my latitude
-$browser & # open firefox
+exec $browser # open firefox
 exec qtwaw & # open qtwaw (Whatsapp)
 exec trizen -Syy & # update package list
 exec mako & # notification server
@@ -381,6 +381,6 @@ bindsym {
    for_window [class="qtwaw"] move container to workspace $ws10
    for_window [app_id="eu.scarpetta.QtWAW"] move container to workspace $ws10
 
-   # for_window [app_id="firefox"] move container to workspace $ws2
+    for_window [app_id="firefox"] move container to workspace $ws2
 
 include /etc/sway/config.d/*
