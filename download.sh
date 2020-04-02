@@ -25,12 +25,12 @@ ln -sf ${pw}/ranger/rifle.conf ~/.config/ranger/rifle.conf
 ln -sf ${pw}/ranger/scope.sh ~/.config/ranger/scope.sh
 # vim
 ln -sf ${pw}/vim/vimrc ~/.vim/vimrc
-ln -sf ${pw}/vim/plugin ~/.vim/plugin
-ln -sf ${pw}/vim/ftplugin ~/.vim/ftplugin
+ln -s ${pw}/vim/plugin ~/.vim/
+ln -s ${pw}/vim/ftplugin ~/.vim/
 # sway
 ln -sf ${pw}/sway ~/.config/sway/config
 ln -sf ${pw}/swaylock ~/.config/swaylock/config
-ln -sf ${pw}/waybar ~/.config/waybar
+ln -s ${pw}/waybar ~/.config/
 
 echo "git config..."
 git config --global user.name Stivvo
