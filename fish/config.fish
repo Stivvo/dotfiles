@@ -15,6 +15,16 @@ alias la='lsd -ha'
 alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
+alias v='vim'
+alias y='pacaur --color=always'
+alias yy='update.sh ~/prog/dotfiles/script/pacman/ignore.txt'
+alias diff='diff --color'
+alias less='less -R'
+
+alias grep="grep --color"
+alias fgrep="fgrep --color"
+alias egrep="egrep --color"
+
 alias clone='git clone'
 alias pull='git pull'
 alias commit='git commit'
@@ -46,13 +56,9 @@ alias gstatus='git status'
 alias greset='git reset'
 alias grestore='git restore'
 
-alias xamppt='sudo xampp start'
-alias xamppp='sudo xampp stop'
-
-alias v='vim'
-alias y='pacaur'
-alias yy='update.sh ~/prog/dotfiles/script/pacman/ignore.txt'
-alias diff='diff --color'
+alias xamt='sudo xampp start'
+alias xamr='sudo xampp start'
+alias xamp='sudo xampp stop'
 
 alias tbt="gnome-terminal -q --tab -- fish -c 'cd '(pwd)'; fish'"
 alias nwt="gnome-terminal -q -- fish -c 'cd '(pwd)'; fish'"
