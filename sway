@@ -39,7 +39,7 @@ exec_always ydotoold & # start ydotool server
 exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland & # start redshift at my latitude
 exec $browser # open firefox
 exec qtwaw & # open qtwaw (Whatsapp)
-exec trizen -Syy & # update package list
+exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/prog/dotfiles/script/intellide/ $fish_user_paths" & # set fish path

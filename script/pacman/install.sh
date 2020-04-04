@@ -1,5 +1,3 @@
 #!/bin/bash
 
-pkg="$(tr "\n" " " < packages.txt)"
-echo $pkg
-pacaur -S --needed "$pkg"
+pacaur -S --needed --noedit --noconfirm - < packages.txt

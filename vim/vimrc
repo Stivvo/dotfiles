@@ -1,5 +1,6 @@
 let mapleader=" "
 set encoding=UTF-8
+set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ Regular\ 10
 set backspace=indent,eol,start
 let g:wrapText=0
 imap <C-v> <C-r>0

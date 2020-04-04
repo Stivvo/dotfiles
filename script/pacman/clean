@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #pacaur -Syu
-pacaur -Rscn $(pacaur -Qdtq)
-pacaur -c
+pacaur --noedit --noconfirm -Rscn $(pacaur -Qdtq)
+pacaur --noedit --noconfirm -c
 paccache -ruk0
-pacaur -Scc
+pacaur --noedit --noconfirm -Scc
 
