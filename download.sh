@@ -38,16 +38,19 @@ git config --global user.email entattis15@itisvinci.com
 git config --global core.editor vim
 git config --global credential.helper 'cache --timeout=14400'
 
-echo "procedures..."
-# volume and brightness notifications files
+echo "volume and brightness notifications files..."
 echo 100 > /tmp/audio-notification
 echo 100 > /tmp/brightness-notification
-# video group for light
-sudo usermod -a -G video $USER
-# install vim instant markdown
+
+echo "gnome-terminal themes..."
+sleep 10s && ydotool key "3+1+enter" &> /dev/null &
+bash -c "$(wget -qO- https://git.io/vQgMr)"
+
+echo "instant markdown..."
 sudo npm -g install instant-markdown-d
 
 echo "oh my fish..."
-# installing fish
 curl -L https://get.oh-my.fish | fish
 fish --command="omf install l"
+
+
