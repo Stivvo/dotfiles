@@ -15,16 +15,17 @@ case "$1" in
         ;;
 esac
 
-select="$(echo -e "default\nchoose\ndelete" | dmenu -i -p "${scrnName} folder")"
+select="$(echo -e "default\nlast\nchoose\ndelete" | dmenu -i -p "${scrnName} folder")"
 
 case "$select" in
     "default")
         scrnPath="/home/stefano/screen/${scrnName}"
         ;;
+    "last")
+        scrnPath="$(cat /tmp/scrnDir.txt)/${scrnName}"
+        ;;
     "choose")
-        scrnDir="$(cat /tmp/scrnDir.txt)"
         urxvt -e ranger "$scrnDir" --show-only-dirs --choosedir=/tmp/scrnDir.txt
-        scrnDir="$(cat /tmp/scrnDir.txt)"
         scrnPath="$(cat /tmp/scrnDir.txt)/${scrnName}"
         ;;
     "delete")
