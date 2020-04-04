@@ -132,7 +132,7 @@ bindsym {
     --release $mod+Ctrl+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'systemctl poweroff'
 # sway stuff
     $mod+c reload
-    $mod+i exec swayinfo | fgrep app_id | tr -d "/app_id=//" | tr -d "\n//" | wl-copy && notify-send.sh $(wl-paste)
+    $mod+i exec swayinfo | fgrep app_id | sed -e "s/^app_id=//g" | tr -d "\n//" | wl-copy && notify-send.sh $(wl-paste)
     $mod+w exec winfocus
 }
 floating_modifier $mod normal
@@ -388,28 +388,28 @@ bindsym {
 
    #for_window [app_id="firefox"] move container to workspace $ws2
    
-   for_window [app_id="gnome-disks"] floating enabled
+   for_window [app_id="gnome-disks"] floating enable
    for_window [app_id="gnome-disks"] border none
 
-   for_window [app_id="cheese"] floating enabled
+   for_window [app_id="cheese"] floating enable
    for_window [app_id="cheese"] border none
 
-   for_window [app_id="eog"] floating enabled
+   for_window [app_id="eog"] floating enable
    for_window [app_id="eog"] border none
 
-   for_window [app_id="org.gnome.Nutlus"] floating enabled
-   for_window [app_id="org.gnome.Nutlus"] border none
+   for_window [app_id="org.gnome.Nautilus"] floating enable
+   for_window [app_id="org.gnome.Nautilus"] border none
 
-   for_window [app_id="conf-etor"] floating enabled
-   for_window [app_id="conf-etor"] border none
+   for_window [app_id="dconf-editor"] floating enable
+   for_window [app_id="dconf-editor"] border none
 
-   for_window [app_id="gnome-font-vewer"] floating enabled
+   for_window [app_id="gnome-font-vewer"] floating enable
    for_window [app_id="gnome-font-vewer"] border none
 
-   for_window [app_id="gthumb"] floating enabled
+   for_window [app_id="gthumb"] floating enable
    for_window [app_id="gthumb"] border none
 
-   for_window [app_id="bobb"] floating enabled
-   for_window [app_id="bobb"] border none
+   for_window [app_id="baobab"] floating enable
+   for_window [app_id="baobab"] border none
 
 include /etc/sway/config.d/*
