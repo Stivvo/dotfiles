@@ -24,8 +24,8 @@ set $down j
 set $up k
 set $right l
 # applications
-set $term exec gnome-terminal
-set $Vterm exec mate-terminal
+set $term exec gnome-terminal --profile="transparent"
+set $Vterm exec gnome-terminal --profile="Dark Pastel"
 set $file exec urxvt -e ranger
 set $browser exec firefox-developer-edition
 set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
