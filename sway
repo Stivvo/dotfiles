@@ -67,8 +67,10 @@ set $m1 = DP-2
 set $m2 = HDMI-A-1
 
 bindsym {
-    $mod+m exec "~/prog/dotfiles/script/screen/./sh s" # switch output
-    $mod+Shift+m exec "~/prog/dotfiles/script/screen/./sh t" # transform output
+# switch output
+    $mod+m exec "~/prog/dotfiles/script/screen/./sh s"
+# rotate output
+    $mod+Shift+m exec "~/prog/dotfiles/script/screen/./sh t"
     $mod+Shift+left move workspace to left # Move workspace to screen 1
     $mod+Shift+right move workspace to right # Move workspace to screeen 2
     $mod+left focus output left # Focus screen 1
@@ -101,7 +103,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 }
 
 ##########################
-#-- Basics keybindings --#
+#-- Applications keybindings --#
 ##########################
 #
 bindsym {
@@ -111,10 +113,9 @@ bindsym {
     $mod+Shift+Return $Vterm # Start vim terminal 
     $mod+Control+Return $Vterm -- vim # Start a terminal running vim
     $mod+q kill
-    $mod+i $browser
+    $mod+p $browser
     $mod+o $file
     $mod+n $term -- ranger ~/notes & # start notes app in a terminal
-    $mod+Shift+c exec swaymsg reload
 # Special keys
     XF86Search $browser #browsers
     XF86Search+Shift exec brave
@@ -130,6 +131,10 @@ bindsym {
     --release $mod+Ctrl+s exec "systemctl suspend"
     --release $mod+Ctrl+r exec swaynag -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot off this computer?' -b 'Yes, reboot' 'systemctl -i reboot'
     --release $mod+Ctrl+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'systemctl poweroff'
+# sway stuff
+    $mod+c exec swaymsg reload
+    $mod+i exec swayinfo | wl-copy && notify-send.sh $(wl-paste)
+    $mod+w exec winfocus
 }
 floating_modifier $mod normal
 
@@ -210,7 +215,7 @@ bindsym {
     $mod+v splitv
 # Switch the current container between different layout styles
     $mod+s layout stacking
-    $mod+w layout tabbed
+    $mod+t layout tabbed
     $mod+e layout toggle split
 # Make the current focus fullscreen
     $mod+f fullscreen
@@ -377,10 +382,11 @@ bindsym {
    for_window [app_id="gnome-calculator"] floating enable
 
    for_window [app_id="pavucontrol"] move container to workspace $ws9
+   for_window [class="Pavucontrol"] move container to workspace $ws9
    
    for_window [class="qtwaw"] move container to workspace $ws10
    for_window [app_id="eu.scarpetta.QtWAW"] move container to workspace $ws10
 
-    for_window [app_id="firefox"] move container to workspace $ws2
+   #for_window [app_id="firefox"] move container to workspace $ws2
 
 include /etc/sway/config.d/*
