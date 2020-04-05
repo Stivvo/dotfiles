@@ -113,6 +113,7 @@ bindsym {
     $mod+Control+Return $Vterm -- vim # Start a terminal running vim
     $mod+q kill
     $mod+p $browser
+    $mod+Shift+p exec Brave
     $mod+o $file
     $mod+n $term -- ranger ~/notes & # start notem app in a terminal
 # Special keys
@@ -378,8 +379,6 @@ bindsym {
    for_window [class="ProvaPallaClient"] floating enable
    for_window [class="ProvaPallaClient"] border normal
 
-   for_window [app_id="gnome-calculator"] floating enable
-
    for_window [app_id="pavucontrol"] move container to workspace $ws9
    for_window [class="Pavucontrol"] move container to workspace $ws9
    
@@ -411,5 +410,11 @@ bindsym {
 
    for_window [app_id="baobab"] floating enable
    for_window [app_id="baobab"] border none
+
+   for_window [app_id="gnome-calculator"] floating enable
+   for_window [app_id="gnome-calculator"] border normal
+
+   for_window [app_id="gnome-tweaks"] floating enable
+   for_window [app_id="gnome-tweaks"] border normal
 
 include /etc/sway/config.d/*
