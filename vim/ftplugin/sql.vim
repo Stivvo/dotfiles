@@ -6,3 +6,4 @@ nmap <leader>i /^[\t ]*insert[a-z` ]*
 nmap <leader>s /^[\t ]*select[a-z` ]*
 nmap <leader>q /^-- \.<left><left>
 
+autocmd Filetype sql call jumpy#map('\c\v^\s*%(create|begin|select|insert|drop|alter)>')
