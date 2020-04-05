@@ -27,6 +27,7 @@ ln -sf ${pw}/ranger/scope.sh ~/.config/ranger/scope.sh
 ln -sf ${pw}/vim/vimrc ~/.vim/vimrc
 ln -s ${pw}/vim/plugin ~/.vim/
 ln -s ${pw}/vim/ftplugin ~/.vim/
+ln -s ${pw}/vim/other ~/.vim/
 # sway
 ln -sf ${pw}/sway ~/.config/sway/config
 ln -sf ${pw}/swaylock ~/.config/swaylock/config

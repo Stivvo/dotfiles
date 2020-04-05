@@ -122,10 +122,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release' }
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'vim-scripts/taglist.vim'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
 "---languages
+Plug 'vim-scripts/taglist.vim', {'for': ['c', 'cpp', 'javascript', 'java']}
 Plug 'vim-scripts/a.vim', { 'for': ['c',  'cpp'] }
 Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
 Plug 'lervag/vimtex', { 'for': 'tex' }

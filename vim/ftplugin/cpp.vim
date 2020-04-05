@@ -1,3 +1,2 @@
-map <leader>h :A
-map <leader>v :AV
-map <leader>s :AS
+source ~/.vim/other/taglist.vim
+source ~/.vim/other/a.vim
