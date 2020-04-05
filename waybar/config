@@ -4,7 +4,7 @@
     "width": 1280,
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "custom/ram", "cpu", "temperature", "battery", "clock"],
+    "modules-right": ["pulseaudio", "custom/ram", "cpu", "temperature", "battery", "clock", "tray"],
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": true
@@ -61,6 +61,10 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
     }
 }
 
