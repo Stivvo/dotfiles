@@ -43,15 +43,21 @@ echo "volume and brightness notifications files..."
 echo 100 > /tmp/audio-notification
 echo 100 > /tmp/brightness-notification
 
+if [ ! -d /usr/lib/node_modules/instant-markdown-d ]
+then
+    echo "instant markdown..."
+    sudo npm -g install instant-markdown-d
+fi
+
+if [ ! -d ~/.config/omf ] || [ ! -d ~/.local/share/omf ]
+then
+    echo "oh my fish..." 
+    curl -L https://get.oh-my.fish > ~/install.fish \ 
+    fish ~/install.fish --path=~/.local/share/omf --config=~/.config/omf \
+    fish --command="omf install l"
+fi
+
 echo "gnome-terminal themes..."
 sleep 10s && ydotool key "3+1+enter" &> /dev/null &
 bash -c "$(wget -qO- https://git.io/vQgMr)"
-
-echo "instant markdown..."
-sudo npm -g install instant-markdown-d
-
-echo "oh my fish..."
-curl -L https://get.oh-my.fish | fish
-fish --command="omf install l"
-
 
