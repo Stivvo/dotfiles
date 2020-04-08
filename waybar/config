@@ -4,7 +4,7 @@
     "width": 1280,
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["pulseaudio", "custom/ram", "cpu", "temperature", "battery", "clock", "tray"],
+    "modules-right": ["pulseaudio", "custom/ram", "cpu", "custom/frequency", "temperature", "battery", "clock", "tray"],
     "sway/workspaces": {
         "disable-scroll": false,
         "all-outputs": true
@@ -15,22 +15,30 @@
     "clock": {
         "timezone": "Europe/Rome",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%b %a %d}"
+        "format-alt": "{:%b %a %d}",
+        "interval": 97
     },
     "custom/ram": {
         "format": "{} ",
         "on-click": "gnome-terminal -- htop",
-        "interval": 30,
+        "interval": 46,
         "exec": "free used -h | awk 'FNR == 2 {print$3}'"
     },
     "cpu": {
         "format": "{usage}% ",
-        "tooltip": false
+        "tooltip": false,
+        "interval": 13
+    },
+    "custom/frequency": {
+        "format": "{}MHz",
+        "interval": 10,
+        "exec": "lscpu | grep -i mhz | awk 'FNR == 1 {print$3}' | cut -c 1-4"
     },
     "temperature": {
-        "critical-threshold": 80,
+        "critical-threshold": 75,
         "format": "{temperatureC}°C {icon}",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""],
+        "interval": 15
     },
     "battery": {
         "states": {
@@ -38,6 +46,7 @@
             "warning": 30,
             "critical": 15
         },
+        "interval": 92,
         "format": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
@@ -60,7 +69,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "pavucontrol"
+        "on-click": "ydotool key super+9 && pavucontrol"
     },
     "tray": {
         "icon-size": 21,

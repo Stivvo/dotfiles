@@ -113,7 +113,7 @@ bindsym {
     $mod+Control+Return $Vterm -- vim # Start a terminal running vim
     $mod+q kill
     $mod+p $browser
-    $mod+Shift+p exec Brave
+    $mod+Shift+p exec brave
     $mod+o $file
     $mod+n $term -- ranger ~/notes & # start notem app in a terminal
 # Special keys
@@ -412,9 +412,9 @@ bindsym {
    for_window [app_id="baobab"] border none
 
    for_window [app_id="gnome-calculator"] floating enable
-   for_window [app_id="gnome-calculator"] border normal
+   for_window [app_id="gnome-calculator"] border none
 
    for_window [app_id="gnome-tweaks"] floating enable
-   for_window [app_id="gnome-tweaks"] border normal
+   for_window [app_id="gnome-tweaks"] border none
 
 include /etc/sway/config.d/*
