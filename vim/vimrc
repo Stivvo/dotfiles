@@ -3,7 +3,10 @@ set encoding=UTF-8
 set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ Regular\ 10
 set backspace=indent,eol,start
 let g:wrapText=0
+
+"clipboard
 imap <C-v> <C-r>0
+vmap <C-c> :'<,'> :w !wl-copy<Cr><Cr>
 
 " go to last line
 if has("autocmd")
@@ -125,7 +128,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
 "---languages
-Plug 'vim-scripts/taglist.vim', {'for': ['c', 'cpp', 'javascript', 'java']}
+Plug 'vim-scripts/taglist.vim', {'on': ['TlistToggle', 'TlistOpen']}
 Plug 'vim-scripts/a.vim', { 'for': ['c',  'cpp'] }
 Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
 Plug 'lervag/vimtex', { 'for': 'tex' }
