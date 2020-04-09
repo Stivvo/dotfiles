@@ -8,6 +8,7 @@ set -U CATALINA_HOME /home/stefano/tomcat
 
 export EDITOR=vim
 export BROWSER=firefox-developer-edition
+export XDG_CURRENT_DESKTOP=Unity
 
 alias l='lsd -h'
 alias ll='lsd -hl'
