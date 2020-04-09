@@ -57,10 +57,20 @@ set mouse=i
 set confirm
 set so=8 "cursor above 8 lines from the bottom of the screen
 set wildmenu "bottom menu autocompletion
-
-"text width
 set ruler
-set colorcolumn=80
+
+"color column
+set colorcolumn=0
+function SetColorColumn()
+    if &colorcolumn == 0
+        set colorcolumn=80
+    else
+        set colorcolumn=0
+    endif
+    echo &colorcolumn
+endfunction
+nmap <F10> :call SetColorColumn()<Cr>
+nmap <C-F10> :set colorcolumn=
 
 "search
 set ignorecase
