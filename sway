@@ -258,10 +258,11 @@ bindsym {
     Mod1+Control+up gaps vertical all plus 5
     Mod1+Control+down gaps vertical all minus 5
 # smart gaps and borders
-    Mod1+g exec "~/prog/dotfiles/script/sway/smartGapsBorderToggle.sh"
+    Mod1+s exec "~/prog/dotfiles/script/sway/smartGapsBorderToggle.sh"
 # reset vertical and horizontal gaps
+    Mod1+g exec "~/prog/dotfiles/script/sway/gapsBorderToggle.sh"
     Mod1+Shift+g gaps outer current set 0
-    Mod1+Control+g gaps outer current all 0
+    Mod1+Control+g gaps outer all set 0
 }
 
 ##################

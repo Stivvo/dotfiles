@@ -5,13 +5,18 @@ state="$(cat $tmpfile)"
 
 #echo $state
 
-if [ "$state" == "off" ]
+if [ "$state" == "OFF" ]
 then
     swaymsg smart_gaps on
     swaymsg smart_borders on
-    echo "on" > $tmpfile
+    state="ON"
 else
     swaymsg smart_gaps off
     swaymsg smart_borders off
-    echo "off" > $tmpfile
+    state="OFF"
 fi
+
+echo $state > $tmpfile
+notify-send.sh "smart\n${state}" \
+    -t 2000 \
+    --replace-file=/tmp/smartGapsBorder-notification
