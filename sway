@@ -242,11 +242,26 @@ smart_borders on
 smart_gaps on
 
 bindsym {
-    $mod+Shift+plus gaps inner all plus 5
-    $mod+Shift+minus gaps inner all minus 5
-    $mod+Control+plus gaps inner all plus 10
-    $mod+Control+minus gaps inner all minus 10
-    $mod+g exec "~/prog/dotfiles/script/smartGapsBorderToggle.sh"
+# inner gaps
+    Mod1+Shift+plus gaps inner current plus 5
+    Mod1+Shift+minus gaps inner current minus 5
+    Mod1+Control+plus gaps inner all plus 5
+    Mod1+Control+minus gaps inner all minus 5
+# horizontal gaps
+    Mod1+Shift+left gaps horizontal current plus 5
+    Mod1+Shift+right gaps horizontal current minus 5
+    Mod1+Control+left gaps horizontal all plus 5
+    Mod1+Control+right gaps horizontal all minus 5
+# vertical gaps
+    Mod1+Shift+up gaps vertical current plus 5
+    Mod1+Shift+down gaps vertical current minus 5
+    Mod1+Control+up gaps vertical all plus 5
+    Mod1+Control+down gaps vertical all minus 5
+# smart gaps and borders
+    Mod1+g exec "~/prog/dotfiles/script/sway/smartGapsBorderToggle.sh"
+# reset vertical and horizontal gaps
+    Mod1+Shift+g gaps outer current set 0
+    Mod1+Control+g gaps outer current all 0
 }
 
 ##################
@@ -272,13 +287,13 @@ set $resizeNorm 30px
 set $resizeFast 90px
 set $resizeSlow 10px
 
-# left shrink the containers width
-# down shrink the containers heigh
+# Left shrink the containers width
+# Down shrink the containers heigh
 # up shrink the containers width
 # right grow the containers height
 
 mode "resize" {
-    bindsym {
+    Bindsym {
         $left resize shrink width $resizeNorm 
         $down resize grow height $resizeNorm  
         $up resize shrink height $resizeNorm  

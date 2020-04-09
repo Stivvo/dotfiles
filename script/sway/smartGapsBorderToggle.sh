@@ -3,7 +3,7 @@
 tmpfile="/tmp/smartGapsBorders.txt"
 state="$(cat $tmpfile)"
 
-echo $state
+#echo $state
 
 if [ "$state" == "off" ]
 then
