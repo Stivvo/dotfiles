@@ -50,8 +50,10 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'francoiscabrol/ranger.vim', { 'on': 'Ranger' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-Plug 'airblade/vim-gitgutter'
 Plug 'unblevable/quick-scope'
+"git
+Plug 'airblade/vim-gitgutter'
+Plug 'itchyny/vim-gitbranch'
 "---Programming
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
