@@ -46,7 +46,7 @@ Plug 'flazz/vim-colorschemes'
 "---utility
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
 Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
 Plug 'francoiscabrol/ranger.vim', { 'on': 'Ranger' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -149,7 +149,7 @@ nmap <F2> :set number! relativenumber!<Cr>
 
 "clipboard
 imap <C-v> <C-r>0
-vmap <C-c> :'<,'> :w !wl-copy<Cr><Cr>
+vmap <C-t> :'<,'> :w !wl-copy<Cr><Cr>
 
 "tabs
 nmap <leader>k :tabprevious<Cr>

@@ -138,3 +138,23 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+"multiple cursors vscode-like
+function! s:select_current_word()
+  if !get(g:, 'coc_cursors_activated', 0)
+    return "\<Plug>(coc-cursors-word)"
+  endif
+  return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
+endfunc
+nmap <expr> <silent> <C-c> <SID>select_current_word()
+
+"multiple cursors
+nmap <silent> <C-g> <Plug>(coc-cursors-position)
+map <silent> <C-l> <Plug>(coc-cursors-word)
+xmap <silent> <C-l> <Plug>(coc-cursors-range)
+" use normal command like `<leader>xi(`
+map <leader>x  <Plug>(coc-cursors-operator)
+
+"rename variable
+map <C-r> :CocCommand document.renameCurrentWord<Cr>
+
