@@ -1,3 +1,3 @@
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'powerline',
       \ }

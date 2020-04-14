@@ -1,3 +1,3 @@
-map <leader>h :A
-map <leader>v :AV
-map <leader>s :AS
+nmap <leader>h :A
+nmap <leader>v :AV
+nmap <leader>s :AS

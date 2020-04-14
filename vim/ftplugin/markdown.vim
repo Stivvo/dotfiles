@@ -18,7 +18,6 @@ nnoremap k gk
 
 "text
 setlocal textwidth=80
-let g:wrapText=1
 
 " compile markdown and open with firefox
 map <leader>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr>

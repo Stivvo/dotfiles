@@ -1,2 +1,3 @@
-map <F8> :NERDTreeToggle<CR>
-autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
+nnoremap <F8> :NERDTreeToggle<Cr>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
