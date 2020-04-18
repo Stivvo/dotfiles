@@ -4,7 +4,7 @@ set encoding=UTF-8
 set backspace=indent,eol,start
 let g:wrapText=0
 syntax on
-set mouse=i
+set mouse=a
 set confirm
 set so=8 "cursor above 8 lines from the bottom of the screen
 set ruler
@@ -64,6 +64,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
 "---languages
+Plug  'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'vim-scripts/taglist.vim', {'on': ['TlistToggle', 'TlistOpen']}
 Plug 'vim-scripts/a.vim', { 'for': ['c',  'cpp'] }
 Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
@@ -147,15 +148,15 @@ nmap <leader> @q
 
 "numbers
 set number norelativenumber
-nmap <F2> :set number! relativenumber!<Cr>
+nmap <F2> :set number relativenumber!<Cr>
 
 "clipboard
 imap <C-v> <C-r>0
-vmap <C-t> :'<,'> :w !wl-copy<Cr><Cr>
+vmap <leader>y :'<,'> :w !wl-copy<Cr><Cr>
 
 "tabs
-nmap <leader>k :tabprevious<Cr>
-nmap <leader>j :tabnext<Cr>
+nnoremap <leader>k :tabprevious<Cr>
+nnoremap <leader>j :tabnext<Cr>
 
 " move around
 nnoremap E gE

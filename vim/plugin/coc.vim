@@ -123,21 +123,21 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings using CoCList:
 " Show all diagnostics.
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+"nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+"nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+"nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+"nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+"nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+"nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+"nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+"nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 "multiple cursors vscode-like
 function! s:select_current_word()
@@ -146,15 +146,15 @@ function! s:select_current_word()
   endif
   return "*\<Plug>(coc-cursors-word):nohlsearch\<CR>"
 endfunc
-nmap <expr> <silent> <C-c> <SID>select_current_word()
+nmap <expr> <silent> <C-g> <SID>select_current_word()
 
 "multiple cursors
-nmap <silent> <C-g> <Plug>(coc-cursors-position)
-map <silent> <C-l> <Plug>(coc-cursors-word)
-xmap <silent> <C-l> <Plug>(coc-cursors-range)
+nmap <silent> <C-x> <Plug>(coc-cursors-position)
+map <silent> <C-c> <Plug>(coc-cursors-word)
+xmap <silent> <C-c> <Plug>(coc-cursors-range)
 " use normal command like `<leader>xi(`
-map <leader>x  <Plug>(coc-cursors-operator)
+map <leader>x <Plug>(coc-cursors-operator)
 
 "rename variable
-map <C-r> :CocCommand document.renameCurrentWord<Cr>
+nmap <leader>r :CocCommand document.renameCurrentWord<Cr>
 
