@@ -1,7 +1,7 @@
 {
     "layer": "bottom",
     "height": 30,
-    "width": 1920,
+    "width": 1366,
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
     "modules-right": ["pulseaudio", "custom/ram", "cpu", "custom/frequency", "temperature", "battery", "clock", "tray"],

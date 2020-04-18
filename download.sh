@@ -32,6 +32,13 @@ ln -s ${pw}/vim/other ~/.vim/
 ln -sf ${pw}/sway ~/.config/sway/config
 ln -sf ${pw}/swaylock ~/.config/swaylock/config
 ln -s ${pw}/waybar ~/.config/
+# pacman
+sudo chown root ${pw}/pacman/mirrorlist
+sudo chown root ${pw}/pacman/makepkg.conf
+sudo chown root ${pw}/pacman/pacman.conf
+sudo ln -sf ${pw}/pacman/mirrorlist /etc/pacman.d/mirrorlist
+sudo ln -sf ${pw}/pacman/makepkg.conf /etc/makepkg.conf
+sudo ln -sf ${pw}/pacman/pacman.conf /etc/pacman.conf
 
 echo "git config..."
 git config --global user.name Stivvo
@@ -58,6 +65,6 @@ then
 fi
 
 echo "gnome-terminal themes..."
-sleep 10s && ydotool key "3+1+enter" &> /dev/null &
-bash -c "$(wget -qO- https://git.io/vQgMr)"
+#sleep 10s && ydotool key "3+1+enter" &> /dev/null &
+#bash -c "$(wget -qO- https://git.io/vQgMr)"
 
