@@ -39,6 +39,7 @@ sudo chown root ${pw}/pacman/pacman.conf
 sudo ln -sf ${pw}/pacman/mirrorlist /etc/pacman.d/mirrorlist
 sudo ln -sf ${pw}/pacman/makepkg.conf /etc/makepkg.conf
 sudo ln -sf ${pw}/pacman/pacman.conf /etc/pacman.conf
+sudo ln -sf ${pw}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
 
 echo "git config..."
 git config --global user.name Stivvo
