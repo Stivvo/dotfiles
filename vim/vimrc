@@ -144,7 +144,7 @@ map <F5> :call SetSpell()<Cr>
 
 "general mapping
 nmap <Esc><Esc> :w<Cr>
-nmap <leader> @q
+nmap <Return> @q
 
 "numbers
 set number norelativenumber

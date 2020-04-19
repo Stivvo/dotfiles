@@ -150,7 +150,7 @@ nmap <expr> <silent> <C-g> <SID>select_current_word()
 
 "multiple cursors
 nmap <silent> <C-x> <Plug>(coc-cursors-position)
-map <silent> <C-c> <Plug>(coc-cursors-word)
+nmap <silent> <C-c> <Plug>(coc-cursors-word)
 xmap <silent> <C-c> <Plug>(coc-cursors-range)
 " use normal command like `<leader>xi(`
 map <leader>x <Plug>(coc-cursors-operator)

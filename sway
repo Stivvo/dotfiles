@@ -24,11 +24,11 @@ set $down j
 set $up k
 set $right l
 # applications
-set $term exec gnome-terminal --profile="transparent"
-set $Vterm exec gnome-terminal --profile="Dark Pastel"
-set $file exec urxvt -e ranger
-set $browser exec firefox-developer-edition
-set $menu exec "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
+set $term gnome-terminal --profile="transparent"
+set $Vterm gnome-terminal --profile="Dark Pastel"
+set $file urxvt -e ranger
+set $browser firefox-developer-edition
+set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
 
 #####################
 #-- Load services --#
@@ -42,6 +42,7 @@ exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/prog/dotfiles/script/intellide/ $fish_user_paths" & # set fish path
+exec udiskie --terminal gnome-terminal --appindicator --tray --no-automount
 
 ##################
 #-- GTK themes --#
@@ -107,20 +108,20 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 #
 bindsym {
 # basics
-    $mod+d $menu
-    $mod+Return $term
-    $mod+Shift+Return $Vterm # Start vim terminal 
-    $mod+Control+Return $Vterm -- vim # Start a terminal running vim
+    $mod+d exec $menu
+    $mod+Return exec $term
+    $mod+Shift+Return exec $Vterm # Start vim terminal 
+    $mod+Control+Return exec $Vterm -- vim # Start a terminal running vim
     $mod+q kill
-    $mod+p $browser
+    $mod+p exec $browser
     $mod+Shift+p exec brave
-    $mod+o $file
-    $mod+n $term -- ranger ~/notes & # start notem app in a terminal
+    $mod+o exec $file
+    $mod+n exec $term -- ranger ~/notes & # start notem app in a terminal
 # Special keys
-    XF86Search $browser #browsers
+    XF86Search exec $browser #browsers
     XF86Search+Shift exec brave
     XF86Calculator exec gnome-calculator
-    XF86Explorer $file # file managers
+    XF86Explorer exec $file # file managers
     XF86Explorer+Shift exec nautilus
     XF86Tools exec intellide # ides
     XF86Tools+Shift exec qtcreator
