@@ -20,9 +20,9 @@ nnoremap k gk
 setlocal textwidth=80
 
 " compile markdown and open with firefox
-map <leader>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr><Cr>
+map <silent> <Space>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr><Cr>
 
 "useful mappings for moving around
-nnoremap <leader>h /^[#]\+ [a-z A-Z]*
+nnoremap <Space>h /^[#]\+ [a-z A-Z]*
 
-nnoremap <silent> <leader>p :silent w<Cr>:!~/prog/dotfiles/script/mark/./presentation.sh % "f" & >> /dev/null<Cr><Cr>
+nnoremap <silent> <Space>p :silent w<Cr>:!~/prog/dotfiles/script/mark/./presentation.sh % "f" & >> /dev/null<Cr><Cr>

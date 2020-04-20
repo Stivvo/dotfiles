@@ -7,7 +7,7 @@ setlocal textwidth=80
 let g:wrapText=1
 
 "vimtex
-nmap <leader>o :VimtexTocOpen<Cr>
-nmap <leader>t :VimtexTocToggle<Cr>
+nmap <Space>o :VimtexTocOpen<Cr>
+nmap <Space>t :VimtexTocToggle<Cr>
 autocmd VimEnter * VimtexCompile
 

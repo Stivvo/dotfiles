@@ -1,5 +1,4 @@
 "general options
-let mapleader=" "
 set encoding=UTF-8
 set backspace=indent,eol,start
 let g:wrapText=0
@@ -97,8 +96,8 @@ function SetColorColumn()
     endif
     echo &colorcolumn
 endfunction
-nmap <F3> :call SetColorColumn()<Cr>
-nmap <C-F3> :set colorcolumn=
+nnoremap <F3> :call SetColorColumn()<Cr>
+nnoremap <C-F3> :set colorcolumn=
 
 " go to last line
 if has("autocmd")
@@ -113,7 +112,7 @@ function! Kformat()
     ":norm ggVGgq
     :exec line
 endfunction
-nmap <F9> :call Kformat()<Cr>
+nnoremap <F9> :call Kformat()<Cr>
 
 "splits
 set splitbelow splitright
@@ -125,7 +124,7 @@ nmap <Up> <C-w>+
 nmap <Down> <C-w>-
 nmap <Left> <C-w><
 nmap <Right> <C-w>>
-nmap <F10> :set splitbelow!<Cr>:set nosplitright!<Cr>
+nnoremap <F10> :set splitbelow!<Cr>:set nosplitright!<Cr>
 
 "spelling
 function SetSpell()
@@ -140,23 +139,34 @@ function SetSpell()
         endif
     endif
 endfunction
-map <F5> :call SetSpell()<Cr>
+nnoremap <F5> :call SetSpell()<Cr>
 
 "general mapping
-nmap <Esc><Esc> :w<Cr>
-nmap <Return> @q
+map <Return> <leader>
+nnoremap <Esc><Esc> :w<Cr>
+nmap \ @q
+
+"move selected text
+noremap <leader>j J
+vnoremap J :m '>+1<Cr>gv=gv
+vnoremap K :m '<-2<Cr>gv=gv
+
+"up and down
+nnoremap + k0C
+nnoremap - j0C
+noremap <Del> ddk
 
 "numbers
 set number norelativenumber
-nmap <F2> :set number relativenumber!<Cr>
+nnoremap <F2> :set number relativenumber!<Cr>
 
 "clipboard
-imap <C-v> <C-r>0
-vmap <leader>y :'<,'> :w !wl-copy<Cr><Cr>
+inoremap <C-v> <C-r>0
+vnoremap <leader>y :'<,'> :w !wl-copy<Cr><Cr>
 
 "tabs
-nnoremap <leader>k :tabprevious<Cr>
-nnoremap <leader>j :tabnext<Cr>
+nnoremap <S-k> :tabprevious<Cr>
+nnoremap <S-j> :tabnext<Cr>
 
 " move around
 nnoremap E gE

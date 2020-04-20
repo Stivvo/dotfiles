@@ -1,5 +1,5 @@
 "open php
-map <leader>h :!firefox --new-window 'localhost/esercizi/%'<Cr> 
+nnoremap <Space>h :!firefox --new-window 'localhost/esercizi/%'<Cr> 
 
 function PhpHtml()
     if &filetype ==# 'html'
@@ -9,4 +9,4 @@ function PhpHtml()
     endif
 endfunction
 
-map <leader>s :call PhpHtml()<Cr>:echo &filetype<Cr>
+nnoremap <Space>p :call PhpHtml()<Cr>:echo &filetype<Cr>
