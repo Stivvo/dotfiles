@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "creating useful dirs..."
-mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock
+mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock ~/.config/imv
 pw=$(pwd)
 echo ${pw}
 
@@ -19,6 +19,7 @@ echo "creating symlinks for programs configs..."
 ln -sf ${pw}/pam ~/.pam_environment  # pam environment, enable wayland on firefox
 ln -sf ${pw}/mako ~/.config/mako/config
 ln -sf ${pw}/zathurarc ~/.config/zathura/zathurarc
+ln -sf ${pw}/imv ~/.config/imv/config
 #ranger
 ln -sf ${pw}/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sf ${pw}/ranger/rifle.conf ~/.config/ranger/rifle.conf

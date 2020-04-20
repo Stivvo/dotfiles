@@ -1,0 +1,6 @@
+[binds]
+
+<Ctrl+j> = next
+<Ctrl+k> = prev
+n = next
+p = prev
