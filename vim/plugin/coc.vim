@@ -50,10 +50,11 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+nnoremap <silent> gf <Plug>(coc-definition)
+nnoremap <silent> gF <Plug>(coc-declaration)
+nnoremap <silent> gi <Plug>(coc-implementation)
+nnoremap <silent> gy <Plug>(coc-type-definition)
+nnoremap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> <leader><F1> :call <SID>show_documentation()<CR>
@@ -70,7 +71,10 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
+nmap rN <Plug>(coc-rename)
+
+"rename variable
+nmap rn :CocCommand document.renameCurrentWord<Cr>
 
 " Formatting selected code.
 xmap <leader>f <Plug>(coc-format-selected)
@@ -155,6 +159,4 @@ xmap <silent> <C-c> <Plug>(coc-cursors-range)
 " use normal command like `<leader>xi(`
 map <leader>x <Plug>(coc-cursors-operator)
 
-"rename variable
-nmap <leader>r :CocCommand document.renameCurrentWord<Cr>
 

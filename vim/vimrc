@@ -46,7 +46,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 "Plug 'terryma/vim-multiple-cursors'
-Plug 'kien/ctrlp.vim', { 'on': 'CtrlP' }
+Plug 'junegunn/fzf', {'on': 'FZF' }
 Plug 'francoiscabrol/ranger.vim', { 'on': 'Ranger' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'unblevable/quick-scope'
@@ -63,7 +63,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
 "---languages
-Plug  'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'vim-scripts/taglist.vim', {'on': ['TlistToggle', 'TlistOpen']}
 Plug 'vim-scripts/a.vim', { 'for': ['c',  'cpp'] }
 Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
@@ -142,14 +142,18 @@ endfunction
 nnoremap <F5> :call SetSpell()<Cr>
 
 "general mapping
-map <Return> <leader>
 nnoremap <Esc><Esc> :w<Cr>
-nmap \ @q
+nmap ^ @q
+
+"change/delete if / for
+nnoremap dai $?if\\|for<Cr>dt{da{
+nnoremap cai $?if\\|for<Cr>dt{ca{
+nnoremap cic $?if\\|for<Cr>f(ci(
 
 "move selected text
-noremap <leader>j J
+noremap <Space>j J
 vnoremap J :m '>+1<Cr>gv=gv
-vnoremap K :m '<-2<Cr>gv=gv
+vnoremap K :m '>-2<Cr>gv=gv
 
 "up and down
 nnoremap + k0C
@@ -162,7 +166,7 @@ nnoremap <F2> :set number relativenumber!<Cr>
 
 "clipboard
 inoremap <C-v> <C-r>0
-vnoremap <leader>y :'<,'> :w !wl-copy<Cr><Cr>
+vnoremap <Space>y :'<,'> :w !wl-copy<Cr><Cr>
 
 "tabs
 nnoremap <S-k> :tabprevious<Cr>
@@ -170,6 +174,6 @@ nnoremap <S-j> :tabnext<Cr>
 
 " move around
 nnoremap E gE
-nnoremap <leader>w f 
-nnoremap <leader>b F 
+nnoremap <Space>w f 
+nnoremap <Space>b F 
 
