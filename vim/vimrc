@@ -135,7 +135,6 @@ function SetSpell()
         set spell spelllang=it
     else
         if &spelllang ==# 'it'
-            set nospell
             set spell spelllang=en
         else
             set nospell

@@ -1,8 +1,16 @@
+let g:gitgutter_map_keys = 0
+
 nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 
-nmap ghs <Plug>(GitGutterStageHunk)
-nmap ghu <Plug>(GitGutterUndoHunk)
+nmap <Leader>s <Plug>(GitGutterStageHunk)
+nmap <Leader>u <Plug>(GitGutterUndoHunk)
+
+highlight GitGutterAdd guifg=#009900 ctermfg=Green
+highlight GitGutterChange guifg=#bbbb00 ctermfg=Yellow
+highlight GitGutterDelete guifg=#ff2222 ctermfg=Red
+
+nmap <Leader>f :GitGutterFold<Cr>
 
 function! GitStatus()
   let [a,m,r] = GitGutterGetHunkSummary()
