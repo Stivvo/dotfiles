@@ -82,5 +82,5 @@ URxvt.keysym.Mod4-b: perl:keyboard-select:activate
 *color14:                 #34e2e2
 *color15:                 #eeeeec
 
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
+URxvt.depth: 32
+URxvt.background: [80]#000000
