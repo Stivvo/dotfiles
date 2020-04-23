@@ -25,7 +25,7 @@ set smartcase
 set nohlsearch
 set incsearch
 set showmatch
-nmap <F4> :set hlsearch!<Cr>
+nmap <silent> <F4> :set hlsearch!<Cr>
 
 "statusline
 set wildmenu
@@ -142,7 +142,7 @@ function SetSpell()
         endif
     endif
 endfunction
-nnoremap <F5> :call SetSpell()<Cr>
+nnoremap <silent> <F5> :call SetSpell()<Cr>
 
 "general mapping
 nnoremap <Esc><Esc> :w<Cr>
@@ -165,7 +165,7 @@ noremap <Del> ddk
 
 "numbers
 set number norelativenumber
-nnoremap <F2> :set number relativenumber!<Cr>
+nnoremap <silent> <F2> :set number relativenumber!<Cr>
 
 "clipboard
 inoremap <C-v> <C-r>0
