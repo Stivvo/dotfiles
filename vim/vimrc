@@ -58,7 +58,7 @@ Plug 'itchyny/vim-gitbranch'
 "---Programming
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
-Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', {'branch': 'release' }
 Plug 'nathanaelkane/vim-indent-guides'
