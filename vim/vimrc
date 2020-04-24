@@ -127,7 +127,7 @@ nmap <Up> <C-w>+
 nmap <Down> <C-w>-
 nmap <Left> <C-w><
 nmap <Right> <C-w>>
-nnoremap <F10> :set splitbelow!<Cr>:set nosplitright!<Cr>
+nnoremap <silent> <F10> :set splitbelow!<Cr>:set splitright!<Cr>
 
 "spelling
 function SetSpell()
@@ -155,7 +155,7 @@ nnoremap cic $?if\\|for<Cr>f(ci(
 "move selected text
 noremap <Space>j J
 vnoremap J :m '>+1<Cr>gv=gv
-vnoremap K :m '>-2<Cr>gv=gv
+vnoremap K :m '<-2<Cr>gv=gv
 
 "up and down
 nnoremap + k0C
@@ -171,8 +171,8 @@ inoremap <C-v> <C-r>0
 vnoremap <Space>y :'<,'> :w !wl-copy<Cr><Cr>
 
 "tabs
-nnoremap <S-k> :tabprevious<Cr>
-nnoremap <S-j> :tabnext<Cr>
+nnoremap K :tabprevious<Cr>
+nnoremap J :tabnext<Cr>
 
 " move around
 nnoremap E gE

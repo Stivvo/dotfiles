@@ -1,0 +1,1 @@
+coc-clangd coc-css coc-html coc-java coc-java-debug coc-json coc-lit-html coc-markdownlint coc-marketplace coc-phpls coc-sh coc-sql coc-tsserver coc-yaml

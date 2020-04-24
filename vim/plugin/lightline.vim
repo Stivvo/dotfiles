@@ -9,11 +9,18 @@ function! GetLang()
         return &spelllang
 endfunction
 
+function! GetSplitDirection()
+    if &splitbelow == 1
+        return '  '
+    else
+        return '  '
+endfunction
+
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified', 'gitbranch', 'gitgutter', 'language' ] ]
+      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified', 'gitbranch', 'gitgutter', 'splitdirection', 'language' ] ]
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
@@ -22,6 +29,7 @@ let g:lightline = {
       \ },
       \ 'component': {
       \   'gitgutter': '%{GitStatus()}',
+      \   'splitdirection': '%{GetSplitDirection()}',
       \   'language': '%{GetLang()}'
       \ },
       \ }

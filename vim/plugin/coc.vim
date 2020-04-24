@@ -50,14 +50,11 @@ nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
-nnoremap <silent> gf <Plug>(coc-definition)
-nnoremap <silent> gF <Plug>(coc-declaration)
-nnoremap <silent> gi <Plug>(coc-implementation)
-nnoremap <silent> gy <Plug>(coc-type-definition)
-nnoremap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> <leader><F1> :call <SID>show_documentation()<CR>
+nmap gd <Plug>(coc-definition)
+nmap gD <Plug>(coc-declaration)
+nmap gi <Plug>(coc-implementation)
+nmap gy <Plug>(coc-type-definition)
+nmap gr <Plug>(coc-references)
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -71,10 +68,10 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
-nmap rN <Plug>(coc-rename)
+nmap <leader>R <Plug>(coc-rename)
 
 "rename variable
-nmap rn :CocCommand document.renameCurrentWord<Cr>
+nmap <leader>r :CocCommand document.renameCurrentWord<Cr>
 
 " Formatting selected code.
 xmap <leader>f <Plug>(coc-format-selected)
@@ -94,9 +91,9 @@ xmap <leader>a  <Plug>(coc-codeaction-selected)
 nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current line.
-nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>c  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>q  <Plug>(coc-fix-current)
 
 " Introduce function text object
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -133,13 +130,13 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 " Show commands.
 "nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-"nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
 "nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
-"nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+nnoremap <silent> <leader>k  :<C-u>CocNext<CR>
 " Do default action for previous item.
-"nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+nnoremap <silent> <leader>j  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 "nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
@@ -157,6 +154,6 @@ nmap <silent> <C-x> <Plug>(coc-cursors-position)
 nmap <silent> <C-c> <Plug>(coc-cursors-word)
 xmap <silent> <C-c> <Plug>(coc-cursors-range)
 " use normal command like `<leader>xi(`
-map <leader>x <Plug>(coc-cursors-operator)
+"map <leader>x <Plug>(coc-cursors-operator)
 
 
