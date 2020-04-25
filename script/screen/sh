@@ -28,14 +28,17 @@ case "$VAR" in
     "1") # monitor
         swaymsg "output DP-2 pos 0 0 enable"
         swaymsg "output HDMI-A-1 disable"
+        notify-send.sh "monitor"
         ;;
     "2") # tv
         swaymsg "output HDMI-A-1 pos 0 0 enable"
         swaymsg "output DP-2 disable"
+        notify-send.sh "tv"
         ;;
     "3") # double
         swaymsg "output DP-2 pos 1920 0 enable"
         swaymsg "output HDMI-A-1 pos 0 0 enable"
+        notify-send.sh "double"
         ;;
 esac
 
