@@ -1,9 +1,21 @@
-effect-blur=30x3
-effect-greyscale
-effect-scale=0.5
+hide-keyboard-layout
 
-indicator
-indicator-radius=240
-indicator-thickness=20
-indicator-caps-lock
+indicator-radius=120
+indicator-thickness=10
+
+font=UbuntuMono Nerd Font Mono Regular
+font-size=42
+
+bs-hl-color=51326E
+
+ring-ver-color=343434
+inside-ver-color=26A65B
+
+ring-wrong-color=343434
+inside-wrong-color=eb4d4b
+
+ring-color=343434
+key-hl-color=9654D4
+
+ring-clear-color=343434
 

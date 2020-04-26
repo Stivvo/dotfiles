@@ -42,7 +42,7 @@ exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/prog/dotfiles/script/intellide/ $fish_user_paths" & # set fish path
-exec udiskie --terminal gnome-terminal --appindicator --tray --no-automount
+exec udiskie --terminal gnome-terminal --appindicator --tray --no-automount --file-manager "$file"
 
 ##################
 #-- GTK themes --#
@@ -322,7 +322,7 @@ mode "resize" {
 #
 # Read `man 5 sway-bar` for more information about this section.
 
-font UbuntuMono Nerd Font Regular 13
+font UbuntuMono Nerd Font Mono Regular 14
 
 bar {
     #position top

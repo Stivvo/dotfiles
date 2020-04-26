@@ -1,12 +1,12 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: UbuntuMono Nerd Font;
-    font-size: 15px;
+    font-family: UbuntuMono Nerd Font Mono Regular;
+    font-size: 14px;
     min-height: 0;
 }
 
-window#waybar {
+#waybar {
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
     transition-property: background-color;
