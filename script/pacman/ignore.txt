@@ -1,10 +1,8 @@
-yaru-gnome-shell-theme
-yaru-gtk-theme
-yaru-icon-theme
-yaru-sound-theme
-yaru-unity-theme
+yaru-shell-theme
+yaru-colors-gtk-theme
+yaru-colors-icon-theme
 otf-san-francisco
+otf-san-francisco-compact
 otf-san-francisco-mono
 otf-san-francisco-pro
-nerd-fonts-complete
 
