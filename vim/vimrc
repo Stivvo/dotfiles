@@ -117,17 +117,32 @@ function! Kformat()
 endfunction
 nnoremap <F9> :call Kformat()<Cr>
 
-"splits
+"switch between splits
 set splitbelow splitright
 nmap <C-h> <C-w>h
 nmap <C-l> <C-w>l
 nmap <C-k> <C-w>k
 nmap <C-j> <C-w>j
-nmap <Up> <C-w>+
-nmap <Down> <C-w>-
-nmap <Left> <C-w><
-nmap <Right> <C-w>>
+"split resizing
+nnoremap <silent> <S-Up> :resize +5<Cr>
+nnoremap <silent> <S-Down> :resize -5<Cr>
+nnoremap <silent> <S-Left> :vertical resize +5<Cr>
+nnoremap <silent> <S-Right> :vertical resize -5<Cr>
+nnoremap <silent> <Up> :resize +10<Cr>
+nnoremap <silent> <Down> :resize -10<Cr>
+nnoremap <silent> <Left> :vertical resize +10<Cr>
+nnoremap <silent> <Right> :vertical resize -10<Cr>
+nnoremap <silent> <C-Up> :resize +20<Cr>
+nnoremap <silent> <C-Down> :resize -20<Cr>
+nnoremap <silent> <C-Left> :vertical resize +20<Cr>
+nnoremap <silent> <C-Right> :vertical resize -20<Cr>
+"run a terminal in vim
+nnoremap <leader>t :vertical terminal<Cr>
+"cycle between split directions
 nnoremap <silent> <F10> :set splitbelow!<Cr>:set splitright!<Cr>
+"switch from vertical to horizontal - horizontal to vertical
+nnoremap <Space>j <C-w>H
+nnoremap <Space>k <C-w>K
 
 "spelling
 function SetSpell()
@@ -153,7 +168,7 @@ nnoremap cai $?if\\|for<Cr>dt{ca{
 nnoremap cic $?if\\|for<Cr>f(ci(
 
 "move selected text
-noremap <Space>j J
+noremap <leader><Enter> J
 vnoremap J :m '>+1<Cr>gv=gv
 vnoremap K :m '<-2<Cr>gv=gv
 
@@ -178,4 +193,3 @@ nnoremap J :tabnext<Cr>
 nnoremap E gE
 nnoremap <Space>w f 
 nnoremap <Space>b F 
-
