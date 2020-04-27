@@ -18,6 +18,7 @@ nnoremap k gk
 
 "text
 setlocal textwidth=80
+set colorcolumn=80
 
 " compile markdown and open with firefox
 map <silent> <Space>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr><Cr>

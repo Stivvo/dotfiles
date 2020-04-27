@@ -160,7 +160,7 @@ nnoremap <silent> <F5> :call SetSpell()<Cr>
 
 "general mapping
 nnoremap <Esc><Esc> :w<Cr>
-nmap ^ @q
+nmap ^ @n
 
 "change/delete if / for
 nnoremap dai $?if\\|for<Cr>dt{da{
@@ -172,9 +172,9 @@ noremap <leader><Enter> J
 vnoremap J :m '>+1<Cr>gv=gv
 vnoremap K :m '<-2<Cr>gv=gv
 
-"up and down
-nnoremap + k0C
-nnoremap - j0C
+"swap and delete lines above / below
+nnoremap + "mddk"mP
+nnoremap - "mddj"mP
 noremap <Del> ddk
 
 "numbers
