@@ -168,14 +168,17 @@ nnoremap cai $?if\\|for<Cr>dt{ca{
 nnoremap cic $?if\\|for<Cr>f(ci(
 
 "move selected text
-noremap <leader><Enter> J
 vnoremap J :m '>+1<Cr>gv=gv
 vnoremap K :m '<-2<Cr>gv=gv
 
 "swap and delete lines above / below
 nnoremap + "mddk"mP
 nnoremap - "mddj"mP
+
+"trim and join lines
 noremap <Del> ddk
+noremap <Leader><Enter> J
+nnoremap <Space><Enter> i<Enter><Esc>
 
 "numbers
 set number norelativenumber

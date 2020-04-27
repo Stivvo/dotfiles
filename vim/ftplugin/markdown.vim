@@ -19,11 +19,12 @@ nnoremap k gk
 "text
 setlocal textwidth=80
 set colorcolumn=80
+set shiftwidth=2
 
-" compile markdown and open with firefox
+" compile markdown
 map <silent> <Space>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr><Cr>
+nnoremap <silent> <Space>p :silent w<Cr>:!~/prog/dotfiles/script/mark/./presentation.sh % "f" & >> /dev/null<Cr><Cr>
 
 "useful mappings for moving around
-nnoremap <Space>h /^[#]\+ [a-z A-Z]*
+nnoremap <Space>h /^[#]\+ [a-z A-Z]*\c<left><left>
 
-nnoremap <silent> <Space>p :silent w<Cr>:!~/prog/dotfiles/script/mark/./presentation.sh % "f" & >> /dev/null<Cr><Cr>
