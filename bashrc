@@ -18,4 +18,6 @@ export BROWSER=firefox-developer-edition
 export XDG_CURRENT_DESKTOP=sway
 export MOZ_ENABLE_WAYLAND=1
 
+PATH=/opt/lampp:/home/stefano/prog/dotfiles/script/pacman:/home/stefano/prog/dotfiles/script/intellide:$PATH
+
 [[ $- != *i* ]] && return

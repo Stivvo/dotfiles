@@ -12,6 +12,6 @@ do
     let R++
     IMG="$(sed -n "${R}p" $LIST)" 
     echo "$R $IMG" > /tmp/currentBg.txt
-    swaymsg output "*" bg "${PA}${IMG}" fit
+    swaymsg output "*" bg "${PA}${IMG}" fill
     sleep 30m
 done
