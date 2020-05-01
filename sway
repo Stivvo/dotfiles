@@ -1,17 +1,17 @@
-# 
-#                                                                                   ______   __           
-#                                                                                  /      \ /  |          
-#   _______  __   __   __   ______   __    __         _______   ______   _______  /$$$$$$  |$$/   ______  
-#  /       |/  | /  | /  | /      \ /  |  /  |       /       | /      \ /       \ $$ |_ $$/ /  | /      \ 
+#
+#                                                                                   ______   __
+#                                                                                  /      \ /  |
+#   _______  __   __   __   ______   __    __         _______   ______   _______  /$$$$$$  |$$/   ______
+#  /       |/  | /  | /  | /      \ /  |  /  |       /       | /      \ /       \ $$ |_ $$/ /  | /      \
 # /$$$$$$$/ $$ | $$ | $$ | $$$$$$  |$$ |  $$ |      /$$$$$$$/ /$$$$$$  |$$$$$$$  |$$   |    $$ |/$$$$$$  |
 # $$      \ $$ | $$ | $$ | /    $$ |$$ |  $$ |      $$ |      $$ |  $$ |$$ |  $$ |$$$$/     $$ |$$ |  $$ |
 #  $$$$$$  |$$ \_$$ \_$$ |/$$$$$$$ |$$ \__$$ |      $$ \_____ $$ \__$$ |$$ |  $$ |$$ |      $$ |$$ \__$$ |
 # /     $$/ $$   $$   $$/ $$    $$ |$$    $$ |      $$       |$$    $$/ $$ |  $$ |$$ |      $$ |$$    $$ |
 # $$$$$$$/   $$$$$/$$$$/   $$$$$$$/  $$$$$$$ |       $$$$$$$/  $$$$$$/  $$/   $$/ $$/       $$/  $$$$$$$ |
 #                                   /  \__$$ |                                                  /  \__$$ |
-#                                   $$    $$/                                                   $$    $$/ 
-#                                    $$$$$$/                                                     $$$$$$/  
-# 
+#                                   $$    $$/                                                   $$    $$/
+#                                    $$$$$$/                                                     $$$$$$/
+#
 
 #################
 #-- Variables --#
@@ -293,10 +293,10 @@ set $resizeSlow 10px
 
 mode "resize" {
     Bindsym {
-        $left resize shrink width $resizeNorm 
-        $down resize grow height $resizeNorm  
-        $up resize shrink height $resizeNorm  
-        $right resize grow width $resizeNorm  
+        $left resize shrink width $resizeNorm
+        $down resize grow height $resizeNorm
+        $up resize shrink height $resizeNorm
+        $right resize grow width $resizeNorm
 # move faster
         Ctrl+$left resize shrink width $resizeFast
         Ctrl+$down resize grow height $resizeFast
@@ -395,12 +395,12 @@ bindsym {
 
    for_window [app_id="pavucontrol"] move container to workspace $ws9
    for_window [class="Pavucontrol"] move container to workspace $ws9
-   
+
    for_window [class="qtwaw"] move container to workspace $ws10
    for_window [app_id="eu.scarpetta.QtWAW"] move container to workspace $ws10
 
    #for_window [app_id="firefox"] move container to workspace $ws2
-   
+
    for_window [app_id="gnome-disks"] floating enable
    for_window [app_id="gnome-disks"] border none
 

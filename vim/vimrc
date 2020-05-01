@@ -202,3 +202,6 @@ nnoremap J :tabnext<Cr>
 nnoremap E gE
 nnoremap <Space>w f 
 nnoremap <Space>b F 
+
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
