@@ -61,6 +61,3 @@ alias grestore='git restore'
 alias xamt='sudo xampp start'
 alias xamr='sudo xampp start'
 alias xamp='sudo xampp stop'
-
-alias tbt="gnome-terminal -q --tab -- fish -c 'cd '(pwd)'; fish'"
-alias nwt="gnome-terminal -q -- fish -c 'cd '(pwd)'; fish'"

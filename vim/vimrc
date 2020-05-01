@@ -79,8 +79,14 @@ Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 "Plug 'scrooloose/syntastic'
 call plug#end()
 
-"gui
-set termguicolors
+"truecolor on alacritty
+if exists('+termguicolors')
+    let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+    set termguicolors
+endif
+set ttymouse=xterm2
+
 colorscheme codedark
 "set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ Regular\ 10
 set guifont=Proggy\ Vector\ Regular\ 10

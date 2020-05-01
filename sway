@@ -24,8 +24,7 @@ set $down j
 set $up k
 set $right l
 # applications
-set $term gnome-terminal --profile="transparent"
-set $Vterm gnome-terminal --profile="Dark Pastel"
+set $term alacritty
 set $file urxvt -e ranger
 set $browser firefox-developer-edition
 set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
@@ -110,8 +109,6 @@ bindsym {
 # basics
     $mod+d exec $menu
     $mod+Return exec $term
-    $mod+Shift+Return exec $Vterm # Start vim terminal 
-    $mod+Control+Return exec $Vterm -- vim # Start a terminal running vim
     $mod+q kill
     $mod+p exec $browser
     $mod+Shift+p exec brave

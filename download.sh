@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "creating useful dirs..."
-mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock ~/.config/imv
+mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock ~/.config/imv .config/alacritty
 pw=$(pwd)
 echo ${pw}
 
@@ -20,6 +20,7 @@ ln -sf ${pw}/pam ~/.pam_environment  # pam environment, enable wayland on firefo
 ln -sf ${pw}/mako ~/.config/mako/config
 ln -sf ${pw}/zathurarc ~/.config/zathura/zathurarc
 ln -sf ${pw}/imv ~/.config/imv/config
+ln -sf ${pw}/alacritty.yml ~/.config/alacritty/alacritty.yml
 #ranger
 ln -sf ${pw}/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sf ${pw}/ranger/rifle.conf ~/.config/ranger/rifle.conf
@@ -70,7 +71,7 @@ then
     fish --command="omf install l"
 fi
 
-echo "gnome-terminal themes..."
+#echo "gnome-terminal themes..."
 #sleep 10s && ydotool key "3+1+enter" &> /dev/null &
 #bash -c "$(wget -qO- https://git.io/vQgMr)"
 
