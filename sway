@@ -41,7 +41,7 @@ exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/prog/dotfiles/script/intellide/ $fish_user_paths" & # set fish path
-exec udiskie --terminal gnome-terminal --appindicator --tray --no-automount --file-manager "$file"
+exec udiskie --terminal gnome-terminal --appindicator --tray --automount --file-manager "$file"
 
 ##################
 #-- GTK themes --#
@@ -113,7 +113,7 @@ bindsym {
     $mod+p exec $browser
     $mod+Shift+p exec brave
     $mod+o exec $file
-    $mod+n exec $term -- ranger ~/notes & # start notem app in a terminal
+    $mod+n exec $term -e ranger ~/notes & # start notem app in a terminal
 # Special keys
     XF86Search exec $browser #browsers
     XF86Search+Shift exec brave
@@ -430,5 +430,7 @@ bindsym {
 
    for_window [app_id="gnome-tweaks"] floating enable
    for_window [app_id="gnome-tweaks"] border none
+
+   for_window [app_id="brasero"] floating enable
 
 include /etc/sway/config.d/*

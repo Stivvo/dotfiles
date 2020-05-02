@@ -22,5 +22,5 @@ sudo ydotool key super+h &> /dev/null
 
 if [ "$2" == "f" ]
 then
-    gnome-terminal -- firefox --new-window $FF &> /dev/null
+    alacritty -e firefox-developer-edition --new-window $FF &> /dev/null
 fi

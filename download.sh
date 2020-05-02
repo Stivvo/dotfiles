@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "creating useful dirs..."
-mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock ~/.config/imv .config/alacritty
+mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty
 pw=$(pwd)
 echo ${pw}
 
@@ -65,8 +65,8 @@ fi
 
 if [ ! -d ~/.config/omf ] || [ ! -d ~/.local/share/omf ]
 then
-    echo "oh my fish..." 
-    curl -L https://get.oh-my.fish > ~/install.fish \ 
+    echo "oh my fish..."
+    curl -L https://get.oh-my.fish > ~/install.fish \
     fish ~/install.fish --path=~/.local/share/omf --config=~/.config/omf \
     fish --command="omf install l"
 fi
