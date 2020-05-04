@@ -41,7 +41,7 @@ exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/prog/dotfiles/script/intellide/ $fish_user_paths" & # set fish path
-exec udiskie --terminal gnome-terminal --appindicator --tray --automount --file-manager "$file"
+exec udiskie --appindicator --tray --automount --file-manager "$file"
 
 ##################
 #-- GTK themes --#

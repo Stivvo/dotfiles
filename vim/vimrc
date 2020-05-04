@@ -52,6 +52,7 @@ Plug 'junegunn/fzf', {'on': 'FZF' }
 Plug 'francoiscabrol/ranger.vim', { 'on': 'Ranger' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'unblevable/quick-scope'
+Plug 'kshenoy/vim-signature'
 "git
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/vim-gitbranch'
@@ -200,8 +201,8 @@ nnoremap J :tabnext<Cr>
 
 " move around
 nnoremap E gE
-nnoremap <Space>w f 
-nnoremap <Space>b F 
+nnoremap <Space>w f
+nnoremap <Space>b F
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e

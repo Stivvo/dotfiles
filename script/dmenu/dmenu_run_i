@@ -2,7 +2,7 @@
 # dmenu_run improved
 # if a command ends with "!", it is started in term.
 
-termcmd="gnome-terminal -- "
+termcmd="alacritty -e "
 test -s $HOME/.dmenurc && . $HOME/.dmenurc
 
 cmd="$(dmenu_path | dmenu $@)"

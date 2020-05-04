@@ -20,7 +20,7 @@
     },
     "custom/ram": {
         "format": "{} ",
-        "on-click": "gnome-terminal -- htop",
+        "on-click": "alacritty -e htop",
         "interval": 46,
         "exec": "free used -h | awk 'FNR == 2 {print$3}'"
     },
