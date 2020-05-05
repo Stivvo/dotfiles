@@ -113,7 +113,7 @@ bindsym {
     $mod+p exec $browser
     $mod+Shift+p exec brave
     $mod+o exec $file
-    $mod+n exec $term -e ranger ~/notes & # start notem app in a terminal
+    $mod+n exec $term -e vim ~/vimwiki/index.md # start notem app in a terminal
 # Special keys
     XF86Search exec $browser #browsers
     XF86Search+Shift exec brave
