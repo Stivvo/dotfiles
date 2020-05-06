@@ -48,7 +48,7 @@ Plug 'flazz/vim-colorschemes'
 "---utility
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
-"Plug 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 Plug 'junegunn/fzf', {'on': 'FZF' }
 Plug 'francoiscabrol/ranger.vim', { 'on': 'Ranger' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
@@ -67,6 +67,7 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
 "---languages
+Plug 'shmup/vim-sql-syntax'
 Plug 'vimwiki/vimwiki'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
@@ -80,6 +81,7 @@ Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 "Plug 'bazelbuild/vim-bazel'
 "Plug 'justmao945/vim-clang'
 "Plug 'scrooloose/syntastic'
+" Plug 'JessicaKMcIntosh/Vim'
 call plug#end()
 
 "truecolor on alacritty
@@ -93,13 +95,15 @@ set ttymouse=xterm2
 colorscheme codedark
 "set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ Regular\ 10
 set guifont=Proggy\ Vector\ Regular\ 10
-hi Normal ctermbg=none
+highlight Normal ctermbg=none
 highlight NonText ctermbg=none
+highlight ColorColumn guibg=#2c2c2c
+highlight CursorLine guibg=#2c2c2c
 
 "columns
 set colorcolumn=0
 set cursorcolumn
-highlight CursorColumn cterm=bold guibg=#2b2b2b
+highlight CursorColumn cterm=bold guibg=#2c2c2c
 function SetColorColumn()
     if &colorcolumn == 0
         set colorcolumn=80
