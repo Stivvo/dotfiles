@@ -31,7 +31,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 10.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -167,20 +167,6 @@ cursor:
 
 # Live config reload (changes require restart)
 #live_config_reload: true
-
-shell:
-  program: /usr/bin/fish
-#  args:
-#    - --login
-
-# Startup directory
-#
-# Directory the shell is started in. If this is unset, or `None`, the working
-# directory of the parent process will be used.
-#working_directory: None
-
-# Send ESC (\x1b) before characters when alt is pressed.
-#alt_send_esc: true
 
 mouse:
   # Click settings

@@ -8,24 +8,27 @@ echo ${pw}
 echo "shells..."
 ln -sf ${pw}/bashrc ~/.bashrc
 source ~/.bashrc
-#sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
-#echo "setting default shell to fish, reboot required"
 ln -sf ${pw}/fish/config.fish ~/.config/fish/config.fish
+echo "setting default shell to fish, reboot required"
+sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
+
+echo "xresources..."
 ln -sf ${pw}/Xresources ~/.Xresources
 xrdb ~/.Xresources
 
 echo "creating symlinks for programs configs..."
-# single
 ln -sf ${pw}/pam ~/.pam_environment  # pam environment, enable wayland on firefox
 ln -sf ${pw}/mako ~/.config/mako/config
 ln -sf ${pw}/zathurarc ~/.config/zathura/zathurarc
 ln -sf ${pw}/imv ~/.config/imv/config
 ln -sf ${pw}/alacritty.yml ~/.config/alacritty/alacritty.yml
-#ranger
+
+echo "ranger..."
 ln -sf ${pw}/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sf ${pw}/ranger/rifle.conf ~/.config/ranger/rifle.conf
 ln -sf ${pw}/ranger/scope.sh ~/.config/ranger/scope.sh
-# vim
+
+echo "vim..."
 ln -sf ${pw}/vim/vimrc ~/.vim/vimrc
 ln -s ${pw}/vim/plugin ~/.vim/
 ln -s ${pw}/vim/ftplugin ~/.vim/
@@ -34,11 +37,13 @@ vim -c "PlugInstall|q|q"
 EXT="CocInstall -sync $(cat vim/cocExtensions.txt)|q"
 echo "${EXT}"
 vim -c "${EXT}"
-# sway
+
+echo "sway..."
 ln -sf ${pw}/sway ~/.config/sway/config
 ln -sf ${pw}/swaylock ~/.config/swaylock/config
 ln -s ${pw}/waybar ~/.config/
-# pacman
+
+echo "pacman config..."
 sudo chown root ${pw}/pacman/mirrorlist
 sudo chown root ${pw}/pacman/makepkg.conf
 sudo chown root ${pw}/pacman/pacman.conf
@@ -70,8 +75,3 @@ then
     fish ~/install.fish --path=~/.local/share/omf --config=~/.config/omf \
     fish --command="omf install l"
 fi
-
-#echo "gnome-terminal themes..."
-#sleep 10s && ydotool key "3+1+enter" &> /dev/null &
-#bash -c "$(wget -qO- https://git.io/vQgMr)"
-
