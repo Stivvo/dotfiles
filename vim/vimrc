@@ -205,10 +205,16 @@ vnoremap <Space>y :'<,'> :w !wl-copy<Cr><Cr>
 nnoremap K :tabprevious<Cr>
 nnoremap J :tabnext<Cr>
 
-" move around
+"move around
 nnoremap E gE
 nnoremap <Space>w f
 nnoremap <Space>b F
+
+"switch ; and , for italian keyboard
+nnoremap ; ,
+nnoremap , ;
+vnoremap ; ,
+vnoremap , ;
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e

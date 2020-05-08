@@ -34,9 +34,6 @@ ln -s ${pw}/vim/plugin ~/.vim/
 ln -s ${pw}/vim/ftplugin ~/.vim/
 ln -s ${pw}/vim/other ~/.vim/
 vim -c "PlugInstall|q|q"
-EXT="CocInstall -sync $(cat vim/cocExtensions.txt)|q"
-echo "${EXT}"
-vim -c "${EXT}"
 
 echo "sway..."
 ln -sf ${pw}/sway ~/.config/sway/config
