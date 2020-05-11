@@ -67,12 +67,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release' }
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
+Plug 'majutsushi/tagbar', { 'on': ['Tagbar', 'TagbarOpenAutoClose'] }
 "---languages
 Plug 'shmup/vim-sql-syntax'
 Plug 'vimwiki/vimwiki'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-Plug 'vim-scripts/taglist.vim', {'on': ['TlistToggle', 'TlistOpen']}
 Plug 'vim-scripts/a.vim', { 'for': ['c',  'cpp'] }
 Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
 Plug 'lervag/vimtex', { 'for': 'tex' }
