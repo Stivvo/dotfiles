@@ -71,6 +71,12 @@ then
     sudo npm i -g yarn
 fi
 
+if [ ! -d /usr/lib/node_modules/standard/ ]
+then
+    echo "standard js.."
+    sudo npm install standard --global
+fi
+
 if [ ! -d ~/.config/omf ] || [ ! -d ~/.local/share/omf ]
 then
     echo "oh my fish..."
