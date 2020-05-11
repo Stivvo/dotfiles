@@ -79,6 +79,7 @@ Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 "maybe
+"Plug 'ycm-core/YouCompleteMe'
 "Plug 'bazelbuild/vim-bazel'
 "Plug 'justmao945/vim-clang'
 "Plug 'scrooloose/syntastic'

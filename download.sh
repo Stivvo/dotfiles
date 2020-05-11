@@ -65,6 +65,12 @@ then
     sudo npm -g install instant-markdown-d
 fi
 
+if [ ! -d /usr/lib/node_modules/yarn/ ]
+then
+    echo "yarn..."
+    sudo npm i -g yarn
+fi
+
 if [ ! -d ~/.config/omf ] || [ ! -d ~/.local/share/omf ]
 then
     echo "oh my fish..."

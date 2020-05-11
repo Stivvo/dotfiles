@@ -63,6 +63,7 @@ function! s:show_documentation()
         call CocAction('doHover')
     endif
 endfunction
+nnoremap <silent> <leader>d :call <SID>show_documentation()<CR>
 
 " Highlight the symbol and its references when holding the cursor.
 autocmd CursorHold * silent call CocActionAsync('highlight')
@@ -74,8 +75,8 @@ nmap <leader>R <Plug>(coc-rename)
 nmap <leader>r :CocCommand document.renameCurrentWord<Cr>
 
 " Formatting selected code.
-xmap <C-F9> <Plug>(coc-format-selected)
-nmap <C-F9> <Plug>(coc-format-selected)
+xmap <leader>e <Plug>(coc-format-selected)
+nmap <leader>e <Plug>(coc-format-selected)
 
 augroup mygroup
     autocmd!
@@ -159,13 +160,23 @@ xmap <silent> <C-c> <Plug>(coc-cursors-range)
 " coc plugins
 let g:coc_global_extensions = [
             \ 'coc-tsserver',
-            \ 'coc-css',
             \ 'coc-html',
+            \ 'coc-css',
+            \ 'coc-cssmodules',
+            \ 'coc-sql',
             \ 'coc-markdownlint',
+            \ 'coc-sh',
             \ 'coc-lit-html',
             \ 'coc-json',
             \ 'coc-java',
             \ 'coc-java-debug',
             \ 'coc-clangd',
+            \ 'coc-cmake',
+            \ 'coc-vimlsp',
+            \ 'coc-erlang_ls',
+            \ 'coc-yaml',
+            \ 'coc-fs-lists',
+            \ 'coc-explorer',
+            \ 'coc-todolist'
             \ ]
-
+" coc-ccls still not ready
