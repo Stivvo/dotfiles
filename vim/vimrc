@@ -57,6 +57,7 @@ Plug 'kshenoy/vim-signature'
 "git
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/vim-gitbranch'
+Plug 'voldikss/vim-floaterm', { 'on': ['FloatermNew', 'FloatermToggle'] }
 "---Programming
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
@@ -149,8 +150,6 @@ nnoremap <silent> <C-Up> :resize +20<Cr>
 nnoremap <silent> <C-Down> :resize -20<Cr>
 nnoremap <silent> <C-Left> :vertical resize +20<Cr>
 nnoremap <silent> <C-Right> :vertical resize -20<Cr>
-"run a terminal in vim
-nnoremap <leader>t :vertical terminal<Cr>
 "cycle between split directions
 nnoremap <silent> <F10> :set splitbelow!<Cr>:set splitright!<Cr>
 "switch from vertical to horizontal - horizontal to vertical
