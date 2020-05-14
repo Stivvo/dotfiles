@@ -13,7 +13,7 @@ noremap ZQ :InstantMarkdownStop<Cr>:q<Cr>
 let g:vim_markdown_new_list_item_indent = 0
 
 "virtual lines with markdown
-nnoremap j gj 
+nnoremap j gj
 nnoremap k gk
 
 "text
@@ -22,9 +22,8 @@ set colorcolumn=80
 set shiftwidth=2
 
 " compile markdown
-map <silent> <Space>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr><Cr>
+nnoremap <silent> <Space>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr><Cr>
 nnoremap <silent> <Space>p :silent w<Cr>:!~/prog/dotfiles/script/mark/./presentation.sh % "f" & >> /dev/null<Cr><Cr>
 
 "useful mappings for moving around
-nnoremap <Space>h /^[#]\+ [a-z A-Z]*\c<left><left>
-
+nnoremap <Space>h /^[#]\+ [a-z A-Z']*\c<left><left>

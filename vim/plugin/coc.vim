@@ -162,7 +162,6 @@ let g:coc_global_extensions = [
             \ 'coc-tsserver',
             \ 'coc-html',
             \ 'coc-css',
-            \ 'coc-cssmodules',
             \ 'coc-sql',
             \ 'coc-markdownlint',
             \ 'coc-sh',

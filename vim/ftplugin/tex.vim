@@ -10,4 +10,3 @@ let g:wrapText=1
 nmap <Space>o :VimtexTocOpen<Cr>
 nmap <Space>t :VimtexTocToggle<Cr>
 autocmd VimEnter * VimtexCompile
-

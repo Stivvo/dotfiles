@@ -45,26 +45,29 @@ Plug 'ryanoasis/vim-devicons'
 "--appearance
 Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
-"---utility
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
-Plug 'terryma/vim-multiple-cursors'
-Plug 'junegunn/fzf', {'on': 'FZF' }
+"---file
+Plug 'junegunn/fzf', { 'on': 'FZF' }
 Plug 'francoiscabrol/ranger.vim', { 'on': 'Ranger' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'voldikss/vim-floaterm', { 'on': ['FloatermNew', 'FloatermToggle'] }
+"---motions
+Plug 'terryma/vim-multiple-cursors'
 Plug 'unblevable/quick-scope'
 Plug 'kshenoy/vim-signature'
-"git
+Plug 'tpope/vim-repeat'
+Plug 'justinmk/vim-sneak'
+"---git
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/vim-gitbranch'
-Plug 'voldikss/vim-floaterm', { 'on': ['FloatermNew', 'FloatermToggle'] }
 Plug 'mhinz/vim-startify'
 "---Programming
 Plug 'ap/vim-css-color'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'neoclide/coc.nvim', {'branch': 'release' }
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
@@ -86,6 +89,14 @@ Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 "Plug 'scrooloose/syntastic'
 " Plug 'JessicaKMcIntosh/Vim'
 call plug#end()
+
+" go to last line
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" Remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
 
 "truecolor on alacritty
 if exists('+termguicolors')
@@ -117,11 +128,6 @@ function SetColorColumn()
 endfunction
 nnoremap <F3> :call SetColorColumn()<Cr>
 nnoremap <C-F3> :set colorcolumn=
-
-" go to last line
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
 
 "auto formatting
 function! Kformat()
@@ -211,11 +217,3 @@ nnoremap E gE
 nnoremap <Space>w f
 nnoremap <Space>b F
 
-"switch ; and , for italian keyboard
-nnoremap ; ,
-nnoremap , ;
-vnoremap ; ,
-vnoremap , ;
-
-" Remove trailing whitespace on save
-autocmd BufWritePre * %s/\s\+$//e
