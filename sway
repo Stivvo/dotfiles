@@ -26,6 +26,7 @@ set $right l
 # applications
 set $term alacritty
 set $file alacritty -e fish -c fff
+set $file2 urxvt -e ranger
 set $browser firefox-developer-edition
 set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
 
@@ -113,16 +114,18 @@ bindsym {
     $mod+p exec $browser
     $mod+Shift+p exec brave
     $mod+o exec $file
+    $mod+Shift+o exec $file2
     $mod+n exec $term -e vim ~/vimwiki/index.md # start notem app in a terminal
 # Special keys
     XF86Search exec $browser #browsers
-    XF86Search+Shift exec brave
+    Shift+XF86Search exec brave
     XF86Calculator exec gnome-calculator
     XF86Explorer exec $file # file managers
-    XF86Explorer+Shift exec nautilus
+    Shift+XF86Explorer exec $file2 # file managers
+    Control+XF86Explorer exec nautilus
     XF86Tools exec intellide # ides
-    XF86Tools+Shift exec qtcreator
-    XF86Tools+Ctrl exec eclipse
+    Shift+XF86Tools exec qtcreator
+    Ctrl+XF86Tools exec eclipse
 # exit
     --release $mod+Ctrl+l exec swaylock-blur
     --release $mod+Ctrl+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'

@@ -68,7 +68,7 @@ fi
 if [ ! -d /usr/lib/node_modules/yarn/ ]
 then
     echo "yarn..."
-    sudo npm i -g yarn
+    sudo npm i -g yarn --global
 fi
 
 if [ ! -d /usr/lib/node_modules/standard/ ]

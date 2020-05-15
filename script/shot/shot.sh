@@ -25,8 +25,8 @@ case "$select" in
         scrnPath="$(cat /tmp/scrnDir.txt)/${scrnName}"
         ;;
     "choose")
-        urxvt -e ranger "$scrnDir" --show-only-dirs --choosedir=/tmp/scrnDir.txt
-        scrnPath="$(cat /tmp/scrnDir.txt)/${scrnName}"
+        alacritty -e fish -c f
+        scrnPath="$(cat /home/stefano/.cache/fff/.fff_d)/${scrnName}"
         ;;
     "delete")
         rm $tmpPath

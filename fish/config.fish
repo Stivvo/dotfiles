@@ -90,3 +90,6 @@ export FFF_FAV9=/home/stefano/tomcat/webapps
 export FFF_FILE_FORMAT="%f"
 export FFF_MARK_FORMAT="> %f*"
 
+export FFF_COL2=5
+export FFF_COL3=5
+export FFF_LS_COLORS=1
