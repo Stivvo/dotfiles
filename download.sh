@@ -9,6 +9,7 @@ echo "shells..."
 ln -sf ${pw}/bashrc ~/.bashrc
 source ~/.bashrc
 ln -sf ${pw}/fish/config.fish ~/.config/fish/config.fish
+ln -sf ${pw}/fish/common.fish ~/.config/fish/common.fish
 echo "setting default shell to fish, reboot required"
 sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
 
