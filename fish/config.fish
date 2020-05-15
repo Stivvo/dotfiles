@@ -1,15 +1,21 @@
 fish_vi_key_bindings
 
 set -U _JAVA_AWT_WM_NONREPARENTING 1
-set -U RANGER_LOAD_DEFAULT_RC FALSE
-set fish_greeting
 set -U JAVA_HOME /usr/lib/jvm/java-11-openjdk
 set -U CATALINA_HOME /home/stefano/tomcat
+set -U ECLIPSE_HOME /home/stefano/eclipse/jee-2020-03/eclipse
 
 export EDITOR=vim
 export BROWSER=firefox-developer-edition
-export XDG_CURRENT_DESKTOP=sway
+set -U RANGER_LOAD_DEFAULT_RC FALSE
 export MOZ_ENABLE_WAYLAND=1
+set fish_greeting
+
+# xdg variables
+export XDG_CURRENT_DESKTOP=sway
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_DATA_HOME="$HOME/.local/share"
 
 alias l='lsd -h'
 alias ll='lsd -hl'
@@ -62,3 +68,25 @@ alias grestore='git restore'
 alias xamt='sudo xampp start'
 alias xamr='sudo xampp start'
 alias xamp='sudo xampp stop'
+
+# fff configuration
+
+function f
+    fff $argv
+    set -q XDG_CACHE_HOME; or set XDG_CACHE_HOME $HOME/.cache
+    cd (cat $XDG_CACHE_HOME/fff/.fff_d)
+end
+
+export FFF_FAV1=/home/stefano/prog
+export FFF_FAV2=/home/stefano/scuola
+export FFF_FAV3=/opt/lampp/htdocs/stuff
+export FFF_FAV4=/home/stefano/prog/dotfiles
+export FFF_FAV5=/home/stefano/scuola/std
+export FFF_FAV6=/home/stefano/scuola/info
+export FFF_FAV7=/home/stefano/scuola/spec
+export FFF_FAV8=/opt/lampp/htdocs/stuff/ArchivioIBC
+export FFF_FAV9=/home/stefano/tomcat/webapps
+
+export FFF_FILE_FORMAT="%f"
+export FFF_MARK_FORMAT="> %f*"
+

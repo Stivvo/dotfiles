@@ -17,7 +17,8 @@ export EDITOR=vim
 export BROWSER=firefox-developer-edition
 export XDG_CURRENT_DESKTOP=sway
 export MOZ_ENABLE_WAYLAND=1
+export ECLIPSE_HOME=/home/stefano/eclipse/jee-2020-03/eclipse
 
-PATH=/opt/lampp:/home/stefano/prog/dotfiles/script/pacman:/home/stefano/prog/dotfiles/script/intellide:$PATH
+PATH=/opt/lampp:/home/stefano/prog/dotfiles/script/pacman:/home/stefano/eclipse/jee-2020-03/eclipse:$PATH
 
 [[ $- != *i* ]] && return
