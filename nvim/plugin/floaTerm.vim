@@ -1,6 +1,7 @@
 let g:floaterm_wintype = 'normal'
 let g:floaterm_position = 'right'
 let g:floaterm_autoclose = 2
+let g:floaterm_gitcommit = 'floaterm'
 
 "horizontal split
 nnoremap <silent> <leader>tx :FloatermNew --wintype=normal --position=bottom<CR>

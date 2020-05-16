@@ -42,7 +42,7 @@ exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths" & # set fish path
-exec udiskie --appindicator --tray --automount --file-manager "$file"
+exec udiskie --appindicator --tray --automount --file-manager "alacritty -e fff "
 
 ##################
 #-- GTK themes --#
@@ -115,7 +115,7 @@ bindsym {
     $mod+Shift+p exec brave
     $mod+o exec $file
     $mod+Shift+o exec $file2
-    $mod+n exec $term -e vim ~/vimwiki/index.md # start notem app in a terminal
+    $mod+n exec $term -e nvim ~/vimwiki/index.md # start notem app in a terminal
 # Special keys
     XF86Search exec $browser #browsers
     Shift+XF86Search exec brave

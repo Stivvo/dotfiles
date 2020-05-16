@@ -1,19 +1,10 @@
 "general options
-set encoding=UTF-8
-set backspace=indent,eol,start
 let g:wrapText=0
-syntax on
 set mouse=a
 set confirm
 set so=8 "cursor above 8 lines from the bottom of the screen
-set ruler
-set nocompatible
 
 "indent
-set autoindent
-filetype indent on
-filetype plugin on
-filetype plugin indent on
 set omnifunc=syntaxcomplete#Complete
 set smartindent
 set expandtab
@@ -22,18 +13,8 @@ set shiftwidth=4
 
 "search
 set ignorecase
-set smartcase
-set nohlsearch
-set incsearch
 set showmatch
-nmap <silent> <F4> :set hlsearch!<Cr>
-
-"statusline
-set wildmenu
-set showmode
-set showcmd
-set laststatus=2
-set statusline+=%f
+nnoremap <silent> <F4> :nohlsearch<Cr>
 
 "Plugins
 call plug#begin('~/.config/nvim/plugged')
@@ -91,21 +72,13 @@ Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 call plug#end()
 
 " go to last line
-if has("autocmd")
-    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-endif
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
 "truecolor on alacritty
-if exists('+termguicolors')
-    let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
-    set termguicolors
-endif
-set ttymouse=xterm2
-
+set termguicolors
 colorscheme codedark
 "set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ Regular\ 10
 set guifont=Proggy\ Vector\ Regular\ 10
@@ -209,8 +182,8 @@ inoremap <C-v> <C-r>0
 vnoremap <Space>y :'<,'> :w !wl-copy<Cr><Cr>
 
 "tabs
-nnoremap K :tabprevious<Cr>
-nnoremap J :tabnext<Cr>
+nnoremap <silent> K :tabprevious<Cr>
+nnoremap <silent> J :tabnext<Cr>
 
 "move around
 nnoremap E gE

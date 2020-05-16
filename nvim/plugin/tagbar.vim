@@ -1,2 +1,2 @@
-nnoremap <Space>t :Tagbar<Cr>
-nnoremap <Space>o :TagbarOpenAutoClose<Cr>
+nnoremap <silent> <Space>t :TagbarToggle<Cr>
+nnoremap <silent> <Space>o :TagbarOpenAutoClose<Cr>

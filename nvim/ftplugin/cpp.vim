@@ -1,1 +1,1 @@
-source ~/.vim/other/a.vim
+source ~/.config/nvim/other/a.vim
