@@ -3,7 +3,7 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 export CATALINA_HOME=/home/stefano/tomcat
 export ECLIPSE_HOME=/home/stefano/eclipse/jee-2020-03/eclipse
 
-export EDITOR=vim
+export EDITOR=nvim
 export BROWSER=firefox-developer-edition
 export RANGER_LOAD_DEFAULT_RC=FALSE
 export MOZ_ENABLE_WAYLAND=1
@@ -19,7 +19,7 @@ alias la='lsd -ha'
 alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
-alias v='vim'
+alias v='nvim'
 alias t='floaterm'
 alias y='pacaur --color=always'
 alias yy='update.sh ~/prog/dotfiles/script/pacman/ignore.txt'

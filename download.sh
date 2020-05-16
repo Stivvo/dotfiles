@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "creating useful dirs..."
-mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.vim ~/.config/zathura ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty
-pw=$(pwd)
+mkdir ~/.cache ~/.cache/markdown/ ~/.cache/markdown/mkd ~/.cache/markdown/html ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.config/nvim ~/.config/zathura ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty
+pw="${PWD}"
 echo ${pw}
 
 echo "shells..."
@@ -29,12 +29,14 @@ ln -sf ${pw}/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sf ${pw}/ranger/rifle.conf ~/.config/ranger/rifle.conf
 ln -sf ${pw}/ranger/scope.sh ~/.config/ranger/scope.sh
 
-echo "vim..."
-ln -sf ${pw}/vim/vimrc ~/.vim/vimrc
-ln -s ${pw}/vim/plugin ~/.vim/
-ln -s ${pw}/vim/ftplugin ~/.vim/
-ln -s ${pw}/vim/other ~/.vim/
-vim -c "PlugInstall|q|q"
+echo "nvim..."
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+ln -sf ${pw}/nvim/init.vim ~/.config/nvim/init.vim
+ln -s ${pw}/nvim/plugin ~/.config/nvim/
+ln -s ${pw}/nvim/ftplugin ~/.config/nvim/
+ln -s ${pw}/nvim/other ~/.config/nvim/
+nvim -c "PlugInstall|q|q"
 
 echo "sway..."
 ln -sf ${pw}/sway ~/.config/sway/config

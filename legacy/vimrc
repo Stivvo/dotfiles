@@ -36,7 +36,7 @@ set laststatus=2
 set statusline+=%f
 
 "Plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 "--dependencies
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
