@@ -115,7 +115,8 @@ bindsym {
     $mod+Shift+p exec brave
     $mod+o exec $file
     $mod+Shift+o exec $file2
-    $mod+n exec $term -e nvim ~/vimwiki/index.md # start notem app in a terminal
+    $mod+n exec glrnvim ~/vimwiki/index.md # start notem app in a terminal
+    $mod+z exec glrnvim
 # Special keys
     XF86Search exec $browser #browsers
     Shift+XF86Search exec brave
@@ -123,7 +124,7 @@ bindsym {
     XF86Explorer exec $file # file managers
     Shift+XF86Explorer exec $file2 # file managers
     Control+XF86Explorer exec nautilus
-    XF86Tools exec intellide # ides
+    XF86Tools exec glrnvim # ides
     Shift+XF86Tools exec qtcreator
     Ctrl+XF86Tools exec eclipse
 # exit
