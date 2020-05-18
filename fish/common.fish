@@ -77,7 +77,11 @@ export FFF_FAV9=/home/stefano/tomcat/webapps
 
 export FFF_FILE_FORMAT="%f"
 export FFF_MARK_FORMAT="> %f*"
+export FFF_OPENER="xdg-open"
 
-export FFF_COL2=5
-export FFF_COL3=5
-export FFF_LS_COLORS=1
+export FFF_COL1=2 # directory
+export FFF_COL2=5 # status background
+export FFF_COL3=5 # selection
+export FFF_COL4=6 # cursor
+export FFF_COL5=0 # foerground
+export FFF_LS_COLORS=0
