@@ -24,6 +24,7 @@ Plug 'unblevable/quick-scope'
 Plug 'kshenoy/vim-signature'
 Plug 'tpope/vim-repeat'
 Plug 'justinmk/vim-sneak'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 "---git
 Plug 'airblade/vim-gitgutter'
@@ -57,7 +58,7 @@ Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 "Plug 'bazelbuild/vim-bazel'
 "Plug 'justmao945/vim-clang'
 "Plug 'scrooloose/syntastic'
-" Plug 'JessicaKMcIntosh/Vim'
+"Plug 'JessicaKMcIntosh/Vim'
 
 call plug#end()
 

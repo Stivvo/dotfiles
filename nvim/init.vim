@@ -3,13 +3,14 @@ let g:wrapText=0
 set mouse=a
 set confirm
 set so=8 "cursor above 8 lines from the bottom of the screen
+filetype plugin indent on
 
 "indent
-set omnifunc=syntaxcomplete#Complete
 set smartindent
 set expandtab
 set smarttab
 set shiftwidth=4
+set softtabstop=-1
 
 "search
 set ignorecase
@@ -134,6 +135,6 @@ nnoremap <silent> J :tabnext<Cr>
 
 "move around
 nnoremap E gE
-nnoremap <Space>w f
-nnoremap <Space>b F
+nnoremap <Space>w f<Space>
+nnoremap <Space>b F<Space>
 
