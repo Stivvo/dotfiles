@@ -126,7 +126,7 @@ bindsym {
     Control+XF86Explorer exec nautilus
     XF86Tools exec glrnvim # ides
     Shift+XF86Tools exec qtcreator
-    Ctrl+XF86Tools exec eclipse
+    Ctrl+XF86Tools exec /home/stefano/eclipse/jee-2020-03/eclipse/./eclipse
 # exit
     --release $mod+Ctrl+l exec swaylock-blur
     --release $mod+Ctrl+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'

@@ -1,3 +1,3 @@
-nnoremap <leader>h :A
-nnoremap <leader>v :AV
-nnoremap <leader>x :AS
+nnoremap <buffer> <leader>h :A
+nnoremap <buffer> <leader>v :AV
+nnoremap <buffer> <leader>x :AS

@@ -40,7 +40,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
-Plug 'majutsushi/tagbar', { 'on': ['Tagbar', 'TagbarOpenAutoClose'] }
+Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpenAutoClose'] }
 
 "---languages
 Plug 'shmup/vim-sql-syntax'

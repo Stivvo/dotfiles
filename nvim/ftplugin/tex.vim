@@ -1,12 +1,12 @@
 "virtual lines as normal lines
-nnoremap j gj
-nnoremap k gk
+nnoremap <buffer> j gj
+nnoremap <buffer> k gk
 
 "text width
 setlocal textwidth=80
 let g:wrapText=1
 
 "vimtex
-nmap <Space>o :VimtexTocOpen<Cr>
-nmap <Space>t :VimtexTocToggle<Cr>
+nnoremap <buffer> <Space>o :VimtexTocOpen<Cr>
+nnoremap <buffer> <Space>t :VimtexTocToggle<Cr>
 autocmd VimEnter * VimtexCompile
