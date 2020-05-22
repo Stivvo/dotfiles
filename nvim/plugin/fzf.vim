@@ -1,1 +1,1 @@
-nnoremap <F7> :FZF<Cr>
+noremap <F7> :FZF<Cr>

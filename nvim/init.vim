@@ -15,7 +15,7 @@ set softtabstop=-1
 "search
 set ignorecase
 set showmatch
-nnoremap <silent> <F4> :nohlsearch<Cr>
+noremap <silent> <F4> :nohlsearch<Cr>
 
 source ~/.config/nvim/plug.vim
 
@@ -47,8 +47,8 @@ function SetColorColumn()
     endif
     echo &colorcolumn
 endfunction
-nnoremap <F3> :call SetColorColumn()<Cr>
-nnoremap <C-F3> :set colorcolumn=
+noremap <F3> :call SetColorColumn()<Cr>
+noremap <C-F3> :set colorcolumn=
 
 "auto formatting
 function! Kformat()
@@ -58,7 +58,7 @@ function! Kformat()
     ":norm ggVGgq
     :exec line
 endfunction
-nnoremap <F9> :call Kformat()<Cr>
+noremap <F9> :call Kformat()<Cr>
 
 "switch between splits
 set splitbelow splitright
@@ -80,7 +80,7 @@ nnoremap <silent> <C-Down> :resize -20<Cr>
 nnoremap <silent> <C-Left> :vertical resize +20<Cr>
 nnoremap <silent> <C-Right> :vertical resize -20<Cr>
 "cycle between split directions
-nnoremap <silent> <F10> :set splitbelow!<Cr>:set splitright!<Cr>
+noremap <silent> <F10> :set splitbelow!<Cr>:set splitright!<Cr>
 "switch from vertical to horizontal - horizontal to vertical
 nnoremap <Space>j <C-w>H
 nnoremap <Space>k <C-w>K
@@ -97,7 +97,7 @@ function SetSpell()
         endif
     endif
 endfunction
-nnoremap <silent> <F5> :call SetSpell()<Cr>
+noremap <silent> <F5> :call SetSpell()<Cr>
 
 "general mapping
 nnoremap <Esc><Esc> :w<Cr>
@@ -122,8 +122,8 @@ noremap <Leader><Enter> J
 nnoremap <Space><Enter> i<Enter><Esc>
 
 "numbers
-set number norelativenumber
-nnoremap <silent> <F2> :set number relativenumber!<Cr>
+set number relativenumber
+noremap <silent> <F2> :set number relativenumber!<Cr>
 
 "clipboard
 inoremap <C-v> <C-r>0
