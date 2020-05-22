@@ -30,6 +30,7 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'airblade/vim-gitgutter'
 Plug 'itchyny/vim-gitbranch'
 Plug 'mhinz/vim-startify'
+Plug 'rhysd/git-messenger.vim'
 
 "---Programming
 Plug 'ap/vim-css-color'

@@ -20,6 +20,7 @@ alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
 alias v='nvim'
+alias g='glrnvim'
 alias t='floaterm'
 alias y='pacaur --color=always'
 alias yy='update.sh ~/prog/dotfiles/script/pacman/ignore.txt'
