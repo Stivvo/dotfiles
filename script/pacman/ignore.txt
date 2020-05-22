@@ -1,6 +1,3 @@
-yaru-shell-theme
-yaru-colors-gtk-theme
-yaru-colors-icon-theme
 otf-san-francisco
 otf-san-francisco-compact
 otf-san-francisco-mono

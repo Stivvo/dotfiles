@@ -51,7 +51,7 @@ exec udiskie --appindicator --tray --automount --file-manager "alacritty -e fff 
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-    gsettings set $gnome-schema gtk-theme Yaru-Purple-dark
+    gsettings set $gnome-schema gtk-theme Yaru-Purple
     gsettings set $gnome-schema icon-theme Yaru-Purple
     gsettings set $gnome-schema cursor-theme Numix-Cursor-Maia
 }
