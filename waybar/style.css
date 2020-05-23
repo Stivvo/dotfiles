@@ -20,13 +20,15 @@
     border-bottom: 3px solid transparent;
 }
 
-#workspaces button:hover {
-    background-color: rgba(55, 55, 55, 0.2);
+#workspaces button.focused {
+    background-color: rgba(150, 84, 212, 0.5);
+    box-shadow: inherit;
     border-bottom: 3px solid rgba(160, 100, 215, 1);
 }
 
-#workspaces button.focused {
-    background-color: rgba(150, 84, 212, 0.5);
+#workspaces button:hover {
+    background: rgba(54, 54, 54, 0.8);
+    box-shadow: inherit;
     border-bottom: 3px solid rgba(160, 100, 215, 1);
 }
 
