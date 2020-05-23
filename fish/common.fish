@@ -12,6 +12,7 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
+export FFF_CD_ON_EXIT=1
 
 alias l='lsd -h'
 alias ll='lsd -hl'
