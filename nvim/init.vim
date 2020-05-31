@@ -120,6 +120,7 @@ nnoremap - "mddj"mP
 noremap <Del> ddk
 noremap <Leader><Enter> J
 nnoremap <Space><Enter> i<Enter><Esc>
+nnoremap Y y$
 
 "numbers
 set number relativenumber

@@ -19,10 +19,10 @@
         "interval": 97
     },
     "custom/ram": {
-        "format": "{} ",
+        "format": "{} Gi ",
         "on-click": "alacritty -e htop",
         "interval": 46,
-        "exec": "free used -h | awk 'FNR == 2 {print$3}'"
+        "exec": "fgrep Active: /proc/meminfo | awk '{ printf \"%.1f\", $2 / 1048576 }'"
     },
     "cpu": {
         "format": "{usage}% ",
@@ -30,11 +30,14 @@
         "interval": 13
     },
     "custom/frequency": {
-        "format": "{}MHz",
+        "format": "{} MHz",
         "interval": 10,
-        "exec": "lscpu | grep -i mhz | awk 'FNR == 1 {print$3}' | cut -c 1-4"
+        "exec": "fgrep MHz /proc/cpuinfo | awk '{ total += $4; count++ } END { print substr(total/count, 1, 4) }'"
     },
     "temperature": {
+        "hwmon-path-abs": "/sys/devices/pci0000:00/0000:00:18.3/hwmon",
+        "input-filename": "temp1_input",
+        "tooltip": true,
         "critical-threshold": 75,
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""],
@@ -69,7 +72,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "ydotool key super+9 && pavucontrol"
+        "on-click": "sudo ydotool key super+9 && pavucontrol"
     },
     "tray": {
         "icon-size": 21,
