@@ -25,7 +25,7 @@ set $up k
 set $right l
 # applications
 set $term alacritty
-set $file alacritty -e fish -c fff
+set $file alacritty -e fff
 set $file2 urxvt -e ranger
 set $browser firefox-developer-edition
 set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
@@ -352,10 +352,10 @@ client.urgent #C20000 #C20000 #FFFFFF #FFFFFF #C20000
 ###################
 #
 bindsym {
-    Print exec "~/prog/dotfiles/script/shot/./shot.sh focused"
-    Control+Print exec "~/prog/dotfiles/script/shot/./shot.sh all"
-    Shift+Print exec "~/prog/dotfiles/script/shot/./shot.sh area"
-    $mod+Print exec "~/prog/dotfiles/script/shot/./colorPicker.sh"
+    Print exec ~/prog/dotfiles/script/shot/./sh "focused"
+    Control+Print exec ~/prog/dotfiles/script/shot/./sh "all"
+    Shift+Print exec ~/prog/dotfiles/script/shot/./sh "area"
+    $mod+Print exec ~/prog/dotfiles/script/shot/./colorPicker.sh
 }
 
 ##################

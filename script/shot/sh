@@ -1,7 +1,11 @@
 #!/bin/bash
 
+source ~/.bashrc
+
 scrnName="scrn_$(date +'%Y-%m-%d_%H-%M-%S').png"
-tmpPath="/tmp/${scrnName}"
+tmpPath="$XDG_CACHE_HOME/shot/${scrnName}"
+echo $tmpPath > ~/tmpPath
+echo $scrName > ~/scrnName
 
 case "$1" in
     "all")
@@ -19,7 +23,7 @@ select="$(echo -e "default\nlast\nchoose" | dmenu -i -p "${scrnName} folder")"
 
 case "$select" in
     "default")
-        scrnPath="/home/stefano/screen/${scrnName}"
+        scrnPath="${HOME}/${scrnName}"
         ;;
     "last")
         scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)/${scrnName}
