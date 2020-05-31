@@ -25,10 +25,10 @@ set $up k
 set $right l
 # applications
 set $term alacritty
-set $file alacritty -e fff
+set $file alacritty -e fish -c fff
 set $file2 urxvt -e ranger
 set $browser firefox-developer-edition
-set $menu "~/prog/dotfiles/script/dmenu/./dmenu_run_i"
+set $menu dmenu_run_i.sh
 
 #####################
 #-- Load services --#
@@ -41,7 +41,7 @@ exec qtwaw & # open qtwaw (Whatsapp)
 exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec pavucontrol & # volume control
-exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/prog/dotfiles/script/pacman $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths" & # set fish path
+exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths" & # set fish path
 exec udiskie --appindicator --tray --automount --file-manager "alacritty -e fff "
 
 ##################
@@ -60,17 +60,18 @@ exec_always {
 #-- Output configuration --#
 ############################
 #
-exec_always "~/prog/dotfiles/script/background/./sh"
-exec_always "~/prog/dotfiles/script/screen/./sh r"
+exec "screen.sh r"
+exec_always "backgroundRestart.sh"
 
 set $m1 = DP-2
 set $m2 = HDMI-A-1
 
 bindsym {
 # switch output
-    $mod+m exec "~/prog/dotfiles/script/screen/./sh s"
+    $mod+m exec monitor.sh s
+    $mod+Control+m exec monitor.sh r
 # rotate output
-    $mod+Shift+m exec "~/prog/dotfiles/script/screen/./sh t"
+    $mod+Shift+m exec monitor.sh t
     $mod+Shift+left move workspace to left # Move workspace to screen 1
     $mod+Shift+right move workspace to right # Move workspace to screeen 2
     $mod+left focus output left # Focus screen 1
@@ -260,9 +261,9 @@ bindsym {
     Mod1+Control+up gaps vertical all plus 5
     Mod1+Control+down gaps vertical all minus 5
 # smart gaps and borders
-    Mod1+s exec "~/prog/dotfiles/script/sway/smartGapsBorderToggle.sh"
+    Mod1+s exec "smartGapsBorderToggle.sh"
 # reset vertical and horizontal gaps
-    Mod1+g exec "~/prog/dotfiles/script/sway/gapsBorderToggle.sh"
+    Mod1+g exec "gapsBorderToggle.sh"
     Mod1+Shift+g gaps outer current set 0
     Mod1+Control+g gaps outer all set 0
 }
@@ -352,10 +353,10 @@ client.urgent #C20000 #C20000 #FFFFFF #FFFFFF #C20000
 ###################
 #
 bindsym {
-    Print exec ~/prog/dotfiles/script/shot/./sh "focused"
-    Control+Print exec ~/prog/dotfiles/script/shot/./sh "all"
-    Shift+Print exec ~/prog/dotfiles/script/shot/./sh "area"
-    $mod+Print exec ~/prog/dotfiles/script/shot/./colorPicker.sh
+    Print exec shot.sh "focused"
+    Control+Print exec shot.sh "all"
+    Shift+Print exec shot.sh "area"
+    $mod+Print exec colorPicker.sh
 }
 
 ##################
@@ -363,8 +364,8 @@ bindsym {
 ##################
 #
 bindsym {
-    XF86MonBrightnessUp exec "~/prog/dotfiles/script/notify/./light.sh u"
-    XF86MonBrightnessDown exec "~/prog/dotfiles/script/notify/./light.sh d"
+    XF86MonBrightnessUp exec light.sh u
+    XF86MonBrightnessDown exec light.sh d
 }
 
 ##############
@@ -372,10 +373,10 @@ bindsym {
 ##############
 #
 bindsym {
-    XF86AudioRaiseVolume exec "~/prog/dotfiles/script/notify/./volume.sh up 5"
-    XF86AudioLowerVolume exec "~/prog/dotfiles/script/notify/./volume.sh down 5"
-    XF86AudioMute exec "~/prog/dotfiles/script/notify/./volume.sh audiomute"
-    XF86AudioMicMute exec "~/prog/dotfiles/script/notify/./volume.sh micmute"
+    XF86AudioRaiseVolume exec volume.sh up 5
+    XF86AudioLowerVolume exec volume.sh down 5
+    XF86AudioMute exec volume.sh audiomute
+    XF86AudioMicMute exec volume.sh micmute
 }
 
 ####################

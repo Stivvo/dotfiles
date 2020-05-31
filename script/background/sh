@@ -1,5 +1,0 @@
-#!/bin/bash
-
-killall background.sh
-~/prog/dotfiles/script/background/background.sh
-

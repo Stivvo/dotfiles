@@ -9,7 +9,7 @@ VAR2=$(cat $FILE2)
 if [ $1 == "s" ]
 then
     VAR=$[VAR+1]
-elif [ $1 == "t" ] 
+elif [ $1 == "t" ]
 then
     VAR2=$[VAR2+1]
 fi

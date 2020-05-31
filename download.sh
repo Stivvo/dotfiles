@@ -52,6 +52,10 @@ sudo ln -sf ${PWD}/pacman/makepkg.conf /etc/makepkg.conf
 sudo ln -sf ${PWD}/pacman/pacman.conf /etc/pacman.conf
 sudo ln -sf ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
 
+echo "symlink to scripts..."
+sudo ln -sf ${PWD}/script/*.sh /usr/bin/
+sudo ln -sf ${PWD}/script/*/*.sh /usr/bin/
+
 echo "git config..."
 git config --global user.name Stivvo
 git config --global user.email stivvo01@gmail.com

@@ -4,8 +4,6 @@ source ~/.bashrc
 
 scrnName="scrn_$(date +'%Y-%m-%d_%H-%M-%S').png"
 tmpPath="$XDG_CACHE_HOME/shot/${scrnName}"
-echo $tmpPath > ~/tmpPath
-echo $scrName > ~/scrnName
 
 case "$1" in
     "all")
