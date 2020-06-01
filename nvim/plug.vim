@@ -49,7 +49,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'vim-scripts/a.vim', { 'for': ['c',  'cpp'] }
-Plug 'othree/xml.vim', { 'for': ['xml', 'html'] }
+Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
