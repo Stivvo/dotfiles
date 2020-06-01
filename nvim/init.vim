@@ -27,13 +27,14 @@ autocmd BufWritePre * %s/\s\+$//e
 
 "truecolor on alacritty
 set termguicolors
-colorscheme codedark
-"set guifont=JetBrainsMono\ Nerd\ Font\ Mono\ Regular\ 10
-set guifont=Proggy\ Vector\ Regular\ 10
+colorscheme molokai
+"set guifont=Proggy\ Vector\ Regular\ 10
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 highlight ColorColumn guibg=#2c2c2c
 highlight CursorLine guibg=#2c2c2c
+hi htmlBold gui=bold
+hi htmlItalic gui=italic
 
 "columns
 set colorcolumn=0

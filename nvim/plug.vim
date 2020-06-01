@@ -45,7 +45,6 @@ Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpenAutoClose'] }
 
 "---languages
 Plug 'shmup/vim-sql-syntax'
-Plug 'vimwiki/vimwiki'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'vim-scripts/a.vim', { 'for': ['c',  'cpp'] }

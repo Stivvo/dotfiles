@@ -21,14 +21,14 @@ font:
     family: ProggyVector
     style: Regular
   bold:
-    family: ProggyVector
-    style: Bold
+    family: JetBrainsMono Nerd Font
+    style: Extra Bold
   italic:
-    family: ProggyVector
+    family: JetBrainsMono Nerd Font
     style: Italic
   bold_italic:
-    family: ProggyVector
-    style: Bold Italic
+    family: JetBrainsMono Nerd Font
+    style: Extra Bold Italic
 
   # Point size
   size: 10.0
@@ -47,7 +47,7 @@ font:
     y: 0
 
 # If `true`, bold text is drawn using the bright color variants.
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 # Colors (Hyper)
 colors:
