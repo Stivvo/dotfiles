@@ -1,13 +1,17 @@
 #!/bin/bash
 
+[ -z "$(cat /dev/shm/background)" ] && echo "0" > /dev/shm/background
+ID="$(cat /dev/shm/background)"
+let "ID = $ID + 1"
+echo $ID > /dev/shm/background
+
 PA="/home/stefano/wallpapers/selected/"
 P="/home/stefano/prog/dotfiles/script/background/"
 LIST="/tmp/listBg.txt"
 
-ID="$(cat /dev/shm/background)"
 CONTINUE="true"
 
-while [ $CONTINUE = "true" ]
+while [ "$CONTINUE" = "true" ]
 do
     ls $PA > $LIST
     L=$(wc -l $LIST | awk '{print $1}')
@@ -16,6 +20,7 @@ do
     IMG="$(sed -n "${R}p" $LIST)"
     echo "$R $IMG" > /tmp/currentBg.txt
     swaymsg output "*" bg "${PA}${IMG}" fill
+    echo $ID
     sleep 30m
-    [ "$ID" = "$(cat /dev/shm/background)" ] && CONTINUE="false"
+    [ "$ID" != "$(cat /dev/shm/background)" ] && CONTINUE="false"
 done

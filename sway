@@ -61,7 +61,7 @@ exec_always {
 ############################
 #
 exec "screen.sh r"
-exec_always "backgroundRestart.sh"
+exec_always "background.sh"
 
 set $m1 = DP-2
 set $m2 = HDMI-A-1
