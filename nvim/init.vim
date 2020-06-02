@@ -27,7 +27,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 "truecolor on alacritty
 set termguicolors
-colorscheme molokai
+colorscheme codedark
 "set guifont=Proggy\ Vector\ Regular\ 10
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none

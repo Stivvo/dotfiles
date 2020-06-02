@@ -1,5 +1,6 @@
-{
+[{
     "layer": "bottom",
+        "output": ["eDP-1", "DP-2"],
     "height": 30,
     "width": 1366,
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
@@ -16,7 +17,7 @@
         "timezone": "Europe/Rome",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%b %a %d}",
-        "interval": 97
+        "interval": 60
     },
     "custom/ram": {
         "format": "{} Gi ",
@@ -78,5 +79,28 @@
         "icon-size": 21,
         "spacing": 10
     }
-}
+},
+{
+    "layer": "bottom",
+        "output": "HDMI-A-1",
+    "height": 30,
+    "width": 1366,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["clock", "tray"],
+    "sway/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true
+    },
+    "clock": {
+        "timezone": "Europe/Rome",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%b %a %d}",
+        "interval": 60
+    },
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    }
+}]
 
