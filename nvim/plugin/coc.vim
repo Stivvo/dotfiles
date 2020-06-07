@@ -52,7 +52,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " GoTo code navigation.
 nmap gd <Plug>(coc-definition)
 nmap gD <Plug>(coc-declaration)
-nmap gi <Plug>(coc-implementation)
+nmap gI <Plug>(coc-implementation)
 nmap gy <Plug>(coc-type-definition)
 nmap gr <Plug>(coc-references)
 
@@ -151,7 +151,7 @@ endfunc
 nmap <expr> <silent> <C-g> <SID>select_current_word()
 
 "multiple cursors
-nmap <silent> <C-x> <Plug>(coc-cursors-position)
+nmap <silent> <C-s> <Plug>(coc-cursors-position)
 nmap <silent> <C-c> <Plug>(coc-cursors-word)
 xmap <silent> <C-c> <Plug>(coc-cursors-range)
 " use normal command like `<leader>xi(`
