@@ -40,16 +40,20 @@ hi htmlItalic gui=italic
 set colorcolumn=0
 set cursorcolumn
 highlight CursorColumn cterm=bold guibg=#2c2c2c
-function SetColorColumn()
+function SetColorColumn(amount)
     if &colorcolumn == 0
-        set colorcolumn=80
+        if a:amount == 80
+            set colorcolumn=80
+        else
+            set colorcolumn=120
+        endif
     else
         set colorcolumn=0
     endif
     echo &colorcolumn
 endfunction
-noremap <F3> :call SetColorColumn()<Cr>
-noremap <C-F3> :set colorcolumn=
+noremap <F3> :call SetColorColumn("80")<Cr>
+noremap <leader><F3> :call SetColorColumn("120")<Cr>
 
 "auto formatting
 function! Kformat()
@@ -136,7 +140,10 @@ nnoremap <silent> K :tabprevious<Cr>
 nnoremap <silent> J :tabnext<Cr>
 
 "move around
-nnoremap E gE
 nnoremap <Space>w f<Space>
 nnoremap <Space>b F<Space>
+
+"multiple change
+nnoremap cn *``cgn
+nnoremap cN *``cgN
 
