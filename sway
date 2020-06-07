@@ -117,7 +117,7 @@ bindsym {
     $mod+Shift+p exec brave
     $mod+o exec $file
     $mod+Shift+o exec $file2
-    $mod+n exec $term --title notes -e nvim ~/vimwiki/index.md # start notem app in a terminal
+    $mod+n exec cd vimwiki && $term --title notes -e nvim index.md # start notem app in a terminal
     $mod+z exec $editor
 # Special keys
     XF86Search exec $browser #browsers

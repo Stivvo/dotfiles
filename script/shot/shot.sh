@@ -21,7 +21,7 @@ select="$(echo -e "default\nlast\nchoose" | dmenu -i -p "${scrnName} folder")"
 
 case "$select" in
     "default")
-        scrnPath="${HOME}/${scrnName}"
+        scrnPath="${HOME}/screen/${scrnName}"
         ;;
     "last")
         scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)/${scrnName}
