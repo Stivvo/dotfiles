@@ -6,6 +6,18 @@ let g:instant_markdown_slow = 1
 let g:instant_markdown_allow_unsafe_content = 1
 let g:instant_markdown_allow_external_content = 1
 
+let g:previewStarted = 1
+function InstantMarkdownToggle()
+    if g:previewStarted == 1
+        :InstantMarkdownStop
+        let g:previewStarted = 0
+    else
+        :InstantMarkdownPreview
+        let g:previewStarted = 1
+    endif
+endfunction
+nnoremap <buffer> <silent> <leader>w :call InstantMarkdownToggle()<Cr>
+
 nnoremap <buffer> ZZ :InstantMarkdownStop<Cr>:wq<Cr>
 nnoremap <buffer> ZQ :InstantMarkdownStop<Cr>:q<Cr>
 
