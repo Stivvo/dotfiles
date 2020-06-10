@@ -61,6 +61,7 @@ git config --global user.name Stivvo
 git config --global user.email stivvo01@gmail.com
 git config --global core.editor nvim
 git config --global credential.helper 'cache --timeout=14400'
+git config --global pull.rebase false
 
 echo "volume and brightness notifications files..."
 echo 100 > /tmp/audio-notification

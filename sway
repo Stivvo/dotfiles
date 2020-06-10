@@ -41,6 +41,7 @@ exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland & # start redshift at my lat
 exec qtwaw & # open qtwaw (Whatsapp)
 exec pacaur -Syy & # update package list
 exec mako & # notification server
+exec corectrl &
 exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths" & # set fish path
 exec udiskie --appindicator --tray --automount --file-manager "alacritty -e fff "
@@ -438,5 +439,7 @@ bindsym {
    for_window [app_id="gnome-tweaks"] border none
 
    for_window [app_id="brasero"] floating enable
+
+   for_window [app_id="corectrl"] move container to workspace $ws9
 
 include /etc/sway/config.d/*
