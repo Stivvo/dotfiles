@@ -32,7 +32,7 @@ echo "nvim..."
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ln -sf ${PWD}/nvim/init.vim ~/.config/nvim/init.vim
-ln -sf ${PWD}/nvim/plug.vim ~/.config/nvim/plug.vim
+ln -sf ${PWD}/nvim/vim-plug.vim ~/.config/nvim/vim-plug.vim
 ln -s ${PWD}/nvim/plugin ~/.config/nvim/
 ln -s ${PWD}/nvim/ftplugin ~/.config/nvim/
 ln -s ${PWD}/nvim/other ~/.config/nvim/

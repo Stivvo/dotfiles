@@ -17,7 +17,7 @@ set ignorecase
 set showmatch
 noremap <silent> <F4> :nohlsearch<Cr>
 
-source ~/.config/nvim/plug.vim
+source ~/.config/nvim/vim-plug.vim
 
 " go to last line
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
