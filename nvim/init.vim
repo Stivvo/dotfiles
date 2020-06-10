@@ -1,5 +1,4 @@
 "general options
-let g:wrapText=0
 set mouse=a
 set confirm
 set so=8 "cursor above 8 lines from the bottom of the screen
@@ -15,7 +14,6 @@ set softtabstop=-1
 "search
 set ignorecase
 set showmatch
-noremap <silent> <F4> :nohlsearch<Cr>
 
 source ~/.config/nvim/vim-plug.vim
 
@@ -44,16 +42,18 @@ function SetColorColumn(amount)
     if &colorcolumn == 0
         if a:amount == 80
             set colorcolumn=80
+            echo &colorcolumn
         else
             set colorcolumn=120
+            echo &colorcolumn
         endif
     else
         set colorcolumn=0
+        echo "--"
     endif
-    echo &colorcolumn
 endfunction
-noremap <F3> :call SetColorColumn("80")<Cr>
-noremap <leader><F3> :call SetColorColumn("120")<Cr>
+noremap <Space>1 :call SetColorColumn("80")<Cr>
+noremap <Leader>1 :call SetColorColumn("120")<Cr>
 
 "auto formatting
 function! Kformat()
@@ -63,7 +63,7 @@ function! Kformat()
     ":norm ggVGgq
     :exec line
 endfunction
-noremap <F9> :call Kformat()<Cr>
+noremap <Space>5 :call Kformat()<Cr>
 
 "switch between splits
 set splitbelow splitright
@@ -85,7 +85,7 @@ nnoremap <silent> <C-Down> :resize -20<Cr>
 nnoremap <silent> <C-Left> :vertical resize +20<Cr>
 nnoremap <silent> <C-Right> :vertical resize -20<Cr>
 "cycle between split directions
-noremap <silent> <F10> :set splitbelow!<Cr>:set splitright!<Cr>
+noremap <silent> <Space>4 :set splitbelow!<Cr>:set splitright!<Cr>
 "switch from vertical to horizontal - horizontal to vertical
 nnoremap <Space>j <C-w>H
 nnoremap <Space>k <C-w>K
@@ -102,11 +102,11 @@ function SetSpell()
         endif
     endif
 endfunction
-noremap <silent> <F5> :call SetSpell()<Cr>
+noremap <silent> <Space>3 :call SetSpell()<Cr>
 
 "general mapping
-nnoremap <Esc><Esc> :w<Cr>
-nmap ^ @n
+nnoremap <silent> <Esc><Esc> :w<Cr>:nohlsearch<Cr>
+nmap ^ @m
 
 "change/delete if / for
 nnoremap dai $?if\\|for<Cr>dt{da{
@@ -118,8 +118,8 @@ vnoremap J :m '>+1<Cr>gv=gv
 vnoremap K :m '<-2<Cr>gv=gv
 
 "swap and delete lines above / below
-nnoremap + "mddk"mP
-nnoremap - "mddj"mP
+nnoremap + "gddk"gP
+nnoremap - "gddj"gP
 
 "trim and join lines
 noremap <Del> ddk
@@ -129,7 +129,7 @@ nnoremap Y y$
 
 "numbers
 set number relativenumber
-noremap <silent> <F2> :set number relativenumber!<Cr>
+nnoremap <silent> <Space>2 :set number relativenumber!<Cr>
 
 "clipboard
 inoremap <C-v> <C-r>0
