@@ -42,6 +42,7 @@ exec qtwaw & # open qtwaw (Whatsapp)
 exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec corectrl &
+exec $browser &
 exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths" & # set fish path
 exec udiskie --appindicator --tray --automount --file-manager "alacritty -e fff "

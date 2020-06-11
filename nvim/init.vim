@@ -38,22 +38,20 @@ hi htmlItalic gui=italic
 set colorcolumn=0
 set cursorcolumn
 highlight CursorColumn cterm=bold guibg=#2c2c2c
-function SetColorColumn(amount)
-    if &colorcolumn == 0
-        if a:amount == 80
-            set colorcolumn=80
-            echo &colorcolumn
-        else
-            set colorcolumn=120
-            echo &colorcolumn
-        endif
-    else
+function SetColorColumn()
+    if &colorcolumn == 120
         set colorcolumn=0
         echo "--"
+    else
+        if &colorcolumn == 80
+            set colorcolumn=120
+        else
+            set colorcolumn=80
+        endif
+        echo &colorcolumn
     endif
 endfunction
-noremap <Space>1 :call SetColorColumn("80")<Cr>
-noremap <Leader>1 :call SetColorColumn("120")<Cr>
+noremap <Space>2 :call SetColorColumn()<Cr>
 
 "auto formatting
 function! Kformat()
@@ -129,7 +127,7 @@ nnoremap Y y$
 
 "numbers
 set number relativenumber
-nnoremap <silent> <Space>2 :set number relativenumber!<Cr>
+nnoremap <silent> <Space>1 :set number relativenumber!<Cr>
 
 "clipboard
 inoremap <C-v> <C-r>0
