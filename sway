@@ -26,7 +26,7 @@ set $right l
 # applications
 set $term alacritty
 set $editor $term --title neovim -e nvim
-set $file $term -e fish -c fff
+set $file fish -c "alacritty --title FFF -e fff"
 set $file2 urxvt -e ranger
 set $browser firefox-developer-edition
 set $menu dmenu_run_i.sh
@@ -45,7 +45,7 @@ exec corectrl &
 exec $browser &
 exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths" & # set fish path
-exec udiskie --appindicator --tray --automount --file-manager "alacritty -e fff "
+exec udiskie --appindicator --tray --automount --file-manager "$term --title 'FFF disk' -e fff "
 
 ##################
 #-- GTK themes --#
