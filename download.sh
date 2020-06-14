@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "creating useful dirs..."
-mkdir ~/.cache ~/.cache/markdown/ ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.config/nvim ~/.config/zathura ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty ~/.cache/shot
+mkdir ~/.cache ~/.cache/markdown/ ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.config/nvim ~/.config/zathura ~/.config/nyaovim ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty ~/.cache/shot
 
 echo "shells..."
 ln -sf ${PWD}/bashrc ~/.bashrc
@@ -22,6 +22,7 @@ ln -sf ${PWD}/zathurarc ~/.config/zathura/zathurarc
 ln -sf ${PWD}/imv ~/.config/imv/config
 ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
 ln -sf ${PWD}/glrnvim.yml ~/.config/glrnvim.yml
+ln -sf ${PWD}/nyaovimrc.html ~/.config/nyaovim/nyaovimrc.html
 
 echo "ranger..."
 ln -sf ${PWD}/ranger/rc.conf ~/.config/ranger/rc.conf
