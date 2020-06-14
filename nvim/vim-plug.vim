@@ -50,10 +50,12 @@ Plug 'honza/vim-snippets'
 Plug 'vim-scripts/a.vim', { 'for': ['c',  'cpp'] }
 Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
 Plug 'lervag/vimtex', { 'for': 'tex' }
-Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
+Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
+Plug 'rhysd/nyaovim-markdown-preview'
 Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 
 "maybe
+" Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
 "Plug 'ycm-core/YouCompleteMe'
 "Plug 'bazelbuild/vim-bazel'
 "Plug 'justmao945/vim-clang'

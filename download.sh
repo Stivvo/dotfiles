@@ -21,7 +21,6 @@ ln -sf ${PWD}/mako ~/.config/mako/config
 ln -sf ${PWD}/zathurarc ~/.config/zathura/zathurarc
 ln -sf ${PWD}/imv ~/.config/imv/config
 ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
-ln -sf ${PWD}/glrnvim.yml ~/.config/glrnvim.yml
 ln -sf ${PWD}/nyaovimrc.html ~/.config/nyaovim/nyaovimrc.html
 
 echo "ranger..."
