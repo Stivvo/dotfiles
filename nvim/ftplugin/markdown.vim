@@ -34,7 +34,7 @@ set colorcolumn=80
 set shiftwidth=2
 
 " compile markdown
-nnoremap <buffer> <silent> <Space>m :w<Cr>:!~/prog/dotfiles/script/mark/./sh % "f" >> /dev/null<Cr><Cr>
+nnoremap <buffer> <silent> <Space>m :w<Cr>:!mark.sh %<Cr>
 nnoremap <buffer> <silent> <Space>p :silent w<Cr>:!~/prog/dotfiles/script/mark/./presentation.sh % "f" & >> /dev/null<Cr><Cr>
 
 "useful mappings for moving around
