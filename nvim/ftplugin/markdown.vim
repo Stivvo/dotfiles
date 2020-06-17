@@ -1,26 +1,39 @@
-let g:markdown_preview_auto=1
-let g:markdown_preview_no_default_mapping=1
+"text
+setlocal textwidth=100
+setlocal colorcolumn=100
+setlocal shiftwidth=2
 
-let g:previewStarted = 1
-function InstantMarkdownToggle()
-    if g:previewStarted == 1
-        :StartMarkdownPreview
-        let g:previewStarted = 0
-    else
-        :StopMarkdownPreview
-        let g:previewStarted = 1
+let g:compile_save = 0
+
+function CompileDocument(command, open)
+    :silent w
+
+    if a:command !~ "default" "pressing space+m|p
+        if g:compile_save == 1
+            let g:compile_save = 0
+        else
+            let g:compile_save = 1
+            let g:pandoc_compiler = a:command
+        endif
+    endif
+
+    echo "compileonsave: " . g:compile_save
+
+    if g:compile_save == 1
+        :silent execute "!" . g:pandoc_compiler . ' ' . resolve(expand('%:p')) . ' ' . a:open . ' &'
+        if file_readable("/tmp/marksh.txt")
+            :silent execute "! sleep 1s"
+            :execute
+        endif
     endif
 endfunction
-nnoremap <buffer> <silent> <leader>w :call InstantMarkdownToggle()<Cr>
-
-"text
-setlocal textwidth=80
-set colorcolumn=80
-set shiftwidth=2
 
 " compile markdown
-nnoremap <buffer> <silent> <Space>m :w<Cr>:!mark.sh %<Cr>
-nnoremap <buffer> <silent> <Space>p :silent w<Cr>:!~/prog/dotfiles/script/mark/./presentation.sh % "f" & >> /dev/null<Cr><Cr>
+nnoremap <buffer> <Space>m :call CompileDocument("mark.sh", "f") <Cr>
+nnoremap <buffer> <Space>p :call CompileDocument("presentation.sh", "f") <Cr>
+nnoremap <buffer> <Space>e :split /tmp/marksh.txt <Cr>
+
+nnoremap <buffer> <silent> <Esc><Esc> :call CompileDocument("default", "n") <Cr>
 
 "useful mappings for moving around
 nnoremap <buffer> <Space>h /^[#]\+ [a-z A-Z']*\c<left><left>

@@ -163,7 +163,6 @@ let g:coc_global_extensions = [
             \ 'coc-html',
             \ 'coc-css',
             \ 'coc-sql',
-            \ 'coc-markdownlint',
             \ 'coc-sh',
             \ 'coc-lit-html',
             \ 'coc-json',
