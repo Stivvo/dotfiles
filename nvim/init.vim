@@ -7,7 +7,6 @@ filetype plugin indent on
 "indent
 set smartindent
 set expandtab
-set smarttab
 set shiftwidth=4
 set softtabstop=-1
 

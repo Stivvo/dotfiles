@@ -35,6 +35,7 @@ set $menu dmenu_run_i.sh
 #-- Load services --#
 #####################
 #
+exec monitor.sh r &
 exec_always xrdb ~/.Xresources & # load Xresources
 exec_always ydotoold & # start ydotool server
 exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland & # start redshift at my latitude
@@ -43,7 +44,7 @@ exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec corectrl &
 exec $browser &
-exec pavucontrol & # volume control
+# exec pavucontrol & # volume control
 exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths" & # set fish path
 exec udiskie --appindicator --tray --automount --file-manager "$term --title 'FFF disk' -e fff "
 
