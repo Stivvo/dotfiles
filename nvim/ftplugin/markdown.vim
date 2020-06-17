@@ -6,7 +6,7 @@ setlocal shiftwidth=2
 let g:compile_save = 0
 
 function CompileDocument(command, open)
-    :silent w
+    :w
 
     if a:command !~ "default" "pressing space+m|p
         if g:compile_save == 1
@@ -15,9 +15,8 @@ function CompileDocument(command, open)
             let g:compile_save = 1
             let g:pandoc_compiler = a:command
         endif
+        echo "compileonsave: " . g:compile_save
     endif
-
-    echo "compileonsave: " . g:compile_save
 
     if g:compile_save == 1
         :silent execute "!" . g:pandoc_compiler . ' ' . resolve(expand('%:p')) . ' ' . a:open . ' &'
@@ -33,7 +32,7 @@ nnoremap <buffer> <Space>m :call CompileDocument("mark.sh", "f") <Cr>
 nnoremap <buffer> <Space>p :call CompileDocument("presentation.sh", "f") <Cr>
 nnoremap <buffer> <Space>e :split /tmp/marksh.txt <Cr>
 
-nnoremap <buffer> <silent> <Esc><Esc> :call CompileDocument("default", "n") <Cr>
+nnoremap <buffer> <Esc><Esc> :call CompileDocument("default", "n") <Cr>
 
 "useful mappings for moving around
 nnoremap <buffer> <Space>h /^[#]\+ [a-z A-Z']*\c<left><left>
