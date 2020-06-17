@@ -6,9 +6,10 @@ setlocal shiftwidth=2
 let g:compile_save = 0
 
 function CompileDocument(command, open)
-    :w
-
-    if a:command !~ "default" "pressing space+m|p
+    if a:command == "default" "pressing space+m|p
+        :w
+    else
+        :silent w
         if g:compile_save == 1
             let g:compile_save = 0
         else
@@ -25,6 +26,8 @@ function CompileDocument(command, open)
             :execute
         endif
     endif
+
+    :nohlsearch
 endfunction
 
 " compile markdown

@@ -3,7 +3,7 @@ let g:floaterm_position = 'bottomright'
 let g:floaterm_autoclose = 2
 let g:floaterm_gitcommit = 'floaterm'
 let g:floaterm_width=0.4
-let g:floaterm_height=0.6
+let g:floaterm_height=0.4
 
 "horizontal split
 nnoremap <silent> <leader>tx :FloatermNew --wintype=normal --position=bottom<CR>
