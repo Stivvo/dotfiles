@@ -14,7 +14,6 @@ Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 
 "---file
 Plug 'junegunn/fzf', { 'on': 'FZF' }
-Plug 'dylanaraps/fff.vim', { 'on': 'F' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'voldikss/vim-floaterm', { 'on': ['FloatermNew', 'FloatermToggle'] }
 
