@@ -26,7 +26,7 @@ set $right l
 # applications
 set $term alacritty
 set $editor $term --title neovim -e nvim
-set $file fish -c "alacritty --title FFF -e fff"
+set $file fish -c "$term --title FFF -e fff"
 set $file2 urxvt -e ranger
 set $browser firefox-developer-edition
 set $menu dmenu_run_i.sh
@@ -129,9 +129,8 @@ bindsym {
     XF86Explorer exec $file # file managers
     Shift+XF86Explorer exec $file2 # file managers
     Control+XF86Explorer exec nautilus
-    XF86Tools exec $editor # ides
+    XF86Tools exec /home/stefano/eclipse/jee-2020-03/eclipse/./eclipse # ides
     Shift+XF86Tools exec qtcreator
-    Ctrl+XF86Tools exec /home/stefano/eclipse/jee-2020-03/eclipse/./eclipse
 # exit
     --release $mod+Ctrl+l exec swaylock-blur
     --release $mod+Ctrl+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'

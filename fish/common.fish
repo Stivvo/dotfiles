@@ -12,7 +12,6 @@ export XDG_CURRENT_DESKTOP=sway
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
-export FFF_CD_ON_EXIT=1
 
 alias l='lsd -h'
 alias ll='lsd -hl'
@@ -80,6 +79,7 @@ export FFF_FAV9=/home/stefano/tomcat/webapps
 export FFF_FILE_FORMAT="%f"
 export FFF_MARK_FORMAT="> %f*"
 export FFF_OPENER="xdg-open"
+export FFF_CD_ON_EXIT=1
 
 export FFF_COL1=2 # directory
 export FFF_COL2=5 # status background
