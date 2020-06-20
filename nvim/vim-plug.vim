@@ -46,11 +46,12 @@ Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpenAutoClose'] }
 Plug 'shmup/vim-sql-syntax'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-Plug 'vim-scripts/a.vim', { 'for': ['c',  'cpp'] }
 Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
 Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
+Plug 'fedorenchik/qt-support.vim', { 'for': ['c',  'cpp', 'qmake'] }
+Plug 'rhysd/vim-clang-format', { 'for': ['c',  'cpp'] }
 
 "maybe
 " Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }

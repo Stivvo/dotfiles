@@ -1,1 +1,1 @@
-source ~/.config/nvim/other/a.vim
+source ~/.config/nvim/other/vim-clang-format.vim

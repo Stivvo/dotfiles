@@ -176,6 +176,7 @@ let g:coc_global_extensions = [
             \ 'coc-fs-lists',
             \ 'coc-explorer',
             \ 'coc-todolist',
+            \ 'coc-floaterm',
             \ 'coc-phpls'
             \ ]
 " coc-ccls still not ready
