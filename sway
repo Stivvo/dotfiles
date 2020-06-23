@@ -35,12 +35,9 @@ set $menu dmenu_run_i.sh
 #-- Load services --#
 #####################
 #
-exec monitor.sh r &
 exec_always xrdb ~/.Xresources & # load Xresources
 exec_always ydotoold & # start ydotool server
 exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland & # start redshift at my latitude
-exec qtwaw & # open qtwaw (Whatsapp)
-exec pacaur -Syy & # update package list
 exec mako & # notification server
 exec corectrl &
 exec $browser &
@@ -64,8 +61,8 @@ exec_always {
 #-- Output configuration --#
 ############################
 #
-exec "screen.sh r"
-exec_always "background.sh"
+exec_always background.sh &
+exec monitor.sh r &
 
 set $m1 = DP-2
 set $m2 = HDMI-A-1
@@ -389,55 +386,16 @@ bindsym {
    workspace $ws10 output $m2
    workspace $ws9 output $m2
 
-   for_window [class="code-Login"] floating enable
-   for_window [class="code-Login"] border normal
-
-   for_window [class="code-Client"] floating enable
-   for_window [class="code-Client"] border normal
-
-   for_window [class="ProvaPallaServer"] floating enable
-   for_window [class="ProvaPallaServer"] border normal
-
-   for_window [class="ProvaPallaClient"] floating enable
-   for_window [class="ProvaPallaClient"] border normal
-
    for_window [app_id="pavucontrol"] move container to workspace $ws9
    for_window [class="Pavucontrol"] move container to workspace $ws9
 
-   for_window [class="qtwaw"] move container to workspace $ws10
-   for_window [app_id="eu.scarpetta.QtWAW"] move container to workspace $ws10
-
    #for_window [app_id="firefox"] move container to workspace $ws2
-
-   for_window [app_id="gnome-disks"] floating enable
-   for_window [app_id="gnome-disks"] border none
-
-   for_window [app_id="cheese"] floating enable
-   for_window [app_id="cheese"] border none
-
-   for_window [app_id="eog"] floating enable
-   for_window [app_id="eog"] border none
-
-   for_window [app_id="org.gnome.Nautilus"] floating enable
-   for_window [app_id="org.gnome.Nautilus"] border none
-
-   for_window [app_id="dconf-editor"] floating enable
-   for_window [app_id="dconf-editor"] border none
-
-   for_window [app_id="gnome-font-vewer"] floating enable
-   for_window [app_id="gnome-font-vewer"] border none
-
-   for_window [app_id="gthumb"] floating enable
-   for_window [app_id="gthumb"] border none
 
    for_window [app_id="baobab"] floating enable
    for_window [app_id="baobab"] border none
 
    for_window [app_id="gnome-calculator"] floating enable
    for_window [app_id="gnome-calculator"] border none
-
-   for_window [app_id="gnome-tweaks"] floating enable
-   for_window [app_id="gnome-tweaks"] border none
 
    for_window [app_id="brasero"] floating enable
 
