@@ -21,5 +21,3 @@ let g:clang_format#auto_format=1
 let g:clang_format#auto_formatexpr=1
 
 autocmd FileType c,cpp ClangFormatAutoEnable
-
-nnoremap <silent> <buffer> <Space>h :CocCommand clangd.switchSourceHeader<Cr>
