@@ -34,3 +34,5 @@ nnoremap <buffer> <Esc><Esc> :nohlsearch<Cr>:call CompileDocument("default", "n"
 
 "useful mappings for moving around
 nnoremap <buffer> <Space>h /^[#]\+ [a-z A-Z']*\c<left><left>
+
+source ~/.config/nvim/other/markdown-preview.vim

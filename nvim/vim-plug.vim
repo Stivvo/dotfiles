@@ -49,6 +49,7 @@ Plug 'honza/vim-snippets'
 Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 Plug 'fedorenchik/qt-support.vim', { 'for': ['c',  'cpp', 'qmake'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c',  'cpp'] }
