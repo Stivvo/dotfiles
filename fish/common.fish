@@ -67,14 +67,14 @@ alias xamr='sudo xampp start'
 alias xamp='sudo xampp stop'
 
 export FFF_FAV1=/home/stefano/prog
-export FFF_FAV2=/home/stefano/scuola
-export FFF_FAV3=/opt/lampp/htdocs/stuff
-export FFF_FAV4=/home/stefano/prog/dotfiles
-export FFF_FAV5=/home/stefano/scuola/std
-export FFF_FAV6=/home/stefano/scuola/info
-export FFF_FAV7=/home/stefano/scuola/spec
-export FFF_FAV8=/opt/lampp/htdocs/stuff/ArchivioIBC
-export FFF_FAV9=/home/stefano/tomcat/webapps
+export FFF_FAV2=/home/stefano/wallpapers
+export FFF_FAV3=/home/stefano/screen
+export FFF_FAV4=/home/stefano/Download
+export FFF_FAV5=/home/stefano/prog/dotfiles
+export FFF_FAV6=/home/stefano/prog/wayPreview
+export FFF_FAV7=/home/stefano/prog/GitNoob2Pro
+export FFF_FAV8=/home/stefano/.local/scripts
+export FFF_FAV9=/opt/lampp/htdocs/stuff
 
 export FFF_FILE_FORMAT="%f"
 export FFF_MARK_FORMAT="> %f*"
