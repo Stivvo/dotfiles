@@ -10,6 +10,7 @@ alsa-topology-conf
 alsa-ucm-conf
 alsa-utils
 amd-ucode
+android-tools
 aom
 apache
 appstream-glib
@@ -47,7 +48,6 @@ boost
 boost-libs
 botan
 brasero
-brave-bin
 brotli
 btrfs-progs
 bubblewrap
@@ -60,6 +60,7 @@ cairo
 cairomm
 cantarell-fonts
 cblas
+ccalc
 cdparanoia
 cdrdao
 cdrtools
@@ -71,9 +72,12 @@ clang
 clazy
 clipnotify
 clucene
+clutter
+clutter-gtk
 cmake
 cmark-gfm
 cmatrix-git
+cogl
 colord
 colord-sane
 compiler-rt
@@ -85,6 +89,7 @@ ctags
 cups
 cups-filters
 curl
+cyrus-sasl
 dash
 dav1d
 db
@@ -119,7 +124,6 @@ fakeroot
 fetchmirrors
 fff
 ffmpeg
-ffmpegthumbnailer
 fftw
 file
 filesystem
@@ -188,16 +192,19 @@ grep
 grim
 groff
 grub
+gsasl
 gsettings-desktop-schemas
 gsfonts
 gsm
 gssdp
 gssproxy
+gst-plugin-gtk
 gst-plugins-base
 gst-plugins-base-libs
 gst-plugins-good
 gstreamer
 gtest
+gthumb
 gtk-doc
 gtk-engine-murrine
 gtk-layer-shell
@@ -357,6 +364,7 @@ hunspell-it
 hwids
 hwloc
 hyphen
+i2c-tools
 iana-etc
 icu
 ijs
@@ -364,7 +372,6 @@ imagemagick
 imlib2
 imv
 inetutils
-intel-tbb
 intltool
 iproute2
 iptables
@@ -766,6 +773,7 @@ nss
 ntfs-3g
 numix-cursor-maia
 obs-studio
+ocl-icd
 olive
 oniguruma
 openal
@@ -870,6 +878,7 @@ poppler-glib
 popt
 potrace
 procps-ng
+protobuf
 pscircle-git
 psmisc
 pulseaudio
@@ -960,7 +969,6 @@ qt5-websockets
 qt5-x11extras
 qt5-xmlpatterns
 qtcreator
-ranger
 raptor
 rasqal
 re2
@@ -980,8 +988,6 @@ ruby-reline
 rubygems
 run-parts
 rxvt
-rxvt-unicode
-rxvt-unicode-terminfo
 s-tui
 sane
 sbc
@@ -992,6 +998,7 @@ sdl2
 sdl2_ttf
 sed
 semver
+sendmail
 serf
 sg3_utils
 shaderc
@@ -1036,6 +1043,7 @@ t1lib
 taglib
 talloc
 tar
+tbb
 tcl
 tdb
 tevent
@@ -1097,6 +1105,7 @@ wayland
 wayland-protocols
 webkit2gtk
 webrtc-audio-processing
+wf-recorder
 wget
 which
 wireless_tools
@@ -1134,9 +1143,6 @@ xorg-bdftopcf
 xorg-docs
 xorg-font-util
 xorg-font-utils
-xorg-fonts-100dpi
-xorg-fonts-75dpi
-xorg-fonts-alias
 xorg-fonts-encodings
 xorg-iceauth
 xorg-luit
@@ -1184,6 +1190,7 @@ xorg-xwininfo
 xorg-xwud
 xorgproto
 xvidcore
+xxhash
 xz
 yaml-cpp
 ydotool-git
