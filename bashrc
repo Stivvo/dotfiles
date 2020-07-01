@@ -10,7 +10,7 @@ export PATH
 
 source $HOME/.config/fish/common.fish
 
-PATH=/opt/lampp:/home/stefano/eclipse/jee-2020-03/eclipse:/home/stefano/.local/nativefier/*:$PATH
+PATH=/opt/lampp:/home/stefano/eclipse/jee-2020-03/eclipse:/home/stefano/.local/nativefier/*:/home/stefano/.local/scripts/:$PATH
 
 f() {
     fff "$@"

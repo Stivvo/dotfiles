@@ -11,22 +11,12 @@ ln -sf ${PWD}/fish/common.fish ~/.config/fish/common.fish
 echo "setting default shell to fish, reboot required"
 sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
 
-echo "xresources..."
-ln -sf ${PWD}/Xresources ~/.Xresources
-xrdb ~/.Xresources
-
 echo "creating symlinks for programs configs..."
 ln -sf ${PWD}/pam ~/.pam_environment  # pam environment, enable wayland on firefox
 ln -sf ${PWD}/mako ~/.config/mako/config
 ln -sf ${PWD}/zathurarc ~/.config/zathura/zathurarc
 ln -sf ${PWD}/imv ~/.config/imv/config
 ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
-ln -sf ${PWD}/nyaovimrc.html ~/.config/nyaovim/nyaovimrc.html
-
-echo "ranger..."
-ln -sf ${PWD}/ranger/rc.conf ~/.config/ranger/rc.conf
-ln -sf ${PWD}/ranger/rifle.conf ~/.config/ranger/rifle.conf
-ln -sf ${PWD}/ranger/scope.sh ~/.config/ranger/scope.sh
 
 echo "nvim..."
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -39,7 +29,7 @@ ln -s ${PWD}/nvim/other ~/.config/nvim/
 nvim -c "PlugInstall|q|q"
 
 echo "sway..."
-ln -sf ${PWD}/sway ~/.config/sway/config
+ln -sf ${PWD}/sway/config ~/.config/sway/config
 ln -sf ${PWD}/swaylock ~/.config/swaylock/config
 ln -s ${PWD}/waybar ~/.config/
 
