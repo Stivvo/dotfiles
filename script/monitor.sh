@@ -14,7 +14,7 @@ then
     VAR2=$[VAR2+1]
 fi
 
-if [ $VAR -gt 3 ]
+if [ $VAR -gt 4 ]
 then
     VAR=1
 fi
@@ -28,6 +28,7 @@ case "$VAR" in
     "1") # monitor
         swaymsg "output DP-2 pos 0 0 enable"
         swaymsg "output HDMI-A-1 disable"
+        swaymsg "output HDMI-A-2 disable"
 
         swaymsg "focus output DP-1"
         notify-send.sh "monitor"
@@ -48,6 +49,11 @@ case "$VAR" in
         swaymsg "focus output HDMI-A-1"
         notify-send.sh "double"
         ;;
+    "4") # cinema
+        swaymsg output "HDMI-A-2 enable"
+        swaymsg output "HDMI-A-1 disable"
+        swaymsg output "DP-2 disable"
+        notify-send.sh "cinema"
 esac
 
 if [ "$VAR2" == "1" ]
