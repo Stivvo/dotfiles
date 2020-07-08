@@ -29,7 +29,7 @@ ln -s ${PWD}/nvim/other ~/.config/nvim/
 nvim -c "PlugInstall|q|q"
 
 echo "sway..."
-ln -sf ${PWD}/sway/config ~/.config/sway/config
+ln -sf ${PWD}/sway ~/.config/sway/config
 ln -sf ${PWD}/swaylock ~/.config/swaylock/config
 ln -s ${PWD}/waybar ~/.config/
 

@@ -113,14 +113,12 @@ bindsym {
     $mod+Return exec $term
     $mod+q kill
     $mod+p exec $browser
-    $mod+Shift+p exec brave
     $mod+o exec $file
     $mod+Shift+o exec $file2
-    $mod+n exec dash -c "cd ~/vimwiki && $editor index.md" # start notem app in a terminal
+    $mod+n exec dash -c "cd ~/notes && $editor README.md" # start note app in a terminal
     $mod+z exec $editor
 # Special keys
     XF86Search exec $browser #browsers
-    Shift+XF86Search exec brave
     XF86Calculator exec gnome-calculator
     XF86Explorer exec $file # file managers
     Shift+XF86Explorer exec $file2 # file managers

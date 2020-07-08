@@ -27,7 +27,7 @@ case "$select" in
         scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)/${scrnName}
         ;;
     "choose")
-        alacritty -e fish -c f
+        alacritty -e f
         scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)/${scrnName}
         ;;
     *)
@@ -40,7 +40,6 @@ then
     notify-send.sh "DELETED\n$scrnName"
 else
     mv $tmpPath $scrnPath
-    notify-send.sh $scrnPath -i $scrnPath --default-action="urxvt -e ranger --selectfile=${scrnPath}"
-    #selectfile is a legacy option
+    notify-send.sh $scrnPath -i $scrnPath --default-action="alacritty -e fff '${scrnPath}'"
 fi
 
