@@ -37,7 +37,7 @@ set $menu dmenu_run_i.sh
 #
 exec_always ydotoold & # start ydotool server
 exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland & # start redshift at my latitude
-exec mako & # notification server
+exec_always killall mako && mako & # notification server
 exec corectrl &
 exec $browser &
 # exec pavucontrol & # volume control
@@ -68,10 +68,12 @@ set $m2 = HDMI-A-1
 
 bindsym {
 # switch output
-    $mod+m exec monitor.sh s
-    $mod+Control+m exec monitor.sh r
+    $mod+m exec monitor.sh
 # rotate output
-    $mod+Shift+m exec monitor.sh t
+    $mod+Shift+m exec rotate.sh
+# refresh outputs
+    $mod+Control+m exec monitor.sh r
+# move workspaces between outputs
     $mod+Shift+left move workspace to left # Move workspace to screen 1
     $mod+Shift+right move workspace to right # Move workspace to screeen 2
     $mod+left focus output left # Focus screen 1
