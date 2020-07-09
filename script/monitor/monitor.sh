@@ -1,5 +1,7 @@
 #!/bin/bash
 
+swaymsg -t get_outputs | fgrep eDP-1 && exit
+
 FILE="${XDG_CACHE_HOME}/screen/status.txt"
 VAR=$(cat $FILE)
 
