@@ -401,6 +401,7 @@ bindsym {
    for_window [app_id="corectrl"] move container to workspace $ws9
 
    for_window [app_id="wayPreviewServer"] floating enable
+   for_window [app_id="wayPreviewServer"] move position 500 50
 
 include /etc/sway/config.d/*
 include ~/.config/sway/personal.config
