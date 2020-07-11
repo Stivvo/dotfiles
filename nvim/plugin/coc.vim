@@ -138,6 +138,8 @@ xmap <silent> <C-c> <Plug>(coc-cursors-range)
 " use normal command like `<leader>xi(`
 "map <leader>x <Plug>(coc-cursors-operator)
 
+nunmap <C-i>
+
 " coc plugins
 let g:coc_global_extensions = [
             \ 'coc-tsserver',
