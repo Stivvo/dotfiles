@@ -82,3 +82,6 @@ let g:mkdp_port = ''
 " preview page title
 " ${name} will be replace with the file name
 let g:mkdp_page_title = '「${name}」'
+
+" toggle preview
+nnoremap <silent> <buffer> <leader>w :MarkdownPreview<Cr>

@@ -1,7 +1,13 @@
-"text
-setlocal textwidth=100
-setlocal colorcolumn=100
+source ~/.config/nvim/other/markdown-preview.vim
+
 setlocal shiftwidth=2
+if resolve(expand('%:t')) == "README.md"
+    setlocal textwidth=80
+    setlocal colorcolumn=80
+else
+    setlocal textwidth=100
+    setlocal colorcolumn=100
+endif
 
 let g:compile_save = 0
 
@@ -34,5 +40,3 @@ nnoremap <buffer> <Esc><Esc> :nohlsearch<Cr>:call CompileDocument("default", "n"
 
 "useful mappings for moving around
 nnoremap <buffer> <Space>h /^[#]\+ [a-z A-Z']*\c<left><left>
-
-source ~/.config/nvim/other/markdown-preview.vim
