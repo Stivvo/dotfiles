@@ -2,8 +2,8 @@ let g:floaterm_wintype = 'floating'
 let g:floaterm_position = 'bottomright'
 let g:floaterm_autoclose = 2
 let g:floaterm_gitcommit = 'floaterm'
-let g:floaterm_width=0.4
-let g:floaterm_height=0.4
+let g:floaterm_width=0.5
+let g:floaterm_height=0.5
 
 "horizontal split
 nnoremap <silent> <leader>tx :FloatermNew --wintype=normal --position=bottom<CR>
@@ -13,11 +13,11 @@ tnoremap <silent> <leader>tx <C-\><C-n>:FloatermNew --wintype=normal --position=
 nnoremap <silent> <leader>tv :FloatermNew --wintype=normal --position=right<CR>
 tnoremap <silent> <leader>tv <C-\><C-n>:FloatermNew --wintype=normal --position=right<CR>
 
-"toggle
 nnoremap <silent> <leader>tt :FloatermToggle<CR>
 tnoremap <silent> <leader>tt <C-\><C-n>:FloatermToggle<CR>
 
-"commands
+nnoremap <silent> <leader>tm :FloatermNew<CR>
+tnoremap <silent> <leader>tm <C-\><C-n>:FloatermNew<CR>
 
 nnoremap <silent> <leader>tp :FloatermPrev<CR>
 tnoremap <silent> <leader>tp <C-\><C-n>:FloatermPrev<CR>
