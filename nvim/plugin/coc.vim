@@ -67,9 +67,10 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>R <Plug>(coc-rename)
-
 "rename variable
 nmap <leader>r :CocCommand document.renameCurrentWord<Cr>
+"search rename
+nnoremap <Space>r :CocSearch <C-R>=expand("<cword>")<Cr><Cr>
 
 " Formatting selected code.
 xmap <leader>e <Plug>(coc-format-selected)

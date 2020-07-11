@@ -25,7 +25,6 @@ autocmd BufWritePre * %s/\s\+$//e
 "truecolor on alacritty
 set termguicolors
 colorscheme codedark
-set guifont=ProggyVector\ 10
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 highlight ColorColumn guibg=#2c2c2c
@@ -137,4 +136,4 @@ nnoremap <silent> <C-Down> :resize -20<Cr>
 nnoremap <silent> <C-Left> :vertical resize +20<Cr>
 nnoremap <silent> <C-Right> :vertical resize -20<Cr>
 "cycle between split directions
-noremap <silent> <Space>7 :set splitbelow!<Cr>:set splitright!<Cr>
+noremap <silent> <Space>4 :set splitbelow!<Cr>:set splitright!<Cr>
