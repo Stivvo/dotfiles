@@ -135,7 +135,7 @@ bindsym {
     --release $mod+Ctrl+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'systemctl poweroff'
 # sway stuff
     $mod+c reload
-    $mod+i exec swayinfo | fgrep app_id | sed -e "s/^app_id=//g" | tr -d "\n//" | wl-copy && notify-send.sh $(wl-paste)
+    $mod+i exec swayinfo.sh
     $mod+w exec winfocus
 }
 floating_modifier $mod normal
