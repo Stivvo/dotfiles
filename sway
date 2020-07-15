@@ -20,7 +20,7 @@ set $right l
 set $term alacritty
 set $editor $term --title neovim -e nvim
 set $file fish -c "$term --title FFF -e fff"
-set $file2 urxvt -e ranger
+set $file2 thunar
 set $browser firefox-developer-edition
 set $menu dmenu_run_i.sh
 
@@ -93,9 +93,8 @@ bindsym {
     XF86Calculator exec gnome-calculator
     XF86Explorer exec $file # file managers
     Shift+XF86Explorer exec $file2 # file managers
-    Control+XF86Explorer exec nautilus
-    XF86Tools exec /home/stefano/eclipse/jee-2020-03/eclipse/./eclipse # ides
-    Shift+XF86Tools exec qtcreator
+    XF86Tools exec qtcreator
+    Shift+XF86Tools exec eclipse
 
 # exit
     --release $mod+Ctrl+l exec swaylock-blur
@@ -358,9 +357,8 @@ exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland # start redshift at my latit
 exec_always killall mako && mako & # notification server
 exec corectrl
 exec $browser
-# exec pavucontrol & # volume control
-exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths /home/stefano/.local/nativefier/* $fish_user_paths /home/stefano/.local/scripts/ $fish_user_paths " # set fish path
-exec udiskie --appindicator --tray --automount --file-manager "$term --title 'FFF disk' -e fff "
+exec $XDG_CONFIG_HOME/fish/path.fish
+exec udiskie.sh $term
 
 ####################
 #-- Window Rules --#

@@ -8,6 +8,7 @@ ln -sf ${PWD}/bashrc ~/.bashrc
 source ~/.bashrc
 ln -sf ${PWD}/fish/config.fish ~/.config/fish/config.fish
 ln -sf ${PWD}/fish/common.fish ~/.config/fish/common.fish
+ln -sf ${PWD}/fish/path.fish ~/.config/fish/path.fish
 echo "setting default shell to fish, reboot required"
 sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
 
