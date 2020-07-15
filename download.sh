@@ -42,7 +42,9 @@ sudo ln -sf ${PWD}/pacman/makepkg.conf /etc/makepkg.conf
 sudo ln -sf ${PWD}/pacman/pacman.conf /etc/pacman.conf
 sudo ln -sf ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
 
-echo "symlink to scripts..."
+echo "chmod and symlink scripts to /usr/bin ..."
+chmod +x ${PWD}/script/*.sh
+chmod +x ${PWD}/script/*/*.sh
 sudo ln -sf ${PWD}/script/*.sh /usr/bin/
 sudo ln -sf ${PWD}/script/*/*.sh /usr/bin/
 

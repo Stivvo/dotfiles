@@ -20,18 +20,18 @@ alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
 alias v='nvim'
-alias g='glrnvim'
+alias vi='setsid $TERM -e nvim'
 alias t='floaterm'
 alias y='pacaur --color=always'
 alias yy='update.sh ~/prog/dotfiles/script/pacman/ignore.txt'
 alias diff='diff --color'
 alias less='less -R'
-alias vi='setsid $TERM -e nvim'
 
 alias zathur='swallow.sh zathura'
 alias thuna='swallow.sh thunar'
-alias imv='swallow.sh imv'
+alias im='swallow.sh imv'
 alias mp='swallow.sh mpv'
+alias brows='swallow.sh $BROWSER'
 
 alias grep="grep --color"
 alias fgrep="fgrep --color"
