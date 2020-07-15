@@ -37,22 +37,22 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'nathanaelkane/vim-indent-guides', {'for': [ 'html', 'xml', 'javascript', 'php', 'c', 'cpp' ]}
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
 Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpenAutoClose'] }
-
-"---languages
-Plug 'shmup/vim-sql-syntax'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
+
+"---languages
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'shmup/vim-sql-syntax'
 Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
-Plug 'fedorenchik/qt-support.vim', { 'for': ['c',  'cpp', 'qmake'] }
+Plug 'fedorenchik/qt-support.vim', { 'for': ['c',  'cpp', 'qmake', 'qml'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c',  'cpp'] }
+Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
 
 "maybe
 " Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
