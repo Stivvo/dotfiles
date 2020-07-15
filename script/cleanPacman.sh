@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/dash
 
 pacaur -Rscn $(pacaur -Qdtq)
 paccache -rk 2

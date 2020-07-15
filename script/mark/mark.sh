@@ -7,7 +7,7 @@ then
     echo > $LOCKFILE
     ERRFILE="/tmp/marksh.txt"
     INFILE=$(echo $1 | egrep -o "[a-zA-Z]*\.md")
-    OUT="$HOME/.cache/markdown/${INFILE%md}pdf"
+    OUT="$XDG_CACHE_HOME/markdown/${INFILE%md}pdf"
 
     pandoc -s -t markdown $1 -t pdf -o $OUT --pdf-engine=pdflatex --metadata-file=$HOME/vimwiki/metadata.yml 2> $ERRFILE
 

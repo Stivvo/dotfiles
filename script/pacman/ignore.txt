@@ -1,5 +1,0 @@
-otf-san-francisco
-otf-san-francisco-compact
-otf-san-francisco-mono
-otf-san-francisco-pro
-
