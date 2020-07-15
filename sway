@@ -1,28 +1,21 @@
-#
-#                                                                                   ______   __
-#                                                                                  /      \ /  |
-#   _______  __   __   __   ______   __    __         _______   ______   _______  /$$$$$$  |$$/   ______
-#  /       |/  | /  | /  | /      \ /  |  /  |       /       | /      \ /       \ $$ |_ $$/ /  | /      \
-# /$$$$$$$/ $$ | $$ | $$ | $$$$$$  |$$ |  $$ |      /$$$$$$$/ /$$$$$$  |$$$$$$$  |$$   |    $$ |/$$$$$$  |
-# $$      \ $$ | $$ | $$ | /    $$ |$$ |  $$ |      $$ |      $$ |  $$ |$$ |  $$ |$$$$/     $$ |$$ |  $$ |
-#  $$$$$$  |$$ \_$$ \_$$ |/$$$$$$$ |$$ \__$$ |      $$ \_____ $$ \__$$ |$$ |  $$ |$$ |      $$ |$$ \__$$ |
-# /     $$/ $$   $$   $$/ $$    $$ |$$    $$ |      $$       |$$    $$/ $$ |  $$ |$$ |      $$ |$$    $$ |
-# $$$$$$$/   $$$$$/$$$$/   $$$$$$$/  $$$$$$$ |       $$$$$$$/  $$$$$$/  $$/   $$/ $$/       $$/  $$$$$$$ |
-#                                   /  \__$$ |                                                  /  \__$$ |
-#                                   $$    $$/                                                   $$    $$/
-#                                    $$$$$$/                                                     $$$$$$/
-#
+ ####  #    #   ##   #   #     ####   ####  #    # ###### #  ####
+#      #    #  #  #   # #     #    # #    # ##   # #      # #    #
+ ####  #    # #    #   #      #      #    # # #  # #####  # #
+     # # ## # ######   #      #      #    # #  # # #      # #  ###
+#    # ##  ## #    #   #      #    # #    # #   ## #      # #    #
+ ####  #    # #    #   #       ####   ####  #    # #      #  ####
 
 #################
 #-- Variables --#
 #################
-#
+
 # keys
 set $mod Mod4
 set $left h
 set $down j
 set $up k
 set $right l
+
 # applications
 set $term alacritty
 set $editor $term --title neovim -e nvim
@@ -31,23 +24,10 @@ set $file2 urxvt -e ranger
 set $browser firefox-developer-edition
 set $menu dmenu_run_i.sh
 
-#####################
-#-- Load services --#
-#####################
-#
-exec_always ydotoold & # start ydotool server
-exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland & # start redshift at my latitude
-exec_always killall mako && mako & # notification server
-exec corectrl &
-exec $browser &
-# exec pavucontrol & # volume control
-exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths /home/stefano/.local/nativefier/* $fish_user_paths /home/stefano/.local/scripts/ $fish_user_paths " & # set fish path
-exec udiskie --appindicator --tray --automount --file-manager "$term --title 'FFF disk' -e fff "
-
 ##################
 #-- GTK themes --#
 ##################
-#
+
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
@@ -56,10 +36,11 @@ exec_always {
     gsettings set $gnome-schema cursor-theme Numix-Cursor-Maia
 }
 
+
 ############################
 #-- Output configuration --#
 ############################
-#
+
 exec_always background.sh &
 exec monitor.sh r &
 
@@ -67,12 +48,10 @@ set $m1 = DP-2
 set $m2 = HDMI-A-1
 
 bindsym {
-# switch output
-    $mod+m exec monitor.sh
-# rotate output
-    $mod+Shift+m exec rotate.sh
-# refresh outputs
-    $mod+Control+m exec monitor.sh r
+    $mod+m exec monitor.sh # switch output
+    $mod+Shift+m exec rotate.sh # rotate output
+    $mod+Control+m exec monitor.sh r # refresh outputs
+
 # move workspaces between outputs
     $mod+Shift+left move workspace to left # Move workspace to screen 1
     $mod+Shift+right move workspace to right # Move workspace to screeen 2
@@ -80,35 +59,24 @@ bindsym {
     $mod+right focus output right # Focus screeen 2
 }
 
-##########################
-#-- Idle configuration --#
-##########################
-#
-# exec swayidle -w timeout 600 'swaymsg "output * dpms off"' \
-#         resume 'swaymsg "output * dpms on"'
-
-#    timeout 300 'swaylock -f -c 000000' \ # lock 300s
-#    before-sleep 'swaylock -f -c 000000' # lock before sleep
-
 ###########################
 #-- Input configuration --#
 ###########################
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
+
 input type:keyboard  {
     xkb_layout it
     xkb_options caps:swapescape
 }
+
 input "2:7:SynPS/2_Synaptics_TouchPad" {
     tap enabled
     natural_scroll enabled
 }
 
-##########################
+################################
 #-- Applications keybindings --#
-##########################
-#
+################################
+
 bindsym {
 # basics
     $mod+d exec $menu
@@ -119,6 +87,7 @@ bindsym {
     $mod+Shift+o exec $file2
     $mod+n exec dash -c "cd ~/notes && $editor README.md" # start note app in a terminal
     $mod+z exec $editor
+
 # Special keys
     XF86Search exec $browser #browsers
     XF86Calculator exec gnome-calculator
@@ -127,29 +96,33 @@ bindsym {
     Control+XF86Explorer exec nautilus
     XF86Tools exec /home/stefano/eclipse/jee-2020-03/eclipse/./eclipse # ides
     Shift+XF86Tools exec qtcreator
+
 # exit
     --release $mod+Ctrl+l exec swaylock-blur
     --release $mod+Ctrl+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
     --release $mod+Ctrl+s exec "systemctl suspend"
     --release $mod+Ctrl+r exec swaynag -t warning -m 'You pressed the reboot shortcut. Do you really want to reboot off this computer?' -b 'Yes, reboot' 'systemctl -i reboot'
     --release $mod+Ctrl+o exec swaynag -t warning -m 'You pressed the poweroff shortcut. Do you really want to power off this computer?' -b 'Yes, poweroff' 'systemctl poweroff'
+
 # sway stuff
     $mod+c reload
     $mod+i exec swayinfo.sh
     $mod+w exec winfocus
 }
+
 floating_modifier $mod normal
 
 #####################
 #-- Moving around --#
 #####################
-#
+
 bindsym {
 # Move your focus around
     $mod+$left focus left
     $mod+$down focus down
     $mod+$up focus up
     $mod+$right focus right
+
 # Move the focused window with the same, but add Shift
     $mod+Shift+$left move left
     $mod+Shift+$down move down
@@ -160,10 +133,11 @@ bindsym {
 ##################
 #-- Workspaces --#
 ##################
-#
+
 workspace back_and_forth yes
-set {
+
 # Workspace variables:
+set {
     $ws1 " 1  "
     $ws2 " 2  "
     $ws3 " 3  "
@@ -175,6 +149,7 @@ set {
     $ws9 " 9  "
     $ws10 " 0  "
 }
+
 bindsym {
 # Switch to workspace
     $mod+1 workspace $ws1
@@ -187,6 +162,7 @@ bindsym {
     $mod+8 workspace $ws8
     $mod+9 workspace $ws9
     $mod+0 workspace $ws10
+
 # Move focused container to workspace
     $mod+Shift+1 move container to workspace $ws1
     $mod+Shift+2 move container to workspace $ws2
@@ -198,41 +174,46 @@ bindsym {
     $mod+Shift+8 move container to workspace $ws8
     $mod+Shift+9 move container to workspace $ws9
     $mod+Shift+0 move container to workspace $ws10
-# Worspace back and forth
-    $mod+u workspace back_and_forth
+
 # Workspace next and prev
     Ctrl+Alt+h workspace prev
     Ctrl+Alt+l workspace next
+
 # Move window to workspace next and prev
     Ctrl+Alt+Shift+h move container to workspace prev
     Ctrl+Alt+Shift+l move container to workspace next
+
+    $mod+u workspace back_and_forth # Worspace back and forth
 }
 
 ####################
 #-- Layout stuff --#
 ####################
-#
+
 bindsym {
-    $mod+b splith
-    $mod+v splitv
 # Switch the current container between different layout styles
     $mod+s layout stacking
     $mod+t layout tabbed
     $mod+e layout toggle split
+
+ # next window will appear at the right
+    $mod+b splith
+ # next window will appear at the bottom
+    $mod+v splitv
 # Make the current focus fullscreen
     $mod+f fullscreen
-# Toggle the current focus between tiling and floating mode
+ # Toggle the current focus between tiling and floating mode
     $mod+Shift+space floating toggle
-# Swap focus between the tiling area and the floating area
+ # Swap focus between the tiling area and the floating area
     $mod+space focus mode_toggle
-# Move focus to the parent container
+ # Move focus to the parent container
     $mod+a focus parent
 }
 
 ###############
 #-- Borders --#
 ###############
-#
+
 gaps {
     inner 10
     outer 0
@@ -249,42 +230,40 @@ bindsym {
     Mod1+Shift+minus gaps inner current minus 5
     Mod1+Control+plus gaps inner all plus 5
     Mod1+Control+minus gaps inner all minus 5
+
 # horizontal gaps
     Mod1+Shift+left gaps horizontal current plus 5
     Mod1+Shift+right gaps horizontal current minus 5
     Mod1+Control+left gaps horizontal all plus 5
     Mod1+Control+right gaps horizontal all minus 5
+
 # vertical gaps
     Mod1+Shift+up gaps vertical current plus 5
     Mod1+Shift+down gaps vertical current minus 5
     Mod1+Control+up gaps vertical all plus 5
     Mod1+Control+down gaps vertical all minus 5
-# smart gaps and borders
-    Mod1+s exec "smartGapsBorderToggle.sh"
+
 # reset vertical and horizontal gaps
     Mod1+g exec "gapsBorderToggle.sh"
     Mod1+Shift+g gaps outer current set 0
     Mod1+Control+g gaps outer all set 0
+
+    Mod1+s exec "smartGapsBorderToggle.sh" # toggle smart gaps and borders together
 }
 
 ##################
 #-- Scratchpad --#
 ##################
-#
-# Sway has a "scratchpad", which is a bag of holding for windows.
-# You can send windows there and get them back later.
+
 bindsym {
-# Move the currently focused window to the scratchpad
-    $mod+minus move scratchpad
-# Show the next scratchpad window or hide the focused scratchpad window
-# If there are multiple scratchpad windows, this command cycles through them.
-    $mod+plus scratchpad show
+    $mod+minus move scratchpad # Move the currently focused window to the scratchpad
+    $mod+plus scratchpad show # cycle through scratchpad windows
 }
 
 ###########################
 #-- Resizing containers --#
 ###########################
-#
+
 bindsym $mod+r mode "resize"
 set $resizeNorm 30px
 set $resizeFast 90px
@@ -301,16 +280,19 @@ mode "resize" {
         $down resize grow height $resizeNorm
         $up resize shrink height $resizeNorm
         $right resize grow width $resizeNorm
+
 # move faster
         Ctrl+$left resize shrink width $resizeFast
         Ctrl+$down resize grow height $resizeFast
         Ctrl+$up resize shrink height $resizeFast
         Ctrl+$right resize grow width $resizeFast
+
 # move slower
         Shift+$left resize shrink width $resizeSlow
         Shift+$down resize grow height $resizeSlow
         Shift+$up resize shrink height $resizeSlow
         Shift+$right resize grow width $resizeSlow
+
 # Return to default mode
         Return mode "default"
         Escape mode "default"
@@ -320,28 +302,17 @@ mode "resize" {
 ##################
 #-- Status Bar --#
 ##################
-#
-# Read `man 5 sway-bar` for more information about this section.
 
 font UbuntuMono Nerd Font Mono Regular 14
 
 bar {
-    #position top
     swaybar_command waybar
-
-    #colors {
-        #statusline #FFFFFF
-        #background #000000
-        #inactive_workspace #9654D4 #000000 #FFFFFF
-        #focused_workspace #FFFFFF #9654D4 #FFFFFF
-        #separator #9654D4
-    #}
 }
 
 ##############
 #-- Colors --#
 ##############
-#
+
 client.focused #9654D4 #9654D4 #FFFFFF #FFFFFF #9654D4
 client.focused_inactive #1b0f26 #1b0f26 #888888 #FFFFFF #1b0f26
 client.unfocused #333333 #333333 #888888 #FFFFFF #333333
@@ -350,7 +321,7 @@ client.urgent #C20000 #C20000 #FFFFFF #FFFFFF #C20000
 ###################
 #-- Screenshots --#
 ###################
-#
+
 bindsym {
     Print exec shot.sh "focused"
     Control+Print exec shot.sh "all"
@@ -361,7 +332,7 @@ bindsym {
 ##################
 #-- Brightness --#
 ##################
-#
+
 bindsym {
     XF86MonBrightnessUp exec light.sh u
     XF86MonBrightnessDown exec light.sh d
@@ -370,7 +341,7 @@ bindsym {
 ##############
 #-- Volume --#
 ##############
-#
+
 bindsym {
     XF86AudioRaiseVolume exec volume.sh up 5
     XF86AudioLowerVolume exec volume.sh down 5
@@ -378,30 +349,45 @@ bindsym {
     XF86AudioMicMute exec volume.sh micmute
 }
 
+#####################
+#-- Load services --#
+#####################
+
+exec_always ydotoold # start ydotool server
+exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland # start redshift at my latitude
+exec_always killall mako && mako & # notification server
+exec corectrl
+exec $browser
+# exec pavucontrol & # volume control
+exec fish --command="set -U fish_user_paths /opt/lampp $fish_user_paths /home/stefano/eclipse/jee-2020-03/eclipse/ $fish_user_paths /home/stefano/.local/nativefier/* $fish_user_paths /home/stefano/.local/scripts/ $fish_user_paths " # set fish path
+exec udiskie --appindicator --tray --automount --file-manager "$term --title 'FFF disk' -e fff "
+
 ####################
 #-- Window Rules --#
 ####################
-#
-   workspace $ws10 output $m2
-   workspace $ws9 output $m2
 
-   for_window [app_id="pavucontrol"] move container to workspace $ws9
-   for_window [class="Pavucontrol"] move container to workspace $ws9
+workspace $ws10 output $m2
+workspace $ws9 output $m2
 
-   #for_window [app_id="firefox"] move container to workspace $ws2
+for_window [app_id="pavucontrol"] move container to workspace $ws9
+for_window [class="Pavucontrol"] move container to workspace $ws9
 
-   for_window [app_id="baobab"] floating enable
-   for_window [app_id="baobab"] border none
+for_window [app_id="baobab"] floating enable
+for_window [app_id="baobab"] border none
 
-   for_window [app_id="gnome-calculator"] floating enable
-   for_window [app_id="gnome-calculator"] border none
+for_window [app_id="gnome-calculator"] floating enable
+for_window [app_id="gnome-calculator"] border none
 
-   for_window [app_id="brasero"] floating enable
+for_window [app_id="brasero"] floating enable
 
-   for_window [app_id="corectrl"] move container to workspace $ws9
+for_window [app_id="corectrl"] move container to workspace $ws9
 
-   for_window [app_id="wayPreviewServer"] floating enable
-   for_window [app_id="wayPreviewServer"] move position 500 50
+for_window [app_id="wayPreviewServer"] floating enable
+for_window [app_id="wayPreviewServer"] move position 500 50
+
+#######################
+#-- Not in the Repo --#
+#######################
 
 include /etc/sway/config.d/*
 include ~/.config/sway/personal.config
