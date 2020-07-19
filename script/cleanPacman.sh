@@ -1,6 +1,6 @@
 #!/bin/dash
 
-pacaur -Rscn $(pacaur -Qdtq)
+pikaur -Rscn $(pikaur -Qdtq)
 paccache -rk 2
 paccache -ruk 2
-pacaur -Scc
+pikaur -Scc
