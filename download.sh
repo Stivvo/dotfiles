@@ -45,9 +45,13 @@ sudo ln -sf ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-r
 
 echo "chmod and symlink scripts to /usr/bin ..."
 chmod +x ${PWD}/script/*.sh
+chmod +x ${PWD}/script/*.fish
 chmod +x ${PWD}/script/*/*.sh
+chmod +x ${PWD}/script/*/*.fish
 sudo ln -sf ${PWD}/script/*.sh /usr/bin/
+sudo ln -sf ${PWD}/script/*.fish /usr/bin/
 sudo ln -sf ${PWD}/script/*/*.sh /usr/bin/
+sudo ln -sf ${PWD}/script/*/*.fish /usr/bin/
 
 echo "git config..."
 git config --global user.name Stivvo
