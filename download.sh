@@ -64,24 +64,6 @@ echo "volume and brightness notifications files..."
 echo 100 > /tmp/audio-notification
 echo 100 > /tmp/brightness-notification
 
-if [ ! -d /usr/lib/node_modules/instant-markdown-d ]
-then
-    echo "instant markdown..."
-    sudo npm -g install instant-markdown-d
-fi
-
-if [ ! -d /usr/lib/node_modules/yarn/ ]
-then
-    echo "yarn..."
-    sudo npm i -g yarn --global
-fi
-
-if [ ! -d /usr/lib/node_modules/standard/ ]
-then
-    echo "standard js.."
-    sudo npm install standard --global
-fi
-
 if [ ! -d ~/.config/omf ] || [ ! -d ~/.local/share/omf ]
 then
     echo "oh my fish..."
