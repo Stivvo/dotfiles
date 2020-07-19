@@ -361,6 +361,7 @@ exec_always killall mako && mako & # notification server
 exec corectrl
 exec $browser
 exec update.sh
+exec_always refreshFzfPath.fish
 exec udiskie.sh $term
 
 ####################
