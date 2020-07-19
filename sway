@@ -22,7 +22,8 @@ set $editor $term --title neovim -e nvim
 set $file fish -c "$term --title FFF -e fff"
 set $file2 thunar
 set $browser firefox-developer-edition
-set $menu dmenu_run_i.sh
+set $menu $term --class fzfLauncher.fish -t fzfLauncher.fish -e fzfLauncher.fish
+
 
 ##################
 #-- GTK themes --#
@@ -255,8 +256,10 @@ bindsym {
 ##################
 
 bindsym {
-    $mod+minus move scratchpad # Move the currently focused window to the scratchpad
-    $mod+plus scratchpad show # cycle through scratchpad windows
+# Move the currently focused window to the scratchpad
+    $mod+minus move scratchpad
+# cycle through scratchpad windows
+    $mod+plus scratchpad show
 }
 
 ###########################
@@ -357,7 +360,7 @@ exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland # start redshift at my latit
 exec_always killall mako && mako & # notification server
 exec corectrl
 exec $browser
-exec $XDG_CONFIG_HOME/fish/path.fish
+exec update.sh
 exec udiskie.sh $term
 
 ####################
@@ -382,6 +385,8 @@ for_window [app_id="corectrl"] move container to workspace $ws9
 
 for_window [app_id="wayPreviewServer"] floating enable
 for_window [app_id="wayPreviewServer"] move position 500 50
+
+for_window [app_id="fzfLauncher.fish"] floating enable, border pixel 10, sticky enable
 
 #######################
 #-- Not in the Repo --#

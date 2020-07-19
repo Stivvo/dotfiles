@@ -8,7 +8,6 @@ ln -sf ${PWD}/bashrc ~/.bashrc
 source ~/.bashrc
 ln -sf ${PWD}/fish/config.fish ~/.config/fish/config.fish
 ln -sf ${PWD}/fish/common.fish ~/.config/fish/common.fish
-ln -sf ${PWD}/fish/path.fish ~/.config/fish/path.fish
 echo "setting default shell to fish, reboot required"
 sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
 
@@ -45,9 +44,13 @@ sudo ln -sf ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-r
 
 echo "chmod and symlink scripts to /usr/bin ..."
 chmod +x ${PWD}/script/*.sh
+chmod +x ${PWD}/script/*.fish
 chmod +x ${PWD}/script/*/*.sh
+chmod +x ${PWD}/script/*/*.fish
 sudo ln -sf ${PWD}/script/*.sh /usr/bin/
+sudo ln -sf ${PWD}/script/*.fish /usr/bin/
 sudo ln -sf ${PWD}/script/*/*.sh /usr/bin/
+sudo ln -sf ${PWD}/script/*/*.fish /usr/bin/
 
 echo "git config..."
 git config --global user.name Stivvo
@@ -60,24 +63,6 @@ echo "volume and brightness notifications files..."
 echo 100 > /tmp/audio-notification
 echo 100 > /tmp/brightness-notification
 
-if [ ! -d /usr/lib/node_modules/instant-markdown-d ]
-then
-    echo "instant markdown..."
-    sudo npm -g install instant-markdown-d
-fi
-
-if [ ! -d /usr/lib/node_modules/yarn/ ]
-then
-    echo "yarn..."
-    sudo npm i -g yarn --global
-fi
-
-if [ ! -d /usr/lib/node_modules/standard/ ]
-then
-    echo "standard js.."
-    sudo npm install standard --global
-fi
-
 if [ ! -d ~/.config/omf ] || [ ! -d ~/.local/share/omf ]
 then
     echo "oh my fish..."
@@ -85,3 +70,5 @@ then
     fish ~/install.fish --path=~/.local/share/omf --config=~/.config/omf \
     fish --command="omf install l"
 fi
+
+fish -c "set -U fish_user_paths $HOME/.local/scripts/ $fish_user_paths $HOME/.local/websites/"
