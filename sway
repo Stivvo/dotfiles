@@ -360,7 +360,7 @@ exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland # start redshift at my latit
 exec_always killall mako && mako & # notification server
 exec corectrl
 exec $browser
-exec $XDG_CONFIG_HOME/fish/path.fish
+exec update.sh
 exec udiskie.sh $term
 
 ####################

@@ -22,10 +22,11 @@ alias tree='lsd -h --tree'
 alias v='nvim'
 alias vi='setsid $TERM -e nvim'
 alias t='floaterm'
-alias y='pacaur --color=always'
-alias yy='update.sh ~/prog/dotfiles/script/pacman/ignore.txt'
 alias diff='diff --color'
 alias less='less -R'
+
+alias a='pikaur --color=always'
+alias y='sudo pacman'
 
 alias zathur='swallow.sh zathura'
 alias thuna='swallow.sh thunar'
