@@ -86,7 +86,7 @@ bindsym {
     $mod+p exec $browser
     $mod+o exec $file
     $mod+Shift+o exec $file2
-    $mod+n exec dash -c "cd ~/notes && $editor README.md" # start note app in a terminal
+    $mod+n exec dash -c "cd ~/prog/notes && $editor README.md" # start note app in a terminal
     $mod+z exec $editor
 
 # Special keys
@@ -363,6 +363,7 @@ exec $browser
 exec update.sh
 exec_always refreshFzfPath.fish
 exec udiskie.sh $term
+exec steam
 
 ####################
 #-- Window Rules --#
