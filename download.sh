@@ -71,4 +71,4 @@ then
     fish --command="omf install l"
 fi
 
-fish -c "set -U fish_user_paths $HOME/.local/scripts/ $fish_user_paths $HOME/.local/websites/"
+fish -c "set -U fish_user_paths $HOME/.local/scripts/ $fish_user_paths $HOME/.local/websites/ $fish_user_paths $HOME/.local/mice/"

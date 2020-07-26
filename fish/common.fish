@@ -94,3 +94,6 @@ export FFF_COL3=5 # selection
 export FFF_COL4=6 # cursor
 export FFF_COL5=0 # foerground
 export FFF_LS_COLORS=0
+
+export MANGOHUD_DLSYM=1
+export MANGOHUD=1
