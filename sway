@@ -220,6 +220,7 @@ gaps {
 }
 
 default_border pixel 3
+default_floating_border normal 3
 
 smart_borders on
 smart_gaps on
@@ -357,7 +358,7 @@ bindsym {
 
 exec_always ydotoold # start ydotool server
 exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland # start redshift at my latitude
-exec_always killall mako && mako & # notification server
+exec_always killall mako && mako # notification server
 exec corectrl
 exec $browser
 exec update.sh
@@ -381,14 +382,15 @@ for_window [app_id="baobab"] border none
 for_window [app_id="gnome-calculator"] floating enable
 for_window [app_id="gnome-calculator"] border none
 
-for_window [app_id="brasero"] floating enable
-
 for_window [app_id="corectrl"] move container to workspace $ws9
 
 for_window [app_id="wayPreviewServer"] floating enable
 for_window [app_id="wayPreviewServer"] move position 500 50
 
 for_window [app_id="fzfLauncher.fish"] floating enable, border pixel 10, sticky enable
+
+for_window [app_id="Federico Guerinoni.qTsConverter"] floating enable
+for_window [app_id="Federico Guerinoni.qTsConverter"] border normal 3
 
 #######################
 #-- Not in the Repo --#
