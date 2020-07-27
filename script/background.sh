@@ -5,8 +5,8 @@ ID="$(cat /dev/shm/background)"
 let "ID = $ID + 1"
 echo $ID > /dev/shm/background
 
-PA="/home/stefano/wallpapers/selected/"
-P="/home/stefano/prog/dotfiles/script/background/"
+PA="$HOME/wallpapers/selected/"
+P="$HOME/prog/dotfiles/script/background/"
 LIST="/tmp/listBg.txt"
 
 CONTINUE="true"

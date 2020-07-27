@@ -1,7 +1,7 @@
 export _JAVA_AWT_WM_NONREPARENTING=1
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
-export CATALINA_HOME=/home/stefano/tomcat
-export ECLIPSE_HOME=/home/stefano/eclipse/jee-2020-03/eclipse
+export CATALINA_HOME=$HOME/tomcat
+export ECLIPSE_HOME=$HOME/eclipse/jee-2020-03/eclipse
 
 export EDITOR=nvim
 export BROWSER=firefox-developer-edition
@@ -74,14 +74,14 @@ alias xamt='sudo xampp start'
 alias xamr='sudo xampp start'
 alias xamp='sudo xampp stop'
 
-export FFF_FAV1=/home/stefano/prog
-export FFF_FAV2=/home/stefano/wallpapers
-export FFF_FAV3=/home/stefano/screen
-export FFF_FAV4=/home/stefano/Download
-export FFF_FAV5=/home/stefano/prog/dotfiles
-export FFF_FAV6=/home/stefano/prog/wayPreview
-export FFF_FAV7=/home/stefano/prog/GitNoob2Pro
-export FFF_FAV8=/home/stefano/.local/scripts
+export FFF_FAV1=$HOME/prog
+export FFF_FAV2=$HOME/wallpapers
+export FFF_FAV3=$HOME/screen
+export FFF_FAV4=$HOME/Download
+export FFF_FAV5=$HOME/prog/dotfiles
+export FFF_FAV6=$HOME/prog/wayPreview
+export FFF_FAV7=$HOME/prog/GitNoob2Pro
+export FFF_FAV8=$HOME/.local/scripts
 export FFF_FAV9=/opt/lampp/htdocs/stuff
 
 export FFF_FILE_FORMAT="%f"
