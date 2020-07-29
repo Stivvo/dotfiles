@@ -24,7 +24,6 @@ set $file2 thunar
 set $browser firefox-developer-edition
 set $menu $term --class fzfLauncher.fish -t fzfLauncher.fish -e fzfLauncher.fish
 
-
 ##################
 #-- GTK themes --#
 ##################
@@ -110,11 +109,11 @@ bindsym {
     $mod+w exec winfocus
 }
 
-floating_modifier $mod normal
-
 #####################
 #-- Moving around --#
 #####################
+
+floating_modifier $mod normal
 
 bindsym {
 # Move your focus around

@@ -60,6 +60,8 @@ Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
 "Plug 'justmao945/vim-clang'
 "Plug 'scrooloose/syntastic'
 "Plug 'JessicaKMcIntosh/Vim'
+"Plug 'skammer/vim-css-color'
+"Plug 'shmargum/vim-sass-colors'
 
 call plug#end()
 
