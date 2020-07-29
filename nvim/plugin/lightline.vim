@@ -10,19 +10,11 @@ function! GetLang()
     endif
 endfunction
 
-function! GetSplitDirection()
-    if &splitbelow == 1
-        return '  '
-    else
-        return '  '
-    endif
-endfunction
-
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             ['readonly', 'filename', 'modified', 'gitbranch', 'gitgutter', 'splitdirection', 'language' ] ]
+      \             ['readonly', 'filename', 'modified', 'gitbranch', 'gitgutter', 'language' ] ]
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',

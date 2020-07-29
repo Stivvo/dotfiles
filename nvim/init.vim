@@ -134,5 +134,3 @@ nnoremap <silent> <C-Up> :resize +20<Cr>
 nnoremap <silent> <C-Down> :resize -20<Cr>
 nnoremap <silent> <C-Left> :vertical resize +20<Cr>
 nnoremap <silent> <C-Right> :vertical resize -20<Cr>
-"cycle between split directions
-noremap <silent> <Space>4 :set splitbelow!<Cr>:set splitright!<Cr>

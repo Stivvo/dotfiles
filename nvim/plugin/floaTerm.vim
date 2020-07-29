@@ -28,8 +28,5 @@ tnoremap <silent> <leader>tn <C-\><C-n>:FloatermNext<CR>
 nnoremap <silent> <leader>tk :FloatermKill<CR>
 tnoremap <silent> <leader>tk <C-\><C-n>:FloatermKill<CR>
 
-nnoremap <Bs> :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
-nnoremap <leader><Bs> :FloatermNew! --wintype=normal --position=right fff <Cr>
-
-nnoremap <Bs>v :vsplit<Cr> :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
-nnoremap <Bs>x :split<Cr> :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
+nnoremap <Space>5 :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
+nnoremap <Space>6 :FloatermNew! --wintype=normal --position=right fff <Cr>
