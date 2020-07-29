@@ -37,6 +37,7 @@ nnoremap <silent> <Esc><Esc> :w<Cr>:nohlsearch<Cr>
 nmap ^ @m
 noremap <Del> ddk
 nnoremap Y y$
+inoremap <C-v> <C-r>0
 
 "change/delete if / for
 nnoremap dai $?if\\|for<Cr>dt{da{
@@ -54,10 +55,6 @@ nnoremap - "gddj"gP
 "trim and join lines
 noremap <Leader><Enter> J
 nnoremap <Space><Enter> i<Enter><Esc>
-
-"clipboard
-inoremap <C-v> <C-r>0
-vnoremap <Space>y :'<,'> :w !wl-copy<Cr><Cr>
 
 "tabs
 nnoremap <silent> K :tabprevious<Cr>
