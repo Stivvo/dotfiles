@@ -80,14 +80,16 @@ set colorcolumn=0
 set cursorcolumn
 highlight CursorColumn cterm=bold guibg=#2c2c2c
 function SetColorColumn()
-    if &colorcolumn == 100
+    if &colorcolumn == 120
         set colorcolumn=0
         echo "--"
     else
-        if &colorcolumn == 80
-            set colorcolumn=100
-        else
+        if &colorcolumn == 0
             set colorcolumn=80
+        elseif &colorcolumn == 80
+            set colorcolumn=100
+        elseif &colorcolumn == 100
+            set colorcolumn=120
         endif
         echo &colorcolumn
     endif
