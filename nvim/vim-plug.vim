@@ -10,7 +10,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 
 "---file
 Plug 'junegunn/fzf', { 'on': 'FZF' }
