@@ -12,7 +12,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'sheerun/vim-polyglot'
 
 "---file
-Plug 'junegunn/fzf', { 'on': 'FZF' }
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'voldikss/vim-floaterm', { 'on': ['FloatermNew', 'FloatermToggle'] }
 
