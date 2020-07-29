@@ -18,12 +18,12 @@ let g:lightline = {
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
-      \   'currentfunction': 'CocCurrentFunction',
-      \   'gitbranch': 'gitbranch#name'
+      \   'currentfunction': 'CocCurrentFunction'
       \ },
       \ 'component': {
       \   'gitgutter': '%{GitStatus()}',
       \   'splitdirection': '%{GetSplitDirection()}',
-      \   'language': '%{GetLang()}'
+      \   'language': '%{GetLang()}',
+      \   'gitbranch': '%{FugitiveHead()}'
       \ },
       \ }
