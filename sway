@@ -358,7 +358,6 @@ bindsym {
 exec_always ydotoold # start ydotool server
 exec redshift -l 45.47:9.19 -t 6500:4500 -m wayland # start redshift at my latitude
 exec_always killall mako && mako # notification server
-exec corectrl
 exec $browser
 exec update.sh
 exec_always refreshFzfPath.fish

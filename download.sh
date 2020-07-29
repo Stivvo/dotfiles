@@ -34,13 +34,10 @@ ln -sf ${PWD}/swaylock ~/.config/swaylock/config
 ln -s ${PWD}/waybar ~/.config/
 
 echo "pacman config..."
-sudo chown root ${PWD}/pacman/mirrorlist
-sudo chown root ${PWD}/pacman/makepkg.conf
-sudo chown root ${PWD}/pacman/pacman.conf
-sudo ln -sf ${PWD}/pacman/mirrorlist /etc/pacman.d/mirrorlist
-sudo ln -sf ${PWD}/pacman/makepkg.conf /etc/makepkg.conf
-sudo ln -sf ${PWD}/pacman/pacman.conf /etc/pacman.conf
-sudo ln -sf ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
+sudo cp ${PWD}/pacman/mirrorlist /etc/pacman.d/mirrorlist
+sudo cp ${PWD}/pacman/makepkg.conf /etc/makepkg.conf
+sudo cp ${PWD}/pacman/pacman.conf /etc/pacman.conf
+sudo cp ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
 
 echo "chmod and symlink scripts to /usr/bin ..."
 chmod +x ${PWD}/script/*.sh
@@ -72,3 +69,6 @@ then
 fi
 
 fish -c "set -U fish_user_paths $HOME/.local/scripts/ $fish_user_paths $HOME/.local/websites/ $fish_user_paths $HOME/.local/mice/"
+
+echo "corectrl configuration"
+sudo cp polkit /etc/polkit-1/rules.d/90-corectrl.rules
