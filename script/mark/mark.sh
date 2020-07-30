@@ -6,13 +6,23 @@ if [ ! -f $LOCKFILE ]
 then
     echo > $LOCKFILE
     ERRFILE="/tmp/marksh.txt"
-    INFILE=$(echo $1 | egrep -o "[a-zA-Z]*\.md")
-    OUT="$XDG_CACHE_HOME/markdown/${INFILE%md}pdf"
 
-    pandoc -s -t markdown $1 -t pdf -o $OUT --pdf-engine=pdflatex --metadata-file=$HOME/vimwiki/metadata.yml 2> $ERRFILE
+    case $1 in
+        *GitNoob2Pro.md*)
+            cd $HOME/prog/GitNoob2Pro
+            OUT=$HOME/prog/GitNoob2Pro/GitNoob2Pro.pdf
+            ./compile.sh > $ERRFILE
+        ;;
 
-    # [ "$2" == "f" ] && $BROWSER --new-window $OUT
-    [ "$2" == "f" ] && zathura $OUT &
+        *)
+            INFILE=$(echo $1 | egrep -o "[a-zA-Z]*\.md")
+            OUT="$XDG_CACHE_HOME/markdown/${INFILE%md}pdf"
+
+            pandoc -s -t markdown $1 -t pdf -o $OUT --pdf-engine=pdflatex --metadata-file=$HOME/prog/notes/metadata.yml > $ERRFILE
+            ;;
+    esac
+
+    [ $2 = "f" ] && zathura $OUT &
 
     [ -s $ERRFILE ] || rm $ERRFILE
 
