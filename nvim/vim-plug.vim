@@ -4,12 +4,13 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'google/vim-maktaba'
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons', { 'on': 'NERDTreeToggle' }
 
 "--appearance
 Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'sheerun/vim-polyglot'
+Plug 'psliwka/vim-smoothie'
 
 "---file
 Plug 'junegunn/fzf'

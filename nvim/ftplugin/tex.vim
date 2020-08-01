@@ -9,4 +9,4 @@ let g:wrapText=1
 "vimtex
 nnoremap <buffer> <Space>o :VimtexTocOpen<Cr>
 nnoremap <buffer> <Space>t :VimtexTocToggle<Cr>
-autocmd VimEnter * VimtexCompile
+nnoremap <buffer> <Space>m :VimtexCompile<Cr>
