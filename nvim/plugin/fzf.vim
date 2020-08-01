@@ -1,3 +1,4 @@
-noremap <Enter> :FZF<Cr>
+nnoremap <Enter> :FZF<Cr>
 nnoremap <Bs> :GFiles<Cr>
-nnoremap <Leader><Leader> :GFiles?<Cr>
+nnoremap <Del> :GFiles?<Cr>
+nnoremap <Leader><Leader> :Buffers<Cr>

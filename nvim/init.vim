@@ -35,7 +35,6 @@ hi htmlItalic gui=italic
 "general mappings
 nnoremap <silent> <Esc><Esc> :w<Cr>:nohlsearch<Cr>
 nmap ^ @m
-noremap <Del> ddk
 nnoremap Y y$
 inoremap <C-v> <C-r>0
 
@@ -56,9 +55,9 @@ nnoremap - "gddj"gP
 noremap <Leader><Enter> J
 nnoremap <Space><Enter> i<Enter><Esc>
 
-"tabs
-nnoremap <silent> K :tabprevious<Cr>
-nnoremap <silent> J :tabnext<Cr>
+"buffers
+nnoremap <silent> K :bprevious<Cr>
+nnoremap <silent> J :bNext<Cr>
 
 "move from space to space
 nnoremap <Space>w f<Space>
