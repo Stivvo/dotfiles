@@ -362,7 +362,6 @@ exec $browser
 exec update.sh
 exec_always refreshFzfPath.fish
 exec udiskie.sh $term
-exec steam
 
 ####################
 #-- Window Rules --#
@@ -396,3 +395,4 @@ for_window [app_id="Federico Guerinoni.qTsConverter"] border normal 3
 
 include /etc/sway/config.d/*
 include ~/.config/sway/personal.config
+include ~/.config/sway/local.config
