@@ -83,8 +83,8 @@ function SetColorColumn()
         if &colorcolumn == 0
             set colorcolumn=80
         elseif &colorcolumn == 80
-            set colorcolumn=100
-        elseif &colorcolumn == 100
+            set colorcolumn=98
+        elseif &colorcolumn == 98
             set colorcolumn=120
         endif
         echo &colorcolumn

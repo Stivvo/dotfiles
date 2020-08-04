@@ -5,8 +5,8 @@ if resolve(expand('%:t')) == "README.md"
     setlocal textwidth=80
     setlocal colorcolumn=80
 else
-    setlocal textwidth=100
-    setlocal colorcolumn=100
+    setlocal textwidth=98
+    setlocal colorcolumn=98
 endif
 
 let g:compile_save = 0
