@@ -34,11 +34,11 @@ hi htmlItalic gui=italic
 
 "general mappings
 nnoremap <silent> <Esc><Esc> :w<Cr>:nohlsearch<Cr>
-nmap ^ @m
+nnoremap ^ @m
 nnoremap Y y$
-inoremap <C-v> <C-r>0
+nnoremap <Space>y :let @+=expand('%:p')<Cr>:echo expand('%:p')<Cr>
 
-"change/delete if / for
+"change/delete if/for
 nnoremap dai $?if\\|for<Cr>dt{da{
 nnoremap cai $?if\\|for<Cr>dt{ca{
 nnoremap cic $?if\\|for<Cr>f(ci(
@@ -46,10 +46,6 @@ nnoremap cic $?if\\|for<Cr>f(ci(
 "move selected text
 vnoremap J :m '>+1<Cr>gv=gv
 vnoremap K :m '<-2<Cr>gv=gv
-
-"swap and delete lines above / below
-nnoremap + "gddk"gP
-nnoremap - "gddj"gP
 
 "trim and join lines
 noremap <Leader><Enter> J
