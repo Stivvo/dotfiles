@@ -4,7 +4,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'google/vim-maktaba'
-Plug 'ryanoasis/vim-devicons', { 'on': 'NERDTreeToggle' }
 
 "--appearance
 Plug 'itchyny/lightline.vim'
@@ -15,7 +14,6 @@ Plug 'psliwka/vim-smoothie'
 "---file
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'voldikss/vim-floaterm', { 'on': ['FloatermNew', 'FloatermToggle'] }
 
 "---motions
