@@ -1,1 +1,3 @@
 setlocal nonumber norelativenumber
+setlocal colorcolumn=0
+setlocal nocursorcolumn
