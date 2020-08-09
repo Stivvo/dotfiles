@@ -5,6 +5,14 @@
 #    # ##  ## #    #   #      #    # #    # #   ## #      # #    #
  ####  #    # #    #   #       ####   ####  #    # #      #  ####
 
+#######################
+#-- Not in the Repo --#
+#######################
+
+include /etc/sway/config.d/*
+include ~/.config/sway/personal.config
+include ~/.config/sway/local.config
+
 #################
 #-- Variables --#
 #################
@@ -386,11 +394,3 @@ for_window [app_id="fzfLauncher.fish"] floating enable, border pixel 10, sticky 
 
 for_window [app_id="Federico Guerinoni.qTsConverter"] floating enable
 for_window [app_id="Federico Guerinoni.qTsConverter"] border normal 3
-
-#######################
-#-- Not in the Repo --#
-#######################
-
-include /etc/sway/config.d/*
-include ~/.config/sway/personal.config
-include ~/.config/sway/local.config
