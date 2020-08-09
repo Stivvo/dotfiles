@@ -2,6 +2,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk
 export CATALINA_HOME=$HOME/tomcat
 export ECLIPSE_HOME=$HOME/eclipse/jee-2020-03/eclipse
+export LD_LIBRARY_PATH="/lib:/usr/lib:/usr/bin/lib:/usr/local/lib"
 
 export EDITOR=nvim
 export BROWSER=firefox-developer-edition
