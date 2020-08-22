@@ -69,7 +69,7 @@ then
     fish --command="omf install l"
 fi
 
-fish -c "set -U fish_user_paths $HOME/.local/path/* /usr/local/bin"
+fish -c "set -U fish_user_paths $HOME/.local/bin $HOME/.local/path/* /usr/local/bin"
 
 echo "corectrl configuration"
 sudo cp polkit /etc/polkit-1/rules.d/90-corectrl.rules

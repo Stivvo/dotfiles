@@ -10,11 +10,9 @@ highlight GitGutterAdd guifg=#009900 ctermfg=Green
 highlight GitGutterChange guifg=#bbbb00 ctermfg=Yellow
 highlight GitGutterDelete guifg=#ff2222 ctermfg=Red
 
-nmap <Leader>f :GitGutterFold<Cr>
+nnoremap <silent> <Leader>f :GitGutterFold<Cr>
 
 function! GitStatus()
   let [a,m,r] = GitGutterGetHunkSummary()
   return printf('+%d ~%d -%d', a, m, r)
 endfunction
-set statusline+=%{GitStatus()}
-
