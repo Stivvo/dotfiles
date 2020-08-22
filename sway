@@ -99,8 +99,8 @@ bindsym {
 # Special keys
     XF86Search exec $browser #browsers
     XF86Calculator exec gnome-calculator
-    XF86Explorer exec $file # file managers
-    Shift+XF86Explorer exec $file2 # file managers
+    XF86Explorer exec $file2 # file managers
+    Shift+XF86Explorer exec $file # file managers
     XF86Tools exec qtcreator
     Shift+XF86Tools exec eclipse
 
