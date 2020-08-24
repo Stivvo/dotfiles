@@ -15,6 +15,7 @@ Plug 'psliwka/vim-smoothie'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm', { 'on': ['FloatermNew', 'FloatermToggle'] }
+Plug 'dylanaraps/root.vim', { 'on': 'Root' }
 
 "---motions
 Plug 'terryma/vim-multiple-cursors'
@@ -53,6 +54,7 @@ Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 Plug 'fedorenchik/qt-support.vim', { 'for': ['c',  'cpp', 'qmake', 'qml'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c',  'cpp'] }
 Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
+Plug 'kana/vim-operator-user'
 
 "maybe
 " Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
