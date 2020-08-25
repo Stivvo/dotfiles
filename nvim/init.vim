@@ -48,6 +48,7 @@ vnoremap J :m '>+1<Cr>gv=gv
 vnoremap K :m '<-2<Cr>gv=gv
 
 "trim and join lines
+vnoremap <Enter> J
 noremap <Leader><Enter> J
 nnoremap <Space><Enter> i<Enter><Esc>
 
