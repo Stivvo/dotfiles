@@ -17,6 +17,7 @@ ln -sf ${PWD}/mako ~/.config/mako/config
 ln -sf ${PWD}/zathurarc ~/.config/zathura/zathurarc
 ln -sf ${PWD}/imv ~/.config/imv/config
 ln -sf ${PWD}/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf ${PWD}/xsession ~/.xsession
 
 echo "nvim..."
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
