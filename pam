@@ -5,6 +5,7 @@ LD_LIBRARY_PATH="/lib:/usr/lib:/usr/bin/lib:/usr/local/lib"
 XDG_CURRENT_DESKTOP=dwl
 MOZ_ENABLE_WAYLAND=1
 QT_QPA_PLATFORM=wayland
+GDK_BACKEND=wayland
 
 XDG_CONFIG_HOME DEFAULT=@{HOME}/.config
 XDG_CACHE_HOME DEFAULT=@{HOME}/.cache
