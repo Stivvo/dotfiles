@@ -6,9 +6,10 @@ filetype plugin indent on
 
 "indent
 set smartindent
-set expandtab
+" set expandtab
 set shiftwidth=4
-set softtabstop=-1
+" set softtabstop=4
+set tabstop=4
 
 "search
 set ignorecase
