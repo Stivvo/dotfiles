@@ -200,6 +200,7 @@ key_bindings:
   - { key: Home,      mods: Shift,         mode: ~Alt, action: ScrollToTop,     }
   - { key: End,       mods: Shift,         mode: ~Alt, action: ScrollToBottom   }
   - { key: N,         mods: Control|Shift, mode: ~Alt, action: SpawnNewInstance }
+  - { key: F,         mods: Control,                   action: ToggleFullscreen }
 
 # (Windows, Linux, and BSD only)
   - { key: V,        mods: Control|Shift,  action: Paste            }
