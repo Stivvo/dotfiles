@@ -13,12 +13,6 @@ alias less='less -R'
 alias a='pikaur --color=always'
 alias p='sudo pacman'
 
-alias zathur='swallow.sh zathura'
-alias thuna='swallow.sh thunar'
-alias im='swallow.sh imv'
-alias mp='swallow.sh mpv'
-alias brows='swallow.sh $BROWSER'
-
 alias grep="grep --color"
 alias fgrep="fgrep --color"
 alias egrep="egrep --color"
