@@ -30,7 +30,7 @@ STATE=`amixer get Master          | \
     egrep -m 1 'Playback.*?\[o' | \
     egrep -o '\[o.+\]'`
 
-ICONPATH="$HOME/prog/dotfiles/script/notify/"
+ICONPATH="$HOME/.local/dotfiles/notify/"
 
 # Have a different symbol for varying volume levels:
 if [[ $STATE != '[off]' ]]; then

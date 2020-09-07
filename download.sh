@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "creating useful dirs..."
-mkdir ~/.cache ~/.cache/markdown/ ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.config/nvim ~/.config/zathura ~/.config/nyaovim ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty ~/.cache/shot
+mkdir ~/.cache ~/.cache/markdown/ ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.config/nvim ~/.config/zathura ~/.config/nyaovim ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty ~/.cache/shot ~/.local/dotfiles
 
 echo "shells..."
 ln -sf ${PWD}/bashrc ~/.bashrc
@@ -41,15 +41,18 @@ sudo cp ${PWD}/pacman/makepkg.conf /etc/makepkg.conf
 sudo cp ${PWD}/pacman/pacman.conf /etc/pacman.conf
 sudo cp ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
 
-echo "chmod and symlink scripts to /usr/bin ..."
-chmod +x ${PWD}/script/*.sh
-chmod +x ${PWD}/script/*.fish
-chmod +x ${PWD}/script/*/*.sh
-chmod +x ${PWD}/script/*/*.fish
-sudo ln -sf ${PWD}/script/*.sh /usr/bin/
-sudo ln -sf ${PWD}/script/*.fish /usr/bin/
-sudo ln -sf ${PWD}/script/*/*.sh /usr/bin/
-sudo ln -sf ${PWD}/script/*/*.fish /usr/bin/
+echo "symlink scripts to ~/.local/dotfiles..."
+for dir in ${PWD}/script/*/
+do
+	for file in $dir*.*sh
+	do
+		echo $file
+		ln -sf $file $HOME/.local/dotfiles/
+	done
+done
+
+echo "symlink notify icons to ~/.local/dotfiles..."
+ln -sf ${PWD}/script/notify ~/.local/dotfiles/
 
 echo "git config..."
 git config --global user.name Stivvo
@@ -69,8 +72,6 @@ then
     fish ~/install.fish --path=~/.local/share/omf --config=~/.config/omf \
     fish --command="omf install l"
 fi
-
-fish -c "set -U fish_user_paths $HOME/.local/bin $HOME/.local/path/* /usr/local/bin"
 
 echo "corectrl configuration"
 sudo cp polkit /etc/polkit-1/rules.d/90-corectrl.rules
