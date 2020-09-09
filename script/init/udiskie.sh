@@ -1,3 +1,3 @@
 #!/bin/dash
 
-udiskie --appindicator --tray --automount --file-manager "$1 --title 'FFF disk' -e fff "
+udiskie --appindicator --tray --automount --notify --file-manager "alacritty --title 'FFF disk' -e fff "
