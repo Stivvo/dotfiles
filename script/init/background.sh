@@ -7,7 +7,7 @@ echo $ID > /dev/shm/background
 
 PA="$HOME/wallpapers/selected/"
 P="$HOME/prog/dotfiles/script/background/"
-LIST="/tmp/listBg.txt"
+LIST="/dev/shm/listBg"
 
 CONTINUE="true"
 
@@ -19,7 +19,8 @@ do
     let R++
     IMG="$(sed -n "${R}p" $LIST)"
     echo "$R $IMG" > /tmp/currentBg.txt
-    swaymsg output "*" bg "${PA}${IMG}" fill
+    pkill swaybg
+    swaybg -i "${PA}${IMG}" -m fill &
     echo $ID
     sleep 30m
     [ "$ID" != "$(cat /dev/shm/background)" ] && CONTINUE="false"
