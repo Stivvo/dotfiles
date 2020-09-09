@@ -1,7 +1,5 @@
 #!/bin/bash
 
-source ~/.bashrc
-
 scrnName="scrn_$(date +'%Y-%m-%d_%H-%M-%S').png"
 tmpPath="$XDG_CACHE_HOME/shot/${scrnName}"
 
@@ -15,9 +13,13 @@ case "$1" in
     "focused")
         grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $tmpPath
         ;;
+    *)
+        echo "available commands: \"all\" \"area\" \"focused\""
+        exit
+        ;;
 esac
 
-select="$(echo -e "default\nlast\nchoose" | dmenu -i -p "${scrnName} folder")"
+select="$(echo -e "default\nlast\nchoose" | bemenu -i "${scrnName} folder")"
 
 case "$select" in
     "default")
