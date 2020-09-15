@@ -22,17 +22,17 @@ FFF_COL2=5
 FFF_COL3=5
 FFF_COL4=6
 FFF_COL5=0
-FFF_LS_COLORS=0
+FFF_LS_COLORS=1
 
 FFF_FAV1 DEFAULT=@{HOME}/prog
 FFF_FAV2 DEFAULT=@{HOME}/wallpapers
 FFF_FAV3 DEFAULT=@{HOME}/screen
 FFF_FAV4 DEFAULT=@{HOME}/Downloads
 FFF_FAV5 DEFAULT=@{HOME}/prog/dotfiles
-FFF_FAV6 DEFAULT=@{HOME}/prog/preview/wayPreview
-FFF_FAV7 DEFAULT=@{HOME}/prog/converter/qTsConverter
-FFF_FAV8 DEFAULT=@{HOME}/.local/path
-FFF_FAV9 DEFAULT=/opt/lampp/htdocs/stuff
+FFF_FAV6 DEFAULT=@{HOME}/Sync
+FFF_FAV7 DEFAULT=@{HOME}/.local/dotfiles
+FFF_FAV8 DEFAULT=@{HOME}/.config
+FFF_FAV9 DEFAULT=/run/media/stefano
 
 MANGOHUD_DLSYM=1
 MANGOHUD=1
