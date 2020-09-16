@@ -23,14 +23,14 @@ select="$(echo -e "default\nlast\nchoose" | bemenu -i "${scrnName} folder")"
 
 case "$select" in
     "default")
-        scrnPath="${HOME}/screen/${scrnName}"
+        scrnPath="${HOME}/screen"
         ;;
     "last")
-        scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)/${scrnName}
+        scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)
         ;;
     "choose")
         alacritty -e fish -c f
-        scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)/${scrnName}
+        scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)
         ;;
     *)
         rm $tmpPath
@@ -41,7 +41,8 @@ if [ -z "${select}" ]
 then
     notify-send.sh "DELETED\n$scrnName"
 else
-    mv $tmpPath $scrnPath
-    notify-send.sh $scrnPath -i $scrnPath --default-action="alacritty -e fff '${scrnPath}'"
+    scrnTot="${scrnPath}/${scrnName}"
+    mv $tmpPath "${scrnTot}"
+    notify-send.sh ${scrnTot} --icon ${scrnTot} --default-action="alacritty -e fff ${scrnPath}"
 fi
 
