@@ -11,7 +11,7 @@ case "$1" in
         grim -g "$(slurp)" $tmpPath
         ;;
     "focused")
-        grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $tmpPath
+        grim -o $2 $tmpPath
         ;;
     *)
         echo "available commands: \"all\" \"area\" \"focused\""
@@ -29,7 +29,7 @@ case "$select" in
         scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)/${scrnName}
         ;;
     "choose")
-        alacritty -e f
+        alacritty -e fish -c f
         scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)/${scrnName}
         ;;
     *)

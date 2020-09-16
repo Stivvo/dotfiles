@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CLR="$(grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1)"
-SLCT="$(echo -e "hex\nsrgb" | dmenu -i -p "color rformat")"
+SLCT="$(echo -e "hex\nsrgb" | bemenu -i "color rformat")"
 
 if [ $SLCT == "hex" ]
 then
