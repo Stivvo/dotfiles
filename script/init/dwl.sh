@@ -1,5 +1,6 @@
 #!/bin/dash
 
+theme.sh &
 corectrl &
 waybar &
 mako &
