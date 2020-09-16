@@ -199,19 +199,19 @@ key_bindings:
   - { key: PageDown,  mods: Super,         mode: ~Alt, action: ScrollLineDown,  }
   - { key: Home,      mods: Shift,         mode: ~Alt, action: ScrollToTop,     }
   - { key: End,       mods: Shift,         mode: ~Alt, action: ScrollToBottom   }
-  - { key: N,         mods: Control|Shift, mode: ~Alt, action: SpawnNewInstance }
-  - { key: F,         mods: Control,                   action: ToggleFullscreen }
+  - { key: N,         mods: Alt,                       action: SpawnNewInstance }
+  - { key: F,         mods: Alt,                       action: ToggleFullscreen }
 
 # (Windows, Linux, and BSD only)
-  - { key: V,        mods: Control|Shift,  action: Paste            }
-  - { key: C,        mods: Control|Shift,  action: Copy             }
+  - { key: V,        mods: Alt,            action: Paste            }
+  - { key: C,        mods: Alt,            action: Copy             }
   - { key: Insert,   mods: Shift,          action: PasteSelection   }
   - { key: Key0,     mods: Control,        action: ResetFontSize    }
   - { key: Add,      mods: Control,        action: IncreaseFontSize }
   - { key: Minus,    mods: Control,        action: DecreaseFontSize }
 
 # Vi Mode
-  - { key: Space,     mods: Shift|Control, action: ToggleViMode                      }
+  - { key: Space,     mods: Alt,           action: ToggleViMode                      }
   - { key: L,         mods: Control,       mode: ~Vi, chars: "\x0c"                  }
   - { key: 58,                             mode: Vi, action: ClearSelection          }
   - { key: I,                              mode: Vi, action: ToggleViMode            }
