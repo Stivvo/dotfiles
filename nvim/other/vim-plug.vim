@@ -56,15 +56,15 @@ Plug 'rhysd/vim-clang-format', { 'for': ['c',  'cpp'] }
 Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
 Plug 'kana/vim-operator-user'
 
-"maybe
+" maybe
 " Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }
-"Plug 'ycm-core/YouCompleteMe'
-"Plug 'bazelbuild/vim-bazel'
-"Plug 'justmao945/vim-clang'
-"Plug 'scrooloose/syntastic'
-"Plug 'JessicaKMcIntosh/Vim'
-"Plug 'skammer/vim-css-color'
-"Plug 'shmargum/vim-sass-colors'
+" Plug 'ycm-core/YouCompleteMe'
+" Plug 'bazelbuild/vim-bazel'
+" Plug 'justmao945/vim-clang'
+" Plug 'scrooloose/syntastic'
+" Plug 'JessicaKMcIntosh/Vim'
+" Plug 'skammer/vim-css-color'
+" Plug 'shmargum/vim-sass-colors'
 
 call plug#end()
 

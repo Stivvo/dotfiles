@@ -15,7 +15,7 @@ set tabstop=4
 set ignorecase
 set showmatch
 
-source ~/.config/nvim/vim-plug.vim
+source ~/.config/nvim/other/vim-plug.vim
 
 " go to last line
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
