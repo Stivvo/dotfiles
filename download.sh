@@ -27,7 +27,7 @@ ln -s ${PWD}/nvim/plugin ~/.config/nvim/
 ln -s ${PWD}/nvim/ftplugin ~/.config/nvim/
 ln -s ${PWD}/nvim/other ~/.config/nvim/
 ln -s ${PWD}/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
-nvim -c "PlugInstall|q|q"
+nvim --cmd "source $HOME/.config/nvim/other/vim-plug.vim" -c "PlugInstall|q|q"
 
 echo "sway..."
 ln -sf ${PWD}/sway ~/.config/sway/config
@@ -56,7 +56,7 @@ ln -sf ${PWD}/script/notify ~/.local/dotfiles/
 echo "git config..."
 git config --global user.name Stivvo
 git config --global user.email stivvo01@gmail.com
-git config --global core.editor nvim
+git config --global core.editor "nvim --cmd 'source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim'"
 git config --global credential.helper 'cache --timeout=14400'
 git config --global pull.rebase false
 
