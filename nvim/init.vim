@@ -1,4 +1,5 @@
 "general options
+let mapleader="`"
 set mouse=a
 set confirm
 set so=8 "cursor above 8 lines from the bottom of the screen
@@ -15,23 +16,11 @@ set tabstop=4
 set ignorecase
 set showmatch
 
-source ~/.config/nvim/other/vim-plug.vim
-
 " go to last line
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
-
-"truecolor on alacritty
-set termguicolors
-colorscheme codedark
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-highlight ColorColumn guibg=#2c2c2c
-highlight CursorLine guibg=#2c2c2c
-hi htmlBold gui=bold
-hi htmlItalic gui=italic
 
 "general mappings
 nnoremap <silent> <Esc><Esc> :w<Cr>:nohlsearch<Cr>
@@ -71,10 +60,8 @@ nnoremap <silent> <Space><Leader> :set number relativenumber!<Cr>
 
 "columns
 set colorcolumn=0
-set cursorcolumn
-highlight CursorColumn cterm=bold guibg=#2c2c2c
-function SetColorColumn()
-    if &colorcolumn == 120
+	function SetColorColumn()
+		if &colorcolumn == 120
         set colorcolumn=0
         echo "--"
     else
