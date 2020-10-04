@@ -2,16 +2,16 @@
 
 case $1 in
     "audiomute")
-    amixer -q set Master toggle
+        pamixer --toggle-mute
         ;;
     "micmute")
-    amixer -q set Capture toggle
+        pactl set-source-mute 0 toggle
         ;;
     "up")
-    amixer -q set Master "${2}%+"
+        pamixer --increase ${2}
         ;;
     "down")
-    amixer -q set Master "${2}%-"
+        pamixer --decrease ${2}
         ;;
 esac
 
@@ -20,20 +20,13 @@ esac
 # Create a delay so the change in volume can be registered:
 sleep 0.05
 
-# Get the volume and check if muted or not (STATE):
-VOLUME=`amixer get Master | \
-    grep 'Left:' | \
-    awk -F'[][]' '{ print $2 }' | \
-    sed --expression 's/%//g'`
-
-STATE=`amixer get Master          | \
-    egrep -m 1 'Playback.*?\[o' | \
-    egrep -o '\[o.+\]'`
+# Get the volume and check if muted or not (ISMUTE):
+VOLUME=$(pamixer --get-volume)
 
 ICONPATH="$HOME/.local/dotfiles/notify/"
 
 # Have a different symbol for varying volume levels:
-if [[ $STATE != '[off]' ]]; then
+if [ $(pamixer --get-mute) == "false"  ]; then
     if [ "${VOLUME}" == "0" ]; then
         ICON="${ICONPATH}vol-mute.png"
     elif [ "${VOLUME}" -lt "33" ] && [ $VOLUME -gt "0" ]; then
@@ -49,10 +42,9 @@ if [[ $STATE != '[off]' ]]; then
         -i ${ICON} \
         -h int:value:${VOLUME} \
         --replace-file=/tmp/audio-notification \
-        -h string:synchronous:volume-change \
-
-# If volume is muted, display the mute sybol:
+        -h string:synchronous:volume-change
 else
+    # If volume is muted, display the mute sybol:
     notify-send.sh "Muted (volume: $VOLUME%)" \
         --replace-file=/tmp/audio-notification \
         -t 2000 \
