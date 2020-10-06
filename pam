@@ -1,4 +1,4 @@
-EDITOR=vim
+EDITOR=editor.sh
 BROWSER=firefox
 LD_LIBRARY_PATH=/lib:/usr/lib:/usr/bin/lib:/usr/local/lib
 PATH=/home/stefano/.local/bin:/home/stefano/.local/script:/home/stefano/.local/dotfiles:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
