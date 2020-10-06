@@ -5,17 +5,17 @@ echo > /dev/shm/volume.sh.lock
 
 case $1 in
     "audiomute")
-        pamixer --toggle-mute
+        amixer set Master toggle
         ;;
     "micmute")
-        pactl set-source-mute 0 toggle
+        amixer set Capture toggle
         MICMUTE=1
         ;;
     "up")
-        pamixer --increase ${2}
+        amixer set Master "${2}%+"
         ;;
     "down")
-        pamixer --decrease ${2}
+        amixer set Master "${2}%-"
         ;;
 esac
 
@@ -25,8 +25,11 @@ esac
 sleep 0.05
 
 # Get the volume and check if muted or not (ISMUTE):
-VOLUME=$(pamixer --get-volume)
-
+VOLUME=$(amixer get Master | grep -E -o "[0-9]+\%")
+VOLUME=${VOLUME%\%}
+STATE=$(amixer get Master | grep -E -o "\[(on|off)\]")
+STATE=${STATE%\]}
+STATE=${STATE#\[}
 ICONPATH="$HOME/.local/dotfiles/notify/"
 
 # Have a different symbol for varying volume levels:
@@ -40,7 +43,7 @@ then
         --replace-file=/tmp/audio-notification \
         -h string:synchronous:volume-change
 
-elif [ $(pamixer --get-mute) == "false"  ]
+elif [ "$STATE" == "on" ]
 then
     if [ "${VOLUME}" == "0" ]; then
         ICON="${ICONPATH}vol-mute.png"
