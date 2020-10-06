@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LIGHTFILE="/tmp/light.txt"
+LIGHTFILE=$XDG_CACHE_HOME/light.var.txt
 BRIGHTNESS=$(cat $LIGHTFILE)
 
 if [ "$1" == "u" ]

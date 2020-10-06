@@ -6,6 +6,7 @@ case $1 in
         ;;
     "micmute")
         pactl set-source-mute 0 toggle
+        exit
         ;;
     "up")
         pamixer --increase ${2}
