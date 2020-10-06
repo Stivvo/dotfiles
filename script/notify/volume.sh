@@ -9,7 +9,7 @@ case $1 in
         ;;
     "micmute")
         pactl set-source-mute 0 toggle
-        exit
+        MICMUTE=1
         ;;
     "up")
         pamixer --increase ${2}
@@ -30,7 +30,18 @@ VOLUME=$(pamixer --get-volume)
 ICONPATH="$HOME/.local/dotfiles/notify/"
 
 # Have a different symbol for varying volume levels:
-if [ $(pamixer --get-mute) == "false"  ]; then
+if [ $MICMUTE ]
+then
+    amixer get Capture | grep "[on]" -q -F && ICON="${ICONPATH}vol-high.png" || ICON="${ICONPATH}vol-mute.png"
+    notify-send.sh "Microphone" \
+        -t 2000 \
+        -i ${ICON} \
+        -h int:value:100 \
+        --replace-file=/tmp/audio-notification \
+        -h string:synchronous:volume-change
+
+elif [ $(pamixer --get-mute) == "false"  ]
+then
     if [ "${VOLUME}" == "0" ]; then
         ICON="${ICONPATH}vol-mute.png"
     elif [ "${VOLUME}" -lt "33" ] && [ $VOLUME -gt "0" ]; then
