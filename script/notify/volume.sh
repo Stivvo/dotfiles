@@ -1,5 +1,8 @@
 #!/bin/bash
 
+[ -f /dev/shm/volume.sh.lock ] && exit
+echo > /dev/shm/volume.sh.lock
+
 case $1 in
     "audiomute")
         pamixer --toggle-mute
@@ -54,3 +57,5 @@ else
         -u critical \
         -h string:synchronous:volume-change
 fi
+
+rm /dev/shm/volume.sh.lock

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+[ -f /dev/shm/light.sh.lock ] && exit
+echo > /dev/shm/light.sh.lock
+
 LIGHTFILE=$XDG_CACHE_HOME/light.var.txt
 BRIGHTNESS=$(cat $LIGHTFILE)
 
@@ -28,3 +31,5 @@ notify-send.sh  "Brightness ${BRIGHTNESS}%"  \
     -h int:value:${BRIGHTNESS} \
     --replace-file=/tmp/brightness-notification \
     -h string:synchronous:brightness-change \
+
+rm /dev/shm/light.sh.lock
