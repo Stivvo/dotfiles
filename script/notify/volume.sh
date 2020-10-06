@@ -25,9 +25,9 @@ esac
 sleep 0.05
 
 # Get the volume and check if muted or not (ISMUTE):
-VOLUME=$(amixer get Master | grep -E -o "[0-9]+\%")
+VOLUME=$(amixer get Master | grep -m 1 -E -o "[0-9]+\%")
 VOLUME=${VOLUME%\%}
-STATE=$(amixer get Master | grep -E -o "\[(on|off)\]")
+STATE=$(amixer get Master | grep -m 1 -E -o "\[(on|off)\]")
 STATE=${STATE%\]}
 STATE=${STATE#\[}
 ICONPATH="$HOME/.local/dotfiles/notify/"
@@ -35,7 +35,9 @@ ICONPATH="$HOME/.local/dotfiles/notify/"
 # Have a different symbol for varying volume levels:
 if [ $MICMUTE ]
 then
-    amixer get Capture | grep "[on]" -q -F && ICON="${ICONPATH}vol-high.png" || ICON="${ICONPATH}vol-mute.png"
+    amixer get Capture | grep -m 1 "[on]" -q -F && \
+        ICON="${ICONPATH}vol-high.png" || ICON="${ICONPATH}vol-mute.png"
+
     notify-send.sh "Microphone" \
         -t 2000 \
         -i ${ICON} \
@@ -61,15 +63,17 @@ then
         -h int:value:${VOLUME} \
         --replace-file=/tmp/audio-notification \
         -h string:synchronous:volume-change
+
 else
     # If volume is muted, display the mute sybol:
     notify-send.sh "Muted (volume: $VOLUME%)" \
-        --replace-file=/tmp/audio-notification \
         -t 2000 \
+        --replace-file=/tmp/audio-notification \
         -i "${ICONPATH}vol-mute.png" \
         -h int:value:${VOLUME} \
         -u critical \
         -h string:synchronous:volume-change
+
 fi
 
 rm /dev/shm/volume.sh.lock
