@@ -59,6 +59,7 @@ git config --global user.email stivvo01@gmail.com
 git config --global core.editor "nvim --cmd 'source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim'"
 git config --global credential.helper 'cache --timeout=14400'
 git config --global pull.rebase false
+ln -s ${PWD}/gitignore ~/.gitignore
 
 echo "volume and brightness notifications files..."
 echo 100 > /tmp/audio-notification
