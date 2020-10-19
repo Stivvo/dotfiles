@@ -4,15 +4,15 @@ echo "creating useful dirs..."
 mkdir ~/.cache ~/.cache/markdown/ ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.config/nvim ~/.config/zathura ~/.config/nyaovim ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty ~/.cache/shot ~/.local/dotfiles
 
 echo "shells..."
+ln -sf ${PWD}/pam ~/.pam_environment
 ln -sf ${PWD}/bashrc ~/.bashrc
-source ~/.bashrc
 ln -sf ${PWD}/fish/config.fish ~/.config/fish/config.fish
 ln -sf ${PWD}/fish/common.fish ~/.config/fish/common.fish
+source ~/.bashrc
 echo "setting default shell to fish, reboot required"
-sudo chsh -s $(whereis fish | awk '{print $2}') $(whoami)
+sudo chsh -s $(whereis fish | awk '{print $2}') $USER
 
 echo "creating symlinks for programs configs..."
-ln -sf ${PWD}/pam ~/.pam_environment  # pam environment, enable wayland on firefox
 ln -sf ${PWD}/mako ~/.config/mako/config
 ln -sf ${PWD}/zathurarc ~/.config/zathura/zathurarc
 ln -sf ${PWD}/imv ~/.config/imv/config
