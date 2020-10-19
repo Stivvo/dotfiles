@@ -69,7 +69,7 @@ if [ ! -d ~/.config/omf ] || [ ! -d ~/.local/share/omf ]
 then
     echo "oh my fish..."
     curl -L https://get.oh-my.fish > ~/install.fish
-    fish ~/install.fish --path=~/.local/share/omf --config=~/.config/omf \
+    fish -c ~/install.fish --path=~/.local/share/omf --config=~/.config/omf \
     fish --command="omf install l"
 fi
 
