@@ -23,7 +23,7 @@ then
 fi
 
 echo $BRIGHTNESS > $LIGHTFILE
-sudo light -S $BRIGHTNESS
+light -S $BRIGHTNESS
 
 notify-send.sh  "Brightness ${BRIGHTNESS}%"  \
     -t 2000 \
