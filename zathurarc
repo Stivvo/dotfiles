@@ -26,5 +26,5 @@ set selection-clipboard clipboard
 
 map x toggle_presentation
 map [presentation] x toggle_presentation
-map [presentation] j scroll full-down
-map [presentation] k scroll full-up
+map [presentation] j navigate next
+map [presentation] k navigate previous
