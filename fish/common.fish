@@ -4,8 +4,8 @@ alias la='lsd -ha'
 alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
-alias v='nvim --cmd "source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim" --cmd "source $XDG_CONFIG_HOME/nvim/other/gui.vim"'
-alias vi='nvim --cmd "source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim"'
+alias v=$EDITOR
+alias vi='nvim'
 alias t='floaterm'
 alias diff='diff --color'
 alias less=$PAGER
