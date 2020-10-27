@@ -38,7 +38,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'nathanaelkane/vim-indent-guides', {'for': [ 'html', 'xml', 'javascript', 'php', 'c', 'cpp' ]}
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
 Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpenAutoClose'] }
