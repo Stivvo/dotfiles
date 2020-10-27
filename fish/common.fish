@@ -4,8 +4,8 @@ alias la='lsd -ha'
 alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
-alias v=$EDITOR
-alias vi='nvim'
+alias v=$VISUAL
+alias vi=$EDITOR
 alias t='floaterm'
 alias diff='diff --color'
 alias less=$PAGER

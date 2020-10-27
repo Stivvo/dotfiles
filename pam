@@ -1,4 +1,5 @@
-EDITOR DEFAULT="nvim --cmd 'let enable_gui = 1'"
+EDITOR=nvim
+VISUAL DEFAULT="nvim --cmd 'let enable_gui = 1'"
 BROWSER=firefox
 PAGER DEFAULT="less -R"
 LD_LIBRARY_PATH=/lib:/usr/lib:/usr/bin/lib:/usr/local/lib
