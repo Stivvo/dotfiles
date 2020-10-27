@@ -7,14 +7,20 @@ filetype plugin indent on
 
 "indent
 set smartindent
-" set expandtab
+set noexpandtab
 set shiftwidth=4
-" set softtabstop=4
+set softtabstop=0
 set tabstop=4
 
 "search
 set ignorecase
 set showmatch
+
+source ~/.config/nvim/other/vim-plug.vim
+
+if exists('enable_gui')
+    source ~/.config/nvim/other/gui.vim
+endif
 
 " go to last line
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -118,3 +124,10 @@ nnoremap <silent> <C-Up> :resize +20<Cr>
 nnoremap <silent> <C-Down> :resize -20<Cr>
 nnoremap <silent> <C-Left> :vertical resize +20<Cr>
 nnoremap <silent> <C-Right> :vertical resize -20<Cr>
+
+"indent
+set smartindent
+set noexpandtab
+set shiftwidth=4
+set softtabstop=0
+set tabstop=4

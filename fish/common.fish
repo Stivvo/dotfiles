@@ -4,14 +4,19 @@ alias la='lsd -ha'
 alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
-alias v='nvim --cmd "source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim" --cmd "source $XDG_CONFIG_HOME/nvim/other/gui.vim"'
-alias vi='nvim --cmd "source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim"'
+alias v='nvim --cmd "let enable_gui = 1"'
+alias vi=$EDITOR
 alias t='floaterm'
 alias diff='diff --color'
-alias less='less -R'
+alias less=$PAGER
 
 alias a='pikaur --color=always'
 alias p='sudo pacman'
+alias q='xbps-query -Rs'
+alias i='sudo xbps-install'
+alias s='sudo xbps-install -S'
+alias u='sudo xbps-install -Su'
+alias r='sudo xbps-remove'
 
 alias grep="grep --color"
 alias fgrep="fgrep --color"

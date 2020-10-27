@@ -1,5 +1,6 @@
-EDITOR=editor.sh
+EDITOR=nvim
 BROWSER=firefox
+PAGER DEFAULT="less -R"
 LD_LIBRARY_PATH=/lib:/usr/lib:/usr/bin/lib:/usr/local/lib
 PATH=/home/stefano/.local/bin:/home/stefano/.local/script:/home/stefano/.local/dotfiles:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 
@@ -36,5 +37,5 @@ FFF_FAV9 DEFAULT=/run/media/stefano
 MANGOHUD_DLSYM=1
 MANGOHUD=1
 
-FZF_DEFAULT_COMMAND=fzf.vim.sh
+FZF_DEFAULT_COMMAND DEFAULT="fd --type f --hidden --follow --exclude .git"
 FZF_CTRL_T_COMMAND=@{FZF_DEFAULT_COMMAND}
