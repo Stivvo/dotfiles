@@ -18,6 +18,10 @@ set showmatch
 
 source ~/.config/nvim/other/vim-plug.vim
 
+if exists('enable_gui')
+    source ~/.config/nvim/other/gui.vim
+endif
+
 " go to last line
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
