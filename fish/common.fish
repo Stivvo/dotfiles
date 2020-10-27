@@ -4,7 +4,7 @@ alias la='lsd -ha'
 alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
-alias v=$VISUAL
+alias v='nvim -S $XDG_CONFIG_HOME/nvim/other/gui.vim'
 alias vi=$EDITOR
 alias t='floaterm'
 alias diff='diff --color'

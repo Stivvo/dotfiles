@@ -1,5 +1,4 @@
 EDITOR=nvim
-VISUAL DEFAULT="nvim -S @{HOME}/.config/nvim/other/gui.vim"
 BROWSER=firefox
 PAGER DEFAULT="less -R"
 LD_LIBRARY_PATH=/lib:/usr/lib:/usr/bin/lib:/usr/local/lib
