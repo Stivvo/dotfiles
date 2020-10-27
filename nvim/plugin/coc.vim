@@ -145,6 +145,10 @@ nunmap <C-i>
 
 " coc plugins
 let g:coc_global_extensions = [
+            \ 'coc-jedi',
+            \ 'coc-python',
+            \ 'coc-cfn-lint',
+            \ 'coc-pyright',
             \ 'coc-tsserver',
             \ 'coc-html',
             \ 'coc-css',
