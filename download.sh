@@ -4,7 +4,7 @@ echo "creating useful dirs..."
 mkdir ~/.cache ~/.cache/markdown/ ~/screen ~/.cache/screen ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.config/nvim ~/.config/zathura ~/.config/nyaovim ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty ~/.cache/shot ~/.local/dotfiles
 
 echo "shells..."
-ln -sf ${PWD}/pam ~/.pam_environment
+ln -sf ${PWD}/pam_environment ~/.pam_environment
 ln -sf ${PWD}/bashrc ~/.bashrc
 ln -sf ${PWD}/fish/config.fish ~/.config/fish/config.fish
 ln -sf ${PWD}/fish/common.fish ~/.config/fish/common.fish
