@@ -8,9 +8,9 @@ filetype plugin indent on
 "indent
 set smartindent
 set noexpandtab
-set shiftwidth=4
-set softtabstop=0
-set tabstop=4
+set softtabstop=0 "use tabs over spaces
+set shiftwidth=4 "automatic indentation
+set tabstop=4 "width of tab
 
 "search
 set ignorecase
@@ -124,10 +124,3 @@ nnoremap <silent> <C-Up> :resize +20<Cr>
 nnoremap <silent> <C-Down> :resize -20<Cr>
 nnoremap <silent> <C-Left> :vertical resize +20<Cr>
 nnoremap <silent> <C-Right> :vertical resize -20<Cr>
-
-"indent
-set smartindent
-set noexpandtab
-set shiftwidth=4
-set softtabstop=0
-set tabstop=4
