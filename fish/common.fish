@@ -8,10 +8,15 @@ alias v='nvim --cmd "source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim" --cmd "sou
 alias vi='nvim --cmd "source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim"'
 alias t='floaterm'
 alias diff='diff --color'
-alias less='less -R'
+alias less=$PAGER
 
 alias a='pikaur --color=always'
 alias p='sudo pacman'
+alias q='xbps-query -Rs'
+alias i='sudo xbps-install'
+alias s='sudo xbps-install -S'
+alias u='sudo xbps-install -Su'
+alias r='sudo xbps-remove'
 
 alias grep="grep --color"
 alias fgrep="fgrep --color"
