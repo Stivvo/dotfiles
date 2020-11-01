@@ -1,11 +1,11 @@
 #!/bin/dash
 
-monitor.sh r &
+mako &
 corectrl &
 waybar &
-mako &
+monitor.sh r
 background.sh &
-udiskie.sh &
 redshift -l 45.47:9.19 -t 6500:4500 -m wayland &
+udiskie.sh &
 update.sh &
-normal.mice.sh &
+normal.mice.sh
