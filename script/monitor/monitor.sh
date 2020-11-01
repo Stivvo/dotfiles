@@ -1,7 +1,12 @@
 #!/bin/dash
 
 FILE="${XDG_CACHE_HOME}/monitor/status.txt"
-VAR=$(cat $FILE)
+if [ -f $FILE ]
+then
+    VAR=$(cat $FILE)
+else
+    VAR=0
+fi
 
 END=0
 

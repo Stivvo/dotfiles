@@ -1,7 +1,12 @@
 #!/bin/dash
 
 FILE="${XDG_CACHE_HOME}/monitor/rotation.txt"
-ROTATE=$(cat $FILE)
+if [ -f $FILE ]
+then
+    ROTATE=$(cat $FILE)
+else
+    ROTATE=0
+fi
 
 ROTATE=$((ROTATE+1))
 [ $ROTATE -gt 2 ] && ROTATE=1
@@ -13,7 +18,6 @@ else
     ACTION=90
 fi
 
-echo "$ROTATE" > $FILE
 MONITOR=$(cat "${XDG_CACHE_HOME}/monitor/status.txt")
 
 case $MONITOR in
@@ -32,3 +36,5 @@ case $MONITOR in
         wlr-randr --output DP-2 --transform $ACTION --pos 1920,0
         ;;
 esac
+
+echo "$ROTATE" > $FILE
