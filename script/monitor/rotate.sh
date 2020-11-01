@@ -1,9 +1,9 @@
-#!/bin/bash
+#!/bin/dash
 
 FILE="${XDG_CACHE_HOME}/monitor/rotation.txt"
 ROTATE=$(cat $FILE)
 
-((ROTATE++))
+ROTATE=$((ROTATE+1))
 [ $ROTATE -gt 2 ] && ROTATE=1
 
 if [ $ROTATE = 1 ]

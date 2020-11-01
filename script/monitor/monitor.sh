@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/dash
 
 FILE="${XDG_CACHE_HOME}/monitor/status.txt"
 VAR=$(cat $FILE)
@@ -8,7 +8,7 @@ COUNT=0
 
 while [ $END = 0 ]
 do
-    [ "$1" == "r" ] || ((VAR++))
+    [ -z "$1" ] && VAR=$((VAR+1))
     [ $VAR -gt 4 ] && VAR=1
 
     case "$VAR" in
