@@ -1,17 +1,26 @@
 #!/bin/bash
 
-FILE="${XDG_CACHE_HOME}/screen/rotation.txt"
-VAR=$(cat $FILE)
+FILE="${XDG_CACHE_HOME}/monitor/rotation.txt"
+ROTATE=$(cat $FILE)
 
-((VAR++))
+((ROTATE++))
+[ $ROTATE -gt 2 ] && ROTATE=1
 
-[ $VAR -gt 2 ] && VAR=1
-
-if [ $VAR = 1 ]
+if [ $ROTATE = 1 ]
 then
-    swaymsg output DP-1 transform "0"
+    ACTION="normal"
 else
-    swaymsg output DP-1 transform "270"
+    ACTION=90
 fi
 
-echo "$VAR" > $FILE
+echo "$ROTATE" > $FILE
+MONITOR=$(cat "${XDG_CACHE_HOME}/monitor/status.txt")
+
+case $MONITOR in
+    "1")
+        wlr-randr --output DP-2 --transform $ACTION --pos 1920,0
+        ;;
+    "3")
+        wlr-randr --output DP-2 --transform $ACTION --pos 1920,0
+        ;;
+esac
