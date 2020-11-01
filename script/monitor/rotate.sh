@@ -25,6 +25,7 @@ case $MONITOR in
             wlr-randr --output HDMI-A-1 --off
         } || {
             wlr-randr --output DP-2 --transform $ACTION --pos 0,0
+            wlr-randr --output eDP-1 --transform $ACTION --pos 0,0
         }
         ;;
     "3")

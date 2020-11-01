@@ -4,7 +4,6 @@ FILE="${XDG_CACHE_HOME}/monitor/status.txt"
 VAR=$(cat $FILE)
 
 END=0
-COUNT=0
 
 while [ $END = 0 ]
 do
@@ -13,8 +12,9 @@ do
 
     case "$VAR" in
         "1") # monitor
-            wlr-randr | fgrep DP-2 && {
+             wlr-randr | fgrep DP-2 | wlr-randr | fgrep eDP-1 && {
                 wlr-randr --output DP-2 --pos 0,0 --on
+                wlr-randr --output eDP-1 --on
                 wlr-randr --output HDMI-A-1 --off
                 wlr-randr --output HDMI-A-2 --off
 
@@ -50,12 +50,12 @@ do
                 wlr-randr --output HDMI-A-2 --pos 0,0 --on
                 wlr-randr --output HDMI-A-1 --off
                 wlr-randr --output DP-2 --off
+                wlr-randr --output eDP-1 --off
 
                 notify-send.sh "cinema"
                 END=1
             }
     esac
-    ((COUNT++))
 done
 
 echo "$VAR" > $FILE
