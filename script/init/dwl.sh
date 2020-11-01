@@ -1,5 +1,6 @@
 #!/bin/dash
 
+monitor.sh r &
 corectrl &
 waybar &
 mako &

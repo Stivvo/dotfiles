@@ -2,7 +2,7 @@
     "layer": "bottom",
     "output": [
         "eDP-1",
-        "DP-1"
+        "DP-2"
     ],
     "height": 30,
     "width": 1366,
