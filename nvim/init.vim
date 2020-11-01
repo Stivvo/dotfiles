@@ -18,8 +18,8 @@ set showmatch
 
 source ~/.config/nvim/other/vim-plug.vim
 
-if exists('enable_gui')
-    source ~/.config/nvim/other/gui.vim
+if exists('ena_gui')
+	source ~/.config/nvim/other/gui.vim
 endif
 
 " go to last line
