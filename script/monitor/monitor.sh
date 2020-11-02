@@ -17,7 +17,7 @@ do
 
     case "$VAR" in
         "1") # monitor
-             wlr-randr | fgrep DP-2 | wlr-randr | fgrep eDP-1 && {
+             wlr-randr | fgrep DP-2 || wlr-randr | fgrep eDP-1 && {
                 wlr-randr --output DP-2 --pos 0,0 --on
                 wlr-randr --output eDP-1 --on
                 wlr-randr --output HDMI-A-1 --off
