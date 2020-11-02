@@ -1,4 +1,10 @@
 *.o
+*.a
+*.so
+*.so.*
+*.prl
+*.lib
 .clangd
 compile_commands.json
 *.out
+*.pdf
