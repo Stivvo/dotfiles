@@ -1,6 +1,5 @@
 source ~/.config/nvim/other/markdown-preview.vim
 
-setlocal shiftwidth=2
 if resolve(expand('%:t')) == "README.md"
     setlocal textwidth=80
     setlocal colorcolumn=80
