@@ -1,6 +1,7 @@
 "truecolor on alacritty
 set termguicolors
 colorscheme codedark
+set background=dark
 highlight Normal ctermbg=none
 highlight NonText ctermbg=none
 highlight ColorColumn guibg=#2c2c2c
