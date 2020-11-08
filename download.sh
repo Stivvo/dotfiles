@@ -23,16 +23,16 @@ echo "nvim..."
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ln -sf ${PWD}/nvim/init.vim ~/.config/nvim/init.vim
-ln -s ${PWD}/nvim/plugin ~/.config/nvim/
-ln -s ${PWD}/nvim/ftplugin ~/.config/nvim/
-ln -s ${PWD}/nvim/other ~/.config/nvim/
-ln -s ${PWD}/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
+ln -sf ${PWD}/nvim/plugin ~/.config/nvim/
+ln -sf ${PWD}/nvim/ftplugin ~/.config/nvim/
+ln -sf ${PWD}/nvim/other ~/.config/nvim/
+ln -sf ${PWD}/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 nvim -c "PlugInstall|q|q"
 
 echo "sway..."
 ln -sf ${PWD}/sway ~/.config/sway/config
 ln -sf ${PWD}/swaylock ~/.config/swaylock/config
-ln -s ${PWD}/waybar ~/.config/
+ln -sf ${PWD}/waybar ~/.config/
 
 echo "pacman config..."
 sudo cp ${PWD}/pacman/mirrorlist /etc/pacman.d/mirrorlist
