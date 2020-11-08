@@ -21,6 +21,9 @@ alias r='sudo xbps-remove'
 alias grep="grep --color"
 alias fgrep="fgrep --color"
 alias egrep="egrep --color"
+alias grepi="grep --color -r -i"
+alias fgrepi="fgrep --color -r -i"
+alias egrepi="egrep --color -r -i"
 
 alias clone='git clone --recursive'
 alias pull='git pull'
@@ -32,18 +35,14 @@ alias pusf='git push -f'
 alias merge='git merge'
 alias add='git add'
 alias adda='git add -A'
-alias branch='git branch'
 alias branca='git branch --all'
 alias remotv='git remote -v'
 alias rebasi='git rebase -i'
 alias gsw='git switch'
 alias glog='git log --color=always'
 alias glol='git log --pretty=oneline --color=always'
-alias gshow='git show'
 alias gdiff='git diff --color'
 alias gstatus='git status'
-alias greset='git reset'
-alias grestore='git restore'
 
 alias xamt='sudo xampp start'
 alias xamr='sudo xampp start'
