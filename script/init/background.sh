@@ -5,7 +5,7 @@ ID="$(cat /dev/shm/background)"
 let "ID = $ID + 1"
 echo $ID > /dev/shm/background
 
-PA="$HOME/wallpapers/selected/"
+PA="$XDG_PICTURES_DIR/wallpapers/selected/"
 P="$HOME/prog/dotfiles/script/background/"
 LIST="/dev/shm/listBg"
 

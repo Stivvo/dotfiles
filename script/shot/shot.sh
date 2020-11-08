@@ -23,7 +23,7 @@ select="$(echo -e "default\nlast\nchoose" | bemenu -i "${scrnName} folder")"
 
 case "$select" in
     "default")
-        scrnPath="${HOME}/screen"
+        scrnPath="${XDG_PICTURES_DIR}/screen"
         ;;
     "last")
         scrnPath=$(cat $XDG_CACHE_HOME/fff/.fff_d)
