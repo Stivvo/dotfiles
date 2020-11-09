@@ -24,16 +24,16 @@ case $MONITOR in
     "1")
         wlr-randr | fgrep HDMI-A-1 && {
             wlr-randr --output HDMI-A-1 --on --pos 0,0
-            wlr-randr --output DP-2 --pos 1920,0
-            wlr-randr --output DP-2 --transform $ACTION --pos 1920,0
+            wlr-randr --output DP-1 --pos 1920,0
+            wlr-randr --output DP-1 --transform $ACTION --pos 1920,0
             wlr-randr --output HDMI-A-1 --off
         } || {
-            wlr-randr --output DP-2 --transform $ACTION --pos 0,0
+            wlr-randr --output DP-1 --transform $ACTION --pos 0,0
             wlr-randr --output eDP-1 --transform $ACTION --pos 0,0
         }
         ;;
     "3")
-        wlr-randr --output DP-2 --transform $ACTION --pos 1920,0
+        wlr-randr --output DP-1 --transform $ACTION --pos 1920,0
         ;;
 esac
 

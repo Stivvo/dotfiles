@@ -17,8 +17,8 @@ do
 
     case "$VAR" in
         "1") # monitor
-             wlr-randr | fgrep DP-2 || wlr-randr | fgrep eDP-1 && {
-                wlr-randr --output DP-2 --pos 0,0 --on
+             wlr-randr | fgrep DP-1 || wlr-randr | fgrep eDP-1 && {
+                wlr-randr --output DP-1 --pos 0,0 --on
                 wlr-randr --output eDP-1 --on
                 wlr-randr --output HDMI-A-1 --off
                 wlr-randr --output HDMI-A-2 --off
@@ -30,7 +30,7 @@ do
         "2") # tv
             wlr-randr | fgrep HDMI-A-1 && {
                 wlr-randr --output HDMI-A-1 --pos 0,0 --on
-                wlr-randr --output DP-2 --off
+                wlr-randr --output DP-1 --off
                 wlr-randr --output HDMI-A-2 --off
 
                 notify-send.sh "tv"
@@ -39,11 +39,11 @@ do
             ;;
         "3") # double
             wlr-randr | fgrep HDMI-A-1 &&
-            wlr-randr | fgrep DP-2  && {
+            wlr-randr | fgrep DP-1  && {
                 wlr-randr --output HDMI-A-1 --pos 0,0 --on
                 notify-send.sh "double"
 
-                wlr-randr --output DP-2 --pos 1920,0 --on
+                wlr-randr --output DP-1 --pos 1920,0 --on
                 notify-send.sh "double"
 
                 wlr-randr --output HDMI-A-2 --off
@@ -54,7 +54,7 @@ do
             wlr-randr | fgrep HDMI-A-2 && {
                 wlr-randr --output HDMI-A-2 --pos 0,0 --on
                 wlr-randr --output HDMI-A-1 --off
-                wlr-randr --output DP-2 --off
+                wlr-randr --output DP-1 --off
                 wlr-randr --output eDP-1 --off
 
                 notify-send.sh "cinema"
