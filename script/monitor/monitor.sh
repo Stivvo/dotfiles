@@ -1,6 +1,7 @@
 #!/bin/dash
 
 END=0
+FILE="${XDG_CACHE_HOME}/monitor/status.txt"
 
 while [ $END = 0 ]
 do
@@ -9,7 +10,6 @@ do
             VAR=$1
             ;;
         *)
-            FILE="${XDG_CACHE_HOME}/monitor/status.txt"
             if [ -f $FILE ]
             then
                 VAR=$(cat $FILE)
@@ -71,8 +71,8 @@ do
             }
             ;;
     esac
+    echo "$VAR" > $FILE
+    VAR=$((VAR+1))
 done
-
-echo "$VAR" > $FILE
 
 kill redshift
