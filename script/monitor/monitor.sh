@@ -1,18 +1,27 @@
 #!/bin/dash
 
-FILE="${XDG_CACHE_HOME}/monitor/status.txt"
-if [ -f $FILE ]
-then
-    VAR=$(cat $FILE)
-else
-    VAR=0
-fi
-
 END=0
 
 while [ $END = 0 ]
 do
-    [ -z "$1" ] && VAR=$((VAR+1))
+    case $1 in
+        [0-9])
+            VAR=$1
+            ;;
+        *)
+            FILE="${XDG_CACHE_HOME}/monitor/status.txt"
+            if [ -f $FILE ]
+            then
+                VAR=$(cat $FILE)
+            else
+                VAR=0
+            fi
+
+            [ -z "$1" ] && VAR=$((VAR+1))
+            ;;
+    esac
+    echo $VAR
+
     [ $VAR -gt 4 ] && VAR=1
 
     case "$VAR" in
@@ -60,6 +69,7 @@ do
                 notify-send.sh "cinema"
                 END=1
             }
+            ;;
     esac
 done
 
