@@ -74,3 +74,5 @@ do
 done
 
 echo "$VAR" > $FILE
+
+kill redshift
