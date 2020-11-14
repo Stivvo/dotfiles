@@ -74,5 +74,3 @@ do
     echo "$VAR" > $FILE
     VAR=$((VAR+1))
 done
-
-kill redshift
