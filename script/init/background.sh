@@ -5,23 +5,19 @@ ID="$(cat /dev/shm/background)"
 let "ID = $ID + 1"
 echo $ID > /dev/shm/background
 
-PA="$XDG_PICTURES_DIR/wallpapers/selected/"
-P="$HOME/prog/dotfiles/script/background/"
-LIST="/dev/shm/listBg"
-
+LIST="$XDG_PICTURES_DIR/wallpapers/list"
 CONTINUE="true"
 
 while [ "$CONTINUE" = "true" ]
 do
-    ls $PA > $LIST
     L=$(wc -l $LIST | awk '{print $1}')
     R=$[RANDOM % L]
     let R++
     IMG="$(sed -n "${R}p" $LIST)"
-    echo "$R $IMG" > /tmp/currentBg.txt
+    # echo "$R $IMG" > /dev/shm/currentbg
     pkill swaybg
     swaybg -i "${PA}${IMG}" -m fill &
-    echo $ID
+    # echo $ID
     sleep 30m
     [ "$ID" != "$(cat /dev/shm/background)" ] && CONTINUE="false"
 done
