@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "creating useful dirs..."
-mkdir ~/.cache ~/.cache/markdown/ ~/screen ~/.cache/monitor ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.config/nvim ~/.config/zathura ~/.config/nyaovim ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty ~/.cache/shot ~/.local/dotfiles
+mkdir ~/.cache ~/.cache/markdown/ ~/.cache/monitor ~/.config ~/.config/fish ~/.config/mako ~/.config/ranger ~/.config/nvim ~/.config/zathura ~/.config/nyaovim ~/.config/sway ~/.config/swaylock ~/.config/imv ~/.config/alacritty ~/.cache/shot ~/.local/dotfiles
 
 echo "shells..."
 ln -sf ${PWD}/pam_environment ~/.pam_environment
