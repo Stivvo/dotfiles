@@ -9,6 +9,10 @@ udiskie --appindicator --tray --automount --notify --file-manager "alacritty --t
 kdeconnect-indicator &
 normal.mice.sh
 sshfs media@olidata.stivvo01.com:/home/media/video ${XDG_VIDEOS_DIR}/remote/
+sshfs media@olidata.stivvo01.com:/home/media/segate/Documenti ${XDG_DOCUMENTS_DIR}/segateDocumenti/
+sshfs media@olidata.stivvo01.com:/home/media/segate/Immagini ${XDG_PICTURES_DIR}/segateImmagini/
+sshfs media@olidata.stivvo01.com:/home/media/segate/Musica ${XDG_MUSIC_DIR}/segateMusica/
+sshfs media@olidata.stivvo01.com:/home/media/segate/Video ${XDG_VIDEOS_DIR}/segateVideo/
 pikaur -Syuw --noconfirm &&
     notify-send.sh -r 10000 "Updated pacman packages" ||
     notify-send.sh -r 10000 "ERROR updating packages"
