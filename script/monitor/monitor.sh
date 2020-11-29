@@ -3,25 +3,25 @@
 END=0
 FILE="${XDG_CACHE_HOME}/monitor/status.txt"
 
+case $1 in
+    [0-9])
+        VAR=$1
+        ;;
+    *)
+        if [ -f $FILE ]
+        then
+            VAR=$(cat $FILE)
+        else
+            VAR=0
+        fi
+
+        [ -z "$1" ] && VAR=$((VAR+1))
+        ;;
+esac
+
 while [ $END = 0 ]
 do
-    case $1 in
-        [0-9])
-            VAR=$1
-            ;;
-        *)
-            if [ -f $FILE ]
-            then
-                VAR=$(cat $FILE)
-            else
-                VAR=0
-            fi
-
-            [ -z "$1" ] && VAR=$((VAR+1))
-            ;;
-    esac
     echo $VAR
-
     [ $VAR -gt 4 ] && VAR=1
 
     case "$VAR" in
@@ -71,6 +71,6 @@ do
             }
             ;;
     esac
-    echo "$VAR" > $FILE
     VAR=$((VAR+1))
 done
+echo "$VAR" > $FILE
