@@ -73,4 +73,5 @@ do
     esac
     VAR=$((VAR+1))
 done
+VAR=$((VAR-1))
 echo "$VAR" > $FILE
