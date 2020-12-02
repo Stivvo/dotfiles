@@ -9,7 +9,6 @@ Plug 'google/vim-maktaba'
 Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'sheerun/vim-polyglot'
-Plug 'psliwka/vim-smoothie'
 
 "---file
 Plug 'junegunn/fzf'
@@ -49,8 +48,6 @@ Plug 'honza/vim-snippets'
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'shmup/vim-sql-syntax'
-Plug 'vim-scripts/dbext.vim', { 'for': 'sql' }
 Plug 'fedorenchik/qt-support.vim', { 'for': ['c',  'cpp', 'qmake', 'qml'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c',  'cpp'] }
 Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
