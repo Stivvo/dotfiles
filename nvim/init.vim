@@ -32,6 +32,7 @@ autocmd BufWritePre * %s/\s\+$//e
 nnoremap <silent> <Esc><Esc> :w<Cr>:nohlsearch<Cr>
 nnoremap ^ @m
 nnoremap Y y$
+nnoremap cw dwi
 nnoremap <Space>y :let @+=expand('%:p')<Cr>:echo expand('%:p')<Cr>
 
 "change/delete if/for
