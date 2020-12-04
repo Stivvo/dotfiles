@@ -9,7 +9,7 @@ filetype plugin indent on
 set smartindent
 set noexpandtab
 set softtabstop=0 "use tabs over spaces
-set shiftwidth=4 "automatic indentation
+set shiftwidth=4 "width of automatic indentation
 set tabstop=4 "width of tab
 
 "search
@@ -22,8 +22,10 @@ if exists('ena_gui')
 	source ~/.config/nvim/other/gui.vim
 endif
 
-" go to last line
+"remember last line and undos
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+set undofile
+set undodir=$HOME/.local/undonvim
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
