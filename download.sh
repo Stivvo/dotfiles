@@ -26,7 +26,6 @@ ln -sf ${PWD}/nvim/init.vim ~/.config/nvim/init.vim
 ln -sf ${PWD}/nvim/plugin ~/.config/nvim/
 ln -sf ${PWD}/nvim/ftplugin ~/.config/nvim/
 ln -sf ${PWD}/nvim/other ~/.config/nvim/
-ln -sf ${PWD}/nvim/coc-settings.json ~/.config/nvim/coc-settings.json
 nvim -c "PlugInstall|q|q"
 
 echo "sway..."

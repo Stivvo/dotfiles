@@ -4,6 +4,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'marcweber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'google/vim-maktaba'
+Plug 'kana/vim-operator-user'
 
 "--appearance
 Plug 'itchyny/lightline.vim'
@@ -15,6 +16,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm', { 'on': ['FloatermNew', 'FloatermToggle'] }
 Plug 'dylanaraps/root.vim', { 'on': 'Root' }
+Plug 'tpope/vim-vinegar'
 
 "---motions
 Plug 'terryma/vim-multiple-cursors'
@@ -51,7 +53,6 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'fedorenchik/qt-support.vim', { 'for': ['c',  'cpp', 'qmake', 'qml'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c',  'cpp'] }
 Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
-Plug 'kana/vim-operator-user'
 
 " maybe
 " Plug 'suan/vim-instant-markdown', { 'for': 'markdown' }

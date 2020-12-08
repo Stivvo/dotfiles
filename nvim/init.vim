@@ -108,6 +108,9 @@ function! Kformat()
 endfunction
 noremap <Space>3 :call Kformat()<Cr>
 
+"netrw vertical split
+nnoremap <Space>4 :Vex<Cr>:vertical resize 80<Cr>
+
 "switch between splits
 set splitbelow splitright
 nmap <C-h> <C-w>h

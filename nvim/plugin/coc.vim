@@ -116,8 +116,6 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " Add `:OR` command for organize imports of the current buffer.
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-"coc explorer
-nnoremap <silent> <Space>4 :CocCommand explorer<Cr>
 " Find symbol of current document.
 nnoremap <silent> <leader>o  :<C-u>CocList outline<cr>
 " Search workspace symbols.
@@ -164,7 +162,6 @@ let g:coc_global_extensions = [
             \ 'coc-erlang_ls',
             \ 'coc-yaml',
             \ 'coc-fs-lists',
-            \ 'coc-explorer',
             \ 'coc-todolist',
             \ 'coc-floaterm',
             \ 'coc-phpls',
