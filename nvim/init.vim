@@ -87,6 +87,7 @@ endfunction
 noremap <Space>1 :call SetColorColumn()<Cr>
 
 "spelling
+set nospell spelllang=
 function SetSpell()
     if &spell == 0
         set spell spelllang=it
@@ -94,7 +95,7 @@ function SetSpell()
         if &spelllang ==# 'it'
             set spell spelllang=en
         else
-            set nospell
+            set nospell spelllang=
         endif
     endif
 endfunction

@@ -76,14 +76,6 @@ nnoremap <Space>r :CocSearch <C-R>=expand("<cword>")<Cr><Cr>
 xmap <leader>e <Plug>(coc-format-selected)
 nmap <leader>e <Plug>(coc-format-selected)
 
-augroup mygroup
-    autocmd!
-    " Setup formatexpr specified filetype(s).
-    autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-    " Update signature help on jump placeholder.
-    autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
 " Applying codeAction to the selected region.
 " Example: `<leader>aap` for current paragraph
 xmap <leader>a  <Plug>(coc-codeaction-selected)
