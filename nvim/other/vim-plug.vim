@@ -43,14 +43,11 @@ Plug 'nathanaelkane/vim-indent-guides'
 Plug 'adelarsq/vim-matchit'
 Plug 'arp242/jumpy.vim'
 Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpenAutoClose'] }
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
 
 "---languages
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'fedorenchik/qt-support.vim', { 'for': ['c',  'cpp', 'qmake', 'qml'] }
 Plug 'rhysd/vim-clang-format', { 'for': ['c',  'cpp'] }
 Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
 

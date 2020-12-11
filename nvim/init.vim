@@ -113,10 +113,11 @@ nnoremap <Space>4 :Vex<Cr>:vertical resize 80<Cr>
 
 "switch between splits
 set splitbelow splitright
-nmap <C-h> <C-w>h
-nmap <C-l> <C-w>l
-nmap <C-k> <C-w>k
-nmap <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+
 "split resizing
 nnoremap <silent> <S-Up> :resize +5<Cr>
 nnoremap <silent> <S-Down> :resize -5<Cr>
