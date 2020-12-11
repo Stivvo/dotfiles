@@ -1,11 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
 
-"--dependencies
-Plug 'marcweber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'google/vim-maktaba'
-Plug 'kana/vim-operator-user'
-
 "--appearance
 Plug 'itchyny/lightline.vim'
 Plug 'flazz/vim-colorschemes'
