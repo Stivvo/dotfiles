@@ -30,3 +30,12 @@ tnoremap <silent> <leader>tk <C-\><C-n>:FloatermKill<CR>
 
 nnoremap + :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
 nnoremap <Space>5 :FloatermNew! --wintype=normal --position=right fff <Cr>
+
+tnoremap <silent> <C-space> <C-\><C-n>
+tnoremap <silent> <C-h> <C-\><C-n><C-w><C-k><C-w><C-h>
+tnoremap <silent> <C-i> <C-\><C-n><C-w><C-k>
+
+tnoremap <silent> <C-Up> <C-\><C-n>:resize +5<Cr>A
+tnoremap <silent> <C-Down> <C-\><C-n>:resize -5<Cr>A
+tnoremap <silent> <C-Left> <C-\><C-n>:vertical resize +10<Cr>A
+tnoremap <silent> <C-Right> <C-\><C-n>:vertical resize -10<Cr>A
