@@ -6,8 +6,8 @@ let g:floaterm_width=0.5
 let g:floaterm_height=0.6
 
 "horizontal split
-nnoremap <silent> <leader>tx :FloatermNew --wintype=normal --position=bottom<CR>
-tnoremap <silent> <leader>tx <C-\><C-n>:FloatermNew --wintype=normal --position=bottom<CR>
+nnoremap <silent> <leader>tx :FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
+tnoremap <silent> <leader>tx <C-\><C-n>:FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
 
 "vertical split
 nnoremap <silent> <leader>tv :FloatermNew --wintype=normal --position=right<CR>
@@ -28,7 +28,7 @@ tnoremap <silent> <leader>tn <C-\><C-n>:FloatermNext<CR>
 nnoremap <silent> <leader>tk :FloatermKill<CR>
 tnoremap <silent> <leader>tk <C-\><C-n>:FloatermKill<CR>
 
-nnoremap + :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
+nnoremap <Space>4 :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
 nnoremap <Space>5 :FloatermNew! --wintype=normal --position=right fff <Cr>
 
 tnoremap <silent> <C-space> <C-\><C-n>

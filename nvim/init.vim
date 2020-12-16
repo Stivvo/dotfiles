@@ -101,16 +101,8 @@ function SetSpell()
 endfunction
 noremap <silent> <Space>2 :call SetSpell()<Cr>
 
-"auto formatting
-function! Kformat()
-    let line = line('.')
-    :norm gg=G
-    :exec line
-endfunction
-noremap <Space>3 :call Kformat()<Cr>
-
 "netrw vertical split
-nnoremap <Space>4 :Vex<Cr>:vertical resize 80<Cr>
+nnoremap <Space>3 :Vex<Cr>
 
 "switch between splits
 set splitbelow splitright
