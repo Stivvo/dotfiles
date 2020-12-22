@@ -39,13 +39,13 @@ sudo cp ${PWD}/pacman/makepkg.conf /etc/makepkg.conf
 sudo cp ${PWD}/pacman/pacman.conf /etc/pacman.conf
 sudo cp ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
 
-echo "symlink scripts to ~/.local/dotfiles..."
+echo "symlink scripts to ~/.local/script..."
 for dir in ${PWD}/script/*/
 do
 	for file in $dir*.*sh
 	do
 		echo $file
-		ln -sf $file $HOME/.local/dotfiles/
+		ln -sf $file $HOME/.local/script/
 	done
 done
 
