@@ -101,8 +101,21 @@ function SetSpell()
 endfunction
 noremap <silent> <Space>2 :call SetSpell()<Cr>
 
+"toggle folding
+set foldmethod=manual
+function SetFold()
+    if &foldmethod == 'manual'
+        set foldmethod=indent
+        normal zM
+    else
+        normal zR
+        set foldmethod=manual
+    endif
+endfunction
+nnoremap <silent><Space>3 :call SetFold()<Cr>
+
 "netrw vertical split
-nnoremap <Space>3 :Vex<Cr>
+nnoremap <Space>4 :Vex<Cr>
 
 "switch between splits
 set splitbelow splitright
