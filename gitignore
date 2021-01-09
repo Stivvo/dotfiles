@@ -4,7 +4,8 @@
 *.so.*
 *.prl
 *.lib
-.clangd
+.clangd/
 compile_commands.json
+.cache/
 *.out
 *.pdf
