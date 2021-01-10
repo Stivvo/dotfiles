@@ -27,7 +27,7 @@ light -S $BRIGHTNESS
 
 notify-send.sh  "Brightness ${BRIGHTNESS}%"  \
     -t 2000 \
-    -i $HOME/.local/dotfiles/notify/brightness-icon.png \
+    -i $HOME/.local/script/notify/brightness-icon.png \
     -h int:value:${BRIGHTNESS} \
     --replace-file=/tmp/brightness-notification \
     -h string:synchronous:brightness-change \
