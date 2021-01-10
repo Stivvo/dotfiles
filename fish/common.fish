@@ -8,7 +8,7 @@ alias v='nvim --cmd "let ena_gui = 1"'
 alias vn='nvim --noplugin'
 alias t='floaterm'
 alias diff='diff --color'
-alias less=$PAGER
+alias less="less -R"
 
 alias a='pikaur --color=always'
 alias p='sudo pacman'
