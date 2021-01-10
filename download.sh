@@ -72,5 +72,8 @@ then
     fish --command="omf install l"
 fi
 
-echo "corectrl configuration"
+echo "corectrl configuration..."
 sudo cp polkit /etc/polkit-1/rules.d/90-corectrl.rules
+
+echo "setting the yaru GTK theme..."
+$HOME/.local/script/theme.sh
