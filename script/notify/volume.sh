@@ -30,7 +30,7 @@ VOLUME=${VOLUME%\%}
 STATE=$(amixer get Master | grep -m 1 -E -o "\[(on|off)\]")
 STATE=${STATE%\]}
 STATE=${STATE#\[}
-ICONPATH="$HOME/.local/dotfiles/notify/"
+ICONPATH="$HOME/.local/script/notify/"
 
 # Have a different symbol for varying volume levels:
 if [ $MICMUTE ]
