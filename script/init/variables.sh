@@ -6,16 +6,6 @@ export PAGER="less -R"
 export LD_LIBRARY_PATH=/usr/local/lib:/lib:/usr/lib:/usr/bin/lib
 export PATH=/home/stefano/.local/bin:/home/stefano/.local/script:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
 
-if [ "$1" = "1" ]
-then
-	export MOZ_ENABLE_WAYLAND=1
-	export QT_QPA_PLATFORM=wayland
-elif [ "$1" = "2" ]
-then
-	export MOZ_ENABLE_WAYLAND=0
-	export QT_QPA_PLATFORM=xcb
-fi
-
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
@@ -55,5 +45,15 @@ export MANGOHUD=1
 
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
+
+if [ "$1" = "1" ]
+then
+	export MOZ_ENABLE_WAYLAND=1
+	export QT_QPA_PLATFORM=wayland
+elif [ "$1" = "2" ]
+then
+	export MOZ_ENABLE_WAYLAND=0
+	export QT_QPA_PLATFORM=xcb
+fi
 
 $2 $3 $4
