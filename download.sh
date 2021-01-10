@@ -58,6 +58,7 @@ git config --global user.email stivvo01@gmail.com
 git config --global core.editor "nvim"
 git config --global credential.helper 'cache --timeout=14400'
 git config --global pull.rebase false
+git config --global core.excludesFile '~/.gitignore'
 ln -sf ${PWD}/gitignore ~/.gitignore
 
 echo "volume and brightness notifications files..."
