@@ -22,6 +22,11 @@ map [fullscreen] e follow
 map f toggle_fullscreen
 map [fullscreen] f toggle_fullscreen
 
+map <C-i> zoom in
+map [fullscreen] <C-i> zoom in
+map <C-o> zoom out
+map [fullscreen] <C-o> zoom out
+
 set selection-clipboard clipboard
 
 map x toggle_presentation
