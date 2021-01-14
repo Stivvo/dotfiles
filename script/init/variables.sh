@@ -19,7 +19,7 @@ export XDG_PICTURES_DIR=$HOME/Immagini
 export XDG_VIDEOS_DIR=$HOME/Video
 
 export FFF_FILE_FORMAT=" %f"
-export FFF_MARK_FORMAT=" > \%f*"
+export FFF_MARK_FORMAT=" > %f*"
 export FFF_OPENER=xdg-open
 export FFF_CD_ON_EXIT=1
 
