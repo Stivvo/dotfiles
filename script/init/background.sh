@@ -1,9 +1,10 @@
 #!/bin/bash
 
-[ -z "$(cat /dev/shm/background)" ] && echo "0" > /dev/shm/background
-ID="$(cat /dev/shm/background)"
+CURRENTBG=/dev/shm/background
+[ -z "$(cat $CURRENTBG)" ] && echo "0" > $CURRENTBG
+ID="$(cat $CURRENTBG)"
 let "ID = $ID + 1"
-echo $ID > /dev/shm/background
+echo $ID > $CURRENTBG
 
 LIST="$XDG_PICTURES_DIR/wallpapers/list"
 CONTINUE="true"
@@ -19,5 +20,5 @@ do
     swaybg -i "${PA}${IMG}" -m fill &
     # echo $ID
     sleep 30m
-    [ "$ID" != "$(cat /dev/shm/background)" ] && CONTINUE="false"
+    [ "$ID" != "$(cat $CURRENTBG)" ] && CONTINUE="false"
 done
