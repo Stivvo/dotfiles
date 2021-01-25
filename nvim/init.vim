@@ -49,7 +49,7 @@ vnoremap K :m '<-2<Cr>gv=gv
 
 "trim and join lines
 vnoremap <Enter> J
-noremap <Leader><Enter> J
+nnoremap <Leader><Enter> J
 nnoremap <Space><Enter> i<Enter><Esc>
 
 "buffers
@@ -91,14 +91,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-j> <C-w>j
 
 "split resizing
-nnoremap <silent> <S-Up> :resize +5<Cr>
-nnoremap <silent> <S-Down> :resize -5<Cr>
-nnoremap <silent> <S-Left> :vertical resize +5<Cr>
-nnoremap <silent> <S-Right> :vertical resize -5<Cr>
-nnoremap <silent> <Up> :resize +10<Cr>
-nnoremap <silent> <Down> :resize -10<Cr>
-nnoremap <silent> <Left> :vertical resize +10<Cr>
-nnoremap <silent> <Right> :vertical resize -10<Cr>
+nnoremap <silent> <Up> :resize +9<Cr>
+nnoremap <silent> <Down> :resize -9<Cr>
+nnoremap <silent> <Left> :vertical resize +9<Cr>
+nnoremap <silent> <Right> :vertical resize -9<Cr>
 nnoremap <silent> <C-Up> :resize +20<Cr>
 nnoremap <silent> <C-Down> :resize -20<Cr>
 nnoremap <silent> <C-Left> :vertical resize +20<Cr>

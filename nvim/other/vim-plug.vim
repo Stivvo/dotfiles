@@ -41,7 +41,7 @@ Plug 'majutsushi/tagbar', { 'on': ['TagbarToggle', 'TagbarOpenAutoClose'] }
 "---languages
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'dhruvasagar/vim-table-mode', { 'for': 'markdown' }
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown']}
 Plug 'rhysd/vim-clang-format', { 'for': ['c',  'cpp'] }
 Plug 'alvan/vim-closetag', { 'for': ['xml', 'html', 'javascript', 'php'] }
 
