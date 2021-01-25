@@ -37,6 +37,7 @@ nnoremap ^ @m
 nnoremap Y y$
 nnoremap cw dwi
 nnoremap <Space>y :call functions#GetFileName()<Cr>
+nnoremap <silent> <Space>d :bdelete<Cr>
 
 "change/delete if/for
 nnoremap dai $?if\\|for<Cr>dt{da{
