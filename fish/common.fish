@@ -4,8 +4,8 @@ alias la='lsd -ha'
 alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
-alias v='nvim --cmd "let ena_gui = 1"'
-alias vn='nvim --noplugin'
+alias v='nvim'
+alias vv='PLUG="n" nvim --noplugin'
 alias t='floaterm'
 alias diff='diff --color'
 alias less="less -R"

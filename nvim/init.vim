@@ -16,10 +16,11 @@ set tabstop=4 "width of tab
 set ignorecase
 set showmatch
 
-source ~/.config/nvim/other/vim-plug.vim
-
-if exists('ena_gui')
-	source ~/.config/nvim/other/gui.vim
+if $PLUG != 'n'
+    source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim
+    if $COLORTERM == 'truecolor'
+        source $XDG_CONFIG_HOME/nvim/other/gui.vim
+    endif
 endif
 
 "remember last line and undos
