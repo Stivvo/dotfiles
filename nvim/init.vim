@@ -35,7 +35,7 @@ nnoremap <silent> <Esc><Esc> :w<Cr>:nohlsearch<Cr>
 nnoremap ^ @m
 nnoremap Y y$
 nnoremap cw dwi
-nnoremap <Space>y :let @+=expand('%:p')<Cr>:echo expand('%:p')<Cr>
+nnoremap <Space>y :call functions#GetFileName()<Cr>
 
 "change/delete if/for
 nnoremap dai $?if\\|for<Cr>dt{da{
@@ -69,50 +69,15 @@ nnoremap <silent> <Space><Leader> :set number relativenumber!<Cr>
 
 "columns
 set colorcolumn=0
-	function SetColorColumn()
-		if &colorcolumn == 120
-        set colorcolumn=0
-        echo "--"
-    else
-        if &colorcolumn == 0
-            set colorcolumn=80
-        elseif &colorcolumn == 80
-            set colorcolumn=98
-        elseif &colorcolumn == 98
-            set colorcolumn=120
-        endif
-        echo &colorcolumn
-    endif
-endfunction
-noremap <Space>1 :call SetColorColumn()<Cr>
+noremap <Space>1 :call functions#SetColorColumn()<Cr>
 
 "spelling
 set nospell spelllang=
-function SetSpell()
-    if &spell == 0
-        set spell spelllang=it
-    else
-        if &spelllang ==# 'it'
-            set spell spelllang=en
-        else
-            set nospell spelllang=
-        endif
-    endif
-endfunction
-noremap <silent> <Space>2 :call SetSpell()<Cr>
+noremap <silent> <Space>2 :call functions#SetSpell()<Cr>
 
 "toggle folding
 set foldmethod=manual
-function SetFold()
-    if &foldmethod == 'manual'
-        set foldmethod=indent
-        normal zM
-    else
-        normal zR
-        set foldmethod=manual
-    endif
-endfunction
-nnoremap <silent><Space>3 :call SetFold()<Cr>
+nnoremap <silent><Space>3 :call functions#SetFold()<Cr>
 
 "netrw vertical split
 nnoremap <Space>4 :Vex<Cr>

@@ -37,6 +37,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ln -sf ${PWD}/nvim/init.vim $XDG_CONFIG_HOME/nvim/init.vim
 ln -sf ${PWD}/nvim/plugin $XDG_CONFIG_HOME/nvim/
 ln -sf ${PWD}/nvim/ftplugin $XDG_CONFIG_HOME/nvim/
+ln -sf ${PWD}/nvim/autoload $XDG_CONFIG_HOME/nvim/
 ln -sf ${PWD}/nvim/other $XDG_CONFIG_HOME/nvim/
 nvim -c "PlugInstall|q|q"
 
