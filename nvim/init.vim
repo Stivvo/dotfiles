@@ -2,8 +2,7 @@
 let mapleader="`"
 set mouse=a
 set confirm
-set so=8 "cursor above 8 lines from the bottom of the screen
-filetype plugin indent on
+set so=6 "cursor above 8 lines from the bottom of the screen
 
 "indent
 set smartindent
