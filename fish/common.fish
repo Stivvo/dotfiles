@@ -5,7 +5,7 @@ alias lla='lsd -hla'
 alias tree='lsd -h --tree'
 
 alias v='nvim'
-alias vv='PLUG="n" nvim --noplugin'
+alias vv='nvim --noplugin'
 alias t='floaterm'
 alias diff='diff --color'
 alias less="less -R"

@@ -21,7 +21,7 @@ if $COLORTERM == 'truecolor'
 endif
 
 "remember last line and undos
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+au BufReadPost * | silent! exe "normal! g'\"" |
 set undofile
 set undodir=$HOME/.local/undonvim
 
