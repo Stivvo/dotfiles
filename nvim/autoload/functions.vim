@@ -44,3 +44,16 @@ function functions#GetFileName()
     let @+=expand('%:p')
     echo expand('%:p')
 endfunction
+
+"speed up vim for faster macro
+function functions#ToggleFaster()
+    if &syntax == 'vim'
+        set syntax=off
+        set noswapfile
+        set lazyredraw
+    else
+        set syntax=vim
+        set swapfile
+        set nolazyredraw
+    endif
+endfunction

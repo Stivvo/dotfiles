@@ -28,7 +28,7 @@ tnoremap <silent> <leader>tn <C-\><C-n>:FloatermNext<CR>
 nnoremap <silent> <leader>tk :FloatermKill<CR>
 tnoremap <silent> <leader>tk <C-\><C-n>:FloatermKill<CR>
 
-nnoremap <Space>5 :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
+nnoremap <Space>6 :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
 
 tnoremap <silent> <C-space> <C-\><C-n>
 tnoremap <silent> <C-h> <C-\><C-n><C-w><C-k><C-w><C-h>

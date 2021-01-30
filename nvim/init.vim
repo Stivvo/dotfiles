@@ -72,6 +72,7 @@ set nospell spelllang=
 noremap <silent> <Space>2 :call functions#ToggleSpell()<Cr>
 nnoremap <silent><Space>3 :call functions#ToggleFold()<Cr>
 nnoremap <Space>4 :Vex<Cr>
+nnoremap <silent><Space>5 :call functions#ToggleFaster()<Cr>
 
 "switch between splits
 set splitbelow splitright
