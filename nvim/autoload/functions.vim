@@ -1,4 +1,5 @@
-function functions#SetColorColumn()
+"cycle trough no column, 80, 98, 120 char
+function functions#ToggleColorColumn()
     if &colorcolumn == 120
         set colorcolumn=0
         echo "--"
@@ -14,7 +15,8 @@ function functions#SetColorColumn()
     endif
 endfunction
 
-function functions#SetSpell()
+"cycle trough no spell, it, eng
+function functions#ToggleSpell()
     if &spell == 0
         set spell spelllang=it
     else
@@ -26,7 +28,8 @@ function functions#SetSpell()
     endif
 endfunction
 
-function functions#SetFold()
+"enable and set folding
+function functions#ToggleFold()
     if &foldmethod == 'manual'
         set foldmethod=indent
         normal zM
@@ -36,6 +39,7 @@ function functions#SetFold()
     endif
 endfunction
 
+"copy the current file name to the clipboard
 function functions#GetFileName()
     let @+=expand('%:p')
     echo expand('%:p')

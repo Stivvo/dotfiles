@@ -64,23 +64,13 @@ nnoremap <Space>b F<Space>
 nnoremap cn *``cgn
 nnoremap cN *``cgN
 
-"numbers
+"numbered mappings
 set number relativenumber
 nnoremap <silent> <Space><Leader> :set number relativenumber!<Cr>
-
-"columns
-set colorcolumn=0
-noremap <Space>1 :call functions#SetColorColumn()<Cr>
-
-"spelling
+noremap <Space>1 :call functions#ToggleColorColumn()<Cr>
 set nospell spelllang=
-noremap <silent> <Space>2 :call functions#SetSpell()<Cr>
-
-"toggle folding
-set foldmethod=manual
-nnoremap <silent><Space>3 :call functions#SetFold()<Cr>
-
-"netrw vertical split
+noremap <silent> <Space>2 :call functions#ToggleSpell()<Cr>
+nnoremap <silent><Space>3 :call functions#ToggleFold()<Cr>
 nnoremap <Space>4 :Vex<Cr>
 
 "switch between splits
