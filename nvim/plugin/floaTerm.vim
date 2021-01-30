@@ -6,27 +6,27 @@ let g:floaterm_width=0.5
 let g:floaterm_height=0.6
 
 "horizontal split
-nnoremap <silent> <leader>tx :FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
-tnoremap <silent> <leader>tx <C-\><C-n>:FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
+nnoremap <silent> ¬X :FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
+tnoremap <silent> ¬X <C-\><C-n>:FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
 
 "vertical split
-nnoremap <silent> <leader>tv :FloatermNew --wintype=normal --position=right<CR>
-tnoremap <silent> <leader>tv <C-\><C-n>:FloatermNew --wintype=normal --position=right<CR>
+nnoremap <silent> ¬W :FloatermNew --wintype=normal --position=right<CR>
+tnoremap <silent> ¬W <C-\><C-n>:FloatermNew --wintype=normal --position=right<CR>
 
-nnoremap <silent> <leader>tt :FloatermToggle<CR>
-tnoremap <silent> <leader>tt <C-\><C-n>:FloatermToggle<CR>
+nnoremap <silent> ¬T :FloatermToggle<CR>
+tnoremap <silent> ¬T <C-\><C-n>:FloatermToggle<CR>
 
-nnoremap <silent> <leader>tm :FloatermNew<CR>
-tnoremap <silent> <leader>tm <C-\><C-n>:FloatermNew<CR>
+nnoremap <silent> ¬M :FloatermNew<CR>
+tnoremap <silent> ¬M <C-\><C-n>:FloatermNew<CR>
 
-nnoremap <silent> <leader>tp :FloatermPrev<CR>
-tnoremap <silent> <leader>tp <C-\><C-n>:FloatermPrev<CR>
+nnoremap <silent> ¬P :FloatermPrev<CR>
+tnoremap <silent> ¬P <C-\><C-n>:FloatermPrev<CR>
 
-nnoremap <silent> <leader>tn :FloatermNext<CR>
-tnoremap <silent> <leader>tn <C-\><C-n>:FloatermNext<CR>
+nnoremap <silent> ¬N :FloatermNext<CR>
+tnoremap <silent> ¬N <C-\><C-n>:FloatermNext<CR>
 
-nnoremap <silent> <leader>tk :FloatermKill<CR>
-tnoremap <silent> <leader>tk <C-\><C-n>:FloatermKill<CR>
+nnoremap <silent> ¬K :FloatermKill<CR>
+tnoremap <silent> ¬K <C-\><C-n>:FloatermKill<CR>
 
 nnoremap <Space>6 :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
 
