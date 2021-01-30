@@ -32,14 +32,13 @@ ln -sf ${PWD}/imv $XDG_CONFIG_HOME/imv/config
 ln -sf ${PWD}/alacritty.yml $XDG_CONFIG_HOME/alacritty/alacritty.yml
 
 echo "nvim..."
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ln -sf ${PWD}/nvim/init.vim $XDG_CONFIG_HOME/nvim/init.vim
 ln -sf ${PWD}/nvim/plugin $XDG_CONFIG_HOME/nvim/
 ln -sf ${PWD}/nvim/ftplugin $XDG_CONFIG_HOME/nvim/
 ln -sf ${PWD}/nvim/autoload $XDG_CONFIG_HOME/nvim/
 ln -sf ${PWD}/nvim/other $XDG_CONFIG_HOME/nvim/
-nvim -c "PlugInstall|q|q"
+./nvim/installplugs.sh start
+./nvim/installplugs.sh opt
 
 echo "sway..."
 ln -sf ${PWD}/swaylock $XDG_CONFIG_HOME/swaylock/config
