@@ -1,3 +1,5 @@
+packadd $XDG_CONFIG_HOME/nvim/pack/plugins/opt/vimtex
+
 "virtual lines as normal lines
 nnoremap <buffer> j gj
 nnoremap <buffer> k gk

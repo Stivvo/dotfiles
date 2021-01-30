@@ -3,6 +3,7 @@ let mapleader="`"
 set mouse=a
 set confirm
 set so=6 "cursor above 8 lines from the bottom of the screen
+silent! helptags ALL
 
 "indent
 set smartindent
@@ -15,11 +16,8 @@ set tabstop=4 "width of tab
 set ignorecase
 set showmatch
 
-if $PLUG != 'n'
-    source $XDG_CONFIG_HOME/nvim/other/vim-plug.vim
-    if $COLORTERM == 'truecolor'
-        source $XDG_CONFIG_HOME/nvim/other/gui.vim
-    endif
+if $COLORTERM == 'truecolor'
+	source $XDG_CONFIG_HOME/nvim/other/gui.vim
 endif
 
 "remember last line and undos

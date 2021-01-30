@@ -1,4 +1,5 @@
-source ~/.config/nvim/other/markdown-preview.vim
+source $XDG_CONFIG_HOME/nvim/other/markdown-preview.vim
+packadd vim-table-mode
 
 if resolve(expand('%:t')) == "README.md"
     setlocal textwidth=80

@@ -1,2 +1,1 @@
-source ~/.config/nvim/other/vim-clang-format.vim
-source ~/.config/nvim/other/Cbinding.vim
+source $XDG_CONFIG_HOME/nvim/other/Cbinding.vim

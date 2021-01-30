@@ -1,3 +1,5 @@
+source $XDG_CONFIG_HOME/nvim/other/vim-clang-format.vim
+
 nnoremap <silent> <buffer> <Space>s :CocCommand clangd.switchSourceHeader<Cr>
 
 if expand(strpart(split(expand('%'), "\\.")[1], 0, 1)) == "c" "c-cpp-cc file

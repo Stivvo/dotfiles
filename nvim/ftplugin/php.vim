@@ -1,3 +1,5 @@
+source $XDG_CONFIG_HOME/nvim/other/closeTag.vim
+
 "open php
 nnoremap <buffer> <Space>h :!firefox --new-window 'localhost/esercizi/%'<Cr>
 
