@@ -49,11 +49,9 @@ endfunction
 function functions#ToggleFaster()
     if &syntax == 'off'
         set syntax=on
-        set swapfile
         set nolazyredraw
     else
         set syntax=off
-        set noswapfile
         set lazyredraw
     endif
 endfunction
