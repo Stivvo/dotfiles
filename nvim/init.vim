@@ -2,8 +2,7 @@
 let mapleader="`"
 set mouse=a
 set confirm
-set so=6 "cursor above 8 lines from the bottom of the screen
-silent! helptags ALL
+set so=6 "cursor above 6 lines from the bottom of the screen
 
 "indent
 set smartindent
@@ -24,17 +23,19 @@ endif
 au BufReadPost * | silent! exe "normal! g'\"" |
 set undofile
 set undodir=$HOME/.local/undonvim
+set noswapfile
 
 " Remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
 "general mappings
-nnoremap <silent> <Esc><Esc> :w<Cr>:nohlsearch<Cr>
+nnoremap <silent> <Esc> :w<Cr>:nohlsearch<Cr>
 nnoremap ^ @m
 nnoremap Y y$
 nnoremap cw dwi
 nnoremap <Space>y :call functions#GetFileName()<Cr>
 nnoremap <silent> <Space>d :bdelete<Cr>
+nnoremap + <Enter>
 
 "change/delete if/for
 nnoremap dai $?if\\|for<Cr>dt{da{
