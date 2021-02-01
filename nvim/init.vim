@@ -67,7 +67,6 @@ nnoremap cN *``cgN
 set number relativenumber
 nnoremap <silent> <Space><Leader> :set number relativenumber!<Cr>
 noremap <Space>1 :call functions#ToggleColorColumn()<Cr>
-set nospell spelllang=
 noremap <silent> <Space>2 :call functions#ToggleSpell()<Cr>
 nnoremap <silent><Space>3 :call functions#ToggleFold()<Cr>
 nnoremap <Space>4 :Vex<Cr>

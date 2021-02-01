@@ -1,16 +1,11 @@
-function GetLang()
-      return &spelllang
-endfunction
-
 let g:lightline = {
       \ 'colorscheme': 'powerline',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             ['readonly', 'filename', 'modified', 'gitbranch', 'gitgutter', 'language' ] ]
+      \             ['readonly', 'filename', 'modified', 'gitbranch', 'gitgutter', 'spell' ] ]
       \ },
       \ 'component_function': {
       \   'gitgutter': 'GitStatus',
-      \   'language': 'GetLang',
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
