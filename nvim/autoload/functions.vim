@@ -47,13 +47,13 @@ endfunction
 
 "speed up vim for faster macro
 function functions#ToggleFaster()
-    if &syntax == 'vim'
+    if &syntax == 'off'
+        set syntax=on
+        set swapfile
+        set nolazyredraw
+    else
         set syntax=off
         set noswapfile
         set lazyredraw
-    else
-        set syntax=vim
-        set swapfile
-        set nolazyredraw
     endif
 endfunction
