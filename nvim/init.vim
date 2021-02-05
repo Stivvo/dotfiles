@@ -66,8 +66,8 @@ nnoremap cN *``cgN
 "numbered mappings
 set number relativenumber
 nnoremap <silent> <Space><Leader> :set number relativenumber!<Cr>
-noremap <Space>1 :call functions#ToggleColorColumn()<Cr>
-noremap <silent> <Space>2 :call functions#ToggleSpell()<Cr>
+nnoremap <Space>1 :call functions#ToggleColorColumn()<Cr>
+nnoremap <silent> <Space>2 :call functions#ToggleSpell()<Cr>
 nnoremap <silent><Space>3 :call functions#ToggleFold()<Cr>
 nnoremap <Space>4 :Vex<Cr>
 nnoremap <silent><Space>5 :call functions#ToggleFaster()<Cr>
