@@ -1,7 +1,7 @@
 #!/bin/dash
 
 export EDITOR=nvim
-export BROWSER=firefox
+export BROWSER=librewolf
 export PAGER="less -R"
 export LD_LIBRARY_PATH=/usr/local/lib:/lib:/usr/lib:/usr/bin/lib
 export PATH=/home/stefano/.local/bin:/home/stefano/.local/script:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl
