@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PAKDIR=$XDG_CONFIG_HOME/nvim/pack/plugins
+mkdir -p $PAKDIR/$1
 while IFS= read -r line;
 do
 	if [ ${line:0:1} != "#"  ]
