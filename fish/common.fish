@@ -11,10 +11,10 @@ alias diff='diff --color'
 alias less="less -R"
 
 alias a='pikaur --color=always'
-alias p='sudo pacman'
+alias p='doas pacman'
 alias q='xbps-query -Rs'
-alias i='sudo xbps-install -S'
-alias u='sudo xbps-install -Su'
+alias i='doas xbps-install -S'
+alias u='doas xbps-install -Su'
 
 alias fgrep="fgrep --color"
 alias egrep="egrep --color"
