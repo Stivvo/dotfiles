@@ -20,7 +20,7 @@ if $COLORTERM == 'truecolor'
 endif
 
 "remember last line and undos
-au BufReadPost * | silent! exe "normal! g'\"" |
+au BufReadPost * normal g'"
 set undofile
 set undodir=$HOME/.local/undonvim
 set noswapfile
