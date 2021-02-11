@@ -34,3 +34,5 @@ alias glog='git log --color=always'
 alias glol='git log --pretty=oneline --color=always'
 alias gdiff='git diff --color'
 alias gt='git status'
+
+alias vars='~/.local/script/variables.sh 3 fish'
