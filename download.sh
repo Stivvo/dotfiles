@@ -18,6 +18,9 @@ source $HOME/.local/script/variables.sh
 echo "creating useful dirs..."
 mkdir $XDG_CACHE_HOME $XDG_CACHE_HOME/markdown/ $XDG_CACHE_HOME/monitor $XDG_CONFIG_HOME $XDG_CONFIG_HOME/fish $XDG_CONFIG_HOME/mako $XDG_CONFIG_HOME/nvim $XDG_CONFIG_HOME/zathura $XDG_CONFIG_HOME/swaylock $XDG_CONFIG_HOME/imv $XDG_CONFIG_HOME/alacritty $XDG_CACHE_HOME/shot
 
+echo "execute as root: cp ${PWD}/doas.conf /etc/"
+su
+
 echo "shells..."
 ln -sf ${PWD}/bashrc $HOME/.bashrc
 ln -sf ${PWD}/fish/config.fish $XDG_CONFIG_HOME/fish/config.fish
@@ -49,7 +52,6 @@ doas cp ${PWD}/pacman/mirrorlist /etc/pacman.d/mirrorlist
 doas cp ${PWD}/pacman/makepkg.conf /etc/makepkg.conf
 doas cp ${PWD}/pacman/pacman.conf /etc/pacman.conf
 doas cp ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
-doas cp ${PWD}/doas.conf /etc/doas.conf
 
 echo "git config..."
 git config --global user.name Stivvo
