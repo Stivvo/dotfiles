@@ -17,6 +17,7 @@ export XDG_DOCUMENTS_DIR=$HOME/Documenti
 export XDG_MUSIC_DIR=$HOME/Musica
 export XDG_PICTURES_DIR=$HOME/Immagini
 export XDG_VIDEOS_DIR=$HOME/Video
+export XDG_DATA_DIRS=/var/lib/flatpak/exports/share:$XDG_DATA_HOME/flatpak/exports/share:/usr/local/share:/usr/share:$XDG_DATA_DIRS
 
 export FFF_FILE_FORMAT=" %f"
 export FFF_MARK_FORMAT=" > %f*"

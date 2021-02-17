@@ -66,6 +66,7 @@ then
 
 else
     # If volume is muted, display the mute sybol:
+
     notify-send.sh "Muted (volume: $VOLUME%)" \
         -t 2000 \
         --replace-file=/tmp/audio-notification \
