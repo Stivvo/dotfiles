@@ -50,8 +50,10 @@ function functions#ToggleFaster()
     if &syntax == 'off'
         set syntax=on
         set nolazyredraw
+		set undofile
     else
         set syntax=off
         set lazyredraw
+		set noundofile
     endif
 endfunction
