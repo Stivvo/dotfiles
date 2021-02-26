@@ -16,7 +16,13 @@ set ignorecase
 set showmatch
 
 if $COLORTERM == 'truecolor'
-	source $XDG_CONFIG_HOME/nvim/other/gui.vim
+	"truecolor on alacritty
+	set termguicolors
+	colorscheme codedark
+	highlight Normal ctermbg=none
+	highlight NonText ctermbg=none
+	hi htmlBold gui=bold
+	hi htmlItalic gui=italic
 endif
 
 "remember last line and undos
