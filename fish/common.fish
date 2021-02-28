@@ -10,7 +10,7 @@ alias t='floaterm'
 alias diff='diff --color'
 alias less="less -R"
 
-alias p='doas pacman'
+alias pc='doas pacman'
 alias q='xbps-query -Rs'
 alias i='doas xbps-install -S'
 alias u='doas xbps-install -Su'
