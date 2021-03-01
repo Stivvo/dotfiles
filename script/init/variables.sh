@@ -43,6 +43,7 @@ export FFF_FAV9=/run/media/stefano
 
 export MANGOHUD_DLSYM=1
 export MANGOHUD=1
+export $(dbus-launch)
 
 export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
 export FZF_CTRL_T_COMMAND=${FZF_DEFAULT_COMMAND}
