@@ -4,7 +4,7 @@ export EDITOR=nvim
 export BROWSER=librewolf
 export PAGER="less -R"
 export LD_LIBRARY_PATH=/usr/local/lib:/lib:/usr/lib:/usr/bin/lib
-export PATH=/home/stefano/.local/bin:/home/stefano/.local/script:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/plan9/bin
+export PATH=$HOME/.local/bin:$HOME/.local/script:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/plan9/bin
 
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
