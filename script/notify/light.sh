@@ -1,17 +1,14 @@
-#!/bin/bash
-
-[ -f /dev/shm/light.sh.lock ] && exit
-echo > /dev/shm/light.sh.lock
+#!/bin/dash
 
 LIGHTFILE=$XDG_CACHE_HOME/light.var.txt
 BRIGHTNESS=$(cat $LIGHTFILE)
 
-if [ "$1" == "u" ]
+if [ "$1" = "u" ]
 then
-    let BRIGHTNESS+=5
-elif [ "$1" == "d" ]
+    BRIGHTNESS=$(( BRIGHTNESS+5 ))
+elif [ "$1" = "d" ]
 then
-    let BRIGHTNESS-=5
+    BRIGHTNESS=$(( BRIGHTNESS-5 ))
 fi
 
 if [ $BRIGHTNESS -ge "100" ]
@@ -31,5 +28,3 @@ notify-send.sh  "Brightness ${BRIGHTNESS}%"  \
     -h int:value:${BRIGHTNESS} \
     --replace-file=/tmp/brightness-notification \
     -h string:synchronous:brightness-change \
-
-rm /dev/shm/light.sh.lock

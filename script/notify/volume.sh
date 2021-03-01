@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/bin/dash
 
-[ -f /dev/shm/volume.sh.lock ] && exit
-echo > /dev/shm/volume.sh.lock
+# Script to create pop-up notification when volume changes.
 
 case $1 in
     "audiomute")
@@ -18,11 +17,6 @@ case $1 in
         amixer set Master "${2}%-"
         ;;
 esac
-
-# Script to create pop-up notification when volume changes.
-
-# Create a delay so the change in volume can be registered:
-sleep 0.05
 
 # Get the volume and check if muted or not (ISMUTE):
 VOLUME=$(amixer get Master | grep -m 1 -E -o "[0-9]+\%")
@@ -45,9 +39,9 @@ then
         --replace-file=/tmp/audio-notification \
         -h string:synchronous:volume-change
 
-elif [ "$STATE" == "on" ]
+elif [ "$STATE" = "on" ]
 then
-    if [ "${VOLUME}" == "0" ]; then
+    if [ "${VOLUME}" = "0" ]; then
         ICON="${ICONPATH}vol-mute.png"
     elif [ "${VOLUME}" -lt "33" ] && [ $VOLUME -gt "0" ]; then
         ICON="${ICONPATH}vol-low.png"
@@ -76,5 +70,3 @@ else
         -h string:synchronous:volume-change
 
 fi
-
-rm /dev/shm/volume.sh.lock
