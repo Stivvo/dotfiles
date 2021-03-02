@@ -1,24 +1,19 @@
-#!/bin/bash
+#!/bin/dash
 
 CURRENTBG=/dev/shm/background
-[ -z "$(cat $CURRENTBG)" ] && echo "0" > $CURRENTBG
-ID="$(cat $CURRENTBG)"
-let "ID = $ID + 1"
+[ ! -f "$CURRENTBG" ] && echo "0" > $CURRENTBG
+IFS= read ID <$CURRENTBG
+ID=$(( $ID+1 ))
 echo $ID > $CURRENTBG
+ID1=$ID
+L=78
 
-LIST="$XDG_PICTURES_DIR/wallpapers/list"
-CONTINUE="true"
-
-while [ "$CONTINUE" = "true" ]
+while [  "$ID1" = "$ID" ]
 do
-    L=$(wc -l $LIST | awk '{print $1}')
-    R=$[RANDOM % L]
-    let R++
-    IMG="$(sed -n "${R}p" $LIST)"
-    # echo "$R $IMG" > /dev/shm/currentbg
+	R=$(( $(date +%s)%L ))
+    IMG="$(sed -n "${R}p" $XDG_PICTURES_DIR/wallpapers/list)"
     pkill swaybg
     swaybg -i "${PA}${IMG}" -m fill &
-    # echo $ID
     sleep 30m
-    [ "$ID" != "$(cat $CURRENTBG)" ] && CONTINUE="false"
+	read ID <$CURRENTBG
 done
