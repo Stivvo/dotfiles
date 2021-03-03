@@ -18,6 +18,8 @@ export XDG_MUSIC_DIR=$HOME/Musica
 export XDG_PICTURES_DIR=$HOME/Immagini
 export XDG_VIDEOS_DIR=$HOME/Video
 export XDG_DATA_DIRS=/usr/local/share:/usr/share:$XDG_DATA_DIRS
+export PKG_CONFIG_LIBDIR=/usr/local/lib/pkgconfig:/usr/local/share/pkgconfig:$PKG_CONFIG_LIBDIR
+export PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/share/pkgconfig:$PKG_CONFIG_PATH
 
 export FFF_FILE_FORMAT=" %f"
 export FFF_MARK_FORMAT=" > %f*"
@@ -39,7 +41,7 @@ export FFF_FAV5=$XDG_PICTURES_DIR/wallpapers
 export FFF_FAV6=$XDG_PICTURES_DIR/screen
 export FFF_FAV7=$XDG_DOWNLOAD_DIR
 export FFF_FAV8=$XDG_VIDEOS_DIR/remote
-export FFF_FAV9=/run/media/stefano
+export FFF_FAV9=/run/media/$(whoami)
 
 export MANGOHUD_DLSYM=1
 export MANGOHUD=1
