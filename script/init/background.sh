@@ -6,11 +6,11 @@ IFS= read ID <$CURRENTBG
 ID=$(( $ID+1 ))
 echo $ID > $CURRENTBG
 ID1=$ID
-L=78
+read L <$XDG_PICTURES_DIR/wallpapers/n
 
 while [  "$ID1" = "$ID" ]
 do
-	R=$(( $(date +%s)%L ))
+	R=$(( $(($(head -c 100 /dev/urandom | tr -dc '0-9')%$L))+1 ))
     IMG="$(sed -n "${R}p" $XDG_PICTURES_DIR/wallpapers/list)"
     pkill swaybg
     swaybg -i "${PA}${IMG}" -m fill &
