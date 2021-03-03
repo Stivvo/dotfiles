@@ -32,7 +32,7 @@ do
                 wlr-randr --output HDMI-A-1 --off
                 wlr-randr --output HDMI-A-2 --off
 
-                notify-send.sh "monitor"
+                CONF="monitor"
                 END=1
             }
             ;;
@@ -42,19 +42,17 @@ do
                 wlr-randr --output DP-1 --off
                 wlr-randr --output HDMI-A-2 --off
 
-                notify-send.sh "tv"
+                CONF="tv"
                 END=1
             }
             ;;
         "3") # double
             wlr-randr | fgrep - | fgrep -C 2 DP-1 | fgrep HDMI-A-1 && {
                 wlr-randr --output DP-1 --pos 0,0 --on
-                notify-send.sh "double"
-
                 wlr-randr --output HDMI-A-1 --pos 1920,0 --on
-                notify-send.sh "double"
-
                 wlr-randr --output HDMI-A-2 --off
+
+                CONF="double"
                 END=1
             }
             ;;
@@ -65,7 +63,7 @@ do
                 wlr-randr --output DP-1 --off
                 wlr-randr --output eDP-1 --off
 
-                notify-send.sh "cinema"
+                CONF="cinema"
                 END=1
             }
             ;;
@@ -74,3 +72,7 @@ do
 done
 VAR=$((VAR-1))
 echo "$VAR" > $FILE
+
+pkill mako
+mako &
+notify-send $CONF
