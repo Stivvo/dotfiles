@@ -10,7 +10,7 @@ case $1 in
     *)
         if [ -f $FILE ]
         then
-            VAR=$(cat $FILE)
+            IFS= read VAR <$FILE
         else
             VAR=0
         fi
@@ -26,7 +26,7 @@ do
 
     case "$VAR" in
         "1") # monitor
-             wlr-randr | fgrep DP-1 || wlr-randr | fgrep eDP-1 && {
+             wlr-randr | fgrep DP-1 && {
                 wlr-randr --output DP-1 --pos 0,0 --on
                 wlr-randr --output eDP-1 --on
                 wlr-randr --output HDMI-A-1 --off
@@ -47,8 +47,7 @@ do
             }
             ;;
         "3") # double
-            wlr-randr | fgrep HDMI-A-1 &&
-            wlr-randr | fgrep DP-1  && {
+            wlr-randr | fgrep - | fgrep -C 2 DP-1 | fgrep HDMI-A-1 && {
                 wlr-randr --output DP-1 --pos 0,0 --on
                 notify-send.sh "double"
 
