@@ -1,7 +1,7 @@
 #!/bin/dash
 
 export EDITOR=nvim
-export BROWSER=librewolf
+export BROWSER=firefox
 export PAGER="less -R"
 export LD_LIBRARY_PATH=/usr/local/lib:/lib:/usr/lib:/usr/bin/lib
 export PATH=$HOME/.local/bin:$HOME/.local/script:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/lib/plan9/bin
