@@ -5,13 +5,8 @@ let g:floaterm_gitcommit = 'floaterm'
 let g:floaterm_width=0.5
 let g:floaterm_height=0.6
 
-"horizontal split
-nnoremap <silent> <Leader>x :FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
-tnoremap <silent> <Leader>x <C-\><C-n>:FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
-
-"vertical split
-nnoremap <silent> <Leader>v :FloatermNew --wintype=normal --position=right<CR>
-tnoremap <silent> <Leader>v <C-\><C-n>:FloatermNew --wintype=normal --position=right<CR>
+nnoremap <silent> <Leader>v :FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
+tnoremap <silent> <Leader>v <C-\><C-n>:FloatermNew --height=0.4 --wintype=normal --position=bottom<CR>
 
 nnoremap <silent> <Leader>t :FloatermToggle<CR>
 tnoremap <silent> <Leader>t <C-\><C-n>:FloatermToggle<CR>
@@ -31,8 +26,8 @@ tnoremap <silent> <Leader>k <C-\><C-n>:FloatermKill<CR>
 nnoremap <Space>6 :FloatermNew! --height=0.5 --width=0.3 fff <Cr>
 
 tnoremap <silent> <C-space> <C-\><C-n>
-tnoremap <silent> <C-h> <C-\><C-n><C-w><C-k><C-w><C-h>
-tnoremap <silent> <C-u> <C-\><C-n><C-w><C-k>
+tnoremap <silent> <C-w>k <C-\><C-n><C-w>k
+tnoremap <silent> <C-h> <C-\><C-n><C-w>h
 
 tnoremap <silent> <C-Up> <C-\><C-n>:resize +5<Cr>A
 tnoremap <silent> <C-Down> <C-\><C-n>:resize -5<Cr>A
