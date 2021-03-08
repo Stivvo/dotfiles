@@ -96,8 +96,8 @@ omap af <Plug>(coc-funcobj-a)
 " Use <TAB> for selections ranges.
 " NOTE: Requires 'textDocument/selectionRange' support from the language server.
 " coc-tsserver, coc-python are the examples of servers that support it.
-nmap <silent> <TAB> <Plug>(coc-range-select)
-xmap <silent> <TAB> <Plug>(coc-range-select)
+" nmap <silent> <TAB> <Plug>(coc-range-select)
+" xmap <silent> <TAB> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
 command! -nargs=0 Format :call CocAction('format')
@@ -124,14 +124,14 @@ function! s:select_current_word()
 endfunc
 nmap <expr> <silent> <C-g> <SID>select_current_word()
 
+unmap <C-i>
+
 "multiple cursors
 nmap <silent> <C-s> <Plug>(coc-cursors-position)
 nmap <silent> <C-c> <Plug>(coc-cursors-word)
 xmap <silent> <C-c> <Plug>(coc-cursors-range)
 " use normal command like `<leader>xi(`
 "map <leader>x <Plug>(coc-cursors-operator)
-
-nunmap <C-i>
 
 " coc plugins
 let g:coc_global_extensions = [

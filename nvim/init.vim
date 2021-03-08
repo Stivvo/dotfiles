@@ -41,7 +41,6 @@ nnoremap Y y$
 nnoremap cw dwi
 nnoremap <Space>y :call functions#GetFileName()<Cr>
 nnoremap <silent> <Space>d :bdelete<Cr>
-nnoremap + <Enter>
 
 "change/delete if/for
 nnoremap dai $?if\\|for<Cr>dt{da{
@@ -52,14 +51,9 @@ nnoremap cic $?if\\|for<Cr>f(ci(
 vnoremap J :m '>+1<Cr>gv=gv
 vnoremap K :m '<-2<Cr>gv=gv
 
-"trim and join lines
-vnoremap <Enter> J
-nnoremap <Leader><Enter> J
-nnoremap <Space><Enter> i<Enter><Esc>
-
 "buffers
-nnoremap <silent> K :bprevious<Cr>
-nnoremap <silent> J :bNext<Cr>
+nnoremap <silent> <S-Tab> :bprevious<Cr>
+nnoremap <silent> <Tab> :bNext<Cr>
 
 "move from space to space
 nnoremap <Space>w f<Space>
