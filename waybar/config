@@ -1,9 +1,5 @@
 [{
     "layer": "bottom",
-    "output": [
-        "eDP-1",
-        "DP-1"
-    ],
     "height": 30,
     "width": 1366,
     "modules-left": [
@@ -31,10 +27,16 @@
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "clock": {
+    "clock#date": {
         "timezone": "Europe/Rome",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%b %a %d}",
+        "format": "{:%b %a %d    %H:%M}",
+        "interval": 60
+    },
+    "clock#time": {
+        "timezone": "Europe/Rome",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{%H:%M}",
         "interval": 60
     },
     "custom/ram": {
@@ -106,37 +108,6 @@
             ]
         },
         "on-click": "sudo ydotool key super+9 && pavucontrol"
-    },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
-    }
-},
-{
-    "layer": "bottom",
-    "output": "HDMI-A-1",
-    "height": 30,
-    "width": 1366,
-    "modules-left": [
-        "sway/workspaces",
-        "sway/mode"
-    ],
-    "modules-center": [
-        "sway/window"
-    ],
-    "modules-right": [
-        "clock",
-        "tray"
-    ],
-    "sway/workspaces": {
-        "disable-scroll": false,
-        "all-outputs": true
-    },
-    "clock": {
-        "timezone": "Europe/Rome",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%b %a %d}",
-        "interval": 60
     },
     "tray": {
         "icon-size": 21,
