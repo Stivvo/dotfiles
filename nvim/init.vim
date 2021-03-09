@@ -55,10 +55,6 @@ vnoremap K :m '<-2<Cr>gv=gv
 nnoremap <silent> <S-Tab> :bprevious<Cr>
 nnoremap <silent> <Tab> :bNext<Cr>
 
-"move from space to space
-nnoremap <Space>w f<Space>
-nnoremap <Space>b F<Space>
-
 "multiple change
 nnoremap cn *``cgn
 nnoremap cN *``cgN

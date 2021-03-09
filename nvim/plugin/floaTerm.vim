@@ -11,8 +11,8 @@ tnoremap <silent> <Leader>v <C-\><C-n>:FloatermNew --height=0.4 --wintype=normal
 nnoremap <silent> <Leader>t :FloatermToggle<CR>
 tnoremap <silent> <Leader>t <C-\><C-n>:FloatermToggle<CR>
 
-nnoremap <silent> <Leader>e :FloatermNew<CR>
-tnoremap <silent> <Leader>e <C-\><C-n>:FloatermNew<CR>
+nnoremap <silent> <Leader>w :FloatermNew<CR>
+tnoremap <silent> <Leader>w <C-\><C-n>:FloatermNew<CR>
 
 nnoremap <silent> <Leader>p :FloatermPrev<CR>
 tnoremap <silent> <Leader>p <C-\><C-n>:FloatermPrev<CR>

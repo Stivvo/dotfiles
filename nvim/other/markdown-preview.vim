@@ -86,4 +86,4 @@ let g:mkdp_port = ''
 let g:mkdp_page_title = '「${name}」'
 
 " toggle preview
-nnoremap <silent> <buffer> <leader>w :MarkdownPreview<Cr>
+nnoremap <silent> <buffer> <space>w :MarkdownPreview<Cr>
