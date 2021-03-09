@@ -4,3 +4,5 @@
 <Ctrl+k> = prev
 n = next
 p = prev
+<Shift+X> = exec rm "$img_current_file"; close
+<Shift+R> = exec magick mogrify -rotate 90 "$imv_current_file"
