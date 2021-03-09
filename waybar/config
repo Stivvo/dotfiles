@@ -68,7 +68,28 @@
         ],
         "interval": 15
     },
-    "battery": {
+    "battery#bat1": {
+		"bat": "BAT1",
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "interval": 92,
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "battery#bat2": {
+		"bat": "BAT2",
         "states": {
             "good": 95,
             "warning": 30,
