@@ -27,7 +27,7 @@
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },
-    "clock#date": {
+    "clock": {
         "timezone": "Europe/Rome",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%b %a %d    %H:%M}",
@@ -68,7 +68,7 @@
         ],
         "interval": 15
     },
-    "battery#bat1": {
+    "battery": {
 		"bat": "BAT1",
         "states": {
             "good": 95,
