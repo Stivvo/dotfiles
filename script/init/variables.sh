@@ -54,6 +54,8 @@ if [ "$1" = "1" ]
 then
 	export MOZ_ENABLE_WAYLAND=1
 	export QT_QPA_PLATFORM=wayland
+	export XDG_CURRENT_DESKTOP=kde
+	export QT_QPA_PLATFORM_THEME=kde
 elif [ "$1" = "2" ]
 then
 	export MOZ_ENABLE_WAYLAND=0

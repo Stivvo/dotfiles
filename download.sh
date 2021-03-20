@@ -76,6 +76,3 @@ fi
 
 echo "corectrl configuration..."
 doas cp polkit /etc/polkit-1/rules.d/90-corectrl.rules
-
-echo "setting the yaru GTK theme..."
-$HOME/.local/script/theme.sh
