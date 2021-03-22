@@ -18,8 +18,7 @@ source $HOME/.local/script/variables.sh
 echo "creating useful dirs..."
 mkdir $XDG_CACHE_HOME $XDG_CACHE_HOME/markdown/ $XDG_CACHE_HOME/monitor $XDG_CONFIG_HOME $XDG_CONFIG_HOME/fish $XDG_CONFIG_HOME/mako $XDG_CONFIG_HOME/nvim $XDG_CONFIG_HOME/zathura $XDG_CONFIG_HOME/swaylock $XDG_CONFIG_HOME/imv $XDG_CONFIG_HOME/alacritty $XDG_CACHE_HOME/shot
 
-echo "execute as root: cp ${PWD}/doas.conf /etc/"
-su
+echo "run as root: cp ${PWD}/doas.conf /etc/ && cp ${PWD}/sddm.conf /etc/"
 
 echo "shells..."
 ln -sf ${PWD}/bashrc $HOME/.bashrc
