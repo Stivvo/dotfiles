@@ -18,14 +18,10 @@ $HOME/.local/script/variables.sh
 echo "creating useful dirs..."
 mkdir $XDG_CACHE_HOME $XDG_CACHE_HOME/markdown/ $XDG_CACHE_HOME/monitor $XDG_CONFIG_HOME $XDG_CONFIG_HOME/fish $XDG_CONFIG_HOME/mako $XDG_CONFIG_HOME/nvim $XDG_CONFIG_HOME/zathura $XDG_CONFIG_HOME/swaylock $XDG_CONFIG_HOME/imv $XDG_CONFIG_HOME/alacritty $XDG_CACHE_HOME/shot
 
-echo "run as root: cp ${PWD}/doas.conf /etc/ && cp ${PWD}/sddm.conf /etc/"
-
 echo "shells..."
 ln -sf ${PWD}/bashrc $HOME/.bashrc
 ln -sf ${PWD}/fish/config.fish $XDG_CONFIG_HOME/fish/config.fish
 ln -sf ${PWD}/fish/common.fish $XDG_CONFIG_HOME/fish/common.fish
-echo "set default shell to fish, reboot required"
-doas chsh -s $(whereis fish | awk '{print $2}') $USER
 
 echo "creating symlinks for programs configs..."
 ln -sf ${PWD}/mako $XDG_CONFIG_HOME/mako/config
@@ -46,12 +42,6 @@ echo "sway..."
 ln -sf ${PWD}/swaylock $XDG_CONFIG_HOME/swaylock/config
 ln -sf ${PWD}/waybar $XDG_CONFIG_HOME/
 
-echo "pacman config..."
-doas cp ${PWD}/pacman/mirrorlist /etc/pacman.d/mirrorlist
-doas cp ${PWD}/pacman/makepkg.conf /etc/makepkg.conf
-doas cp ${PWD}/pacman/pacman.conf /etc/pacman.conf
-doas cp ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
-
 echo "git config..."
 git config --global user.name Stivvo
 git config --global user.email stivvo01@gmail.com
@@ -71,6 +61,3 @@ then
 	curl -L https://get.oh-my.fish | fish
     fish --command="omf install l"
 fi
-
-echo "corectrl configuration..."
-doas cp polkit /etc/polkit-1/rules.d/90-corectrl.rules
