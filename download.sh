@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 mkdir $HOME/.local/script
 echo "symlink scripts to ~/.local/script..."
@@ -13,7 +13,7 @@ done
 ln -sf ${PWD}/script/notify ~/.local/script/
 
 echo "Reading environment variables..."
-source $HOME/.local/script/variables.sh
+$HOME/.local/script/variables.sh
 
 echo "creating useful dirs..."
 mkdir $XDG_CACHE_HOME $XDG_CACHE_HOME/markdown/ $XDG_CACHE_HOME/monitor $XDG_CONFIG_HOME $XDG_CONFIG_HOME/fish $XDG_CONFIG_HOME/mako $XDG_CONFIG_HOME/nvim $XDG_CONFIG_HOME/zathura $XDG_CONFIG_HOME/swaylock $XDG_CONFIG_HOME/imv $XDG_CONFIG_HOME/alacritty $XDG_CACHE_HOME/shot
@@ -56,10 +56,10 @@ echo "git config..."
 git config --global user.name Stivvo
 git config --global user.email stivvo01@gmail.com
 git config --global core.editor "nvim"
-git config --global credential.helper 'cache --timeout=14400'
+git config --global credential.helper "cache --timeout=14400"
 git config --global pull.rebase false
-git config --global core.excludesFile '~/.gitignore'
-ln -sf ${PWD}/gitignore ~/.gitignore
+git config --global core.excludesFile "$HOME/.gitignore"
+ln -sf ${PWD}/gitignore $HOME/.gitignore
 
 echo "volume and brightness notifications files..."
 echo 100 > /tmp/audio-notification
@@ -68,8 +68,7 @@ echo 100 > /tmp/brightness-notification
 if [ ! -d $XDG_CONFIG_HOME/omf ] || [ ! -d $XDG_DATA_HOME/omf ]
 then
     echo "oh my fish..."
-    curl -L https://get.oh-my.fish > $HOME/install.fish
-    fish -c $HOME/install.fish --path=$XDG_DATA_HOME/omf --config=$XDGu_/omf \
+	curl -L https://get.oh-my.fish | fish
     fish --command="omf install l"
 fi
 
