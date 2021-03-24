@@ -49,6 +49,7 @@ git config --global core.editor "nvim"
 git config --global credential.helper "cache --timeout=14400"
 git config --global pull.rebase false
 git config --global core.excludesFile "$HOME/.gitignore"
+git config --global init.defaultBranch master
 ln -sf ${PWD}/gitignore $HOME/.gitignore
 
 echo "volume and brightness notifications files..."
