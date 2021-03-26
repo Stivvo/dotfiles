@@ -16,7 +16,7 @@ echo "Reading environment variables..."
 $HOME/.local/script/variables.sh
 
 echo "creating useful dirs..."
-mkdir $XDG_CACHE_HOME $XDG_CACHE_HOME/markdown/ $XDG_CACHE_HOME/monitor $XDG_CONFIG_HOME $XDG_CONFIG_HOME/fish $XDG_CONFIG_HOME/mako $XDG_CONFIG_HOME/nvim $XDG_CONFIG_HOME/zathura $XDG_CONFIG_HOME/swaylock $XDG_CONFIG_HOME/imv $XDG_CONFIG_HOME/alacritty $XDG_CACHE_HOME/shot
+mkdir $XDG_CACHE_HOME $XDG_CACHE_HOME/markdown/ $XDG_CACHE_HOME/monitor $XDG_CONFIG_HOME $XDG_CONFIG_HOME/fish $XDG_CONFIG_HOME/mako $XDG_CONFIG_HOME/nvim $XDG_CONFIG_HOME/zathura $XDG_CONFIG_HOME/swaylock $XDG_CONFIG_HOME/yambar $XDG_CONFIG_HOME/imv $XDG_CONFIG_HOME/alacritty $XDG_CACHE_HOME/shot
 
 echo "shells..."
 ln -sf ${PWD}/bashrc $HOME/.bashrc
@@ -41,6 +41,7 @@ ln -sf ${PWD}/nvim/other $XDG_CONFIG_HOME/nvim/
 echo "sway..."
 ln -sf ${PWD}/swaylock $XDG_CONFIG_HOME/swaylock/config
 ln -sf ${PWD}/waybar $XDG_CONFIG_HOME/
+ln -sf ${PWD}/yambar.yml $XDG_CONFIG_HOME/yambar/config.yml
 
 echo "git config..."
 git config --global user.name Stivvo
