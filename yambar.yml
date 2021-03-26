@@ -1,12 +1,71 @@
+awesome: &awesome Font Awesome 5 Free:style=solid:pixelsize=14
+awesome_brands: &awesome_brands Font Awesome 5 Brands:pixelsize=16
+
 bar:
-  height: 26
+  height: 32
   location: top
   background: 000000ff
 
   right:
-    - clock:
+    - alsa:
+        card: hw:S/PDIF
+        mixer: PCM
         content:
-          - string: {text: , font: "Font Awesome 5 Free:style=solid:size=12"}
+            map:
+                on-click: volume.sh audiomute
+                tag: muted
+                values:
+                    true: {string: {text: , font: *awesome, foreground: ffffff66}}
+                    false:
+                        ramp:
+                            tag: volume
+                            items:
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+    - backlight:
+        name: intel_backlight
+        content: [ string: {text: , font: *awesome}, string: {text: "{percent}%"}]
+    - battery:
+        name: BAT0
+        poll-interval: 30
+        content:
+            map:
+                tag: state
+                values:
+                    discharging:
+                        - ramp:
+                            tag: capacity
+                            items:
+                                - string: {text: , foreground: ff0000ff, font: *awesome}
+                                - string: {text: , foreground: ffa600ff, font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , font: *awesome}
+                                - string: {text: , foreground: 00ff00ff, font: *awesome}
+                        - string: {text: "{capacity}% {estimate}"}
+                    charging:
+                        - string: {text: , foreground: 00ff00ff, font: *awesome}
+                        - string: {text: "{capacity}% {estimate}"}
+                    full:
+                        - string: {text: , foreground: 00ff00ff, font: *awesome}
+                        - string: {text: "{capacity}% full"}
+    - clock:
+        time-format: "%H:%M %Z"
+        content:
+          - string: {text: , font: *awesome}
           - string: {text: "{date}", right-margin: 5}
-          - string: {text: , font: "Font Awesome 5 Free:style=solid:size=12"}
+          - string: {text: , font: *awesome}
           - string: {text: "{time}"}
+    - label:
+        content:
+          string:
+            on-click: loginctl poweroff
+            text: 
+            font: *awesome
