@@ -4,7 +4,7 @@ awesome_brands: &awesome_brands Font Awesome 5 Brands:pixelsize=17
 bar:
   height: 30
   location: top
-  background: 000000ff
+  background: 000000cc
 
   right:
     - alsa:
