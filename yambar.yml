@@ -1,8 +1,8 @@
-awesome: &awesome Font Awesome 5 Free:style=solid:pixelsize=14
-awesome_brands: &awesome_brands Font Awesome 5 Brands:pixelsize=16
+awesome: &awesome Font Awesome 5 Free:style=solid:pixelsize=17
+awesome_brands: &awesome_brands Font Awesome 5 Brands:pixelsize=17
 
 bar:
-  height: 32
+  height: 30
   location: top
   background: 000000ff
 
@@ -27,7 +27,7 @@ bar:
                                 - string: {text: , font: *awesome}
     - backlight:
         name: intel_backlight
-        content: [ string: {text: , font: *awesome}, string: {text: "{percent}%"}]
+        content: [ string: {text: " ", font: *awesome}, string: {text: " {percent}% "}]
     - battery:
         name: BAT0
         poll-interval: 30
@@ -49,20 +49,20 @@ bar:
                                 - string: {text: , font: *awesome}
                                 - string: {text: , font: *awesome}
                                 - string: {text: , foreground: 00ff00ff, font: *awesome}
-                        - string: {text: "{capacity}% {estimate}"}
+                        - string: {text: " {capacity}% {estimate} "}
                     charging:
                         - string: {text: , foreground: 00ff00ff, font: *awesome}
-                        - string: {text: "{capacity}% {estimate}"}
+                        - string: {text: " {capacity}% {estimate} "}
                     full:
                         - string: {text: , foreground: 00ff00ff, font: *awesome}
-                        - string: {text: "{capacity}% full"}
+                        - string: {text: " {capacity}% full "}
     - clock:
         time-format: "%H:%M %Z"
         content:
           - string: {text: , font: *awesome}
-          - string: {text: "{date}", right-margin: 5}
+          - string: {text: " {date} ", right-margin: 5}
           - string: {text: , font: *awesome}
-          - string: {text: "{time}"}
+          - string: {text: " {time} "}
     - label:
         content:
           string:
