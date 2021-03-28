@@ -1,5 +1,5 @@
 #!/bin/dash
 
-waybar &
+yambar &
 mako &
 personal.sh
