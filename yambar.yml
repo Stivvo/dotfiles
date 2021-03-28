@@ -8,8 +8,8 @@ bar:
 
   right:
     - alsa:
-        card: hw:S/PDIF
-        mixer: PCM
+        card: hw:PCH
+        mixer: Master
         content:
             map:
                 on-click: volume.sh audiomute
