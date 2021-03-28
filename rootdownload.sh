@@ -12,5 +12,8 @@ cp ${PWD}/pacman/makepkg.conf /etc/makepkg.conf
 cp ${PWD}/pacman/pacman.conf /etc/pacman.conf
 cp ${PWD}/pacman/mirrorlist-rankmirrors.conf /etc/pacman.d/mirrorlist-rankmirrors.conf
 
+echo "xbps ignore..."
+cp ${PWD}/ignore.conf /etc/xbps.d/
+
 echo "corectrl configuration..."
 cp polkit /etc/polkit-1/rules.d/90-corectrl.rules
