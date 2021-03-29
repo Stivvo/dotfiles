@@ -9,6 +9,7 @@ bar:
     left:
         - script:
             path: /usr/local/bin/dwl-tags.sh
+            args: [0]
             anchors:
                 - occupied: &occupied {foreground: 57bbf4ff}
                 - focused: &focused {foreground: fc65b0ff}

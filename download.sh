@@ -42,6 +42,7 @@ echo "sway..."
 ln -sf ${PWD}/swaylock $XDG_CONFIG_HOME/swaylock/config
 ln -sf ${PWD}/waybar $XDG_CONFIG_HOME/
 ln -sf ${PWD}/yambar.yml $XDG_CONFIG_HOME/yambar/config.yml
+sed 's+\[0\]+\[4\]+g' $XDG_CONFIG_HOME/yambar/config.yml > $XDG_CONFIG_HOME/yambar/config2.yml
 
 echo "git config..."
 git config --global user.name Stivvo

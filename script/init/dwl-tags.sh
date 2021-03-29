@@ -54,13 +54,14 @@ _cycle
 while true; do
 
   # Wait for dwl to close it after writing
-  inotifywait -qqe close_write "${fname}"
+  inotifywait -qqe modify "${fname}"
 
   # Get info from the file
-  title=$(sed "1!d" "${fname}")
-  taginfo=$(sed "2!d" "${fname}")
-  tagsinfo=$(sed "3!d" "${fname}")
-  layoutinfo=$(sed "4!d" "${fname}")
+  offs=$1
+  title=$(sed "$((offs+1))!d" "${fname}")
+  taginfo=$(sed "$((offs+2))!d" "${fname}")
+  tagsinfo=$(sed "$((offs+3))!d" "${fname}")
+  layoutinfo=$(sed "$((offs+4))!d" "${fname}")
 
   isactive=$(printf -- '%s\n' "${tagline}" | cut -d ' ' -f 1)
   ctags=$(printf -- '%s\n' "${tagsinfo}" | cut -d ' ' -f 3)
