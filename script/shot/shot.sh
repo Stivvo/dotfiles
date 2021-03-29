@@ -43,6 +43,6 @@ then
 else
     scrnTot="${scrnPath}/${scrnName}"
     mv $tmpPath "${scrnTot}"
-    notify-send.sh ${scrnTot} --icon ${scrnTot} --default-action="alacritty -e fff ${scrnPath}"
+    notify-send.sh ${scrnTot} --icon ${scrnTot} --default-action="imv ${scrnTot}"
 fi
 
