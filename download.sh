@@ -29,15 +29,6 @@ ln -sf ${PWD}/zathurarc $XDG_CONFIG_HOME/zathura/zathurarc
 ln -sf ${PWD}/imv $XDG_CONFIG_HOME/imv/config
 ln -sf ${PWD}/alacritty.yml $XDG_CONFIG_HOME/alacritty/alacritty.yml
 
-echo "nvim..."
-ln -sf ${PWD}/nvim/init.vim $XDG_CONFIG_HOME/nvim/init.vim
-ln -sf ${PWD}/nvim/plugin $XDG_CONFIG_HOME/nvim/
-ln -sf ${PWD}/nvim/ftplugin $XDG_CONFIG_HOME/nvim/
-ln -sf ${PWD}/nvim/autoload $XDG_CONFIG_HOME/nvim/
-ln -sf ${PWD}/nvim/other $XDG_CONFIG_HOME/nvim/
-./nvim/installplugs.sh start
-./nvim/installplugs.sh opt
-
 echo "sway..."
 ln -sf ${PWD}/swaylock $XDG_CONFIG_HOME/swaylock/config
 ln -sf ${PWD}/waybar $XDG_CONFIG_HOME/
@@ -57,6 +48,15 @@ ln -sf ${PWD}/gitignore $HOME/.gitignore
 echo "volume and brightness notifications files..."
 echo 100 > /tmp/audio-notification
 echo 100 > /tmp/brightness-notification
+
+echo "nvim..."
+ln -sf ${PWD}/nvim/init.vim $XDG_CONFIG_HOME/nvim/init.vim
+ln -sf ${PWD}/nvim/plugin $XDG_CONFIG_HOME/nvim/
+ln -sf ${PWD}/nvim/ftplugin $XDG_CONFIG_HOME/nvim/
+ln -sf ${PWD}/nvim/autoload $XDG_CONFIG_HOME/nvim/
+ln -sf ${PWD}/nvim/other $XDG_CONFIG_HOME/nvim/
+./nvim/installplugs.sh start
+./nvim/installplugs.sh opt
 
 if [ ! -d $XDG_CONFIG_HOME/omf ] || [ ! -d $XDG_DATA_HOME/omf ]
 then
