@@ -16,4 +16,7 @@ echo "xbps ignore..."
 cp ${PWD}/ignore.conf /etc/xbps.d/
 
 echo "corectrl configuration..."
-cp polkit /etc/polkit-1/rules.d/90-corectrl.rules
+cp ${PWD}/polkit /etc/polkit-1/rules.d/90-corectrl.rules
+
+echo "dwltags..."
+cp ${PWD}/script/init/dwl-tags.sh /usr/local/bin/dwl-tags.sh
