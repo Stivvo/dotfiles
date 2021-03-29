@@ -56,10 +56,9 @@ then
 	export QT_QPA_PLATFORM=wayland
 	export XDG_CURRENT_DESKTOP=kde
 	export QT_QPA_PLATFORM_THEME=kde
+	$2 $3 $4
 elif [ "$1" = "2" ]
 then
 	export MOZ_ENABLE_WAYLAND=0
 	export QT_QPA_PLATFORM=xcb
 fi
-
-$2 $3 $4

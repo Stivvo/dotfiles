@@ -2,70 +2,228 @@ awesome: &awesome Font Awesome 5 Free:style=solid:pixelsize=17
 awesome_brands: &awesome_brands Font Awesome 5 Brands:pixelsize=17
 
 bar:
-  height: 30
-  location: top
-  background: 000000cc
+    height: 30
+    location: top
+    background: 000000cc
 
-  right:
-    - alsa:
-        card: hw:PCH
-        mixer: Master
-        content:
-            map:
-                on-click: volume.sh audiomute
-                tag: muted
-                values:
-                    true: {string: {text: , font: *awesome, foreground: ffffff66}}
-                    false:
-                        ramp:
-                            tag: volume
-                            items:
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-    - backlight:
-        name: intel_backlight
-        content: [ string: {text: " ", font: *awesome}, string: {text: " {percent}% "}]
-    - battery:
-        name: BAT0
-        poll-interval: 30
-        content:
-            map:
-                tag: state
-                values:
-                    discharging:
-                        - ramp:
-                            tag: capacity
-                            items:
-                                - string: {text: , foreground: ff0000ff, font: *awesome}
-                                - string: {text: , foreground: ffa600ff, font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , font: *awesome}
-                                - string: {text: , foreground: 00ff00ff, font: *awesome}
-                        - string: {text: " {capacity}% {estimate} "}
-                    charging:
-                        - string: {text: , foreground: 00ff00ff, font: *awesome}
-                        - string: {text: " {capacity}% {estimate} "}
-                    full:
-                        - string: {text: , foreground: 00ff00ff, font: *awesome}
-                        - string: {text: " {capacity}% full "}
-    - clock:
-        time-format: "%H:%M %Z"
-        content:
-          - string: {text: , font: *awesome}
-          - string: {text: " {date} ", right-margin: 5}
-          - string: {text: , font: *awesome}
-          - string: {text: " {time} "}
-    - label:
-        content:
-          string:
-            on-click: loginctl poweroff
-            text: 
-            font: *awesome
+    left:
+        - script:
+            path: /usr/local/bin/dwl-tags.sh
+            anchors:
+                - occupied: &occupied {foreground: 57bbf4ff}
+                - focused: &focused {foreground: fc65b0ff}
+                - default: &default {foreground: d2ccd6ff}
+            content:
+                - map:
+                    margin: 4
+                    tag: tag_0_occupied
+                    values:
+                        true:
+                            map:
+                                tag: tag_0_focused
+                                values:
+                                    true: {string: {text: "{tag_0}", <<: *focused}}
+                                    false: {string: {text: "{tag_0}", <<: *occupied}}
+                        false:
+                            map:
+                                tag: tag_0_focused
+                                values:
+                                    true: {string: {text: "{tag_0}", <<: *focused}}
+                                    false: {string: {text: "{tag_0}", <<: *default}}
+                - map:
+                    margin: 4
+                    tag: tag_1_occupied
+                    values:
+                        true:
+                            map:
+                                tag: tag_1_focused
+                                values:
+                                    true: {string: {text: "{tag_1}", <<: *focused}}
+                                    false: {string: {text: "{tag_1}", <<: *occupied}}
+                        false:
+                            map:
+                                tag: tag_1_focused
+                                values:
+                                    true: {string: {text: "{tag_1}", <<: *focused}}
+                                    false: {string: {text: "{tag_1}", <<: *default}}
+                - map:
+                    margin: 4
+                    tag: tag_2_occupied
+                    values:
+                        true:
+                            map:
+                                tag: tag_2_focused
+                                values:
+                                    true: {string: {text: "{tag_2}", <<: *focused}}
+                                    false: {string: {text: "{tag_2}", <<: *occupied}}
+                        false:
+                            map:
+                                tag: tag_2_focused
+                                values:
+                                    true: {string: {text: "{tag_2}", <<: *focused}}
+                                    false: {string: {text: "{tag_2}", <<: *default}}
+                - map:
+                    margin: 4
+                    tag: tag_3_occupied
+                    values:
+                        true:
+                            map:
+                                tag: tag_3_focused
+                                values:
+                                    true: {string: {text: "{tag_3}", <<: *focused}}
+                                    false: {string: {text: "{tag_3}", <<: *occupied}}
+                        false:
+                            map:
+                                tag: tag_3_focused
+                                values:
+                                    true: {string: {text: "{tag_3}", <<: *focused}}
+                                    false: {string: {text: "{tag_3}", <<: *default}}
+                - map:
+                    margin: 4
+                    tag: tag_4_occupied
+                    values:
+                        true:
+                            map:
+                                tag: tag_4_focused
+                                values:
+                                    true: {string: {text: "{tag_4}", <<: *focused}}
+                                    false: {string: {text: "{tag_4}", <<: *occupied}}
+                        false:
+                            map:
+                                tag: tag_4_focused
+                                values:
+                                    true: {string: {text: "{tag_4}", <<: *focused}}
+                                    false: {string: {text: "{tag_4}", <<: *default}}
+                - map:
+                    margin: 4
+                    tag: tag_5_occupied
+                    values:
+                        true:
+                            map:
+                                tag: tag_5_focused
+                                values:
+                                    true: {string: {text: "{tag_5}", <<: *focused}}
+                                    false: {string: {text: "{tag_5}", <<: *occupied}}
+                        false:
+                            map:
+                                tag: tag_5_focused
+                                values:
+                                    true: {string: {text: "{tag_5}", <<: *focused}}
+                                    false: {string: {text: "{tag_5}", <<: *default}}
+                - map:
+                    margin: 4
+                    tag: tag_6_occupied
+                    values:
+                        true:
+                            map:
+                                tag: tag_6_focused
+                                values:
+                                    true: {string: {text: "{tag_6}", <<: *focused}}
+                                    false: {string: {text: "{tag_6}", <<: *occupied}}
+                        false:
+                            map:
+                                tag: tag_6_focused
+                                values:
+                                    true: {string: {text: "{tag_6}", <<: *focused}}
+                                    false: {string: {text: "{tag_6}", <<: *default}}
+                - map:
+                    margin: 4
+                    tag: tag_7_occupied
+                    values:
+                        true:
+                            map:
+                                tag: tag_7_focused
+                                values:
+                                    true: {string: {text: "{tag_7}", <<: *focused}}
+                                    false: {string: {text: "{tag_7}", <<: *occupied}}
+                        false:
+                            map:
+                                tag: tag_7_focused
+                                values:
+                                    true: {string: {text: "{tag_7}", <<: *focused}}
+                                    false: {string: {text: "{tag_7}", <<: *default}}
+                - map:
+                    margin: 4
+                    tag: tag_8_occupied
+                    values:
+                        true:
+                            map:
+                                tag: tag_8_focused
+                                values:
+                                    true: {string: {text: "{tag_8}", <<: *focused}}
+                                    false: {string: {text: "{tag_8}", <<: *occupied}}
+                        false:
+                            map:
+                                tag: tag_8_focused
+                                values:
+                                    true: {string: {text: "{tag_8}", <<: *focused}}
+                                    false: {string: {text: "{tag_8}", <<: *default}}
+                - list:
+                    spacing: 3
+                    items:
+                        - string: {text: "{layout}"}
+                        - string: {text: "{title}"}
+
+    right:
+        - alsa:
+            card: hw:PCH
+            mixer: Master
+            content:
+                map:
+                    on-click: volume.sh audiomute
+                    tag: muted
+                    values:
+                        true: {string: {text: , font: *awesome, foreground: ffffff66}}
+                        false:
+                            ramp:
+                                tag: volume
+                                items:
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+        - backlight:
+            name: intel_backlight
+            content: [ string: {text: " ", font: *awesome}, string: {text: " {percent}% "}]
+        - battery:
+            name: BAT0
+            poll-interval: 30
+            content:
+                map:
+                    tag: state
+                    values:
+                        discharging:
+                            - ramp:
+                                tag: capacity
+                                items:
+                                    - string: {text: , foreground: ff0000ff, font: *awesome}
+                                    - string: {text: , foreground: ffa600ff, font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , foreground: 00ff00ff, font: *awesome}
+                            - string: {text: " {capacity}% {estimate} "}
+                        charging:
+                            - string: {text: , foreground: 00ff00ff, font: *awesome}
+                            - string: {text: " {capacity}% {estimate} "}
+                        full:
+                            - string: {text: , foreground: 00ff00ff, font: *awesome}
+                            - string: {text: " {capacity}% full "}
+        - clock:
+            time-format: "%H:%M %Z"
+            content:
+              - string: {text: , font: *awesome}
+              - string: {text: " {date} ", right-margin: 5}
+              - string: {text: , font: *awesome}
+              - string: {text: " {time} "}
+        - label:
+            content:
+              string:
+                on-click: loginctl poweroff
+                text: 
+                font: *awesome
