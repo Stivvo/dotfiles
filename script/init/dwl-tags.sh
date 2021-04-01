@@ -59,6 +59,7 @@ while true; do
   # Get info from the file
   offs=$1
   title=$(sed "$((offs+1))!d" "${fname}")
+  title=${title:11:${#title}}
   taginfo=$(sed "$((offs+2))!d" "${fname}")
   tagsinfo=$(sed "$((offs+3))!d" "${fname}")
   layoutinfo=$(sed "$((offs+4))!d" "${fname}")
