@@ -36,14 +36,8 @@ ln -sf ${PWD}/yambar.yml $XDG_CONFIG_HOME/yambar/config.yml
 sed 's+\[0\]+\[4\]+g' $XDG_CONFIG_HOME/yambar/config.yml > $XDG_CONFIG_HOME/yambar/config2.yml
 
 echo "git config..."
-git config --global user.name Stivvo
-git config --global user.email stivvo01@gmail.com
-git config --global core.editor "nvim"
-git config --global credential.helper "cache --timeout=14400"
-git config --global pull.rebase false
-git config --global core.excludesFile "$HOME/.gitignore"
-git config --global init.defaultBranch master
 ln -sf ${PWD}/gitignore $HOME/.gitignore
+ln -sf ${PWD}/gitconfig $HOME/.gitconfig
 
 echo "volume and brightness notifications files..."
 echo 100 > /tmp/audio-notification

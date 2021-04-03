@@ -20,3 +20,6 @@ cp ${PWD}/polkit /etc/polkit-1/rules.d/90-corectrl.rules
 
 echo "dwltags..."
 cp ${PWD}/script/init/dwl-tags.sh /usr/local/bin/dwl-tags.sh
+
+echo "nvimdiff..."
+cp ${PWD}/script/init/nvimdiff /usr/local/bin/nvimdiff

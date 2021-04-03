@@ -1,0 +1,20 @@
+[user]
+	name = Stivvo
+	email = stivvo01@gmail.com
+[core]
+	editor = nvim
+	excludesFile = /home/stefano/.gitignore
+[credential]
+	helper = cache --timeout=14400
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master
+[diff]
+	tool = nvimdiff
+[merge]
+	tool = nvimdiff
+[mergetool]
+	prompt = false
+[mergetool "nvimdiff"]
+	trustExitCode = false
