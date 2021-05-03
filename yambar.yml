@@ -189,7 +189,35 @@ bar:
             content: [ string: {text: " ", font: *awesome}, string: {text: " {percent}% "}]
         - battery:
             name: BAT0
-            poll-interval: 30
+            poll-interval: 60
+            content:
+                map:
+                    tag: state
+                    values:
+                        discharging:
+                            - ramp:
+                                tag: capacity
+                                items:
+                                    - string: {text: , foreground: ff0000ff, font: *awesome}
+                                    - string: {text: , foreground: ffa600ff, font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , font: *awesome}
+                                    - string: {text: , foreground: 00ff00ff, font: *awesome}
+                            - string: {text: " {capacity}% {estimate} "}
+                        charging:
+                            - string: {text: , foreground: 00ff00ff, font: *awesome}
+                            - string: {text: " {capacity}% {estimate} "}
+                        full:
+                            - string: {text: , foreground: 00ff00ff, font: *awesome}
+                            - string: {text: " {capacity}% full "}
+        - battery:
+            name: BAT1
+            poll-interval: 60
             content:
                 map:
                     tag: state
