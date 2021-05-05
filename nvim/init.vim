@@ -53,7 +53,7 @@ vnoremap K :m '<-2<Cr>gv=gv
 
 "buffers
 nnoremap <silent> <S-Tab> :bprevious<Cr>
-nnoremap <silent> <Tab> :bNext<Cr>
+nnoremap <silent> \ :bNext<Cr>
 
 "multiple change
 nnoremap cn *``cgn

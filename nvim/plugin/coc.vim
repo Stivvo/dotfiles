@@ -124,8 +124,6 @@ function! s:select_current_word()
 endfunc
 nmap <expr> <silent> <C-g> <SID>select_current_word()
 
-unmap <C-i>
-
 "multiple cursors
 nmap <silent> <C-s> <Plug>(coc-cursors-position)
 nmap <silent> <C-c> <Plug>(coc-cursors-word)
