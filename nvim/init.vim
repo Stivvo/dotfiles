@@ -52,8 +52,12 @@ vnoremap J :m '>+1<Cr>gv=gv
 vnoremap K :m '<-2<Cr>gv=gv
 
 "buffers
-nnoremap <silent> <S-Tab> :bprevious<Cr>
-nnoremap <silent> \ :bNext<Cr>
+nnoremap <silent> <PageDown> :bprevious<Cr>
+nnoremap <silent> <PageUp> :bNext<Cr>
+nnoremap <silent> \k :bprevious<Cr>
+nnoremap <silent> \j :bNext<Cr>
+nnoremap <silent> \l :tabNext<Cr>
+nnoremap <silent> \h :tabprevious<Cr>
 
 "multiple change
 nnoremap cn *``cgn
